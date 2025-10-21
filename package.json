@@ -1,0 +1,25 @@
+{
+  "name": "vazen",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Hashversion",
+    "email": "hello@hashversion.com",
+    "url": "https://hashversion.com"
+  },
+  "type": "module",
+  "scripts": {
+    "commit": "commit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/prompt-cli": "^20.1.0",
+    "lefthook": "^2.0.0"
+  },
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=22"
+  }
+}
