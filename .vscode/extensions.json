@@ -1,5 +1,6 @@
 {
   "recommendations": [
     "mattpocock.ts-error-translator",
+    "dbaeumer.vscode-eslint"
   ]
 }
