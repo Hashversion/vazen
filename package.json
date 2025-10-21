@@ -17,6 +17,7 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/prompt-cli": "^20.1.0",
     "lefthook": "^2.0.0",
+    "prettier": "^3.6.2",
     "turbo": "^2.5.8",
     "typescript": "catalog:"
   },
