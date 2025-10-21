@@ -1,6 +1,10 @@
 packages:
   - "apps/*"
   - "packages/*"
+  - "packages/configs/*"
+
+catalog:
+  typescript: 5.9.3
 
 onlyBuiltDependencies:
   - lefthook
