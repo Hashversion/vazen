@@ -4,12 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build --turbopack",
+    "build": "next build",
+    "cf-typegen": "wrangler types",
+    "deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=staging",
     "dev": "next dev --turbopack",
     "lint": "eslint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.11.0",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
@@ -23,6 +27,7 @@
     "@types/react-dom": "catalog:",
     "eslint": "catalog:",
     "tailwindcss": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "wrangler": "catalog:"
   }
 }

@@ -37,4 +37,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "files.associations": {
+    "wrangler.json": "jsonc"
+  }
 }
