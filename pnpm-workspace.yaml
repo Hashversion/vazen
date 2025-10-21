@@ -1,10 +1,20 @@
 packages:
-  - "apps/*"
-  - "packages/*"
-  - "packages/configs/*"
+  - apps/*
+  - packages/*
+  - packages/configs/*
 
 catalog:
+  "@types/node": 24.3.1
+  "@types/react": 19.2.2
+  "@types/react-dom": 19.2.2
   typescript: 5.9.3
+  react: 19.1.0
+  react-dom: 19.1.0
+  next: 15.5.6
+  eslint: 9.38.0
+  tailwindcss: 4.1.15
 
 onlyBuiltDependencies:
   - lefthook
+  - sharp
+  - unrs-resolver
