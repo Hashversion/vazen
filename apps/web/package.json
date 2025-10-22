@@ -6,9 +6,12 @@
   "scripts": {
     "build": "next build",
     "cf-typegen": "wrangler types",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf node_modules .next .turbo",
     "deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=staging",
     "dev": "next dev --turbopack",
-    "lint": "eslint",
+    "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",
+    "lint:fix": "eslint --fix",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start"
   },

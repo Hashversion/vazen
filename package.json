@@ -10,8 +10,14 @@
   },
   "type": "module",
   "scripts": {
+    "build:web": "turbo build",
+    "clean": "turbo clean",
     "commit": "commit",
-    "knip": "knip"
+    "dev:web": "turbo dev -F web",
+    "format": "prettier --write \"**/*.{css,ts,tsx,md,mdx}\"",
+    "knip": "knip",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
