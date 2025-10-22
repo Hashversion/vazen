@@ -10,12 +10,15 @@
   },
   "type": "module",
   "scripts": {
-    "commit": "commit"
+    "commit": "commit",
+    "knip": "knip"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/prompt-cli": "^20.1.0",
+    "@types/node": "catalog:",
+    "knip": "^5.66.2",
     "lefthook": "^2.0.0",
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",
