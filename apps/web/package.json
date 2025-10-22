@@ -8,6 +8,7 @@
     "cf-typegen": "wrangler types",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf node_modules .next .turbo",
+    "deploy:production": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=production",
     "deploy:staging": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=staging",
     "dev": "next dev --turbopack",
     "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",

@@ -16,6 +16,14 @@
   },
   "preview_urls": true,
   "env": {
-    "staging": {}
+    "staging": {},
+    "production": {
+      "routes": [
+        {
+          "pattern": "vazen.dev",
+          "custom_domain": true
+        }
+      ]
+    }
   }
 }
