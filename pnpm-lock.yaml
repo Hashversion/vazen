@@ -74,6 +74,9 @@ importers:
       '@opennextjs/cloudflare':
         specifier: ^1.11.0
         version: 1.11.0(wrangler@4.43.0)
+      '@repo/fonts':
+        specifier: workspace:*
+        version: link:../../packages/design-system/fonts
       next:
         specifier: 'catalog:'
         version: 15.5.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -149,6 +152,21 @@ importers:
         version: 8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
 
   packages/configs/typescript-config: {}
+
+  packages/design-system/fonts:
+    dependencies:
+      next:
+        specifier: 'catalog:'
+        version: 15.5.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript-config
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  packages/design-system/tokens: {}
 
 packages:
 
