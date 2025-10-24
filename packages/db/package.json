@@ -18,6 +18,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@t3-oss/env-nextjs": "catalog:",
     "drizzle-orm": "catalog:",
     "postgres": "^3.4.7",
     "server-only": "catalog:",

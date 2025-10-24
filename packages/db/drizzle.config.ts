@@ -1,5 +1,5 @@
 import { defineConfig } from "drizzle-kit";
-import { getDbUrl } from "./src/lib/utils";
+import { env } from "./env";
 
 export default defineConfig({
   out: "./drizzle",
@@ -7,7 +7,7 @@ export default defineConfig({
   dialect: "postgresql",
   casing: "snake_case",
   dbCredentials: {
-    url: getDbUrl() as string,
+    url: env().DATABASE_URL,
     ssl: process.env.NODE_ENV === "production" ? "require" : undefined,
   },
   strict: true,
