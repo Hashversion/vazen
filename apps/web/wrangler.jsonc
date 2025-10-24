@@ -23,6 +23,9 @@
       "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db"
     }
   ],
+  "placement": {
+    "mode": "smart"
+  },
   "env": {
     "stage": {
       "hyperdrive": [
