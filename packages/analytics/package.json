@@ -1,0 +1,22 @@
+{
+  "name": "@repo/analytics",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./posthog": "./src/posthog.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "catalog:",
+    "posthog-js": "^1.275.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

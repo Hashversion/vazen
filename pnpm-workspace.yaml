@@ -25,6 +25,7 @@ catalog:
   zod: 4.1.12
 
 onlyBuiltDependencies:
+  - core-js
   - esbuild
   - lefthook
   - rclone.js

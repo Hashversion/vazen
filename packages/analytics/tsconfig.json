@@ -1,0 +1,13 @@
+{
+  "extends": "@repo/typescript-config/app/dom",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -22,6 +22,7 @@
     "@orpc/client": "catalog:",
     "@orpc/server": "catalog:",
     "@orpc/tanstack-query": "catalog:",
+    "@repo/analytics": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/fonts": "workspace:*",
     "@repo/ui": "workspace:*",
