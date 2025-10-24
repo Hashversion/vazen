@@ -1,6 +1,6 @@
 import "@/lib/orpc.server"; // pre-rendering for ssr
 import type { Metadata } from "next";
-import "./globals.css";
+import "./styles.css";
 import { fontsVariable } from "@repo/fonts";
 import { Providers } from "@/app/providers";
 
