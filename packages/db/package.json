@@ -26,8 +26,10 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251014.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
     "drizzle-kit": "^0.31.5",
     "eslint": "catalog:",
     "typescript": "catalog:"

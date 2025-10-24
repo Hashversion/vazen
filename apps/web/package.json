@@ -15,7 +15,7 @@
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
     "typegen:worker": "wrangler types",
-    "typegen:worker:stage": "wrangler types -e=stage"
+    "typegen:worker:stage": "wrangler types --env-interface CloudflareEnv -e=stage"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.11.0",

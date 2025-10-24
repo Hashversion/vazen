@@ -15,8 +15,23 @@
     "enabled": true
   },
   "preview_urls": true,
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      // id :: random uuid for local dev or empty
+      "id": "9707b7d4-c675-46fb-9268-c34b343a0cd3",
+      "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db"
+    }
+  ],
   "env": {
-    "stage": {},
+    "stage": {
+      "hyperdrive": [
+        {
+          "binding": "HYPERDRIVE",
+          "id": "1160c9c349e14aeb9fe2427a0f0fe86e",
+        }
+      ]
+    },
     "production": {
       "routes": [
         {

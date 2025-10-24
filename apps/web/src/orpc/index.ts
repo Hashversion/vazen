@@ -3,9 +3,9 @@ import { os } from "@orpc/server";
 import { z } from "zod";
 import { getDb } from "@repo/db";
 
-export async function createORPCContext(options: { headers: Headers }) {
+export async function createORPCContext(options: { headers: Headers; CloudflareEnv: CloudflareEnv }) {
   return {
-    db: getDb(),
+    db: getDb(options.CloudflareEnv),
     ...options,
   };
 }
