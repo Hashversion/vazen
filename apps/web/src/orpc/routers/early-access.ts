@@ -1,6 +1,6 @@
 import { o } from "@/orpc";
-import { z } from "zod";
 import { waitlistSchema } from "@/schema/forms";
+import { z } from "zod";
 
 export const earlyAccessRouter = {
   getWaitlistCount: o

@@ -1,8 +1,8 @@
-import "@/lib/orpc.server"; // pre-rendering for ssr
-import type { Metadata } from "next";
-import "./styles.css";
 import { fontsVariable } from "@repo/fonts";
+import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
+import "@/lib/orpc.server";
+import "./styles.css";
 
 export const metadata: Metadata = {
   title: "Vazen",

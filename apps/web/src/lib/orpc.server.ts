@@ -1,9 +1,8 @@
 import "server-only";
-
 import { headers } from "next/headers";
-import { createRouterClient } from "@orpc/server";
-import { router } from "@/orpc/root";
 import { createORPCContext } from "@/orpc";
+import { router } from "@/orpc/root";
+import { createRouterClient } from "@orpc/server";
 
 globalThis.$client = createRouterClient(router, {
   context: async () => {

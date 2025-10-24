@@ -1,10 +1,8 @@
 import "server-only";
-
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-
-import * as schema from "./schema";
 import { getDbUrl } from "./lib/utils";
+import * as schema from "./schema";
 
 export function getDb() {
   const globalDb = globalThis as unknown as {

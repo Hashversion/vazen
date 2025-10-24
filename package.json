@@ -27,6 +27,7 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/prompt-cli": "^20.1.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@types/node": "catalog:",
     "knip": "^5.66.2",
     "lefthook": "^2.0.0",
