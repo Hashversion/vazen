@@ -1,9 +1,9 @@
-import { base } from "@/orpc/base";
+import { o } from "@/orpc";
 import { z } from "zod";
 import { waitlistSchema } from "@/schema/forms";
 
 export const earlyAccessRouter = {
-  getWaitlistCount: base
+  getWaitlistCount: o
     .route({
       method: "GET",
       path: "/waitlist",
@@ -19,7 +19,7 @@ export const earlyAccessRouter = {
       return { count: 100 };
     }),
 
-  joinWaitlist: base
+  joinWaitlist: o
     .route({
       method: "POST",
       path: "/waitlist",
