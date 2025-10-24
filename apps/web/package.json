@@ -24,6 +24,7 @@
     "@orpc/tanstack-query": "catalog:",
     "@repo/db": "workspace:*",
     "@repo/fonts": "workspace:*",
+    "@repo/ui": "workspace:*",
     "@tanstack/react-query": "^5.90.5",
     "next": "catalog:",
     "react": "catalog:",

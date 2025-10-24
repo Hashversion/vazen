@@ -10,7 +10,8 @@
   },
   "type": "module",
   "scripts": {
-    "build:web": "turbo build",
+    "build": "turbo build",
+    "build:web": "turbo build -F web...",
     "clean": "turbo clean",
     "commit": "commit",
     "dev:web": "turbo dev -F web...",
@@ -30,7 +31,8 @@
     "knip": "^5.66.2",
     "lefthook": "^2.0.0",
     "prettier": "^3.6.2",
-    "turbo": "^2.5.8",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "turbo": "2.5.6",
     "typescript": "catalog:"
   },
   "packageManager": "pnpm@10.18.1",

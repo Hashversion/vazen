@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import "@repo/ui/globals.css";
+
+/** @see https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources   */
+@source "../../node_modules/@repo/ui/dist/**/*.{js,ts,jsx,tsx}";

@@ -37,6 +37,10 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "tailwindCSS.classFunctions": [
+    "cva",
+    "cx"
+  ],
   "files.associations": {
     "wrangler.json": "jsonc"
   }
