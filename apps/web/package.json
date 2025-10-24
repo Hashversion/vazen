@@ -5,8 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "cf-typegen": "wrangler types",
-    "cf-typegen:stage": "wrangler types -e=stage",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf node_modules .next .turbo",
     "deploy:production": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=production",
@@ -15,7 +13,9 @@
     "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",
     "lint:fix": "eslint --fix",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "start": "next start"
+    "start": "next start",
+    "typegen:worker": "wrangler types",
+    "typegen:worker:stage": "wrangler types -e=stage"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.11.0",
