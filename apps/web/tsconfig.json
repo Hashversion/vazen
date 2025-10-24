@@ -12,7 +12,10 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "./worker-configuration.d.ts",
+    ]
   },
   "include": [
     "**/*.ts",
