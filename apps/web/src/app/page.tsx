@@ -1,4 +1,5 @@
 import { Button } from "@repo/ui";
+import ThemeToggle from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         A strict monorepo starter to kickstart projects, ideas, and experiments.
       </p>
       <Button>Button</Button>
+      <ThemeToggle />
     </>
   );
 }
