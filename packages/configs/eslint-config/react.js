@@ -1,8 +1,10 @@
-import globals from "globals";
-import pluginReactHooks from "eslint-plugin-react-hooks";
+import js from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
 import { defineConfig } from "eslint/config";
-import baseConfig from "./base";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import baseConfig from "./base.js";
 
 export default defineConfig([
   ...baseConfig,
