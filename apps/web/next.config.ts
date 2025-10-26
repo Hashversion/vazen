@@ -2,6 +2,8 @@ import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  cacheComponents: true,
   async rewrites() {
     return [
       // posthog proxy
