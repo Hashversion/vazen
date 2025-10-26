@@ -5,13 +5,18 @@ import js from "@eslint/js";
 import checkFile from "eslint-plugin-check-file";
 import onlyWarn from "eslint-plugin-only-warn";
 import pluginTurbo from "eslint-plugin-turbo";
-import { defineConfig } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const gitignorePath = resolve(__dirname, "../../../.gitignore");
 
+/**
+ * A shared ESLint configuration for the repository.
+ *
+ * @type {import("eslint").Linter.Config[]}
+ * */
 export default defineConfig([
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -27,9 +32,6 @@ export default defineConfig([
     plugins: {
       onlyWarn,
     },
-  },
-  {
-    ignores: ["dist/**"],
   },
   {
     files: ["src/**/*.*"],
@@ -55,5 +57,5 @@ export default defineConfig([
     },
   },
   includeIgnoreFile(gitignorePath, "Imported .gitignore patterns"),
-  { ignores: ["**/*.css", "**/*.d.ts", "**/*.ico"] },
+  globalIgnores(["**/*.css", "**/*.ico", "worker-configuration.d.ts"]),
 ]);

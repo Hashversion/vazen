@@ -6,6 +6,11 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import baseConfig from "./base.js";
 
+/**
+ * A custom ESLint configuration for libraries that use React.
+ *
+ * @type {import("eslint").Linter.Config[]}
+ * */
 export default defineConfig([
   ...baseConfig,
   js.configs.recommended,
