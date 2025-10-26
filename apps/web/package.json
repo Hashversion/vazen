@@ -11,7 +11,6 @@
     "deploy:stage": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=stage",
     "dev": "next dev --turbopack",
     "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",
-    "lint:fix": "eslint --fix",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
     "typegen:worker": "wrangler types",

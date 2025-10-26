@@ -20,8 +20,7 @@
     "docker:up": "docker compose up -d",
     "format": "prettier --write \"**/*.{css,ts,tsx,md,mdx}\"",
     "knip": "knip",
-    "lint": "turbo lint",
-    "lint:fix": "turbo lint:fix"
+    "lint": "turbo lint"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
