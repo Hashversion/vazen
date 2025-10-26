@@ -8,7 +8,7 @@
   },
   "scripts": {
     "check-types": "tsc --noEmit",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "catalog:",
