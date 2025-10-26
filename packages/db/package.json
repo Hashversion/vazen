@@ -15,7 +15,7 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "dev": "drizzle-kit studio",
-    "lint": "eslint ."
+    "lint": "eslint --max-warnings 0"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "catalog:",

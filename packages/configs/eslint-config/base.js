@@ -57,5 +57,5 @@ export default defineConfig([
     },
   },
   includeIgnoreFile(gitignorePath, "Imported .gitignore patterns"),
-  globalIgnores(["**/*.css", "**/*.ico", "worker-configuration.d.ts"]),
+  globalIgnores(["worker-configuration.d.ts"]),
 ]);
