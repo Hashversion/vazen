@@ -3,7 +3,7 @@ import pluginNext from "@next/eslint-plugin-next";
 import pluginQuery from "@tanstack/eslint-plugin-query";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
-import { defineConfig } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import baseConfig from "./base.js";
@@ -47,4 +47,15 @@ export default defineConfig([
       "react/react-in-jsx-scope": "off",
     },
   },
+  globalIgnores([
+    ".next/**",
+    ".open-next/**",
+    ".wrangler/**",
+    "out/**",
+    "build/**",
+    "**/*.ico",
+    "**/*.css",
+    "next-env.d.ts",
+    "worker-configuration.d.ts",
+  ]),
 ]);

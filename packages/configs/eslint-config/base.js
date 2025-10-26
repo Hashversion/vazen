@@ -1,16 +1,9 @@
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
-import { includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
 import checkFile from "eslint-plugin-check-file";
 import onlyWarn from "eslint-plugin-only-warn";
 import pluginTurbo from "eslint-plugin-turbo";
-import { defineConfig, globalIgnores } from "eslint/config";
+import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const gitignorePath = resolve(__dirname, "../../../.gitignore");
 
 /**
  * A shared ESLint configuration for the repository.
@@ -56,6 +49,4 @@ export default defineConfig([
       ],
     },
   },
-  includeIgnoreFile(gitignorePath, "Imported .gitignore patterns"),
-  globalIgnores(["worker-configuration.d.ts"]),
 ]);
