@@ -26,6 +26,7 @@
     "@repo/fonts": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tanstack/react-query": "^5.90.5",
+    "drizzle-orm": "catalog:",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",

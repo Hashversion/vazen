@@ -8,7 +8,7 @@ const handler = new RPCHandler(router);
 async function handleRequest(request: Request) {
   const { env: CloudflareEnv } = getCloudflareContext();
   const { response } = await handler.handle(request, {
-    prefix: "/rpc",
+    prefix: "/api/rpc",
     context: await createORPCContext({ headers: request.headers, CloudflareEnv }),
   });
 

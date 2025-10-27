@@ -14,7 +14,7 @@ const link = new RPCLink({
       throw new Error("RPCLink is not allowed on the server side.");
     }
 
-    return `${window.location.origin}/rpc`;
+    return `${window.location.origin}/api/rpc`;
   },
 });
 

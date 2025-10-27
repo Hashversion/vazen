@@ -6,9 +6,60 @@ settings:
 
 catalogs:
   default:
+    '@orpc/client':
+      specifier: 1.10.0
+      version: 1.10.0
+    '@orpc/server':
+      specifier: 1.10.0
+      version: 1.10.0
+    '@orpc/tanstack-query':
+      specifier: 1.10.0
+      version: 1.10.0
+    '@t3-oss/env-nextjs':
+      specifier: 0.13.8
+      version: 0.13.8
+    '@types/node':
+      specifier: 24.3.1
+      version: 24.3.1
+    '@types/react':
+      specifier: 19.2.2
+      version: 19.2.2
+    '@types/react-dom':
+      specifier: 19.2.2
+      version: 19.2.2
+    drizzle-orm:
+      specifier: 0.44.6
+      version: 0.44.6
+    eslint:
+      specifier: 9.38.0
+      version: 9.38.0
+    next:
+      specifier: 16.0.0
+      version: 16.0.0
+    react:
+      specifier: 19.1.0
+      version: 19.1.0
+    react-dom:
+      specifier: 19.1.0
+      version: 19.1.0
+    server-only:
+      specifier: 0.0.1
+      version: 0.0.1
+    tailwindcss:
+      specifier: 4.1.15
+      version: 4.1.15
+    tsdown:
+      specifier: 0.15.9
+      version: 0.15.9
     typescript:
       specifier: 5.9.3
       version: 5.9.3
+    wrangler:
+      specifier: 4.43.0
+      version: 4.43.0
+    zod:
+      specifier: 4.1.12
+      version: 4.1.12
 
 importers:
 
@@ -77,6 +128,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.90.5
         version: 5.90.5(react@19.1.0)
+      drizzle-orm:
+        specifier: 'catalog:'
+        version: 0.44.6(@cloudflare/workers-types@4.20251014.0)(postgres@3.4.7)
       next:
         specifier: 'catalog:'
         version: 16.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -10290,7 +10344,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.2':
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.9.1
 
   '@types/cors@2.8.19':
     dependencies:
@@ -10312,7 +10366,7 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.9.1
       form-data: 4.0.4
 
   '@types/node@18.19.130':
@@ -10337,7 +10391,7 @@ snapshots:
 
   '@types/rclone.js@0.6.3':
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.9.1
 
   '@types/react-dom@19.0.4(@types/react@19.0.10)':
     dependencies:
@@ -10357,7 +10411,7 @@ snapshots:
 
   '@types/webpack@5.28.5(esbuild@0.25.10)':
     dependencies:
-      '@types/node': 22.14.1
+      '@types/node': 24.9.1
       tapable: 2.3.0
       webpack: 5.102.1(esbuild@0.25.10)
     transitivePeerDependencies:
@@ -12138,7 +12192,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.14.1
+      '@types/node': 24.9.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -13135,7 +13189,7 @@ snapshots:
 
   send@1.2.0:
     dependencies:
-      debug: 4.3.6
+      debug: 4.4.3
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1

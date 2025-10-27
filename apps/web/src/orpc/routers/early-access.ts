@@ -1,6 +1,8 @@
 import { o } from "@/orpc";
 import { waitlistSchema } from "@/schema/forms";
+import { count } from "drizzle-orm";
 import { z } from "zod";
+import { waitlist } from "@repo/db/schema";
 
 export const earlyAccessRouter = {
   getWaitlistCount: o
@@ -12,11 +14,16 @@ export const earlyAccessRouter = {
     })
     .input(z.void())
     .output(z.object({ count: z.number() }))
-    .handler(async ({ context }) => {
-      console.log(context.headers);
-      //TODO :: get waitlist count from the db
+    .handler(async ({ context: ctx, errors }) => {
+      const waitlistCount = await ctx.db.select({ count: count() }).from(waitlist);
 
-      return { count: 100 };
+      if (!waitlistCount[0]) {
+        throw errors.INTERNAL_SERVER_ERROR;
+      }
+
+      return {
+        count: waitlistCount[0].count,
+      };
     }),
 
   joinWaitlist: o
