@@ -3,7 +3,8 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always",
   },
   "eslint.rules.customizations": [
     {
@@ -37,11 +38,17 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.tsx": "${dirname} - page",
+    "**/app/**/layout.tsx": "${dirname} - layout",
+    "**/components/**/index.tsx": "${dirname} - component"
+  },
   "tailwindCSS.classFunctions": [
     "cva",
     "cx"
   ],
   "files.associations": {
+    "*.css": "tailwindcss",
     "wrangler.json": "jsonc"
   }
 }

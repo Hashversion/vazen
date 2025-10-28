@@ -4,6 +4,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   cacheComponents: true,
+  typedRoutes: true,
+
   async rewrites() {
     return [
       // posthog proxy
