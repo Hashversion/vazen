@@ -1,29 +1,18 @@
-:root {
-  --background: #f8f8f8;
-  --foreground: #000000;
-}
+@import "@repo/tokens/tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: var(--color-neutrals-onyx-100);
+  --foreground: var(--color-black);
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #dadade;
+  --background: var(--color-black);
+  --foreground: var(--color-neutrals-onyx-100);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@theme {
-  --font-sans-geist: geist;
-  --font-mono-commitlint-vazen: commitlint-mono-vazen;
 }

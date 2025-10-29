@@ -1,7 +1,7 @@
-import { fontsVariable } from "@repo/fonts";
-import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
 import "@/lib/orpc.server";
+import { fontsVariable } from "@repo/fonts";
+import type { Metadata } from "next";
 import "./styles.css";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className={fontsVariable} suppressHydrationWarning>
-      <body className="antialiased">
+      <body className="font-sans-geist antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>
