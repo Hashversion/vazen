@@ -1,8 +1,8 @@
-import { o } from "@/orpc";
-import { waitlistSchema } from "@/schema/forms";
 import { count } from "drizzle-orm";
 import { z } from "zod";
 import { waitlist } from "@repo/db/schema";
+import { o } from "../orpc";
+import { waitlistSchema } from "../schema/forms";
 
 export const earlyAccessRouter = {
   getWaitlistCount: o

@@ -1,7 +1,11 @@
-import "server-only";
 import { os } from "@orpc/server";
-import { z } from "zod";
 import { getDb } from "@repo/db";
+import "server-only";
+import { z } from "zod";
+
+interface CloudflareEnv {
+  HYPERDRIVE: Hyperdrive;
+}
 
 export async function createORPCContext(options: { headers: Headers; CloudflareEnv: CloudflareEnv }) {
   return {
@@ -23,3 +27,5 @@ export const o = os.$context<ORPCContext>().errors({
     message: "Internal Server Error.",
   },
 });
+
+export const createContext = createORPCContext;

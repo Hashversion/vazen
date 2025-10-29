@@ -1,7 +1,7 @@
-import { router } from "@/orpc/root";
 import { createORPCClient } from "@orpc/client";
 import { RPCLink } from "@orpc/client/fetch";
 import { createTanstackQueryUtils } from "@orpc/tanstack-query";
+import { router } from "@repo/api/router";
 import type { RouterClient } from "@orpc/server";
 
 declare global {

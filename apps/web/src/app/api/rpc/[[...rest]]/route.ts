@@ -1,7 +1,7 @@
-import { createORPCContext } from "@/orpc";
-import { router } from "@/orpc/root";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { RPCHandler } from "@orpc/server/fetch";
+import { createContext } from "@repo/api/orpc";
+import { router } from "@repo/api/router";
 
 const handler = new RPCHandler(router);
 
@@ -9,7 +9,7 @@ async function handleRequest(request: Request) {
   const { env: CloudflareEnv } = getCloudflareContext();
   const { response } = await handler.handle(request, {
     prefix: "/api/rpc",
-    context: await createORPCContext({ headers: request.headers, CloudflareEnv }),
+    context: await createContext({ headers: request.headers, CloudflareEnv }),
   });
 
   return response ?? new Response("Not found", { status: 404 });
