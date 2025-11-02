@@ -2,16 +2,26 @@ import { Button } from "@repo/ui";
 import ThemeToggle from "@/components/theme-toggle";
 import { WaitlistCount } from "@/components/waitlist-count";
 
-export default async function Home() {
+export default function Page() {
   return (
     <>
-      <h1 className="text-6xl">Vazen</h1>
-      <p className="font-mono-commitmono-vazen">
-        A strict monorepo starter to kickstart projects, ideas, and experiments.
-      </p>
-      <Button>Button</Button>
-      <ThemeToggle />
-      <WaitlistCount />
+      <header className="py-9">
+        <div className="mx-auto max-w-400 px-3">
+          <div className="space-y-3 text-center">
+            <h1 className="font-sans-asul text-6xl">Vazen</h1>
+            <p>A strict monorepo starter to kickstart projects, ideas, and experiments.</p>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div className="mx-auto max-w-400 px-3">
+          <div className="flex items-center justify-center gap-2">
+            <Button size={"sm"}>Button</Button>
+            <ThemeToggle />
+            <WaitlistCount />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

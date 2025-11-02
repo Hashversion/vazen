@@ -7,7 +7,7 @@ export default function ThemeToggle() {
 
   return (
     <>
-      <Button onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}>
+      <Button size={"sm"} onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}>
         <span>switch theme</span>
       </Button>
     </>

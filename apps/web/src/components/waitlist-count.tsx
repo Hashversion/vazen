@@ -9,7 +9,7 @@ export function WaitlistCount() {
   return (
     <div>
       {isLoading && <p>loading....</p>}
-      {isError && <p>Something went wrong</p>}
+      {isError && <p>failed to fetch waitlist count!</p>}
       {data?.count}
     </div>
   );
