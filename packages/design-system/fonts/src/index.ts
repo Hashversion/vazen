@@ -1,7 +1,7 @@
 import { geist } from "./google/geist";
-import { commitlintMonoVazen } from "./local/commitlint-mono-vazen";
+import { commitMonoVazen } from "./local/commitmono-vazen";
 
-const fonts = [geist, commitlintMonoVazen];
+const fonts = [geist, commitMonoVazen];
 const fontsVariable = fonts.map((font) => font.variable).join(" ");
 
-export { geist, commitlintMonoVazen, fontsVariable };
+export { commitMonoVazen, fontsVariable, geist };

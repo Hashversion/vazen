@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 
-export const commitlintMonoVazen = localFont({
+export const commitMonoVazen = localFont({
   src: [
     {
       path: "./CommitMonoVazen.woff2",
@@ -9,6 +9,6 @@ export const commitlintMonoVazen = localFont({
     },
   ],
   display: "swap",
-  variable: "--font-mono-commitlint-vazen",
+  variable: "--font-mono-commitmono-vazen",
   preload: true,
 });
