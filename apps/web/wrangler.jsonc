@@ -3,16 +3,13 @@
   "name": "vazen-web",
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-09-15",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "binding": "ASSETS",
-    "directory": ".open-next/assets"
+    "directory": ".open-next/assets",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "preview_urls": true,
   "hyperdrive": [
@@ -20,28 +17,28 @@
       "binding": "HYPERDRIVE",
       // id :: random uuid for local dev or empty
       "id": "9707b7d4-c675-46fb-9268-c34b343a0cd3",
-      "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db"
-    }
+      "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
+    },
   ],
   "placement": {
-    "mode": "smart"
+    "mode": "smart",
   },
   "env": {
     "stage": {
       "hyperdrive": [
         {
           "binding": "HYPERDRIVE",
-          "id": "1160c9c349e14aeb9fe2427a0f0fe86e",
-        }
-      ]
+          "id": "27e9b0ddd58543be936c0964628c11fb",
+        },
+      ],
     },
     "production": {
       "routes": [
         {
           "pattern": "vazen.dev",
-          "custom_domain": true
-        }
-      ]
-    }
-  }
+          "custom_domain": true,
+        },
+      ],
+    },
+  },
 }
