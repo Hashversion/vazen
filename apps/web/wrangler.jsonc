@@ -39,6 +39,13 @@
           "custom_domain": true,
         },
       ],
+      "hyperdrive": [
+        {
+          "binding": "HYPERDRIVE",
+          // replace below id with the production hyperdrive id.
+          "id": "1df9e250-b937-11f0-9fb0-7778443cf125",
+        },
+      ],
     },
   },
 }
