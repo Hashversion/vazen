@@ -46,8 +46,8 @@ catalogs:
       specifier: 0.0.1
       version: 0.0.1
     tailwindcss:
-      specifier: 4.1.15
-      version: 4.1.15
+      specifier: 4.1.17
+      version: 4.1.17
     tsdown:
       specifier: 0.15.9
       version: 0.15.9
@@ -173,7 +173,7 @@ importers:
         version: 9.38.0(jiti@2.6.1)
       tailwindcss:
         specifier: 'catalog:'
-        version: 4.1.15
+        version: 4.1.17
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -309,13 +309,13 @@ importers:
         version: 0.10.3(@terrazzo/cli@0.10.3(hono@4.10.3))
       '@terrazzo/plugin-tailwind':
         specifier: ^0.3.3
-        version: 0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.15)
+        version: 0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.17)
       culori:
         specifier: ^4.0.2
         version: 4.0.2
       tailwindcss:
         specifier: 'catalog:'
-        version: 4.1.15
+        version: 4.1.17
 
   packages/design-system/ui:
     dependencies:
@@ -6466,11 +6466,11 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tailwindcss@4.1.15:
-    resolution: {integrity: sha512-k2WLnWkYFkdpRv+Oby3EBXIyQC8/s1HOFMBUViwtAh6Z5uAozeUSMQlIsn/c6Q2iJzqG6aJT3wdPaRNj70iYxQ==}
-
   tailwindcss@4.1.16:
     resolution: {integrity: sha512-pONL5awpaQX4LN5eiv7moSiSPd/DLDzKVRJz8Q9PgzmAdd1R4307GQS2ZpfiN7ZmekdQrfhZZiSE5jkLR4WNaA==}
+
+  tailwindcss@4.1.17:
+    resolution: {integrity: sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q==}
 
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
@@ -10570,12 +10570,12 @@ snapshots:
       '@terrazzo/cli': 0.10.3(hono@4.10.3)
       '@terrazzo/token-tools': 0.10.3
 
-  '@terrazzo/plugin-tailwind@0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.15)':
+  '@terrazzo/plugin-tailwind@0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.17)':
     dependencies:
       '@terrazzo/cli': 0.10.3(hono@4.10.3)
       '@terrazzo/plugin-css': 0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3))
       '@terrazzo/token-tools': 0.10.3
-      tailwindcss: 4.1.15
+      tailwindcss: 4.1.17
 
   '@terrazzo/token-tools@0.10.3':
     dependencies:
@@ -13864,9 +13864,9 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  tailwindcss@4.1.15: {}
-
   tailwindcss@4.1.16: {}
+
+  tailwindcss@4.1.17: {}
 
   tapable@2.3.0: {}
 
