@@ -9,6 +9,6 @@ export const commitMonoVazen = localFont({
     },
   ],
   display: "swap",
-  variable: "--font-mono-commitmono-vazen",
+  variable: "--font-commitmono-vazen",
   preload: true,
 });

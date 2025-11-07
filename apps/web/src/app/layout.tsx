@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className={fontsVariable} suppressHydrationWarning>
-      <body className="font-sans-geist antialiased">
+      <body className="font-geist antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>

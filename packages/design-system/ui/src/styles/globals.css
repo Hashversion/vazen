@@ -3,13 +3,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: var(--color-neutrals-onyx-100);
+  --background: var(--color-onyx-100);
   --foreground: var(--color-black);
 }
 
 .dark {
   --background: var(--color-black);
-  --foreground: var(--color-neutrals-onyx-100);
+  --foreground: var(--color-onyx-100);
 }
 
 body {

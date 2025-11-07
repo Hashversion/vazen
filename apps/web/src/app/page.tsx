@@ -8,7 +8,7 @@ export default function Page() {
       <header className="py-9">
         <div className="mx-auto max-w-400 px-3">
           <div className="space-y-3 text-center">
-            <h1 className="font-sans-asul text-6xl">Vazen</h1>
+            <h1 className="font-asul text-6xl">Vazen</h1>
             <p>A strict monorepo starter to kickstart projects, ideas, and experiments.</p>
           </div>
         </div>
