@@ -2,7 +2,7 @@ import { defineConfig } from "@terrazzo/cli";
 import css from "@terrazzo/plugin-css";
 import js from "@terrazzo/plugin-js";
 import tailwind from "@terrazzo/plugin-tailwind";
-import { toOklch } from "./src/utils/to-oklch.js";
+import { toOklch } from "#utils/to-oklch.js";
 
 export default defineConfig({
   tokens: ["./src/tokens/tokens.json", "./src/tokens/easings.json"],
