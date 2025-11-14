@@ -1,20 +1,20 @@
-import "server-only";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
+import "server-only";
 import * as schema from "./schema";
 
 interface CloudflareEnv {
   HYPERDRIVE: Hyperdrive;
 }
 
-export function getDb(CloudflareEnv: CloudflareEnv) {
+export function getDb(cloudflareEnv: CloudflareEnv) {
   const globalDb = globalThis as unknown as {
     conn: postgres.Sql | undefined;
   };
 
   const client =
     globalDb.conn ??
-    postgres(CloudflareEnv.HYPERDRIVE.connectionString, {
+    postgres(cloudflareEnv.HYPERDRIVE.connectionString, {
       prepare: false,
       max: 5,
       fetch_types: false,

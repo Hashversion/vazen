@@ -5,10 +5,10 @@ import { createContext } from "@repo/api/orpc";
 import { router } from "@repo/api/router";
 import "server-only";
 
-const { env: CloudflareEnv } = await getCloudflareContext({ async: true });
+const { env: cloudflareEnv } = await getCloudflareContext({ async: true });
 globalThis.$client = createRouterClient(router, {
   context: async () => {
-    const ctx = await createContext({ headers: await headers(), CloudflareEnv: CloudflareEnv });
+    const ctx = await createContext({ headers: await headers(), cloudflareEnv });
     return ctx;
   },
 });

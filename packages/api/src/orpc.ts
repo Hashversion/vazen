@@ -7,9 +7,9 @@ interface CloudflareEnv {
   HYPERDRIVE: Hyperdrive;
 }
 
-export async function createORPCContext(options: { headers: Headers; CloudflareEnv: CloudflareEnv }) {
+export async function createORPCContext(options: { headers: Headers; cloudflareEnv: CloudflareEnv }) {
   return {
-    db: getDb(options.CloudflareEnv),
+    db: getDb(options.cloudflareEnv),
     ...options,
   };
 }

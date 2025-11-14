@@ -6,10 +6,10 @@ import { router } from "@repo/api/router";
 const handler = new RPCHandler(router);
 
 async function handleRequest(request: Request) {
-  const { env: CloudflareEnv } = getCloudflareContext();
+  const { env: cloudflareEnv } = getCloudflareContext();
   const { response } = await handler.handle(request, {
     prefix: "/api/rpc",
-    context: await createContext({ headers: request.headers, CloudflareEnv }),
+    context: await createContext({ headers: request.headers, cloudflareEnv }),
   });
 
   return response ?? new Response("Not found", { status: 404 });
