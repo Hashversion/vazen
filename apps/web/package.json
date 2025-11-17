@@ -17,6 +17,7 @@
     "typegen:worker:stage": "wrangler types --env-interface CloudflareEnv -e=stage"
   },
   "dependencies": {
+    "@c15t/nextjs": "^1.8.1",
     "@opennextjs/cloudflare": "^1.11.0",
     "@orpc/client": "catalog:",
     "@orpc/server": "catalog:",
