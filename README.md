@@ -29,8 +29,8 @@
 - [**react.js v19**](https://react.dev/) :: latest react with react compiler enabled
 - [**typescript**](https://www.typescriptlang.org/) :: type-safe development
 - [**tailwind CSS v4**](https://tailwindcss.com/) :: utility-first CSS framework
-- [**oRPC**]() :: alternative to tRPC with openapi support out of the box
-- [**tanstack query**](https://orpc.unnoq.com/) :: for efficient query & api handling
+- [**oRPC**](https://orpc.unnoq.com/) :: alternative to tRPC with openapi support out of the box
+- [**tanstack query**](https://tanstack.com/query/latest) :: for efficient query & api handling
 - [**supabase**](https://supabase.com/) :: postgresql on supabase, i'm assuming you're just starting up, for growth you may move to aws RDS later
 - [**drizzle ORM**](https://orm.drizzle.team/) :: database interactions & cloudflare hyperdrive integration (turning regional database to distributed database by cashing reads)
 - [**better-auth**](https://better-auth.com/) :: the most comprehensive authentication framework
