@@ -13,7 +13,7 @@
     "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
-    "typegen:worker": "wrangler types",
+    "typegen:worker": "wrangler types --env-interface CloudflareEnv",
     "typegen:worker:stage": "wrangler types --env-interface CloudflareEnv -e=stage"
   },
   "dependencies": {
@@ -24,10 +24,12 @@
     "@orpc/tanstack-query": "catalog:",
     "@repo/analytics": "workspace:*",
     "@repo/api": "workspace:*",
+    "@repo/auth": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/fonts": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tanstack/react-query": "^5.90.5",
+    "better-auth": "catalog:",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",

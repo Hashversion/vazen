@@ -12,6 +12,9 @@
     "enabled": true,
   },
   "preview_urls": true,
+  "placement": {
+    "mode": "smart",
+  },
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
@@ -20,9 +23,12 @@
       "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
     },
   ],
-  "placement": {
-    "mode": "smart",
-  },
+  "kv_namespaces": [
+    {
+      "binding": "AUTH_CACHE",
+      "id": "<DEVELOPMENT_BINDING_ID>",
+    },
+  ],
   "env": {
     "stage": {
       "hyperdrive": [
@@ -31,7 +37,14 @@
           "id": "27e9b0ddd58543be936c0964628c11fb",
         },
       ],
+      "kv_namespaces": [
+        {
+          "binding": "AUTH_CACHE",
+          "id": "<STAGE_BINDING_ID>",
+        },
+      ],
     },
+
     "production": {
       "routes": [
         {
@@ -44,6 +57,12 @@
           "binding": "HYPERDRIVE",
           // replace below id with the production hyperdrive id.
           "id": "27e9b0ddd58543be936c0964628c11fb",
+        },
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "AUTH_CACHE",
+          "id": "<PRODUCTION_BINDING_ID>",
         },
       ],
     },

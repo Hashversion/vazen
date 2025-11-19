@@ -1,21 +1,18 @@
 {
-  "name": "@repo/api",
+  "name": "@repo/auth",
   "version": "0.0.0",
   "private": true,
-  "license": "MIT",
   "type": "module",
   "exports": {
-    "./orpc": "./src/orpc.ts",
-    "./router": "./src/router.ts"
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts"
   },
   "scripts": {
     "clean": "rm -rf node_modules .turbo",
-    "lint": "eslint --max-warnings 0"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@repo/auth": "workspace:*",
-    "@repo/db": "workspace:*",
-    "drizzle-orm": "catalog:"
+    "@repo/db": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",
@@ -23,12 +20,10 @@
     "@repo/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "eslint-plugin-drizzle": "^0.2.3",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@orpc/server": "catalog:",
-    "server-only": "catalog:",
-    "zod": "catalog:"
+    "better-auth": "catalog:",
+    "server-only": "catalog:"
   }
 }
