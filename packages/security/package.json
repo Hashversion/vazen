@@ -1,0 +1,20 @@
+{
+  "name": "@repo/security",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./security-headers": "./src/security-headers.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "@nosecone/next": "1.0.0-beta.15"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

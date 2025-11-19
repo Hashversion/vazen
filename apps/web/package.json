@@ -27,6 +27,7 @@
     "@repo/auth": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/fonts": "workspace:*",
+    "@repo/security": "workspace:*",
     "@repo/ui": "workspace:*",
     "@tanstack/react-query": "^5.90.5",
     "better-auth": "catalog:",
