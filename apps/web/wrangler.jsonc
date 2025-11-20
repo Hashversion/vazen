@@ -40,7 +40,7 @@
       "kv_namespaces": [
         {
           "binding": "AUTH_CACHE",
-          "id": "<STAGE_BINDING_ID>",
+          "id": "4fed3baa113a4394aa56bc74c16063c1",
         },
       ],
     },
