@@ -1,7 +1,7 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
-  "globalPassThroughEnv": ["NODE_ENV", "DATABASE_URL", "NEXT_RUNTIME"],
+  "globalPassThroughEnv": ["NODE_ENV", "DATABASE_URL", "NEXT_RUNTIME", "ANALYZE"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
