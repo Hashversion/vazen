@@ -1,5 +1,5 @@
-import * as Sentry from "@sentry/nextjs";
-import { initSentry } from "@repo/telemetry/sentry/server";
+// import * as Sentry from "@sentry/nextjs";
+// import { initSentry } from "@repo/telemetry/sentry/server";
 
 export async function register() {
   // Conditionally import if facing runtime compatibility issues
@@ -7,7 +7,7 @@ export async function register() {
     await import("@/lib/orpc.server");
   }
 
-  initSentry();
+  // initSentry();
 }
 
-export const onRequestError = Sentry.captureRequestError;
+// export const onRequestError = Sentry.captureRequestError;
