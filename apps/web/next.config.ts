@@ -1,10 +1,11 @@
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+import { withSentry } from "@repo/telemetry/sentry/with-sentry";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactCompiler: true,
-  cacheComponents: true,
+  cacheComponents: false,
   typedRoutes: true,
 
   async rewrites() {
@@ -25,4 +26,5 @@ const nextConfig: NextConfig = {
 };
 
 initOpenNextCloudflareForDev();
-export default nextConfig;
+
+export default withSentry(nextConfig);

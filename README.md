@@ -5,7 +5,7 @@
 > [!note]
 >
 > - this setup is done for quickly spinning up an MVP with a waitlist
-> - more features will be added soon :: including payments, feature flags, rate limiting, captchas, i18n, monitoring, testing, and etc
+> - more features will be added soon :: including payments, feature flags, rate limiting, captchas, i18n, testing, and etc
 > - documentation is yet to be developed
 
 ## what is vazen?
@@ -25,7 +25,7 @@
 
 ### Tech Stack
 
-- [**next.js v16**](https://nextjs.org/) :: react framework with app router & cache components enabled
+- [**next.js v16**](https://nextjs.org/) :: react framework with app router
 - [**react.js v19**](https://react.dev/) :: latest react with react compiler enabled
 - [**typescript**](https://www.typescriptlang.org/) :: type-safe development
 - [**tailwind CSS v4**](https://tailwindcss.com/) :: utility-first CSS framework
@@ -36,6 +36,7 @@
 - [**better-auth**](https://better-auth.com/) :: the most comprehensive authentication framework
 - [**react-email**](https://react.email/) :: library for building email templates in react
 - [**posthog**](https://posthog.com/) :: web analytics
+- [**sentry**](https://sentry.io/) :: error monitoring & logging
 - [**c15t**](https://c15t.com/) :: developer-first consent management (cookie compliance)
 
 ### CI/CD

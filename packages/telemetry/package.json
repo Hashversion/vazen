@@ -1,17 +1,22 @@
 {
-  "name": "@repo/security",
+  "name": "@repo/telemetry",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "imports": {
+    "#env": "./env.ts"
+  },
   "exports": {
-    "./security-headers": "./src/security-headers.ts"
+    "./sentry/with-sentry": "./src/sentry/with-sentry.ts",
+    "./sentry/client": "./src/sentry/client.ts",
+    "./sentry/server": "./src/sentry/server.ts"
   },
   "scripts": {
     "check-types": "tsc --noEmit",
     "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
-    "@nosecone/next": "1.0.0-beta.15",
+    "@sentry/nextjs": "catalog:",
     "@t3-oss/env-nextjs": "catalog:",
     "zod": "catalog:"
   },
