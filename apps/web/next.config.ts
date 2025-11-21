@@ -1,5 +1,5 @@
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-import { withSentry } from "@repo/telemetry/sentry/with-sentry";
+// import { withSentry } from "@repo/telemetry/sentry/with-sentry";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -27,4 +27,6 @@ const nextConfig: NextConfig = {
 
 initOpenNextCloudflareForDev();
 
-export default withSentry(nextConfig);
+// withSentry(nextConfig);
+
+export default nextConfig;

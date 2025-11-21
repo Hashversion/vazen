@@ -1,8 +1,10 @@
-import * as Sentry from "@sentry/nextjs";
+// import * as Sentry from "@sentry/nextjs";
+
 import { initializeAnalytics as initPostHog } from "@repo/analytics/posthog";
-import { initSentry } from "@repo/telemetry/sentry/client";
+
+// import { initSentry } from "@repo/telemetry/sentry/client";
 
 initPostHog();
-initSentry();
+// initSentry();
 
-export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
+// export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
