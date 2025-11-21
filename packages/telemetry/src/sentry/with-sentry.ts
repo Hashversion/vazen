@@ -15,6 +15,7 @@ export const sentryConfig: Parameters<typeof withSentryConfig>[1] = {
    */
   tunnelRoute: "/_proxy/sentry",
   disableLogger: true,
+  telemetry: false,
 };
 
 /**
