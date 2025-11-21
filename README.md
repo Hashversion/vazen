@@ -22,6 +22,7 @@
 - [**eslint**](https://eslint.org/) :: code linting
 - [**docker**](https://www.docker.com/) :: docker compose for local dev setup
 - [**t3-oss/env-nextjs**](https://env.t3.gg/) :: never build your apps with invalid environment variables again
+- [**nosecone**](https://docs.arcjet.com/nosecone/quick-start) :: arcjet nosecone is an open source library that helps set security headers
 
 ### Tech Stack
 
@@ -31,7 +32,7 @@
 - [**tailwind CSS v4**](https://tailwindcss.com/) :: utility-first CSS framework
 - [**oRPC**](https://orpc.unnoq.com/) :: alternative to tRPC with openapi support out of the box
 - [**tanstack query**](https://tanstack.com/query/latest) :: for efficient query & api handling
-- [**supabase**](https://supabase.com/) :: postgresql on supabase, i'm assuming you're just starting up, for growth you may move to aws RDS later
+- [**supabase**](https://supabase.com/) :: postgresql on supabase
 - [**drizzle ORM**](https://orm.drizzle.team/) :: database interactions & cloudflare hyperdrive integration (turning regional database to distributed database by cashing reads)
 - [**better-auth**](https://better-auth.com/) :: the most comprehensive authentication framework
 - [**react-email**](https://react.email/) :: library for building email templates in react
@@ -45,7 +46,7 @@
 
 ### Deployment
 
-- [**cloudflare**](https://cloudflare.com/): ideal for quick prototypes, MVPs, and fast startups. cloudflare is cost-efficient and eliminates the overhead of more complex cloud setups. AWS can become expensive if cost is a concern during early stages.
+- [**cloudflare**](https://cloudflare.com/): ideal for quick prototypes, MVPs, and fast startups. cloudflare is cost-efficient and eliminates the overhead of more complex cloud setups.
 
 ### License
 
