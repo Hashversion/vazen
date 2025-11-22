@@ -5,8 +5,12 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./orpc": "./src/orpc.ts",
-    "./router": "./src/router.ts"
+    ".": {
+      "default": "./src/orpc.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
   },
   "scripts": {
     "clean": "rm -rf node_modules .turbo",

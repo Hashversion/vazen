@@ -1,9 +1,9 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { RPCHandler } from "@orpc/server/fetch";
-import { createContext } from "@repo/api/orpc";
-import { router } from "@repo/api/router";
+import { createContext } from "@repo/api/context";
+import { appRouter } from "@repo/api/routers/index";
 
-const handler = new RPCHandler(router);
+const handler = new RPCHandler(appRouter);
 
 async function handleRequest(request: Request) {
   const { env: cloudflareEnv } = getCloudflareContext();

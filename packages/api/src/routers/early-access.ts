@@ -1,17 +1,11 @@
 import { count } from "drizzle-orm";
 import { z } from "zod";
 import { waitlist } from "@repo/db/schema";
-import { o } from "../orpc";
+import { publicProcedure } from "../orpc";
 import { waitlistSchema } from "../schema/forms";
 
 export const earlyAccessRouter = {
-  getWaitlistCount: o
-    .route({
-      method: "GET",
-      path: "/waitlist",
-      summary: "",
-      tags: [],
-    })
+  getWaitlistCount: publicProcedure
     .input(z.void())
     .output(z.object({ count: z.number() }))
     .handler(async ({ context: ctx, errors }) => {
@@ -26,13 +20,7 @@ export const earlyAccessRouter = {
       };
     }),
 
-  joinWaitlist: o
-    .route({
-      method: "POST",
-      path: "/waitlist",
-      summary: "",
-      tags: [],
-    })
+  joinWaitlist: publicProcedure
     .input(waitlistSchema)
     .output(z.object({ message: z.string(), email: z.email() }))
     .handler(async ({ input: { name, email } }) => {

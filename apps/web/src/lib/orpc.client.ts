@@ -1,11 +1,11 @@
 import { createORPCClient } from "@orpc/client";
 import { RPCLink } from "@orpc/client/fetch";
 import { createTanstackQueryUtils } from "@orpc/tanstack-query";
-import { router } from "@repo/api/router";
+import { type AppRouter } from "@repo/api/routers/index";
 import type { RouterClient } from "@orpc/server";
 
 declare global {
-  var $client: RouterClient<typeof router> | undefined;
+  var $client: RouterClient<AppRouter> | undefined;
 }
 
 const link = new RPCLink({
@@ -21,6 +21,6 @@ const link = new RPCLink({
 /**
  * Fallback to client-side client if server-side client is not available.
  */
-export const client: RouterClient<typeof router> = globalThis.$client ?? createORPCClient(link);
+export const client: RouterClient<AppRouter> = globalThis.$client ?? createORPCClient(link);
 
 export const orpc = createTanstackQueryUtils(client);
