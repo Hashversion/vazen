@@ -1,0 +1,24 @@
+{
+  "name": "@repo/payments",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./polar": "./src/polar.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "@polar-sh/sdk": "^0.41.5",
+    "@t3-oss/env-nextjs": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@polar-sh/better-auth": "catalog:"
+  }
+}

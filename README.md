@@ -4,9 +4,8 @@
 
 > [!note]
 >
-> - this setup is done for quickly spinning up an MVP with a waitlist
-> - more features will be added soon :: including payments, feature flags, rate limiting, captchas, i18n, testing, and etc
-> - documentation is yet to be developed
+> - documentation coming soon.
+> - more features will be added soon :: including feature flags, rate limiting, captchas, i18n, testing, and etc
 
 ## what is vazen?
 
@@ -35,6 +34,7 @@
 - [**supabase**](https://supabase.com/) :: postgresql on supabase
 - [**drizzle ORM**](https://orm.drizzle.team/) :: database interactions & cloudflare hyperdrive integration (turning regional database to distributed database by cashing reads)
 - [**better-auth**](https://better-auth.com/) :: the most comprehensive authentication framework
+- [**polar.sh**](https://polar.sh/) :: payments infrastructure
 - [**react-email**](https://react.email/) :: library for building email templates in react
 - [**posthog**](https://posthog.com/) :: web analytics
 - [**sentry**](https://sentry.io/) :: error monitoring & logging

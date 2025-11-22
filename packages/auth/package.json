@@ -12,7 +12,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@repo/db": "workspace:*"
+    "@polar-sh/better-auth": "catalog:",
+    "@repo/db": "workspace:*",
+    "@repo/payments": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",
