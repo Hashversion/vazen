@@ -31,7 +31,7 @@
 - [**tailwind CSS v4**](https://tailwindcss.com/) :: utility-first CSS framework
 - [**oRPC**](https://orpc.unnoq.com/) :: alternative to tRPC with openapi support out of the box
 - [**tanstack query**](https://tanstack.com/query/latest) :: for efficient query & api handling
-- [**supabase**](https://supabase.com/) :: postgresql on supabase
+- [**database**](https://postgresql.org/) :: postgresql
 - [**drizzle ORM**](https://orm.drizzle.team/) :: database interactions & cloudflare hyperdrive integration (turning regional database to distributed database by cashing reads)
 - [**better-auth**](https://better-auth.com/) :: the most comprehensive authentication framework
 - [**polar.sh**](https://polar.sh/) :: payments infrastructure
