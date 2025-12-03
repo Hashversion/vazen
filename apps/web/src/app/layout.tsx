@@ -6,6 +6,7 @@ import "./styles.css";
 
 export const metadata: Metadata = {
   title: "Vazen",
+  description: "A production grade monorepo starter to build full-stack applications on cloudflare",
 };
 
 export default function RootLayout({
