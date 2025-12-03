@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - stage
+concurrency:
+  group: deploy-stage
+  cancel-in-progress: true
 jobs:
   deploy:
     environment: stage
@@ -55,5 +58,7 @@ jobs:
           SENTRY_PROJECT: ${{secrets.SENTRY_PROJECT}}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          POLAR_ACCESS_TOKEN: ${{ secrets.POLAR_ACCESS_TOKEN }}
+          POLAR_WEBHOOK_SECRET: ${{ secrets.POLAR_WEBHOOK_SECRET }}
         timeout-minutes: 11
         run: pnpm deploy:stage
