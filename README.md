@@ -5,7 +5,6 @@
 > [!note]
 >
 > - documentation coming soon.
-> - more features will be added soon :: including feature flags, rate limiting, captchas, i18n, testing, and etc
 
 ## what is vazen?
 

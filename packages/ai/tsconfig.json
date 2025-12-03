@@ -1,0 +1,8 @@
+{
+  "extends": "@repo/typescript-config/app/dom",
+  "compilerOptions": {
+    "types": ["@cloudflare/workers-types", "@types/node"]
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
