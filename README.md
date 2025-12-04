@@ -37,7 +37,7 @@
 - [**react-email**](https://react.email/) :: library for building email templates in react
 - [**posthog**](https://posthog.com/) :: web analytics
 - [**sentry**](https://sentry.io/) :: error monitoring & logging
-- [**c15t**](https://c15t.com/) :: developer-first consent management (cookie compliance)
+- [**c15t**](https://c15t.com/) :: developer-first consent management (cookie compliance) :: see benchmark results: [cookiebench.com](https://cookiebench.com/)
 
 ### CI/CD
 
