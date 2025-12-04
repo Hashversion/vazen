@@ -4,54 +4,54 @@
 
 > [!note]
 >
-> - documentation coming soon.
+> - Documentation coming soon.
 
-## what is vazen?
+## What is vazen?
 
-- [**vazen**](https://vazen.dev) :: velocity + (minimal & simplicity)
+- [**Vazen**](https://vazen.dev) :: velocity + (minimal & simplicity)
 
 ### Dev Toolkit
 
-- [**pnpm**](https://pnpm.io) :: package manager
-- [**commitlint**](https://commitlint.js.org/) :: enforces conventional commits
-- [**lefthook**](https://lefthook.dev/) :: handles pre-commit hooks
-- [**knip**](https://knip.dev) :: removes dead code and declutters your project
-- [**prettier**](https://prettier.io/) :: code formatting
-- [**eslint**](https://eslint.org/) :: code linting
-- [**docker**](https://www.docker.com/) :: docker compose for local dev setup
-- [**t3-oss/env-nextjs**](https://env.t3.gg/) :: never build your apps with invalid environment variables again
-- [**nosecone**](https://docs.arcjet.com/nosecone/quick-start) :: arcjet nosecone is an open source library that helps set security headers
+- [**pnpm**](https://pnpm.io) :: Fast, disk-efficient package manager
+- [**commitlint**](https://commitlint.js.org/) :: Enforces Conventional Commits
+- [**lefthook**](https://lefthook.dev/) :: Fast Git hooks (pre-commit, pre-push, etc.)
+- [**knip**](https://knip.dev) :: Dead-code analysis and project cleanup
+- [**Prettier**](https://prettier.io/) :: Opinionated code formatter
+- [**ESLint**](https://eslint.org/) :: Static analysis and linting
+- [**Docker**](https://www.docker.com/) :: Local development via Docker Compose
+- [**t3-oss/env-nextjs**](https://env.t3.gg/) :: Validates environment variables at build-time
+- [**Nosecone**](https://docs.arcjet.com/nosecone/quick-start) :: Security headers made simple (Arcjet’s OSS library)
 
 ### Tech Stack
 
-- [**next.js v16**](https://nextjs.org/) :: react framework with app router
-- [**react.js v19**](https://react.dev/) :: latest react with react compiler enabled
-- [**typescript**](https://www.typescriptlang.org/) :: type-safe development
-- [**tailwind CSS v4**](https://tailwindcss.com/) :: utility-first CSS framework
-- [**oRPC**](https://orpc.unnoq.com/) :: alternative to tRPC with openapi support out of the box
-- [**tanstack query**](https://tanstack.com/query/latest) :: for efficient query & api handling
-- [**database**](https://postgresql.org/) :: postgresql
-- [**drizzle ORM**](https://orm.drizzle.team/) :: database interactions & cloudflare hyperdrive integration (turning regional database to distributed database by cashing reads)
-- [**better-auth**](https://better-auth.com/) :: the most comprehensive authentication framework
-- [**polar.sh**](https://polar.sh/) :: payments infrastructure
-- [**react-email**](https://react.email/) :: library for building email templates in react
-- [**posthog**](https://posthog.com/) :: web analytics
-- [**sentry**](https://sentry.io/) :: error monitoring & logging
-- [**c15t**](https://c15t.com/) :: developer-first consent management (cookie compliance) :: see benchmark results: [cookiebench.com](https://cookiebench.com/)
+- [**Next.js v16**](https://nextjs.org/) :: React framework with app router
+- [**React.js v19**](https://react.dev/) :: Latest React with React compiler enabled
+- [**Typescript**](https://www.typescriptlang.org/) :: Type-safe development
+- [**Tailwind CSS v4**](https://tailwindcss.com/) :: Utility-first CSS framework
+- [**oRPC**](https://orpc.unnoq.com/) :: tRPC alternative with built-in OpenAPI support
+- [**Tanstack Query**](https://tanstack.com/query/latest) :: Data fetching and caching
+- [**PostgreSQL**](https://postgresql.org/) :: Primary database
+- [**Drizzle ORM**](https://orm.drizzle.team/) :: Type-safe queries + Cloudflare Hyperdrive integration (cached, geo-distributed reads)
+- [**Better-Auth**](https://better-auth.com/) :: Comprehensive authentication framework
+- [**Polar**](https://polar.sh/) :: Payments infrastructure
+- [**React Email**](https://react.email/) :: React-based email templates
+- [**PostHog**](https://posthog.com/) :: Web analytics
+- [**Sentry**](https://sentry.io/) :: Error monitoring & logging
+- [**c15t**](https://c15t.com/) :: Developer-first consent management (cookie compliance); see benchmark results: [**cookiebench.com**](https://cookiebench.com)
 
 ### CI/CD
 
-- gihtub actions (CI) :: a stage deployment setup for the next.js app
+- GitHub Actions (CI) :: Stage deployment pipeline for the Next.js application
 
 ### Deployment
 
-- [**cloudflare**](https://cloudflare.com/): ideal for quick prototypes, MVPs, and fast startups. cloudflare is cost-efficient and eliminates the overhead of more complex cloud setups.
+- [**Cloudflare**](https://cloudflare.com/) :: Optimized for rapid prototypes, MVPs, and fast-moving startups; cost-efficient with minimal infrastructure overhead.
 
 ### License
 
-- this project is licensed under the MIT license :: see the [LICENSE](LICENSE) file for details.
+- MIT License :: See the [LICENSE](LICENSE) file for details.
 
 ### Acknowledgments
 
-- built by [Hashversion](https://hashversion.com) & [Powenel](https://powenel.com) (design-system)
-- inspired by modern web development best practices
+- Built by [Hashversion](https://hashversion.com) & [Powenel](https://powenel.com) (design-system)
+- Inspired by modern web development best practices
