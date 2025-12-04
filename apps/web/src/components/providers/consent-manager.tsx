@@ -9,40 +9,27 @@ export function ConsentManagementProvider({ children }: { children: ReactNode })
         mode: "offline",
         consentCategories: ["necessary", "measurement"],
         ignoreGeoLocation: true, // Useful for development to always view the banner.
-        legalLinks: {
-          privacyPolicy: {
-            href: "/privacy",
-            label: "Privacy Policy",
-          },
-          termsOfService: {
-            href: "/terms",
-            label: "Terms of Service",
-          },
-        },
       }}
     >
       <CookieBanner
         theme={{
           "banner.overlay": "!bg-black/30",
           "banner.root": "!font-geist",
-          "banner.card": "!rounded-none !border",
-          "banner.footer.accept-button": "!rounded-none",
-          "banner.footer.reject-button": "!rounded-none",
-          "banner.footer.customize-button": "!rounded-none ",
+          "banner.footer.accept-button": "!rounded-full",
+          "banner.footer.reject-button": "!rounded-full",
+          "banner.footer.customize-button": "!rounded-full",
         }}
-        legalLinks={["privacyPolicy", "termsOfService"]}
         scrollLock={true}
         trapFocus={true}
       />
       <ConsentManagerDialog
-        legalLinks={["privacyPolicy", "termsOfService"]}
         theme={{
-          "dialog.root": "!rounded-none !font-geist",
+          "dialog.root": "!font-geist",
           "dialog.footer": "!hidden",
-          "widget.accordion.item": "!rounded-none",
-          "widget.footer.reject-button": "!rounded-none",
-          "widget.footer.accept-button": "!rounded-none",
-          "widget.footer.save-button": "!rounded-none ",
+          "widget.accordion.item": "!rounded-full",
+          "widget.footer.reject-button": "!rounded-full",
+          "widget.footer.accept-button": "!rounded-full",
+          "widget.footer.save-button": "!rounded-full",
         }}
       />
       <ConsentManagerClient>{children}</ConsentManagerClient>
