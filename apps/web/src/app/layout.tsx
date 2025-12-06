@@ -9,6 +9,20 @@ import "./styles.css";
 export const metadata: Metadata = {
   title: "Vazen",
   description: "A production grade monorepo starter to build full-stack applications on cloudflare",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/favicon-dark.png",
+        href: "/images/favicon-dark.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/favicon-light.png",
+        href: "/images/favicon-light.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
