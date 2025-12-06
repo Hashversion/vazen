@@ -1,5 +1,7 @@
 import { Providers } from "@/app/providers";
 import "@/lib/orpc.server";
+import { domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
 import type { Metadata } from "next";
 import "./styles.css";
@@ -16,9 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className={fontsVariable} suppressHydrationWarning>
-      <body className="font-geist antialiased">
-        <Providers>{children}</Providers>
-      </body>
+      <LazyMotion features={domAnimation}>
+        <m.body
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.23 }}
+          className="font-geist antialiased"
+        >
+          <Providers>{children}</Providers>
+        </m.body>
+      </LazyMotion>
     </html>
   );
 }

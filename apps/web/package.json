@@ -34,6 +34,7 @@
     "@sentry/nextjs": "catalog:",
     "@tanstack/react-query": "^5.90.5",
     "better-auth": "catalog:",
+    "motion": "^12.23.25",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
