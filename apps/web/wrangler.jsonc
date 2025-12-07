@@ -49,7 +49,7 @@
     "production": {
       "routes": [
         {
-          "pattern": "vazen.dev",
+          "pattern": "web.vazen.dev",
           "custom_domain": true,
         },
       ],
