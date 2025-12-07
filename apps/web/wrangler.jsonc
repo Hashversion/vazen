@@ -63,7 +63,8 @@
       "kv_namespaces": [
         {
           "binding": "AUTH_CACHE",
-          "id": "<PRODUCTION_BINDING_ID>",
+          // replace below id with the production kv id.
+          "id": "4fed3baa113a4394aa56bc74c16063c1",
         },
       ],
     },
