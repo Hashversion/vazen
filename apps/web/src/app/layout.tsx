@@ -1,5 +1,6 @@
 import { Providers } from "@/app/providers";
 import "@/lib/orpc.server";
+import { type Viewport } from "next";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
@@ -23,6 +24,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
