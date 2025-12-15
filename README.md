@@ -2,7 +2,7 @@
 
 [![VAZEN](./github.svg)](https://github.com/hashversion/vazen)
 
-> [!note]
+> [!IMPORTANT]
 >
 > - Documentation coming soon.
 
@@ -21,6 +21,16 @@
 - [**Docker**](https://www.docker.com/) :: Local development via Docker Compose
 - [**t3-oss/env-nextjs**](https://env.t3.gg/) :: Validates environment variables at build-time
 - [**Nosecone**](https://docs.arcjet.com/nosecone/quick-start) :: Security headers made simple (Arcjet’s OSS library)
+
+> [!NOTE]
+>
+> - [**VisBug**](https://github.com/GoogleChromeLabs/ProjectVisBug) is an open-source in-browser design and debugging tool that lets you visually inspect, edit, and experiment with live webpages—directly in production or prototype states.
+> - Ideal for designers and content creators who want design-tool interactions inside the browser.
+> - Install VisBug for your browser:
+>   [Chrome](https://chrome.google.com/webstore/detail/cdockenadnadldjbbgcallicgledbeoc) ·
+>   [Firefox](https://addons.mozilla.org/en-US/firefox/addon/visbug/) ·
+>   [Safari](https://apps.apple.com/app/id1538509686) ·
+>   [Edge](https://microsoftedge.microsoft.com/addons/detail/visbug/kdmdoinnkaeognnpegpkepdnggeaodkn)
 
 ### Tech Stack
 
