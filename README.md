@@ -1,4 +1,4 @@
-# [Vazen](https://vazen.dev)
+# Vazen
 
 [![VAZEN](./github.svg)](https://github.com/hashversion/vazen)
 
