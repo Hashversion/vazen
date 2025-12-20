@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "next build --webpack",
-    "check-types": "next typegen && tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "clean": "rm -rf node_modules .next .open-next .wrangler .turbo",
     "deploy:production": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=production",
     "deploy:stage": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=stage",

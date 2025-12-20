@@ -20,10 +20,10 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "check-types": "tsc --noEmit",
     "clean": "rm -rf node_modules dist .turbo",
     "dev": "tsdown --clean --watch",
-    "lint": "eslint --max-warnings 0"
+    "lint": "eslint --max-warnings 0",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check-types": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "clean": "rm -rf node_modules .turbo dist",
     "dev": "email dev --dir ./src/templates --port 4444"
   },
