@@ -3,9 +3,8 @@ pre-commit:
   commands:
     prettier:
       glob: "**/*.{css,ts,tsx,md,mdx}"
-      run: |
-        pnpm prettier --write {staged_files}
-        git add {staged_files}
+      run: pnpm prettier --write {staged_files}
+      stage_fixed: true
 
 # Validate commit messages
 commit-msg:
