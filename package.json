@@ -20,6 +20,7 @@
     "db:push": "turbo run db:push",
     "db:studio": "turbo run db:studio",
     "dev:web": "turbo dev -F web...",
+    "postinstall": "lefthook install",
     "docker:clean": "docker compose down -v",
     "docker:down": "docker compose down",
     "docker:up": "docker compose up -d",
