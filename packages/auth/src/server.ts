@@ -1,8 +1,8 @@
+import { passkey } from "@better-auth/passkey";
 import { polar } from "@polar-sh/better-auth";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin, magicLink } from "better-auth/plugins";
-import { passkey } from "better-auth/plugins/passkey";
 import { getDb } from "@repo/db";
 import { polarOptions } from "@repo/payments/polar";
 import "server-only";

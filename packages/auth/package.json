@@ -12,6 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@better-auth/passkey": "^1.4.7",
     "@polar-sh/better-auth": "catalog:",
     "@repo/db": "workspace:*",
     "@repo/payments": "workspace:*"
