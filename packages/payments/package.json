@@ -10,7 +10,7 @@
     "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
-    "@polar-sh/sdk": "^0.41.5",
+    "@polar-sh/sdk": "^0.42.0",
     "@t3-oss/env-nextjs": "catalog:",
     "zod": "catalog:"
   },
