@@ -58,8 +58,8 @@ catalogs:
       specifier: 0.0.1
       version: 0.0.1
     tailwindcss:
-      specifier: 4.1.17
-      version: 4.1.17
+      specifier: 4.1.18
+      version: 4.1.18
     tsdown:
       specifier: 0.15.9
       version: 0.15.9
@@ -209,7 +209,7 @@ importers:
         version: 9.38.0(jiti@2.6.1)
       tailwindcss:
         specifier: 'catalog:'
-        version: 4.1.17
+        version: 4.1.18
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -407,13 +407,13 @@ importers:
         version: 0.10.3(@terrazzo/cli@0.10.3(hono@4.10.3))
       '@terrazzo/plugin-tailwind':
         specifier: ^0.3.3
-        version: 0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.17)
+        version: 0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.18)
       culori:
         specifier: ^4.0.2
         version: 4.0.2
       tailwindcss:
         specifier: 'catalog:'
-        version: 4.1.17
+        version: 4.1.18
 
   packages/design-system/ui:
     dependencies:
@@ -8356,8 +8356,8 @@ packages:
   tailwindcss@4.1.16:
     resolution: {integrity: sha512-pONL5awpaQX4LN5eiv7moSiSPd/DLDzKVRJz8Q9PgzmAdd1R4307GQS2ZpfiN7ZmekdQrfhZZiSE5jkLR4WNaA==}
 
-  tailwindcss@4.1.17:
-    resolution: {integrity: sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q==}
+  tailwindcss@4.1.18:
+    resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
 
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
@@ -10220,7 +10220,7 @@ snapshots:
       '@orpc/zod': 1.8.1(@opentelemetry/api@1.9.0)(@orpc/contract@1.8.1(@opentelemetry/api@1.9.0))(@orpc/server@1.8.1(@opentelemetry/api@1.9.0))(zod@4.1.12)
       base-x: 5.0.1
       defu: 6.1.4
-      drizzle-orm: 0.44.6(@opentelemetry/api@1.9.0)(@types/pg@8.15.5)(kysely@0.27.6)(postgres@3.4.7)
+      drizzle-orm: 0.44.6(@cloudflare/workers-types@4.20251014.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.5)(kysely@0.28.8)(postgres@3.4.7)
       fumadb: 0.1.2(drizzle-orm@0.44.6(@opentelemetry/api@1.9.0)(@types/pg@8.15.5)(kysely@0.27.6)(postgres@3.4.7))(typeorm@0.3.27(reflect-metadata@0.2.2))
       kysely: 0.27.6
       neverthrow: 8.2.0
@@ -13902,7 +13902,7 @@ snapshots:
       '@sentry/bundler-plugin-core': 4.6.1
       unplugin: 1.0.1
       uuid: 9.0.1
-      webpack: 5.102.1(esbuild@0.25.10)
+      webpack: 5.102.1
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -14670,12 +14670,12 @@ snapshots:
       '@terrazzo/cli': 0.10.3(hono@4.10.3)
       '@terrazzo/token-tools': 0.10.3
 
-  '@terrazzo/plugin-tailwind@0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.17)':
+  '@terrazzo/plugin-tailwind@0.3.3(@terrazzo/cli@0.10.3(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3)))(tailwindcss@4.1.18)':
     dependencies:
       '@terrazzo/cli': 0.10.3(hono@4.10.3)
       '@terrazzo/plugin-css': 0.10.4(@terrazzo/cli@0.10.3(hono@4.10.3))
       '@terrazzo/token-tools': 0.10.3
-      tailwindcss: 4.1.17
+      tailwindcss: 4.1.18
 
   '@terrazzo/token-tools@0.10.3':
     dependencies:
@@ -15766,13 +15766,6 @@ snapshots:
       kysely: 0.28.8
       postgres: 3.4.7
 
-  drizzle-orm@0.44.6(@opentelemetry/api@1.9.0)(@types/pg@8.15.5)(kysely@0.27.6)(postgres@3.4.7):
-    optionalDependencies:
-      '@opentelemetry/api': 1.9.0
-      '@types/pg': 8.15.5
-      kysely: 0.27.6
-      postgres: 3.4.7
-
   dts-resolver@2.1.2(oxc-resolver@11.11.1):
     optionalDependencies:
       oxc-resolver: 11.11.1
@@ -16445,7 +16438,7 @@ snapshots:
       semver: 7.7.3
       zod: 4.1.12
     optionalDependencies:
-      drizzle-orm: 0.44.6(@opentelemetry/api@1.9.0)(@types/pg@8.15.5)(kysely@0.27.6)(postgres@3.4.7)
+      drizzle-orm: 0.44.6(@cloudflare/workers-types@4.20251014.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.5)(kysely@0.28.8)(postgres@3.4.7)
       typeorm: 0.3.27(reflect-metadata@0.2.2)
 
   function-bind@1.1.2: {}
@@ -18543,7 +18536,7 @@ snapshots:
 
   tailwindcss@4.1.16: {}
 
-  tailwindcss@4.1.17: {}
+  tailwindcss@4.1.18: {}
 
   tapable@2.3.0: {}
 
@@ -18557,6 +18550,15 @@ snapshots:
       webpack: 5.102.1(esbuild@0.25.10)
     optionalDependencies:
       esbuild: 0.25.10
+
+  terser-webpack-plugin@5.3.14(webpack@5.102.1):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.31
+      jest-worker: 27.5.1
+      schema-utils: 4.3.3
+      serialize-javascript: 6.0.2
+      terser: 5.44.0
+      webpack: 5.102.1
 
   terser@5.16.9:
     dependencies:
@@ -18937,6 +18939,38 @@ snapshots:
   webpack-sources@3.3.3: {}
 
   webpack-virtual-modules@0.5.0: {}
+
+  webpack@5.102.1:
+    dependencies:
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.8
+      '@types/json-schema': 7.0.15
+      '@webassemblyjs/ast': 1.14.1
+      '@webassemblyjs/wasm-edit': 1.14.1
+      '@webassemblyjs/wasm-parser': 1.14.1
+      acorn: 8.15.0
+      acorn-import-phases: 1.0.4(acorn@8.15.0)
+      browserslist: 4.27.0
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.18.3
+      es-module-lexer: 1.7.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.1
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 4.3.3
+      tapable: 2.3.0
+      terser-webpack-plugin: 5.3.14(webpack@5.102.1)
+      watchpack: 2.4.4
+      webpack-sources: 3.3.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
 
   webpack@5.102.1(esbuild@0.25.10):
     dependencies:
