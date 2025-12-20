@@ -25,7 +25,8 @@
     "docker:up": "docker compose up -d",
     "format": "prettier --write \"**/*.{css,ts,tsx,md,mdx}\"",
     "knip": "knip --no-exit-code",
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "turbo:devtools": "turbo devtools"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
@@ -37,7 +38,7 @@
     "lefthook": "^2.0.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
-    "turbo": "2.5.6",
+    "turbo": "2.7.0",
     "typescript": "catalog:"
   },
   "packageManager": "pnpm@10.18.1",
