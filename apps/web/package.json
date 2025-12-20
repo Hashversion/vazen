@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "next build --webpack",
-    "typecheck": "next typegen && tsc --noEmit",
+    "build:prod": "opennextjs-cloudflare build -e=production",
+    "build:stage": "opennextjs-cloudflare build -e=stage",
     "clean": "rm -rf node_modules .next .open-next .wrangler .turbo",
     "deploy:production": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=production",
     "deploy:stage": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -e=stage",
@@ -13,6 +14,7 @@
     "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit",
     "typegen:worker": "wrangler types --env-interface CloudflareEnv",
     "typegen:worker:stage": "wrangler types --env-interface CloudflareEnv -e=stage"
   },

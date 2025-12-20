@@ -11,8 +11,8 @@
   "type": "module",
   "scripts": {
     "build": "turbo build",
-    "build:web": "turbo build -F web...",
-    "typecheck": "turbo run typecheck",
+    "build:web:prod": "turbo build:prod -F web",
+    "build:web:stage": "turbo build:stage -F web",
     "clean": "turbo clean",
     "commit": "commit",
     "db:generate": "turbo run db:generate",
@@ -20,14 +20,15 @@
     "db:push": "turbo run db:push",
     "db:studio": "turbo run db:studio",
     "dev:web": "turbo dev -F web...",
-    "postinstall": "lefthook install",
     "docker:clean": "docker compose down -v",
     "docker:down": "docker compose down",
     "docker:up": "docker compose up -d",
     "format": "prettier --write \"**/*.{css,ts,tsx,md,mdx}\"",
+    "postinstall": "lefthook install",
     "knip": "knip --no-exit-code",
     "lint": "turbo lint",
-    "turbo:devtools": "turbo devtools"
+    "turbo:devtools": "turbo devtools",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
