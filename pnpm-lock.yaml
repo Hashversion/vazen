@@ -115,7 +115,7 @@ importers:
     dependencies:
       '@c15t/nextjs':
         specifier: ^1.8.1
-        version: 1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.3))
+        version: 1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.28)(use-sync-external-store@1.6.0(react@19.2.3))
       '@next/bundle-analyzer':
         specifier: ^16.0.3
         version: 16.1.0
@@ -149,15 +149,9 @@ importers:
       '@repo/security':
         specifier: workspace:*
         version: link:../../packages/security
-      '@repo/telemetry':
-        specifier: workspace:*
-        version: link:../../packages/telemetry
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/design-system/ui
-      '@sentry/nextjs':
-        specifier: 'catalog:'
-        version: 10.32.1(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.102.1)
       '@tanstack/react-query':
         specifier: ^5.90.5
         version: 5.90.12(react@19.2.3)
@@ -4262,11 +4256,6 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-gnu@4.54.0':
-    resolution: {integrity: sha512-WGt5J8Ij/rvyqpFexxk3ffKqqbLf9AqrTBbWDk7ApGUzaIs6V+s2s84kAxklFwmMF/vBNGrVdYgbblCOFFezMQ==}
-    cpu: [x64]
-    os: [linux]
-
   '@rollup/rollup-linux-x64-musl@4.53.3':
     resolution: {integrity: sha512-eoROhjcc6HbZCJr+tvVT8X4fW3/5g/WkGvvmwz/88sDtSJzO7r/blvoBDgISDiCjDRZmHpwud7h+6Q9JxFwq1Q==}
     cpu: [x64]
@@ -5385,10 +5374,6 @@ packages:
   ansi-styles@6.2.3:
     resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
     engines: {node: '>=12'}
-
-  ansis@3.17.0:
-    resolution: {integrity: sha512-0qWUglt9JEqLFr3w1I1pbrChn1grhaiAR2ocX1PP/flRmxgtwTzPFFFnfIlD6aMOLQZgSuCRlidD70lvx8yhzg==}
-    engines: {node: '>=14'}
 
   ansis@4.2.0:
     resolution: {integrity: sha512-HqZ5rWlFjGiV0tDm3UxxgNRqsOTniqoKZu0pIAfh7TZQMGuZK+hH0drySty0si0QXj1ieop4+SkSfPZBPPkHig==}
@@ -8178,11 +8163,6 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  resolve@1.22.11:
-    resolution: {integrity: sha512-RfqAvLnMl313r7c9oclB1HhUEAezcpLjz95wFH4LVuhk9JF/r22qmVP9AMmOU4vMX7Q8pN8jwNg/CSpdFnMjTQ==}
-    engines: {node: '>= 0.4'}
-    hasBin: true
-
   resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
@@ -8741,24 +8721,23 @@ packages:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
     engines: {node: '>= 0.4'}
 
-  typeorm@0.3.27:
-    resolution: {integrity: sha512-pNV1bn+1n8qEe8tUNsNdD8ejuPcMAg47u2lUGnbsajiNUr3p2Js1XLKQjBMH0yMRMDfdX8T+fIRejFmIwy9x4A==}
+  typeorm@0.3.28:
+    resolution: {integrity: sha512-6GH7wXhtfq2D33ZuRXYwIsl/qM5685WZcODZb7noOOcRMteM9KF2x2ap3H0EBjnSV0VO4gNAfJT5Ukp0PkOlvg==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     peerDependencies:
-      '@google-cloud/spanner': ^5.18.0 || ^6.0.0 || ^7.0.0
+      '@google-cloud/spanner': ^5.18.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       '@sap/hana-client': ^2.14.22
       better-sqlite3: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
       ioredis: ^5.0.4
       mongodb: ^5.8.0 || ^6.0.0
-      mssql: ^9.1.1 || ^10.0.1 || ^11.0.1
+      mssql: ^9.1.1 || ^10.0.0 || ^11.0.0 || ^12.0.0
       mysql2: ^2.2.5 || ^3.0.1
       oracledb: ^6.3.0
       pg: ^8.5.1
       pg-native: ^3.0.0
       pg-query-stream: ^4.0.0
       redis: ^3.1.1 || ^4.0.0 || ^5.0.14
-      reflect-metadata: ^0.1.14 || ^0.2.0
       sql.js: ^1.4.0
       sqlite3: ^5.0.3
       ts-node: ^10.7.0
@@ -10373,7 +10352,7 @@ snapshots:
 
   '@better-fetch/fetch@1.1.21': {}
 
-  '@c15t/backend@1.8.0(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(postgres@3.4.7)(typeorm@0.3.27(reflect-metadata@0.2.2))':
+  '@c15t/backend@1.8.0(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(postgres@3.4.7)(typeorm@0.3.28)':
     dependencies:
       '@c15t/logger': 1.0.1
       '@c15t/translations': 1.8.0
@@ -10389,7 +10368,7 @@ snapshots:
       base-x: 5.0.1
       defu: 6.1.4
       drizzle-orm: 0.44.7(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.9)(postgres@3.4.7)
-      fumadb: 0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.7))(typeorm@0.3.27(reflect-metadata@0.2.2))
+      fumadb: 0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.7))(typeorm@0.3.28)
       kysely: 0.27.6
       neverthrow: 8.2.0
       superjson: 2.2.6
@@ -10436,9 +10415,9 @@ snapshots:
       neverthrow: 8.2.0
       picocolors: 1.1.1
 
-  '@c15t/nextjs@1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.3))':
+  '@c15t/nextjs@1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.28)(use-sync-external-store@1.6.0(react@19.2.3))':
     dependencies:
-      '@c15t/react': 1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.3))
+      '@c15t/react': 1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.28)(use-sync-external-store@1.6.0(react@19.2.3))
       '@c15t/translations': 1.8.0
       next: 16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react: 19.2.3
@@ -10484,12 +10463,12 @@ snapshots:
       - use-sync-external-store
       - ws
 
-  '@c15t/react@1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.3))':
+  '@c15t/react@1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typeorm@0.3.28)(use-sync-external-store@1.6.0(react@19.2.3))':
     dependencies:
       '@radix-ui/react-accordion': 1.2.4(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@radix-ui/react-slot': 1.2.0(@types/react@19.2.7)(react@19.2.3)
       '@radix-ui/react-switch': 1.1.4(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      c15t: 1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react@19.2.3)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.3))
+      c15t: 1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react@19.2.3)(typeorm@0.3.28)(use-sync-external-store@1.6.0(react@19.2.3))
       clsx: 2.1.1
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
@@ -13517,9 +13496,6 @@ snapshots:
   '@rollup/rollup-linux-x64-gnu@4.53.3':
     optional: true
 
-  '@rollup/rollup-linux-x64-gnu@4.54.0':
-    optional: true
-
   '@rollup/rollup-linux-x64-musl@4.53.3':
     optional: true
 
@@ -13630,32 +13606,6 @@ snapshots:
       - supports-color
 
   '@sentry/core@10.32.1': {}
-
-  '@sentry/nextjs@10.32.1(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.102.1)':
-    dependencies:
-      '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.38.0
-      '@rollup/plugin-commonjs': 28.0.1(rollup@4.53.3)
-      '@sentry-internal/browser-utils': 10.32.1
-      '@sentry/bundler-plugin-core': 4.6.1
-      '@sentry/core': 10.32.1
-      '@sentry/node': 10.32.1
-      '@sentry/opentelemetry': 10.32.1(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.38.0)
-      '@sentry/react': 10.32.1(react@19.2.3)
-      '@sentry/vercel-edge': 10.32.1
-      '@sentry/webpack-plugin': 4.6.1(webpack@5.102.1)
-      next: 16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      resolve: 1.22.8
-      rollup: 4.53.3
-      stacktrace-parser: 0.1.11
-    transitivePeerDependencies:
-      - '@opentelemetry/context-async-hooks'
-      - '@opentelemetry/core'
-      - '@opentelemetry/sdk-trace-base'
-      - encoding
-      - react
-      - supports-color
-      - webpack
 
   '@sentry/nextjs@10.32.1(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.1.0(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.102.1)':
     dependencies:
@@ -14994,8 +14944,6 @@ snapshots:
 
   ansi-styles@6.2.3: {}
 
-  ansis@3.17.0: {}
-
   ansis@4.2.0: {}
 
   anymatch@3.1.3:
@@ -15234,9 +15182,9 @@ snapshots:
 
   bytes@3.1.2: {}
 
-  c15t@1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react@19.2.3)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.3)):
+  c15t@1.8.2(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.7)(immer@10.2.0)(postgres@3.4.7)(react@19.2.3)(typeorm@0.3.28)(use-sync-external-store@1.6.0(react@19.2.3)):
     dependencies:
-      '@c15t/backend': 1.8.0(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(postgres@3.4.7)(typeorm@0.3.27(reflect-metadata@0.2.2))
+      '@c15t/backend': 1.8.0(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/instrumentation@0.208.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(postgres@3.4.7)(typeorm@0.3.28)
       '@c15t/translations': 1.8.0
       '@orpc/client': 1.8.1(@opentelemetry/api@1.9.0)
       '@orpc/server': 1.8.1(@opentelemetry/api@1.9.0)
@@ -16369,18 +16317,18 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fumadb@0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.7))(typeorm@0.3.27(reflect-metadata@0.2.2)):
+  fumadb@0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.7))(typeorm@0.3.28):
     dependencies:
       '@clack/prompts': 0.11.0
       '@paralleldrive/cuid2': 2.3.1
       commander: 14.0.2
       kysely: 0.28.9
-      kysely-typeorm: 0.3.0(kysely@0.28.9)(typeorm@0.3.27(reflect-metadata@0.2.2))
+      kysely-typeorm: 0.3.0(kysely@0.28.9)(typeorm@0.3.28)
       semver: 7.7.3
       zod: 4.2.1
     optionalDependencies:
       drizzle-orm: 0.44.7(@cloudflare/workers-types@4.20251218.0)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.9)(postgres@3.4.7)
-      typeorm: 0.3.27(reflect-metadata@0.2.2)
+      typeorm: 0.3.28
 
   function-bind@1.1.2: {}
 
@@ -16896,10 +16844,10 @@ snapshots:
       typescript: 5.9.3
       zod: 4.2.1
 
-  kysely-typeorm@0.3.0(kysely@0.28.9)(typeorm@0.3.27(reflect-metadata@0.2.2)):
+  kysely-typeorm@0.3.0(kysely@0.28.9)(typeorm@0.3.28):
     dependencies:
       kysely: 0.28.9
-      typeorm: 0.3.27(reflect-metadata@0.2.2)
+      typeorm: 0.3.28
 
   kysely@0.27.6: {}
 
@@ -17212,7 +17160,7 @@ snapshots:
 
   neverthrow@8.2.0:
     optionalDependencies:
-      '@rollup/rollup-linux-x64-gnu': 4.54.0
+      '@rollup/rollup-linux-x64-gnu': 4.53.3
 
   next-themes@0.4.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
@@ -17592,7 +17540,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
       long: 5.3.2
 
   proxy-addr@2.0.7:
@@ -17785,7 +17733,7 @@ snapshots:
     dependencies:
       debug: 4.4.3
       module-details-from-path: 1.0.4
-      resolve: 1.22.11
+      resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
 
@@ -17803,12 +17751,6 @@ snapshots:
   resolve-from@5.0.0: {}
 
   resolve-pkg-maps@1.0.0: {}
-
-  resolve@1.22.11:
-    dependencies:
-      is-core-module: 2.16.1
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
 
   resolve@1.22.8:
     dependencies:
@@ -18499,10 +18441,10 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-  typeorm@0.3.27(reflect-metadata@0.2.2):
+  typeorm@0.3.28:
     dependencies:
       '@sqltools/formatter': 1.2.5
-      ansis: 3.17.0
+      ansis: 4.2.0
       app-root-path: 3.1.0
       buffer: 6.0.3
       dayjs: 1.11.19
