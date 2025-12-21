@@ -1,6 +1,5 @@
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-// import { withSentry } from "@repo/telemetry/sentry/with-sentry";
 import type { NextConfig } from "next";
 
 const bundleAnalyzer = withBundleAnalyzer({
