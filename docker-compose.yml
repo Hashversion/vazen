@@ -1,7 +1,7 @@
 services:
   db:
     container_name: vazen
-    image: postgres:18
+    image: postgres:17
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
