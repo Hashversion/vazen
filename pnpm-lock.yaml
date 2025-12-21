@@ -120,7 +120,7 @@ importers:
         specifier: ^16.0.3
         version: 16.1.0
       '@opennextjs/cloudflare':
-        specifier: ^1.13.0
+        specifier: ^1.14.7
         version: 1.14.7(next@16.0.10(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(wrangler@4.56.0(@cloudflare/workers-types@4.20251218.0))
       '@orpc/client':
         specifier: 'catalog:'
@@ -9258,7 +9258,7 @@ snapshots:
       '@aws-crypto/sha256-js': 3.0.0
       '@aws-crypto/supports-web-crypto': 3.0.0
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.956.0
       '@aws-sdk/util-locate-window': 3.953.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
@@ -9276,7 +9276,7 @@ snapshots:
   '@aws-crypto/sha256-js@3.0.0':
     dependencies:
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.956.0
       tslib: 1.14.1
 
   '@aws-crypto/sha256-js@5.2.0':
@@ -9295,7 +9295,7 @@ snapshots:
 
   '@aws-crypto/util@3.0.0':
     dependencies:
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.956.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
 
@@ -14574,7 +14574,7 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 24.10.4
+      '@types/node': 25.0.3
       form-data: 4.0.5
 
   '@types/node@18.19.130':
