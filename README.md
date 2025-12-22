@@ -38,7 +38,7 @@
 - [**React.js v19**](https://react.dev/) :: Latest React with React compiler enabled
 - [**Typescript**](https://www.typescriptlang.org/) :: Type-safe development
 - [**Tailwind CSS v4**](https://tailwindcss.com/) :: Utility-first CSS framework
-- [**oRPC**](https://orpc.unnoq.com/) :: tRPC alternative with built-in OpenAPI support
+- [**oRPC**](https://orpc.dev/) :: tRPC alternative with built-in OpenAPI support
 - [**Tanstack Query**](https://tanstack.com/query/latest) :: Data fetching and caching
 - [**PostgreSQL**](https://postgresql.org/) :: Primary database
 - [**Drizzle ORM**](https://orm.drizzle.team/) :: Type-safe queries + Cloudflare Hyperdrive integration (cached, geo-distributed reads)
