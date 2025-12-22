@@ -22,14 +22,14 @@ export const earlyAccessRouter = {
 
   joinWaitlist: publicProcedure
     .input(waitlistSchema)
-    .output(z.object({ message: z.string(), email: z.email() }))
-    .handler(async ({ input: { name, email } }) => {
+    .output(z.object({ message: z.string() }))
+    .handler(async ({ input }) => {
+      //TODO :: add rate-limiting
       //TODO :: put the user email in the db
+      console.log(input.email);
 
       return {
         message: "Yayy! you're on the waitlist",
-        name,
-        email,
       };
     }),
 };

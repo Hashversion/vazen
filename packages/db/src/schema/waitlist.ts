@@ -5,7 +5,6 @@ export const waitlist = pgTable("waitlist", {
   id: uuid()
     .primaryKey()
     .$defaultFn(() => v7()),
-  name: varchar({ length: 255 }).notNull(),
   email: varchar({ length: 255 }).unique().notNull(),
   joinedAt: timestamp({
     withTimezone: true,
