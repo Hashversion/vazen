@@ -5,16 +5,18 @@ packages:
   - quark/*
 
 catalog:
-  "@cloudflare/workers-types": 4.20251218.0
-  "@orpc/client": 1.13.0
-  "@orpc/server": 1.13.0
-  "@orpc/tanstack-query": 1.13.0
-  "@polar-sh/better-auth": 1.6.3
-  "@sentry/nextjs": 10.32.1
-  "@t3-oss/env-nextjs": 0.13.10
-  "@types/node": 24.10.4
-  "@types/react": 19.2.7
-  "@types/react-dom": 19.2.3
+  '@cloudflare/workers-types': 4.20251218.0
+  '@orpc/client': 1.13.0
+  '@orpc/openapi': 1.13.0
+  '@orpc/server': 1.13.0
+  '@orpc/tanstack-query': 1.13.0
+  '@orpc/zod': 1.13.0
+  '@polar-sh/better-auth': 1.6.3
+  '@sentry/nextjs': 10.32.1
+  '@t3-oss/env-nextjs': 0.13.10
+  '@types/node': 24.10.4
+  '@types/react': 19.2.7
+  '@types/react-dom': 19.2.3
   better-auth: 1.4.7
   drizzle-orm: 0.41.0
   eslint: 9.39.2
@@ -29,7 +31,7 @@ catalog:
   zod: 4.2.1
 
 onlyBuiltDependencies:
-  - "@sentry/cli"
+  - '@sentry/cli'
   - core-js
   - esbuild
   - lefthook
