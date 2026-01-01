@@ -1,3 +1,4 @@
+import { ReactScan } from "@/components/react-scan";
 import { Providers } from "@/app/providers";
 import "@/lib/orpc.server";
 import { type Viewport } from "next";
@@ -40,6 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className={fontsVariable} suppressHydrationWarning>
+      <ReactScan />
       <LazyMotion features={domAnimation}>
         <m.body
           initial={{ opacity: 0 }}
