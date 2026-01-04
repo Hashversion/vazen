@@ -20,6 +20,7 @@ export const securityHeadersOptions: NoseconeOptions = {
         "'unsafe-inline'",
         ...(isDev ? (["'unsafe-eval'"] as const) : []),
         "https://*.posthog.com",
+        "https://static.cloudflareinsights.com",
         "https://cdn.jsdelivr.net/npm/@scalar/api-reference",
       ],
       connectSrc: [
