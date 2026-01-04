@@ -41,7 +41,6 @@
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-scan": "^0.4.3",
     "zod": "catalog:"
   },
   "devDependencies": {
