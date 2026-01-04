@@ -1,0 +1,64 @@
+{
+  "color": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.white}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.black}"
+        }
+      }
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{color.black}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.white}"
+        }
+      }
+    },
+    "primary": {
+      "$type": "color",
+      "$value": "{color.black}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.white}"
+        }
+      }
+    },
+    "primary-foreground": {
+      "$type": "color",
+      "$value": "{color.white}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.black}"
+        }
+      }
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "{color.white}"
+    },
+    "secondary-foreground": {
+      "$type": "color",
+      "$value": "{color.black}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.onyx.400}"
+    },
+    "input": {
+      "$type": "color",
+      "$value": "{color.onyx.400}"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "{color.onyx.50}"
+    },
+    "destructive": {
+      "$type": "color",
+      "$value": "{color.coral-red.500}"
+    }
+  }
+}

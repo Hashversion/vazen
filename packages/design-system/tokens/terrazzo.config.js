@@ -2,15 +2,19 @@ import { defineConfig } from "@terrazzo/cli";
 import css from "@terrazzo/plugin-css";
 import js from "@terrazzo/plugin-js";
 import tailwind from "@terrazzo/plugin-tailwind";
-import { toOklch } from "#utils/to-oklch.js";
 
 export default defineConfig({
-  tokens: ["./src/tokens/tokens.json", "./src/tokens/easings.json"],
+  tokens: [
+    "./src/tokens/primitives/colors.json",
+    "./src/tokens/colors.json",
+    "./src/tokens/easings.json",
+    "./src/tokens/typography.json",
+  ],
   outDir: "./dist/",
   plugins: [
     css({
       skipBuild: true,
-      transform: (token) => toOklch(token),
+      legacyHex: true,
     }),
     js({ js: true }),
     tailwind({
@@ -22,6 +26,7 @@ export default defineConfig({
         font: ["typography.font-family.*"],
         ease: ["ease.*"],
       },
+      modeVariants: [{ variant: "dark", mode: "dark" }],
     }),
   ],
   lint: {

@@ -6,78 +6,9 @@ settings:
 
 catalogs:
   default:
-    '@cloudflare/workers-types':
-      specifier: 4.20251218.0
-      version: 4.20251218.0
-    '@orpc/client':
-      specifier: 1.13.0
-      version: 1.13.0
-    '@orpc/openapi':
-      specifier: 1.13.0
-      version: 1.13.0
-    '@orpc/server':
-      specifier: 1.13.0
-      version: 1.13.0
-    '@orpc/tanstack-query':
-      specifier: 1.13.0
-      version: 1.13.0
-    '@orpc/zod':
-      specifier: 1.13.0
-      version: 1.13.0
-    '@polar-sh/better-auth':
-      specifier: 1.6.3
-      version: 1.6.3
-    '@sentry/nextjs':
-      specifier: 10.32.1
-      version: 10.32.1
-    '@t3-oss/env-nextjs':
-      specifier: 0.13.10
-      version: 0.13.10
-    '@types/node':
-      specifier: 24.10.4
-      version: 24.10.4
-    '@types/react':
-      specifier: 19.2.7
-      version: 19.2.7
-    '@types/react-dom':
-      specifier: 19.2.3
-      version: 19.2.3
-    better-auth:
-      specifier: 1.4.7
-      version: 1.4.7
-    drizzle-orm:
-      specifier: 0.41.0
-      version: 0.41.0
-    eslint:
-      specifier: 9.39.2
-      version: 9.39.2
-    next:
-      specifier: 16.0.10
-      version: 16.0.10
-    react:
-      specifier: 19.2.3
-      version: 19.2.3
-    react-dom:
-      specifier: 19.2.3
-      version: 19.2.3
-    server-only:
-      specifier: 0.0.1
-      version: 0.0.1
     tailwindcss:
       specifier: 4.1.18
       version: 4.1.18
-    tsdown:
-      specifier: 0.18.1
-      version: 0.18.1
-    typescript:
-      specifier: 5.9.3
-      version: 5.9.3
-    wrangler:
-      specifier: 4.56.0
-      version: 4.56.0
-    zod:
-      specifier: 4.2.1
-      version: 4.2.1
 
 importers:
 
@@ -420,9 +351,6 @@ importers:
       '@terrazzo/plugin-tailwind':
         specifier: ^0.3.3
         version: 0.3.3(@terrazzo/cli@0.10.5(hono@4.10.3))(@terrazzo/plugin-css@0.10.4(@terrazzo/cli@0.10.5(hono@4.10.3)))(tailwindcss@4.1.18)
-      culori:
-        specifier: ^4.0.2
-        version: 4.0.2
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.18

@@ -16,7 +16,9 @@ export default function Page() {
       <section>
         <div className="mx-auto max-w-400 px-3">
           <div className="flex items-center justify-center gap-2">
-            <Button size={"sm"}>Button</Button>
+            <Button size={"sm"} variant={"destructive"}>
+              Button
+            </Button>
             <ThemeToggle />
             <WaitlistCount />
           </div>

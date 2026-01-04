@@ -25,7 +25,6 @@
     "@terrazzo/plugin-css": "^0.10.4",
     "@terrazzo/plugin-js": "^0.10.3",
     "@terrazzo/plugin-tailwind": "^0.3.3",
-    "culori": "^4.0.2",
     "tailwindcss": "catalog:"
   }
 }

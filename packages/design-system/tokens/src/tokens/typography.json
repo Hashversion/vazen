@@ -1,0 +1,18 @@
+{
+  "typography": {
+    "font-family": {
+      "geist": {
+        "$type": "string",
+        "$value": "geist"
+      },
+      "asul": {
+        "$type": "string",
+        "$value": "asul"
+      },
+      "commitmono-vazen": {
+        "$type": "string",
+        "$value": "commitmono-vazen"
+      }
+    }
+  }
+}
