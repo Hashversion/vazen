@@ -7,12 +7,12 @@
     "./posthog": "./src/posthog.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "clean": "rm -rf node_modules .turbo"
+    "clean": "rm -rf node_modules .turbo",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "catalog:",
-    "posthog-js": "^1.275.1",
+    "posthog-js": "^1.336.4",
     "zod": "catalog:"
   },
   "devDependencies": {
