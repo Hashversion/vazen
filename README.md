@@ -50,6 +50,13 @@
 - [**Sentry**](https://sentry.io/) :: Error monitoring & logging
 - [**c15t**](https://c15t.com/) :: Developer-first consent management (cookie compliance); see benchmark results: [**cookiebench.com**](https://cookiebench.com)
 
+### AI Agent Skills
+
+- React best practices
+- cloudflare :: platform & wrangler
+
+add more skills from [skills.sh](https://skills.sh)
+
 ### CI/CD
 
 - GitHub Actions (CI) :: Stage deployment pipeline for the Next.js application
