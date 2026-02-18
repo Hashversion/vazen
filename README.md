@@ -53,7 +53,8 @@
 ### AI Agent Skills
 
 - React best practices
-- cloudflare :: platform & wrangler
+- React doctor
+- Cloudflare :: platform & wrangler
 
 add more skills from [skills.sh](https://skills.sh)
 
