@@ -7,7 +7,7 @@ const polarClient = new Polar({
   /**
    * @see https://polar.sh/docs/integrate/sandbox
    */
-  server: "sandbox",
+  server: env().POLAR_ENVIRONMENT,
 });
 
 type PolarOptions = Parameters<typeof polar>[0];
