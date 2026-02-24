@@ -27,7 +27,8 @@
   "kv_namespaces": [
     {
       "binding": "AUTH_CACHE",
-      "id": "<DEVELOPMENT_BINDING_ID>",
+      // id :: random uuid for local dev or empty
+      "id": "830929fe-07bb-4c88-8c5f-12af46a6fc0b",
     },
   ],
   "env": {
@@ -35,17 +36,18 @@
       "hyperdrive": [
         {
           "binding": "HYPERDRIVE",
+          // replace below id with the staging hyperdrive id.
           "id": "27e9b0ddd58543be936c0964628c11fb",
         },
       ],
       "kv_namespaces": [
         {
           "binding": "AUTH_CACHE",
+          // replace below id with the staging kv id.
           "id": "4fed3baa113a4394aa56bc74c16063c1",
         },
       ],
     },
-
     "production": {
       "routes": [
         {
