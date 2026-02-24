@@ -44,7 +44,6 @@
 - React best practices
 - React doctor
 - Cloudflare :: platform & wrangler
-
 - add more skills from [skills.sh](https://skills.sh)
 
 ### CI/CD
