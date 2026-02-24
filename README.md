@@ -4,7 +4,6 @@
 
 > [!IMPORTANT]
 >
-> - Documentation coming soon.
 > - Demo site :: [web.vazen.dev](https://web.vazen.dev)
 
 ## What is vazen?
