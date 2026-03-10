@@ -8,7 +8,7 @@
       "dependencyDashboardApproval": true,
       "automerge": false,
       "groupName": "major and minor dependencies",
-      "schedule": ["before 5am every monday"]
+      "schedule": ["before 5am on monday"]
     },
     {
       "matchUpdateTypes": ["patch"],
@@ -16,7 +16,7 @@
       "automergeType": "pr",
       "platformAutomerge": true,
       "groupName": "patch dependencies",
-      "schedule": ["before 5am every monday"]
+      "schedule": ["before 5am on monday"]
     }
   ]
 }
