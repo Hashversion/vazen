@@ -7,10 +7,10 @@ packages:
 catalog:
   "@cloudflare/workers-types": 4.20260128.0
   "@orpc/client": 1.13.6
-  "@orpc/openapi": 1.13.5
-  "@orpc/server": 1.13.5
-  "@orpc/tanstack-query": 1.13.5
-  "@orpc/zod": 1.13.5
+  "@orpc/openapi": 1.13.6
+  "@orpc/server": 1.13.6
+  "@orpc/tanstack-query": 1.13.6
+  "@orpc/zod": 1.13.6
   "@polar-sh/better-auth": 1.6.3
   "@sentry/nextjs": 10.32.1
   "@t3-oss/env-nextjs": 0.13.10
@@ -19,7 +19,7 @@ catalog:
   "@types/react-dom": 19.2.3
   better-auth: 1.4.19
   drizzle-orm: 0.41.0
-  eslint: 9.39.3
+  eslint: 9.39.4
   next: 16.1.6
   react: 19.2.4
   react-dom: 19.2.4
