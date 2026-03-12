@@ -1,11 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommits"],
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "groupName": "dependencies",
-      "schedule": ["before 5am every monday"]
-    }
-  ]
+  "extends": ["config:recommended", ":preserveSemverRanges", "group:allNonMajor"],
+  "baseBranches": ["dev"]
 }
