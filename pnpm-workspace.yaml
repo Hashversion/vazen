@@ -6,7 +6,7 @@ packages:
 
 catalog:
   "@cloudflare/workers-types": 4.20260128.0
-  "@orpc/client": 1.13.0
+  "@orpc/client": 1.13.6
   "@orpc/openapi": 1.13.0
   "@orpc/server": 1.13.0
   "@orpc/tanstack-query": 1.13.0
