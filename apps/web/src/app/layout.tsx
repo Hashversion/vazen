@@ -1,5 +1,5 @@
 import { Providers } from "@/app/providers";
-import "@/lib/orpc.server";
+import "@/lib/orpc/server";
 import { type Viewport } from "next";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";

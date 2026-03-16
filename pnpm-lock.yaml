@@ -121,7 +121,7 @@ importers:
     dependencies:
       '@c15t/nextjs':
         specifier: ^1.8.5
-        version: 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@6.21.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@6.21.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)
+        version: 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@7.1.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@7.1.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)
       '@next/bundle-analyzer':
         specifier: ^16.1.6
         version: 16.1.6
@@ -146,9 +146,6 @@ importers:
       '@repo/analytics':
         specifier: workspace:*
         version: link:../../packages/analytics
-      '@repo/api':
-        specifier: workspace:*
-        version: link:../../packages/api
       '@repo/auth':
         specifier: workspace:*
         version: link:../../packages/auth
@@ -158,6 +155,9 @@ importers:
       '@repo/fonts':
         specifier: workspace:*
         version: link:../../packages/design-system/fonts
+      '@repo/rpc':
+        specifier: workspace:*
+        version: link:../../packages/rpc
       '@repo/security':
         specifier: workspace:*
         version: link:../../packages/security
@@ -172,7 +172,7 @@ importers:
         version: 5.90.21(react@19.2.4)
       better-auth:
         specifier: 'catalog:'
-        version: 1.5.5(@cloudflare/workers-types@4.20260316.1)(drizzle-kit@0.31.9)(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@6.21.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 1.5.5(@cloudflare/workers-types@4.20260316.1)(drizzle-kit@0.31.9)(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@7.1.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       motion:
         specifier: ^12.36.0
         version: 12.36.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -263,49 +263,6 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tooling/typescript-config
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
-
-  packages/api:
-    dependencies:
-      '@orpc/server':
-        specifier: 'catalog:'
-        version: 1.13.7(@opentelemetry/api@1.9.0)(ws@8.18.3)
-      '@repo/auth':
-        specifier: workspace:*
-        version: link:../auth
-      '@repo/db':
-        specifier: workspace:*
-        version: link:../db
-      drizzle-orm:
-        specifier: 'catalog:'
-        version: 0.45.1(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.12)(postgres@3.4.8)
-      server-only:
-        specifier: 'catalog:'
-        version: 0.0.1
-      zod:
-        specifier: 'catalog:'
-        version: 4.3.6
-    devDependencies:
-      '@cloudflare/workers-types':
-        specifier: 'catalog:'
-        version: 4.20260316.1
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../tooling/eslint-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../tooling/typescript-config
-      '@types/node':
-        specifier: 'catalog:'
-        version: 24.12.0
-      eslint:
-        specifier: 'catalog:'
-        version: 9.39.4(jiti@2.6.1)
-      eslint-plugin-drizzle:
-        specifier: ^0.2.3
-        version: 0.2.3(eslint@9.39.4(jiti@2.6.1))
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -525,6 +482,49 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tooling/typescript-config
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  packages/rpc:
+    dependencies:
+      '@orpc/server':
+        specifier: 'catalog:'
+        version: 1.13.7(@opentelemetry/api@1.9.0)(ws@8.18.3)
+      '@repo/auth':
+        specifier: workspace:*
+        version: link:../auth
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../db
+      drizzle-orm:
+        specifier: 'catalog:'
+        version: 0.45.1(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.12)(postgres@3.4.8)
+      server-only:
+        specifier: 'catalog:'
+        version: 0.0.1
+      zod:
+        specifier: 'catalog:'
+        version: 4.3.6
+    devDependencies:
+      '@cloudflare/workers-types':
+        specifier: 'catalog:'
+        version: 4.20260316.1
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript-config
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.12.0
+      eslint:
+        specifier: 'catalog:'
+        version: 9.39.4(jiti@2.6.1)
+      eslint-plugin-drizzle:
+        specifier: ^0.2.3
+        version: 0.2.3(eslint@9.39.4(jiti@2.6.1))
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -4991,9 +4991,6 @@ packages:
   '@types/webidl-conversions@7.0.3':
     resolution: {integrity: sha512-CiJJvcRtIgzadHCYXw7dqEnMNRjhGZlYK05Mj9OyktqV8uVT8fD2BFOB7S1uwBE3Kj2Z+4UyPmFw/Ixgw/LAlA==}
 
-  '@types/whatwg-url@11.0.5':
-    resolution: {integrity: sha512-coYR071JRaHa+xoEvvYqvnIHaVqaYrLPbsufM9BF63HkwI5Lgmy2QR8Q5K/lYDYo5AK82wOvSOS0UsLTpTG7uQ==}
-
   '@types/whatwg-url@13.0.0':
     resolution: {integrity: sha512-N8WXpbE6Wgri7KUSvrmQcqrMllKZ9uxkYWMt+mCSGwNc0Hsw9VQTW7ApqI4XNrx6/SaM2QQJCzMPDEXE058s+Q==}
 
@@ -5427,10 +5424,6 @@ packages:
     resolution: {integrity: sha512-ZC5Bd0LgJXgwGqUknZY/vkUQ04r8NXnJZ3yYi4vDmSiZmC/pdSN0NbNRPxZpbtO4uAfDUAFffO8IZoM3Gj8IkA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
-
-  bson@6.10.4:
-    resolution: {integrity: sha512-WIsKqkSC0ABoBJuT1LEX+2HEvNmNKKgnTAyd0fL8qzK4SH2i9NXg+t08YtdZp/V9IZ33cxe3iV4yM0qg8lMQng==}
-    engines: {node: '>=16.20.1'}
 
   bson@7.2.0:
     resolution: {integrity: sha512-YCEo7KjMlbNlyHhz7zAZNDpIpQbd+wOEHJYezv0nMYTn4x31eIUM2yomNNubclAt63dObUzKHWsBLJ9QcZNSnQ==}
@@ -7347,39 +7340,9 @@ packages:
   module-details-from-path@1.0.4:
     resolution: {integrity: sha512-EGWKgxALGMgzvxYF1UyGTy0HXX/2vHLkw6+NvDKW2jypWbHpjQuj4UMcqQWXHERJhVGKikolT06G3bcKe4fi7w==}
 
-  mongodb-connection-string-url@3.0.2:
-    resolution: {integrity: sha512-rMO7CGo/9BFwyZABcKAWL8UJwH/Kc2x0g72uhDWzG48URRax5TCIcJ7Rc3RZqffZzO/Gwff/jyKwCU9TN8gehA==}
-
   mongodb-connection-string-url@7.0.1:
     resolution: {integrity: sha512-h0AZ9A7IDVwwHyMxmdMXKy+9oNlF0zFoahHiX3vQ8e3KFcSP3VmsmfvtRSuLPxmyv2vjIDxqty8smTgie/SNRQ==}
     engines: {node: '>=20.19.0'}
-
-  mongodb@6.21.0:
-    resolution: {integrity: sha512-URyb/VXMjJ4da46OeSXg+puO39XH9DeQpWCslifrRn9JWugy0D+DvvBvkm2WxmHe61O/H19JM66p1z7RHVkZ6A==}
-    engines: {node: '>=16.20.1'}
-    peerDependencies:
-      '@aws-sdk/credential-providers': ^3.188.0
-      '@mongodb-js/zstd': ^1.1.0 || ^2.0.0
-      gcp-metadata: ^5.2.0
-      kerberos: ^2.0.1
-      mongodb-client-encryption: '>=6.0.0 <7'
-      snappy: ^7.3.2
-      socks: ^2.7.1
-    peerDependenciesMeta:
-      '@aws-sdk/credential-providers':
-        optional: true
-      '@mongodb-js/zstd':
-        optional: true
-      gcp-metadata:
-        optional: true
-      kerberos:
-        optional: true
-      mongodb-client-encryption:
-        optional: true
-      snappy:
-        optional: true
-      socks:
-        optional: true
 
   mongodb@7.1.0:
     resolution: {integrity: sha512-kMfnKunbolQYwCIyrkxNJFB4Ypy91pYqua5NargS/f8ODNSJxT03ZU3n1JqL4mCzbSih8tvmMEMLpKTT7x5gCg==}
@@ -9885,12 +9848,6 @@ snapshots:
       '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
 
-  '@better-auth/mongo-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(mongodb@6.21.0)':
-    dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0)
-      '@better-auth/utils': 0.3.1
-      mongodb: 6.21.0
-
   '@better-auth/mongo-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(mongodb@7.1.0)':
     dependencies:
       '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0)
@@ -9924,7 +9881,7 @@ snapshots:
 
   '@better-fetch/fetch@1.1.21': {}
 
-  '@c15t/backend@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(mongodb@6.21.0)(postgres@3.4.8)(typeorm@0.3.28(mongodb@6.21.0))(ws@8.18.3)':
+  '@c15t/backend@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(mongodb@7.1.0)(postgres@3.4.8)(typeorm@0.3.28(mongodb@7.1.0))(ws@8.18.3)':
     dependencies:
       '@c15t/logger': 1.0.1
       '@c15t/translations': 1.8.5
@@ -9940,7 +9897,7 @@ snapshots:
       base-x: 5.0.1
       defu: 6.1.4
       drizzle-orm: 0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.12)(postgres@3.4.8)
-      fumadb: 0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@6.21.0)(typeorm@0.3.28(mongodb@6.21.0))
+      fumadb: 0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@7.1.0)(typeorm@0.3.28(mongodb@7.1.0))
       kysely: 0.27.6
       neverthrow: 8.2.0
       superjson: 2.2.6
@@ -9988,9 +9945,9 @@ snapshots:
       neverthrow: 8.2.0
       picocolors: 1.1.1
 
-  '@c15t/nextjs@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@6.21.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@6.21.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)':
+  '@c15t/nextjs@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@7.1.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@7.1.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)':
     dependencies:
-      '@c15t/react': 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@6.21.0)(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@6.21.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)
+      '@c15t/react': 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@7.1.0)(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@7.1.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)
       '@c15t/translations': 1.8.5
       next: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
@@ -10037,12 +9994,12 @@ snapshots:
       - use-sync-external-store
       - ws
 
-  '@c15t/react@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@6.21.0)(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@6.21.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)':
+  '@c15t/react@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(immer@11.1.4)(mongodb@7.1.0)(postgres@3.4.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.28(mongodb@7.1.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)':
     dependencies:
       '@radix-ui/react-accordion': 1.2.12(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@radix-ui/react-slot': 1.2.4(@types/react@19.2.14)(react@19.2.4)
       '@radix-ui/react-switch': 1.1.4(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      c15t: 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.14)(immer@11.1.4)(mongodb@6.21.0)(postgres@3.4.8)(react@19.2.4)(typeorm@0.3.28(mongodb@6.21.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)
+      c15t: 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.14)(immer@11.1.4)(mongodb@7.1.0)(postgres@3.4.8)(react@19.2.4)(typeorm@0.3.28(mongodb@7.1.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3)
       clsx: 2.1.1
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -13967,7 +13924,7 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 24.12.0
+      '@types/node': 25.5.0
       form-data: 4.0.5
 
   '@types/node@18.19.130':
@@ -14010,10 +13967,6 @@ snapshots:
   '@types/use-sync-external-store@0.0.6': {}
 
   '@types/webidl-conversions@7.0.3': {}
-
-  '@types/whatwg-url@11.0.5':
-    dependencies:
-      '@types/webidl-conversions': 7.0.3
 
   '@types/whatwg-url@13.0.0':
     dependencies:
@@ -14408,13 +14361,13 @@ snapshots:
 
   baseline-browser-mapping@2.10.8: {}
 
-  better-auth@1.5.5(@cloudflare/workers-types@4.20260316.1)(drizzle-kit@0.31.9)(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@6.21.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  better-auth@1.5.5(@cloudflare/workers-types@4.20260316.1)(drizzle-kit@0.31.9)(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@7.1.0)(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0)
       '@better-auth/drizzle-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))
       '@better-auth/kysely-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(kysely@0.28.12)
       '@better-auth/memory-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)
-      '@better-auth/mongo-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(mongodb@6.21.0)
+      '@better-auth/mongo-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(mongodb@7.1.0)
       '@better-auth/prisma-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))(@better-auth/utils@0.3.1)
       '@better-auth/telemetry': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(@cloudflare/workers-types@4.20260316.1)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.12)(nanostores@1.2.0))
       '@better-auth/utils': 0.3.1
@@ -14430,7 +14383,7 @@ snapshots:
     optionalDependencies:
       drizzle-kit: 0.31.9
       drizzle-orm: 0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.12)(postgres@3.4.8)
-      mongodb: 6.21.0
+      mongodb: 7.1.0
       next: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -14528,8 +14481,6 @@ snapshots:
       node-releases: 2.0.36
       update-browserslist-db: 1.2.3(browserslist@4.28.1)
 
-  bson@6.10.4: {}
-
   bson@7.2.0: {}
 
   buffer-from@1.1.2: {}
@@ -14546,9 +14497,9 @@ snapshots:
 
   bytes@3.1.2: {}
 
-  c15t@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.14)(immer@11.1.4)(mongodb@6.21.0)(postgres@3.4.8)(react@19.2.4)(typeorm@0.3.28(mongodb@6.21.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3):
+  c15t@1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(@types/react@19.2.14)(immer@11.1.4)(mongodb@7.1.0)(postgres@3.4.8)(react@19.2.4)(typeorm@0.3.28(mongodb@7.1.0))(use-sync-external-store@1.6.0(react@19.2.4))(ws@8.18.3):
     dependencies:
-      '@c15t/backend': 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(mongodb@6.21.0)(postgres@3.4.8)(typeorm@0.3.28(mongodb@6.21.0))(ws@8.18.3)
+      '@c15t/backend': 1.8.5(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/instrumentation@0.211.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.6)(mongodb@7.1.0)(postgres@3.4.8)(typeorm@0.3.28(mongodb@7.1.0))(ws@8.18.3)
       '@c15t/translations': 1.8.5
       '@orpc/client': 1.13.6(@opentelemetry/api@1.9.0)
       '@orpc/server': 1.13.6(@opentelemetry/api@1.9.0)(ws@8.18.3)
@@ -15672,19 +15623,19 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fumadb@0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@6.21.0)(typeorm@0.3.28(mongodb@6.21.0)):
+  fumadb@0.1.2(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.27.6)(postgres@3.4.8))(mongodb@7.1.0)(typeorm@0.3.28(mongodb@7.1.0)):
     dependencies:
       '@clack/prompts': 0.11.0
       '@paralleldrive/cuid2': 2.3.1
       commander: 14.0.3
       kysely: 0.28.12
-      kysely-typeorm: 0.3.0(kysely@0.28.12)(typeorm@0.3.28(mongodb@6.21.0))
+      kysely-typeorm: 0.3.0(kysely@0.28.12)(typeorm@0.3.28(mongodb@7.1.0))
       semver: 7.7.4
       zod: 4.3.6
     optionalDependencies:
       drizzle-orm: 0.44.7(@cloudflare/workers-types@4.20260316.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(kysely@0.28.12)(postgres@3.4.8)
-      mongodb: 6.21.0
-      typeorm: 0.3.28(mongodb@6.21.0)
+      mongodb: 7.1.0
+      typeorm: 0.3.28(mongodb@7.1.0)
 
   function-bind@1.1.2: {}
 
@@ -16201,10 +16152,10 @@ snapshots:
       yaml: 2.8.2
       zod: 4.3.6
 
-  kysely-typeorm@0.3.0(kysely@0.28.12)(typeorm@0.3.28(mongodb@6.21.0)):
+  kysely-typeorm@0.3.0(kysely@0.28.12)(typeorm@0.3.28(mongodb@7.1.0)):
     dependencies:
       kysely: 0.28.12
-      typeorm: 0.3.28(mongodb@6.21.0)
+      typeorm: 0.3.28(mongodb@7.1.0)
 
   kysely@0.27.6: {}
 
@@ -16459,21 +16410,10 @@ snapshots:
 
   module-details-from-path@1.0.4: {}
 
-  mongodb-connection-string-url@3.0.2:
-    dependencies:
-      '@types/whatwg-url': 11.0.5
-      whatwg-url: 14.2.0
-
   mongodb-connection-string-url@7.0.1:
     dependencies:
       '@types/whatwg-url': 13.0.0
       whatwg-url: 14.2.0
-
-  mongodb@6.21.0:
-    dependencies:
-      '@mongodb-js/saslprep': 1.4.6
-      bson: 6.10.4
-      mongodb-connection-string-url: 3.0.2
 
   mongodb@7.1.0:
     dependencies:
@@ -17741,7 +17681,7 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-  typeorm@0.3.28(mongodb@6.21.0):
+  typeorm@0.3.28(mongodb@7.1.0):
     dependencies:
       '@sqltools/formatter': 1.2.5
       ansis: 4.2.0
@@ -17759,7 +17699,7 @@ snapshots:
       uuid: 11.1.0
       yargs: 17.7.2
     optionalDependencies:
-      mongodb: 6.21.0
+      mongodb: 7.1.0
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
