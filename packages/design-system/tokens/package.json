@@ -21,7 +21,7 @@
     "lint": "tz check"
   },
   "devDependencies": {
-    "@terrazzo/cli": "^0.10.3",
+    "@terrazzo/cli": "^0.10.5",
     "@terrazzo/plugin-css": "^0.10.4",
     "@terrazzo/plugin-js": "^0.10.3",
     "@terrazzo/plugin-tailwind": "^0.3.3",

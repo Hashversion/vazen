@@ -12,8 +12,8 @@
     "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
-    "ai": "^5.0.106",
-    "workers-ai-provider": "^2.0.0"
+    "ai": "^6.0.116",
+    "workers-ai-provider": "^3.1.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",

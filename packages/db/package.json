@@ -20,7 +20,7 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "catalog:",
     "drizzle-orm": "catalog:",
-    "postgres": "^3.4.7",
+    "postgres": "^3.4.8",
     "server-only": "catalog:",
     "uuid": "^13.0.0",
     "zod": "catalog:"
@@ -30,7 +30,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "catalog:",
-    "drizzle-kit": "^0.31.5",
+    "drizzle-kit": "^0.31.9",
     "eslint": "catalog:",
     "typescript": "catalog:"
   }
