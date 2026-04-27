@@ -18,7 +18,7 @@ catalog:
   "@orpc/client": 1.13.7
   "@orpc/server": 1.13.7
   "@orpc/tanstack-query": 1.13.7
-  "@orpc/openapi": 1.13.7
+  "@orpc/openapi": 1.13.9
   "@orpc/zod": 1.13.7
   "@polar-sh/better-auth": 1.8.3
   "@sentry/nextjs": 10.43.0
