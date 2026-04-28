@@ -1,16 +1,17 @@
 import { Providers } from "@/app/providers";
 import "@/lib/orpc/server";
+import "@/styles/styles.css";
 import { type Viewport } from "next";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
 import { token } from "@repo/tokens/js";
 import type { Metadata } from "next";
-import "./styles.css";
 
 export const metadata: Metadata = {
   title: "Vazen",
   description: "A production grade monorepo starter to build full-stack applications on cloudflare",
+  alternates: { canonical: "/" },
   icons: {
     icon: [
       {
