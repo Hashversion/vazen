@@ -19,6 +19,8 @@
     "db:migrate": "turbo run db:migrate",
     "db:push": "turbo run db:push",
     "db:studio": "turbo run db:studio",
+    "deploy:web:prod": "turbo deploy:prod -F web",
+    "deploy:web:stage": "turbo deploy:stage -F web",
     "dev:web": "turbo dev -F web...",
     "docker:clean": "docker compose down -v",
     "docker:down": "docker compose down",
