@@ -44,8 +44,12 @@ export const auth = (cloudflareEnv: CloudflareEnv) => {
     advanced: {
       cookiePrefix: "vazen",
       useSecureCookies: true,
+      ipAddress: {
+        ipAddressHeaders: ["cf-connecting-ip", "x-forwarded-for"],
+      },
     },
   });
 };
 
 export type Session = ReturnType<typeof auth>["$Infer"]["Session"];
+export type User = Session["user"];
