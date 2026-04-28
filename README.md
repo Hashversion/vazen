@@ -13,7 +13,7 @@
 - [**pnpm**](https://pnpm.io) :: Fast, disk-efficient package manager
 - [**commitlint**](https://commitlint.js.org/) :: Enforces Conventional Commits
 - [**lefthook**](https://lefthook.dev/) :: Fast Git hooks (pre-commit, pre-push, etc.)
-- [**knip**](https://knip.dev) :: Dead-code analysis and project cleanup
+- [**fallow**](https://fallow.tools) :: Dead-code analysis and project cleanup
 - [**Prettier**](https://prettier.io/) :: Opinionated code formatter
 - [**ESLint**](https://eslint.org/) :: Static analysis and linting
 - [**Docker**](https://www.docker.com/) :: Local development via Docker Compose

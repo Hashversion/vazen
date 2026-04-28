@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fallow-rs/fallow/main/schema.json",
+  "entry": [
+    "src/index.{js,jsx,mjs}",
+    "src/main.{js,jsx,mjs}"
+  ],
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*",
+      "packages/design-system/*",
+      "tooling/*"
+    ]
+  },
+  "rules": {}
+}

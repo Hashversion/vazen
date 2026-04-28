@@ -175,3 +175,4 @@ storybook-static/
 # wrangler files
 .wrangler
 .dev.vars*
+.fallow/
