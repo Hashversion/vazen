@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "vazen-web",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2025-09-15",
+  "compatibility_date": "2026-04-21",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "keep_names": false,
   "assets": {
