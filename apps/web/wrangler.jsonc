@@ -38,6 +38,7 @@
           "binding": "HYPERDRIVE",
           // replace below id with the staging hyperdrive id.
           "id": "27e9b0ddd58543be936c0964628c11fb",
+          "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
         },
       ],
       "kv_namespaces": [
@@ -60,6 +61,7 @@
           "binding": "HYPERDRIVE",
           // replace below id with the production hyperdrive id.
           "id": "27e9b0ddd58543be936c0964628c11fb",
+          "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
         },
       ],
       "kv_namespaces": [

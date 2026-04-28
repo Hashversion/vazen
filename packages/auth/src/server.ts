@@ -19,9 +19,9 @@ export const auth = (cloudflareEnv: CloudflareEnv) => {
   return betterAuth({
     baseURL: {
       allowedHosts: [
-        "vazen.com", // Production,
         "localhost:3000", // Local development
         "*.workers.dev", // cloudflare workers
+        "web.vazen.dev", // Production,
       ],
     },
     database: drizzleAdapter(db, {
