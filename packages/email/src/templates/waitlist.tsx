@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Body, Container, Font, Head, Heading, Hr, Html, Img, Tailwind, Text } from "@react-email/components";
+import { Body, Container, Font, Head, Heading, Hr, Html, Img, Tailwind, Text } from "react-email";
 
 type PrelaunchEmailProps = {
   inviteeEmail: string;

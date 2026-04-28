@@ -4,21 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "typecheck": "tsc --noEmit",
     "clean": "rm -rf node_modules .turbo dist",
-    "dev": "email dev --dir ./src/templates --port 4444"
+    "dev": "email dev --dir ./src/templates --port 4444",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@react-email/components": "^1.0.9",
+    "@react-email/ui": "^6.0.1",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@react-email/preview-server": "5.2.9",
     "@repo/typescript-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "react-email": "^5.2.9",
+    "react-email": "^6.0.1",
     "typescript": "catalog:"
   }
 }

@@ -1,5 +1,4 @@
 import { ORPCError, os } from "@orpc/server";
-import "server-only";
 import { z } from "zod";
 import type { ORPCContext } from "./context";
 

@@ -17,6 +17,13 @@ export const auth = (cloudflareEnv: CloudflareEnv) => {
   const db = getDb(cloudflareEnv);
 
   return betterAuth({
+    baseURL: {
+      allowedHosts: [
+        "vazen.com", // Production,
+        "localhost:3000", // Local development
+        "*.workers.dev", // cloudflare workers
+      ],
+    },
     database: drizzleAdapter(db, {
       provider: "pg",
     }),
