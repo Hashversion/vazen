@@ -19,7 +19,6 @@
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      // id :: random uuid for local dev or empty
       "id": "9707b7d4-c675-46fb-9268-c34b343a0cd3",
       "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
     },
@@ -27,7 +26,6 @@
   "kv_namespaces": [
     {
       "binding": "AUTH_CACHE",
-      // id :: random uuid for local dev or empty
       "id": "830929fe-07bb-4c88-8c5f-12af46a6fc0b",
     },
   ],
@@ -36,7 +34,6 @@
       "hyperdrive": [
         {
           "binding": "HYPERDRIVE",
-          // replace below id with the staging hyperdrive id.
           "id": "27e9b0ddd58543be936c0964628c11fb",
           "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
         },
@@ -44,7 +41,6 @@
       "kv_namespaces": [
         {
           "binding": "AUTH_CACHE",
-          // replace below id with the staging kv id.
           "id": "4fed3baa113a4394aa56bc74c16063c1",
         },
       ],
@@ -59,7 +55,6 @@
       "hyperdrive": [
         {
           "binding": "HYPERDRIVE",
-          // replace below id with the production hyperdrive id.
           "id": "27e9b0ddd58543be936c0964628c11fb",
           "localConnectionString": "postgresql://postgres:postgres@localhost:5432/vazen_db",
         },
@@ -67,7 +62,6 @@
       "kv_namespaces": [
         {
           "binding": "AUTH_CACHE",
-          // replace below id with the production kv id.
           "id": "4fed3baa113a4394aa56bc74c16063c1",
         },
       ],
