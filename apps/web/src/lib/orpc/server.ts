@@ -1,9 +1,9 @@
 import { headers } from "next/headers";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { createRouterClient } from "@orpc/server";
+import { createContext } from "@repo/rpc/context";
+import { appRouter } from "@repo/rpc/routers/index";
 import "server-only";
-import { createContext } from "../../../../../packages/rpc/src/context";
-import { appRouter } from "../../../../../packages/rpc/src/routers/index";
 
 const { env: cloudflareEnv } = await getCloudflareContext({ async: true });
 
