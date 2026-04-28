@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@repo/ui/";
+import { Button } from "@repo/ui";
 
 export default function NotFound() {
   return (
