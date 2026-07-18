@@ -28,14 +28,14 @@
   "devDependencies": {
     "@commitlint/cli": "^20.5.3",
     "@commitlint/config-conventional": "^20.5.3",
-    "@infisical/cli": "^0.43.104",
+    "@infisical/cli": "^0.43.106",
     "@types/node": "catalog:",
     "fallow": "^2.104.0",
     "lefthook": "^2.1.10",
     "oxfmt": "^0.59.0",
-    "portless": "^0.15.1",
+    "portless": "^0.15.3",
     "rimraf": "^6.1.3",
-    "turbo": "^2.10.4",
+    "turbo": "^2.10.5",
     "typescript": "catalog:"
   },
   "engines": {

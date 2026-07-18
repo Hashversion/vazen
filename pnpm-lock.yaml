@@ -95,8 +95,8 @@ importers:
         specifier: ^20.5.3
         version: 20.5.3
       '@infisical/cli':
-        specifier: ^0.43.104
-        version: 0.43.104
+        specifier: ^0.43.106
+        version: 0.43.110
       '@types/node':
         specifier: 'catalog:'
         version: 24.13.3
@@ -110,14 +110,14 @@ importers:
         specifier: ^0.59.0
         version: 0.59.0
       portless:
-        specifier: ^0.15.1
-        version: 0.15.1
+        specifier: ^0.15.3
+        version: 0.15.4
       rimraf:
         specifier: ^6.1.3
         version: 6.1.3
       turbo:
-        specifier: ^2.10.4
-        version: 2.10.4
+        specifier: ^2.10.5
+        version: 2.10.5
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -274,11 +274,11 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: ^3.0.226
-        version: 3.0.227(react@19.2.7)(zod@4.4.3)
+        specifier: ^3.0.228
+        version: 3.0.232(react@19.2.7)(zod@4.4.3)
       ai:
-        specifier: ^6.0.224
-        version: 6.0.225(zod@4.4.3)
+        specifier: ^6.0.226
+        version: 6.0.230(zod@4.4.3)
       react:
         specifier: catalog:react
         version: 19.2.7
@@ -308,7 +308,7 @@ importers:
         specifier: 'catalog:'
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       posthog-js:
-        specifier: ^1.399.2
+        specifier: ^1.399.5
         version: 1.399.5
       zod:
         specifier: 'catalog:'
@@ -585,7 +585,7 @@ importers:
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       files-sdk:
         specifier: ^1.9.0
-        version: 1.9.0(@aws-sdk/client-s3@3.1075.0)(@aws-sdk/s3-presigned-post@3.1075.0)(@aws-sdk/s3-request-presigner@3.1075.0)(@opentelemetry/api@1.9.1)(ai@6.0.225(zod@4.4.3))(zod@4.4.3)
+        version: 1.9.0(@aws-sdk/client-s3@3.1075.0)(@aws-sdk/s3-presigned-post@3.1075.0)(@aws-sdk/s3-request-presigner@3.1075.0)(@opentelemetry/api@1.9.1)(ai@6.0.230(zod@4.4.3))(zod@4.4.3)
       zod:
         specifier: 'catalog:'
         version: 4.4.3
@@ -607,7 +607,7 @@ importers:
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       evlog:
         specifier: ^2.19.2
-        version: 2.19.2(@orpc/server@1.14.8(@opentelemetry/api@1.9.1)(ws@8.21.0))(ai@6.0.225(zod@4.4.3))(express@5.2.1)(hono@4.12.27)(next@16.2.10(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
+        version: 2.19.2(@orpc/server@1.14.8(@opentelemetry/api@1.9.1)(ws@8.21.0))(ai@6.0.230(zod@4.4.3))(express@5.2.1)(hono@4.12.27)(next@16.2.10(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
       zod:
         specifier: 'catalog:'
         version: 4.4.3
@@ -691,14 +691,14 @@ importers:
 
 packages:
 
-  '@ai-sdk/gateway@3.0.149':
-    resolution: {integrity: sha512-+EVPEHqdJVJn0FZHBd6NyH4rvlTK7X79B6xFuW5bfZIP1G/7Y5OTEgxpL0hjOCAxDBG4ZFM6SZWnVBXxeR1x8w==}
+  '@ai-sdk/gateway@3.0.153':
+    resolution: {integrity: sha512-R5r567od2Olqze/lL2dVS4wVOVyVqG6sJ3cEUI/kW12XQJYKf8fetyxWPYS0ZFe87QPcsh3Z3sDnrMAtAIiS3Q==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  '@ai-sdk/provider-utils@4.0.38':
-    resolution: {integrity: sha512-/HHGmtKllqjg1OLc023v9w9kK3laW7Z6TzfZukYQWCsGBbzB9p60zTvvpXFVcs44NZBVXL3viOa1HRKUbeee8g==}
+  '@ai-sdk/provider-utils@4.0.40':
+    resolution: {integrity: sha512-OL5IrpUm9Y8Dwy+w/vvFwPotS6m52O9W0op2oXgXdCROMJIBalBI0oro6OIBYkPxvm5Xg02GSkoQN25RlR0bnw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -707,8 +707,8 @@ packages:
     resolution: {integrity: sha512-5X1k57JBJ4H7H1QjX7CnJYAB1I19r/trVZTMcSms7/kLNZ8RaU4Nt2agcwZzv82Hfx6Q7/TOLU7agAKeFfc8cA==}
     engines: {node: '>=18'}
 
-  '@ai-sdk/react@3.0.227':
-    resolution: {integrity: sha512-rqvfgQmgJiHmgVziMRdHlUeJQc+VXe4gHMxpHKWQkYKTtAOehJcgJ1GBJH/a7HaVc+q/2n/N2oCVXs1VwgfgtQ==}
+  '@ai-sdk/react@3.0.232':
+    resolution: {integrity: sha512-cfdwM3RMGYNO3RoF/Y61Mp1LEqdT6GyvOOAp7DNsgPyuybnTngoWFVYoLvsdBGYZImgaX1IXi6NLhXH9OY3VLg==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18 || ~19.0.1 || ~19.1.2 || ^19.2.1
@@ -1826,8 +1826,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@infisical/cli@0.43.104':
-    resolution: {integrity: sha512-FBFRtqnhwS2vnKjyS+BNKWD+RsuO8v3dP7RFlcnnKuUV8bXv4aIuuzaF4mDnZrPnRjc4eSxREWmpOnbqYD/rWg==}
+  '@infisical/cli@0.43.110':
+    resolution: {integrity: sha512-9fniduy2GsTNOZnqkM4FKgx4AvWD9KSu3FCS5GF9/iolCDhw5WY9EaNu5O63fyJ1ah5IN8FZ104COnzDh32UuA==}
     hasBin: true
 
   '@isaacs/fs-minipass@4.0.1':
@@ -3293,33 +3293,33 @@ packages:
     peerDependencies:
       react: ^18 || ^19
 
-  '@turbo/darwin-64@2.10.4':
-    resolution: {integrity: sha512-m1MUEI4MJ69r5CwfMYxmHi0H0rrgiYCBOp0tgBZ9x/YVvOb5uu/lRIDyDwdtH054R2yWeQaIigUGu6aCX9f8cA==}
+  '@turbo/darwin-64@2.10.5':
+    resolution: {integrity: sha512-ENvPwy3x5yS7MwNYHeWjqOBXkwIMp39Pd+/zXC6PoiNzF8EIvvLZOZZ+ny6L9x4WgS5vxUii2LM5gM+zjPdnWw==}
     cpu: [x64]
     os: [darwin]
 
-  '@turbo/darwin-arm64@2.10.4':
-    resolution: {integrity: sha512-VQ1Yxs5zkPT+2z7t1P4mvn6JmcKLkOCAsPuK9XbOvuVj0DlTlETfIXNisX0771v/vTWHOQqiwoGi+TtAUq8efw==}
+  '@turbo/darwin-arm64@2.10.5':
+    resolution: {integrity: sha512-rqROo9zsF/P9RqsdtbLD1nFJicjSrYyvQ9kNJC38AbxA3pAs6VAlATvtvOFx7bqOv6vicf20SP9kF33avJjy2w==}
     cpu: [arm64]
     os: [darwin]
 
-  '@turbo/linux-64@2.10.4':
-    resolution: {integrity: sha512-IzV1QovmwX7mfGnVinmE++2IB8tbeo38weltiuH5zNqwCTBjLs/DytyRKx+bmnhHdXIq9SheR8p0Nip/LBUPHg==}
+  '@turbo/linux-64@2.10.5':
+    resolution: {integrity: sha512-RoSSiNFUxi27zLJuM9F6GyWWjHgLch9t6nwD6K0FkXRirZkTLlzIj6IhFnK8H9++nefLtdFqylE4vGjZAv6AAA==}
     cpu: [x64]
     os: [linux]
 
-  '@turbo/linux-arm64@2.10.4':
-    resolution: {integrity: sha512-rfujSQkP5aYiRn0PgTM7F00WkJCP/bKDVZbOx3WmrZwa/vHA0bplhCl328kpX7VI9HH2vI90ISGwuSVgJgoqTw==}
+  '@turbo/linux-arm64@2.10.5':
+    resolution: {integrity: sha512-4ZComcpzmHGmVynQqvvi+iZOSq/tBvY1SltXB8g4NZRsrA01W8E+yRL8RNM+PLoyWsrCnJa8xa+DkWkv+xg4iQ==}
     cpu: [arm64]
     os: [linux]
 
-  '@turbo/windows-64@2.10.4':
-    resolution: {integrity: sha512-NnspP7Wd5fa3Wwnqv9bKfhegqZzuHBgbPxdZU/idTLQcazx/vgKu95JlCx2YHY0hdvKCnPcARrDwM+KEUmaO7A==}
+  '@turbo/windows-64@2.10.5':
+    resolution: {integrity: sha512-eL2Iyj4DbMINq1Sr1w0iAi6nAiZOF16KSlRGwCJpVh+IWZeY33MAsLHVOBMj1xoFtncVJXclCVpTPL2nBoYkFg==}
     cpu: [x64]
     os: [win32]
 
-  '@turbo/windows-arm64@2.10.4':
-    resolution: {integrity: sha512-Iv02YgOpaEShc2OkG7mgCJ2pEw1RUKiKbs0h8W5wAf4jZ5vpmraTEjuGTgHRuOORQnC1GN3KHo5WB+hu1abRMA==}
+  '@turbo/windows-arm64@2.10.5':
+    resolution: {integrity: sha512-sog+wP+8YSJrdWZ/rUJg8xghVTrwoG+BrSlDQpnK5fzSgJHn1INRWXbVWRH0d3vX8dBI01E3yxXRre9Dn+OXQA==}
     cpu: [arm64]
     os: [win32]
 
@@ -3515,8 +3515,8 @@ packages:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
 
-  ai@6.0.225:
-    resolution: {integrity: sha512-TCkt/NxyZFyXyHeGO/4FMsdTIoCdwV/e78jG9iEHIjnwrAHYlqOwVj7WDFsNRqXUeoUefgbiOkNuE5k8jdpFRg==}
+  ai@6.0.230:
+    resolution: {integrity: sha512-TQKOUPL7GLirkGvA2/sxA3bNzPeTY2w30mOyzwfQyiB8WvTQTr08mGgBBETPHwKIefgYF8HbLeVMgEahRVsX/Q==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -5531,8 +5531,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  portless@0.15.1:
-    resolution: {integrity: sha512-MQTt405HrcIa3m9OSKpH6WjJDbfNP4oFMNg0VzAoUO4B19l1eFJBFcSWfQY8KYMhzZVfa+Gea2OUrlDm8+/M4A==}
+  portless@0.15.4:
+    resolution: {integrity: sha512-tOxEsdlDGuPHO6DPkuK3c3mMV5ctXEgVFm53Sa8nfZ2RsRGTq4By424C6z5+JWfNbd3ktR5SOd1FJBOlB1Woqg==}
     engines: {node: '>=24'}
     os: [darwin, linux, win32]
     hasBin: true
@@ -6062,8 +6062,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  turbo@2.10.4:
-    resolution: {integrity: sha512-GQpduILaKjoaGljw097ScsSyKTtZSY7cZ3bJktzfTkPMyCf3ShKLuXK2IaOEN2Plziml+ArR7WJ1m+V4VbnaKQ==}
+  turbo@2.10.5:
+    resolution: {integrity: sha512-07Y/C7OUp23l4P92PJoYtFNbHjLhftrZH5Ce7dbczS4kX2Re+wtbXvZLoxn/pUtzgsQaRCBaRuZPJp4zmAn0WQ==}
     hasBin: true
 
   tw-animate-css@1.4.0:
@@ -6328,14 +6328,14 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.149(zod@4.4.3)':
+  '@ai-sdk/gateway@3.0.153(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider': 3.0.14
-      '@ai-sdk/provider-utils': 4.0.38(zod@4.4.3)
+      '@ai-sdk/provider-utils': 4.0.40(zod@4.4.3)
       '@vercel/oidc': 3.2.0
       zod: 4.4.3
 
-  '@ai-sdk/provider-utils@4.0.38(zod@4.4.3)':
+  '@ai-sdk/provider-utils@4.0.40(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider': 3.0.14
       '@standard-schema/spec': 1.1.0
@@ -6346,10 +6346,10 @@ snapshots:
     dependencies:
       json-schema: 0.4.0
 
-  '@ai-sdk/react@3.0.227(react@19.2.7)(zod@4.4.3)':
+  '@ai-sdk/react@3.0.232(react@19.2.7)(zod@4.4.3)':
     dependencies:
-      '@ai-sdk/provider-utils': 4.0.38(zod@4.4.3)
-      ai: 6.0.225(zod@4.4.3)
+      '@ai-sdk/provider-utils': 4.0.40(zod@4.4.3)
+      ai: 6.0.230(zod@4.4.3)
       react: 19.2.7
       swr: 2.4.2(react@19.2.7)
       throttleit: 2.1.0
@@ -7353,7 +7353,7 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@infisical/cli@0.43.104':
+  '@infisical/cli@0.43.110':
     dependencies:
       tar: 7.5.16
       yauzl: 3.4.0
@@ -8639,22 +8639,22 @@ snapshots:
       '@tanstack/query-core': 5.101.2
       react: 19.2.7
 
-  '@turbo/darwin-64@2.10.4':
+  '@turbo/darwin-64@2.10.5':
     optional: true
 
-  '@turbo/darwin-arm64@2.10.4':
+  '@turbo/darwin-arm64@2.10.5':
     optional: true
 
-  '@turbo/linux-64@2.10.4':
+  '@turbo/linux-64@2.10.5':
     optional: true
 
-  '@turbo/linux-arm64@2.10.4':
+  '@turbo/linux-arm64@2.10.5':
     optional: true
 
-  '@turbo/windows-64@2.10.4':
+  '@turbo/windows-64@2.10.5':
     optional: true
 
-  '@turbo/windows-arm64@2.10.4':
+  '@turbo/windows-arm64@2.10.5':
     optional: true
 
   '@types/cors@2.8.19':
@@ -8861,11 +8861,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ai@6.0.225(zod@4.4.3):
+  ai@6.0.230(zod@4.4.3):
     dependencies:
-      '@ai-sdk/gateway': 3.0.149(zod@4.4.3)
+      '@ai-sdk/gateway': 3.0.153(zod@4.4.3)
       '@ai-sdk/provider': 3.0.14
-      '@ai-sdk/provider-utils': 4.0.38(zod@4.4.3)
+      '@ai-sdk/provider-utils': 4.0.40(zod@4.4.3)
       '@opentelemetry/api': 1.9.1
       zod: 4.4.3
 
@@ -9486,10 +9486,10 @@ snapshots:
       eventsource-parser: 3.1.0
     optional: true
 
-  evlog@2.19.2(@orpc/server@1.14.8(@opentelemetry/api@1.9.1)(ws@8.21.0))(ai@6.0.225(zod@4.4.3))(express@5.2.1)(hono@4.12.27)(next@16.2.10(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7):
+  evlog@2.19.2(@orpc/server@1.14.8(@opentelemetry/api@1.9.1)(ws@8.21.0))(ai@6.0.230(zod@4.4.3))(express@5.2.1)(hono@4.12.27)(next@16.2.10(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7):
     optionalDependencies:
       '@orpc/server': 1.14.8(@opentelemetry/api@1.9.1)(ws@8.21.0)
-      ai: 6.0.225(zod@4.4.3)
+      ai: 6.0.230(zod@4.4.3)
       express: 5.2.1
       hono: 4.12.27
       next: 16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -9574,7 +9574,7 @@ snapshots:
 
   fflate@0.4.8: {}
 
-  files-sdk@1.9.0(@aws-sdk/client-s3@3.1075.0)(@aws-sdk/s3-presigned-post@3.1075.0)(@aws-sdk/s3-request-presigner@3.1075.0)(@opentelemetry/api@1.9.1)(ai@6.0.225(zod@4.4.3))(zod@4.4.3):
+  files-sdk@1.9.0(@aws-sdk/client-s3@3.1075.0)(@aws-sdk/s3-presigned-post@3.1075.0)(@aws-sdk/s3-request-presigner@3.1075.0)(@opentelemetry/api@1.9.1)(ai@6.0.230(zod@4.4.3))(zod@4.4.3):
     dependencies:
       commander: 15.0.0
       picomatch: 4.0.4
@@ -9584,7 +9584,7 @@ snapshots:
       '@aws-sdk/s3-request-presigner': 3.1075.0
       '@modelcontextprotocol/sdk': 1.29.0(zod@4.4.3)
       '@opentelemetry/api': 1.9.1
-      ai: 6.0.225(zod@4.4.3)
+      ai: 6.0.230(zod@4.4.3)
       zod: 4.4.3
     transitivePeerDependencies:
       - '@cfworker/json-schema'
@@ -10948,7 +10948,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
-  portless@0.15.1: {}
+  portless@0.15.4: {}
 
   postcss@8.4.31:
     dependencies:
@@ -11626,14 +11626,14 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  turbo@2.10.4:
+  turbo@2.10.5:
     optionalDependencies:
-      '@turbo/darwin-64': 2.10.4
-      '@turbo/darwin-arm64': 2.10.4
-      '@turbo/linux-64': 2.10.4
-      '@turbo/linux-arm64': 2.10.4
-      '@turbo/windows-64': 2.10.4
-      '@turbo/windows-arm64': 2.10.4
+      '@turbo/darwin-64': 2.10.5
+      '@turbo/darwin-arm64': 2.10.5
+      '@turbo/linux-64': 2.10.5
+      '@turbo/linux-arm64': 2.10.5
+      '@turbo/windows-64': 2.10.5
+      '@turbo/windows-arm64': 2.10.5
 
   tw-animate-css@1.4.0: {}
 
