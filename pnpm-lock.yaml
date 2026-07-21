@@ -95,7 +95,7 @@ importers:
         specifier: ^20.5.3
         version: 20.5.3
       '@infisical/cli':
-        specifier: ^0.43.109
+        specifier: ^0.43.110
         version: 0.43.110
       '@types/node':
         specifier: 'catalog:'
@@ -274,10 +274,10 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: ^3.0.231
+        specifier: ^3.0.232
         version: 3.0.232(react@19.2.7)(zod@4.4.3)
       ai:
-        specifier: ^6.0.229
+        specifier: ^6.0.230
         version: 6.0.230(zod@4.4.3)
       react:
         specifier: catalog:react
