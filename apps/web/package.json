@@ -27,7 +27,7 @@
     "@tanstack/react-query": "catalog:tanstack",
     "better-auth": "catalog:auth",
     "next": "catalog:next",
-    "nuqs": "^2.9.0",
+    "nuqs": "^2.9.1",
     "react": "catalog:react",
     "react-dom": "catalog:react"
   },
