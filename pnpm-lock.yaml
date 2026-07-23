@@ -222,7 +222,7 @@ importers:
         specifier: catalog:next
         version: 16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       nuqs:
-        specifier: ^2.9.0
+        specifier: ^2.9.1
         version: 2.9.1(next@16.2.10(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
       react:
         specifier: catalog:react
@@ -308,7 +308,7 @@ importers:
         specifier: 'catalog:'
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       posthog-js:
-        specifier: ^1.404.0
+        specifier: ^1.404.1
         version: 1.406.2
       zod:
         specifier: 'catalog:'
@@ -572,13 +572,13 @@ importers:
   packages/storage:
     dependencies:
       '@aws-sdk/client-s3':
-        specifier: ^3.1089.0
+        specifier: ^3.1090.0
         version: 3.1092.0
       '@aws-sdk/s3-presigned-post':
-        specifier: ^3.1089.0
+        specifier: ^3.1090.0
         version: 3.1092.0
       '@aws-sdk/s3-request-presigner':
-        specifier: ^3.1089.0
+        specifier: ^3.1090.0
         version: 3.1092.0
       '@t3-oss/env-nextjs':
         specifier: 'catalog:'
