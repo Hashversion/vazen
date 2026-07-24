@@ -274,10 +274,10 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: ^3.0.232
+        specifier: ^3.0.233
         version: 3.0.235(react@19.2.7)(zod@4.4.3)
       ai:
-        specifier: ^6.0.230
+        specifier: ^6.0.231
         version: 6.0.233(zod@4.4.3)
       react:
         specifier: catalog:react
@@ -606,7 +606,7 @@ importers:
         specifier: 'catalog:'
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       evlog:
-        specifier: ^2.22.0
+        specifier: ^2.22.1
         version: 2.22.3(@orpc/server@1.14.8(@opentelemetry/api@1.9.1)(ws@8.21.1))(ai@6.0.233(zod@4.4.3))(express@5.2.1)(hono@4.12.31)(next@16.2.10(@opentelemetry/api@1.9.1)(@playwright/test@1.61.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
       zod:
         specifier: 'catalog:'
