@@ -31,8 +31,8 @@ catalogs:
     "@better-auth/infra": 0.2.14
     better-auth: 1.6.23
   next:
-    "@next/bundle-analyzer": 16.2.10
-    next: 16.2.10
+    "@next/bundle-analyzer": 16.2.11
+    next: 16.2.11
   orpc:
     "@orpc/client": 1.14.8
     "@orpc/server": 1.14.8
@@ -40,8 +40,8 @@ catalogs:
   react:
     "@types/react": 19.2.17
     "@types/react-dom": 19.2.3
-    react: 19.2.7
-    "react-dom": 19.2.7
+    react: 19.2.8
+    "react-dom": 19.2.8
   tanstack:
-    "@tanstack/react-query": ^5.101.3
-    "@tanstack/react-query-devtools": ^5.101.3
+    "@tanstack/react-query": ^5.101.4
+    "@tanstack/react-query-devtools": ^5.101.4
