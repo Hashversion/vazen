@@ -22,7 +22,7 @@
   "dependencies": {
     "@sentry/nextjs": "catalog:",
     "@t3-oss/env-nextjs": "catalog:",
-    "evlog": "^2.22.1",
+    "evlog": "^2.22.3",
     "zod": "catalog:"
   },
   "devDependencies": {
