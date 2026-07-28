@@ -95,7 +95,7 @@ importers:
         specifier: ^20.5.3
         version: 20.5.3
       '@infisical/cli':
-        specifier: ^0.43.113
+        specifier: ^0.43.114
         version: 0.43.114
       '@types/node':
         specifier: 'catalog:'
