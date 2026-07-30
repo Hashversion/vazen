@@ -34,9 +34,9 @@ catalogs:
     "@next/bundle-analyzer": 16.2.12
     next: 16.2.12
   orpc:
-    "@orpc/client": 1.14.10
-    "@orpc/server": 1.14.10
-    "@orpc/tanstack-query": 1.14.10
+    "@orpc/client": 1.14.12
+    "@orpc/server": 1.14.12
+    "@orpc/tanstack-query": 1.14.12
   react:
     "@types/react": 19.2.17
     "@types/react-dom": 19.2.3
