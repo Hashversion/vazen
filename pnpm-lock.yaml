@@ -274,10 +274,10 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: ^3.0.238
+        specifier: ^3.0.239
         version: 3.0.240(react@19.2.8)(zod@4.4.3)
       ai:
-        specifier: ^6.0.236
+        specifier: ^6.0.237
         version: 6.0.238(zod@4.4.3)
       react:
         specifier: catalog:react
