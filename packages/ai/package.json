@@ -12,8 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ai-sdk/react": "^3.0.239",
-    "ai": "^6.0.237",
+    "@ai-sdk/react": "^3.0.240",
+    "ai": "^6.0.238",
     "react": "catalog:react",
     "react-dom": "catalog:react"
   },
