@@ -8,5 +8,3 @@ export const initializeAnalytics = () => {
     defaults: "2025-05-24",
   });
 };
-
-export { usePostHog } from "posthog-js/react";
