@@ -17,7 +17,7 @@ export default function Page() {
               The production-grade starter kit for modern full-stack applications
             </p>
             <div className="flex items-center gap-3">
-              <Button>Button</Button>
+              <Button size={"sm"}>Button</Button>
               <APIHealth />
             </div>
           </div>

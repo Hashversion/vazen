@@ -49,6 +49,7 @@
   --font-sans: var(--font-geist);
   --font-asul: var(--font-asul);
   --font-commitmono: var(--font-commitmono);
+  --color-selection: var(--selection);
 }
 
 :root {
@@ -75,7 +76,7 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0.45rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -84,6 +85,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --selection: oklch(0.9672 0 0);
 }
 
 .dark {
@@ -118,6 +120,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --selection: oklch(0.1344 0 0);
 }
 
 @layer base {
@@ -127,8 +130,21 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-selection);
+    color: var(--color-foreground);
+    text-shadow: none;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+@utility text-trim {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
