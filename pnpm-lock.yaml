@@ -95,7 +95,7 @@ importers:
         specifier: ^20.5.3
         version: 20.5.3
       '@infisical/cli':
-        specifier: ^0.43.114
+        specifier: ^0.43.116
         version: 0.43.116
       '@types/node':
         specifier: 'catalog:'
@@ -116,7 +116,7 @@ importers:
         specifier: ^6.1.3
         version: 6.1.3
       turbo:
-        specifier: ^2.10.7
+        specifier: ^2.10.8
         version: 2.10.8
       typescript:
         specifier: 'catalog:'
@@ -274,10 +274,10 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: ^3.0.240
+        specifier: ^3.0.241
         version: 3.0.242(react@19.2.8)(zod@4.4.3)
       ai:
-        specifier: ^6.0.238
+        specifier: ^6.0.239
         version: 6.0.240(zod@4.4.3)
       react:
         specifier: catalog:react
@@ -308,7 +308,7 @@ importers:
         specifier: 'catalog:'
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       posthog-js:
-        specifier: ^1.407.8
+        specifier: ^1.408.1
         version: 1.409.5
       zod:
         specifier: 'catalog:'
@@ -506,7 +506,7 @@ importers:
         specifier: ^2.0.8
         version: 2.0.8(@upstash/redis@1.38.1)
       '@upstash/redis':
-        specifier: ^1.38.0
+        specifier: ^1.38.1
         version: 1.38.1
       zod:
         specifier: 'catalog:'
@@ -572,13 +572,13 @@ importers:
   packages/storage:
     dependencies:
       '@aws-sdk/client-s3':
-        specifier: ^3.1097.0
+        specifier: ^3.1098.0
         version: 3.1101.0
       '@aws-sdk/s3-presigned-post':
-        specifier: ^3.1097.0
+        specifier: ^3.1098.0
         version: 3.1101.0
       '@aws-sdk/s3-request-presigner':
-        specifier: ^3.1097.0
+        specifier: ^3.1098.0
         version: 3.1101.0
       '@t3-oss/env-nextjs':
         specifier: 'catalog:'
