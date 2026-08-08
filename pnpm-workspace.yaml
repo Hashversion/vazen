@@ -29,7 +29,7 @@ catalog:
 catalogs:
   auth:
     "@better-auth/infra": 0.3.7
-    better-auth: 1.6.25
+    better-auth: 1.6.26
   next:
     "@next/bundle-analyzer": 16.2.12
     next: 16.2.12
