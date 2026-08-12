@@ -23,7 +23,8 @@
     "typecheck": "turbo typecheck",
     "web:build": "turbo build -F web...",
     "web:dev": "turbo dev -F web...",
-    "web:e2e": "turbo e2e -F @e2e/web"
+    "web:e2e": "turbo e2e -F @e2e/web",
+    "web:e2e:local": "pnpm --filter web e2e:local"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",

@@ -63,8 +63,13 @@ export function createPlaywrightSuiteConfig({
 
     // Run your local dev server before starting the tests
     webServer: {
-      command: `pnpm --filter ${appName} exec next start --hostname localhost --port ${port}`,
+      command: `pnpm --filter ${appName} exec next start`,
       cwd: repoRoot,
+      env: {
+        ...process.env,
+        HOSTNAME: "localhost",
+        PORT: String(port),
+      },
       reuseExistingServer: !process.env.CI,
       //3 minutes in milliseconds
       timeout: 3 * 60 * 1000,

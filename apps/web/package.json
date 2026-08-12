@@ -8,6 +8,7 @@
     "clean": "rimraf .next .turbo node_modules next-env.d.ts",
     "dev": "infisical run --env=dev --path=/vazen-web -- portless",
     "dev:app": "next dev",
+    "e2e:local": "infisical run --env=dev --path=/vazen-web -- sh -c \"pnpm run build && pnpm --filter @e2e/web e2e\"",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
