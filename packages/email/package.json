@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@opencoredev/email-sdk": "^0.6.5",
+    "@opencoredev/email-sdk": "^1.1.0",
     "@repo/telemetry": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",
     "react": "catalog:react",
