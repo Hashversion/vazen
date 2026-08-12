@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createNEMO } from "@rescale/nemo";
+import { createNEMO } from "@zanreal/nemo";
 import { securityHeadersMiddleware, securityHeadersOptions } from "@repo/security/security-headers";
-import type { MiddlewareConfig } from "@rescale/nemo";
+import type { MiddlewareConfig } from "@zanreal/nemo";
 import { getSessionCookie } from "@/lib/auth/session";
 import { getStableId } from "@repo/flags/lib/stable-id";
 const securityHeaders = securityHeadersMiddleware(securityHeadersOptions);
