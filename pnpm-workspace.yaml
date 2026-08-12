@@ -16,7 +16,7 @@ allowBuilds:
 
 catalog:
   "@playwright/test": ^1.62.1
-  "@sentry/nextjs": 10.69.0
+  "@sentry/nextjs": 10.70.0
   "@t3-oss/env-nextjs": ^0.13.11
   "@tailwindcss/postcss": ^4.3.3
   "@types/node": ^24.13.3
