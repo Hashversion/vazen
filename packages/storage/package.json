@@ -19,7 +19,7 @@
     "@aws-sdk/s3-presigned-post": "^3.1105.0",
     "@aws-sdk/s3-request-presigner": "^3.1105.0",
     "@t3-oss/env-nextjs": "catalog:",
-    "files-sdk": "^1.9.0",
+    "files-sdk": "^2.2.4",
     "zod": "catalog:"
   },
   "devDependencies": {
