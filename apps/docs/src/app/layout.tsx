@@ -1,16 +1,18 @@
-import { RootProvider } from "fumadocs-ui/provider/next";
+import { fontsVariable } from "@repo/ui/fonts";
+
 import "@/styles/global.css";
-import { type Metadata, type Viewport } from "next";
+import { RootProvider } from "fumadocs-ui/provider/next";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
-import { fontsVariable } from "@repo/ui/fonts";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: {
     template: "%s :: Vazen",
     default: "Vazen",
   },
-  description: "A production grade monorepo starter to build full-stack applications",
+  description:
+    "A production grade monorepo starter to build full-stack applications",
   icons: {
     icon: [
       {

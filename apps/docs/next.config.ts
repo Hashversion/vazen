@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
 
 const NextApp = () => {
   const plugins = [withMDX];
+  // oxlint-disable-next-line unicorn/no-array-reduce
   return plugins.reduce((config, plugin) => plugin(config), nextConfig);
 };
 

@@ -1,5 +1,6 @@
 import { RPCHandler } from "@orpc/server/fetch";
-import { type Context, createContext } from "@repo/rpc/context";
+import { createContext } from "@repo/rpc/context";
+import type { Context } from "@repo/rpc/context";
 import { appRouter } from "@repo/rpc/routers/index";
 import { withEvlog } from "@repo/telemetry/evlog/orpc";
 

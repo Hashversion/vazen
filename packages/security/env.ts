@@ -7,6 +7,7 @@ export const env = () =>
       NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT: z.url(),
     },
     experimental__runtimeEnv: {
-      NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT: process.env.NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT,
+      NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT:
+        process.env.NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT,
     },
   });

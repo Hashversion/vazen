@@ -1,5 +1,5 @@
+import type { EmailMessage } from "@opencoredev/email-sdk";
 import { log } from "@repo/telemetry/evlog";
-import { type EmailMessage } from "@opencoredev/email-sdk";
 
 type MockableEmailOptions = EmailMessage & {
   _mockContext?: {
@@ -8,7 +8,7 @@ type MockableEmailOptions = EmailMessage & {
   };
 };
 
-export async function sendDevEmail(options: MockableEmailOptions) {
+export function sendDevEmail(options: MockableEmailOptions) {
   log.info({
     event: "email.mock_send",
     email: {

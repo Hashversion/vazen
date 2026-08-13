@@ -1,15 +1,25 @@
-import { getPageImage, source } from "@/lib/fuma/source";
+import { generate as DefaultImage } from "fumadocs-ui/og";
 import { notFound } from "next/navigation";
 import { ImageResponse } from "next/og";
-import { generate as DefaultImage } from "fumadocs-ui/og";
 
-export async function GET(_req: Request, { params }: RouteContext<"/og/docs/[...slug]">) {
+import { getPageImage, source } from "@/lib/fuma/source";
+
+export async function GET(
+  _req: Request,
+  { params }: RouteContext<"/og/docs/[...slug]">
+) {
   const { slug } = await params;
   const page = source.getPage(slug.slice(0, -1));
-  if (!page) notFound();
+  if (!page) {
+    notFound();
+  }
 
   return new ImageResponse(
-    <DefaultImage title={page.data.title} description={page.data.description} site="My App" />,
+    <DefaultImage
+      title={page.data.title}
+      description={page.data.description}
+      site="My App"
+    />,
     {
       width: 1200,
       height: 630,

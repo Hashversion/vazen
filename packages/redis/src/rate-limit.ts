@@ -1,5 +1,6 @@
 import { Ratelimit } from "@upstash/ratelimit";
 import type { RatelimitConfig } from "@upstash/ratelimit";
+
 import { redis } from "./client";
 import { RATE_LIMIT_PREFIX } from "./prefix";
 

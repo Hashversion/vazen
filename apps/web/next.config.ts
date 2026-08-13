@@ -1,6 +1,6 @@
-import type { NextConfig } from "next";
 import bundleAnalyzer from "@next/bundle-analyzer";
 import { withSentry } from "@repo/telemetry/sentry/with-sentry";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -25,6 +25,7 @@ const bundleAnalyzerPlugin = bundleAnalyzer({
 
 const NextApp = () => {
   const plugins = [bundleAnalyzerPlugin, withSentry];
+  // oxlint-disable-next-line unicorn/no-array-reduce
   return plugins.reduce((config, plugin) => plugin(config), nextConfig);
 };
 

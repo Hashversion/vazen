@@ -1,6 +1,6 @@
-import { cookies, headers } from "next/headers";
 import { dedupe } from "flags/next";
 import { nanoid } from "nanoid";
+import { cookies, headers } from "next/headers";
 
 /**
  * - reads the stable id from the cookie or returns a new stable id
@@ -16,7 +16,9 @@ export const getStableId = dedupe(async () => {
   }
 
   const stableId = cookiesStore.get("stable-id")?.value;
-  if (!stableId) return { value: nanoid(), isFresh: true };
+  if (!stableId) {
+    return { value: nanoid(), isFresh: true };
+  }
 
   return { value: stableId, isFresh: false };
 });

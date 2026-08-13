@@ -2,17 +2,22 @@ import { upstashCache } from "drizzle-orm/cache/upstash";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import "server-only";
+
 import { env } from "../env";
 import * as schema from "./schema";
+
 export * from "drizzle-orm";
 
 const globalForDb = globalThis as unknown as {
   client: postgres.Sql | undefined;
 };
 
-const client = globalForDb.client ?? postgres(env().DATABASE_URL, { prepare: false });
+const client =
+  globalForDb.client ?? postgres(env().DATABASE_URL, { prepare: false });
 
-if (process.env.NODE_ENV !== "production") globalForDb.client = client;
+if (process.env.NODE_ENV !== "production") {
+  globalForDb.client = client;
+}
 
 export const db = drizzle(client, {
   schema,

@@ -6,5 +6,12 @@ export const geist = Geist({
   variable: "--font-geist",
   preload: true,
   adjustFontFallback: true,
-  fallback: ["system-ui", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+  fallback: [
+    "system-ui",
+    "Segoe UI",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
 });

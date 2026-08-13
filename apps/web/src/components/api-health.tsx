@@ -1,7 +1,8 @@
 "use client";
 
-import { orpc } from "@/lib/orpc/client";
 import { useQuery } from "@tanstack/react-query";
+
+import { orpc } from "@/lib/orpc/client";
 
 export default function APIHealth() {
   const { data, isPending, isError } = useQuery(orpc.health.queryOptions());
@@ -14,7 +15,9 @@ export default function APIHealth() {
       ) : (
         <p className="font-commitmono">{data?.ok ? "OK" : "NOT OK"}</p>
       )}
-      {isError && <p className="text-destructive">{"[API]"} Failed to fetch API Health!</p>}
+      {isError && (
+        <p className="text-destructive">[API] Failed to fetch API Health!</p>
+      )}
     </div>
   );
 }

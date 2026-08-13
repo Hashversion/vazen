@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
+
 import { env } from "#env";
 
 /**
@@ -18,6 +19,8 @@ export const initSentry = (): ReturnType<typeof Sentry.init> =>
     tracesSampleRate: 0.1,
     enableLogs: true,
     debug: false,
-    replaysSessionSampleRate: 0.1, // 10% of sessions
-    replaysOnErrorSampleRate: 1.0, // 100% of sessions with errors
+    // 10% of sessions
+    replaysSessionSampleRate: 0.1,
+    // 100% of sessions with errors
+    replaysOnErrorSampleRate: 1,
   });

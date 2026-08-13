@@ -1,9 +1,18 @@
+import type { QueryClient } from "@tanstack/react-query";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { cache } from "react";
-import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
+
 import { createQueryClient } from "./client";
 
 export const getQueryClient = cache(createQueryClient);
 
-export function HydrateClient(props: { children: React.ReactNode; client: QueryClient }) {
-  return <HydrationBoundary state={dehydrate(props.client)}>{props.children}</HydrationBoundary>;
+export function HydrateClient(props: {
+  children: React.ReactNode;
+  client: QueryClient;
+}) {
+  return (
+    <HydrationBoundary state={dehydrate(props.client)}>
+      {props.children}
+    </HydrationBoundary>
+  );
 }

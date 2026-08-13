@@ -1,5 +1,6 @@
-import { Icons } from "@/components/ui/icons";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+
+import { Icons } from "@/components/ui/icons";
 
 export function baseOptions(): BaseLayoutProps {
   return {

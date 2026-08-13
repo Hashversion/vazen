@@ -1,9 +1,10 @@
 import { dash } from "@better-auth/infra";
+import { db } from "@repo/db";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin, magicLink } from "better-auth/plugins";
-import { db } from "@repo/db";
 import "server-only";
+
 import { env } from "../env";
 import { secondaryStorage } from "./secondary-storage";
 
@@ -15,10 +16,14 @@ export const auth = betterAuth({
   appName: "vazen",
   baseURL: {
     allowedHosts: [
-      "localhost:3000", // Local Host
-      "local.web.vazen.id", // Local development (using portless)
-      "*.vercel.app", // Preview (Vercel)
-      "web.vazen.dev", // Production
+      // Local Host
+      "localhost:3000",
+      // Local development (using portless)
+      "local.web.vazen.id",
+      // Preview (Vercel)
+      "*.vercel.app",
+      // Production
+      "web.vazen.dev",
     ],
   },
 

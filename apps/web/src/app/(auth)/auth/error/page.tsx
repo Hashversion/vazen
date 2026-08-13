@@ -1,9 +1,9 @@
 "use client";
 
-import { Suspense } from "react";
+import { Button } from "@repo/ui/components/button";
 import Link from "next/link";
 import { parseAsString, useQueryState } from "nuqs";
-import { Button } from "@repo/ui/components/button";
+import { Suspense } from "react";
 
 const ERROR_MESSAGES: Record<string, { title: string; description: string }> = {
   account_already_linked_to_different_user: {
@@ -70,10 +70,16 @@ function AuthErrorPage() {
       <div className="w-full max-w-md space-y-6 text-center">
         <div className="space-y-2">
           <h1 className="text-xl font-medium">{errorInfo.title}</h1>
-          <p className="text-muted-foreground text-sm">{errorInfo.description}</p>
+          <p className="text-muted-foreground text-sm">
+            {errorInfo.description}
+          </p>
         </div>
 
-        {errorCode && <code className="text-muted-foreground block text-xs">{errorCode}</code>}
+        {errorCode && (
+          <code className="text-muted-foreground block text-xs">
+            {errorCode}
+          </code>
+        )}
 
         <div className="mx-auto w-1/2 space-y-2">
           <Button

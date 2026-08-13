@@ -10,9 +10,9 @@ const buttonVariants = cva(
     "rounded-4xl border border-transparent",
     "bg-clip-padding",
     "text-sm whitespace-nowrap",
-    "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 select-none",
-    "outline-none transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50",
-    "aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 aria-invalid:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40"
+    "select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+    "focus-visible:border-ring focus-visible:ring-ring/50 transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
+    "aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:ring-[3px]"
   ),
   {
     defaultVariants: {
@@ -21,7 +21,8 @@ const buttonVariants = cva(
     },
     variants: {
       size: {
-        default: "h-10 gap-1.5 px-4 has-data-[icon=inline-end]:pr-2.5 has-data-[icon=inline-start]:pl-3 py-3",
+        default:
+          "h-10 gap-1.5 px-4 py-3 has-data-[icon=inline-end]:pr-2.5 has-data-[icon=inline-start]:pl-3",
         icon: "size-9",
         "icon-lg": "size-10",
         "icon-sm": "size-8",

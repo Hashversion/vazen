@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
-import { fontsVariable } from "@repo/ui/fonts";
 import { Button } from "@repo/ui/components/button";
+import { fontsVariable } from "@repo/ui/fonts";
 import * as Sentry from "@sentry/nextjs";
+import { useEffect } from "react";
 
 interface GlobalErrorProps {
   readonly error: Error & { digest?: string };

@@ -1,13 +1,17 @@
-import type { Metadata, Viewport } from "next";
+import { fontsVariable } from "@repo/ui/fonts";
+
 import "@/lib/orpc/server";
+
 import "@/styles/globals.css";
 import { cn } from "@repo/ui/lib/utils";
+import type { Metadata, Viewport } from "next";
+
 import { Providers } from "@/app/providers";
-import { fontsVariable } from "@repo/ui/fonts";
 
 export const metadata: Metadata = {
   title: "Vazen",
-  description: "A production grade monorepo starter to build full-stack applications",
+  description:
+    "A production grade monorepo starter to build full-stack applications",
   alternates: { canonical: "/" },
   icons: {
     icon: [

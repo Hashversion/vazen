@@ -1,6 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommits", "group:monorepos", "group:recommended"],
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    "group:monorepos",
+    "group:recommended"
+  ],
   "dependencyDashboard": true,
   "prConcurrentLimit": 10,
   "prHourlyLimit": 5,

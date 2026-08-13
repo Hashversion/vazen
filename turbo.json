@@ -20,9 +20,6 @@
     "typecheck": {
       "dependsOn": ["^typecheck"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
     "clean": {
       "cache": false
     }

@@ -6,23 +6,23 @@ use this playbook for any database modification, especially changes that affect 
 
 ## Risk overview
 
-| operation                    | risk level     | recommended approach                            |
-| ---------------------------- | -------------- | ----------------------------------------------- |
-| add table                    | low            | migrate first, then deploy code                 |
-| add nullable column          | low            | migrate first, then deploy code                 |
-| add column with safe default | low to medium  | migrate first                                   |
-| make column not null         | medium to high | write values, backfill, then enforce            |
-| change column type           | medium to high | add new column and migrate in phases            |
-| rename column                | high           | add new, backfill, switch reads, drop old later |
-| rename table                 | high           | phased replacement with dual write if needed    |
-| remove column                | high           | stop all reads and writes first, drop later     |
-| remove table                 | high           | stop all usage first, drop later                |
-| add foreign key              | medium to high | clean data then add constraint                  |
-| change foreign key action    | high           | review delete and update behavior first         |
-| add index                    | low            | add only for known query patterns               |
-| drop index                   | low to medium  | confirm no longer used by critical queries      |
-| add or tighten constraint    | medium to high | validate and backfill data first                |
-| change or remove enum value  | high           | additive only, phase out old values             |
+| operation | risk level | recommended approach |
+| --- | --- | --- |
+| add table | low | migrate first, then deploy code |
+| add nullable column | low | migrate first, then deploy code |
+| add column with safe default | low to medium | migrate first |
+| make column not null | medium to high | write values, backfill, then enforce |
+| change column type | medium to high | add new column and migrate in phases |
+| rename column | high | add new, backfill, switch reads, drop old later |
+| rename table | high | phased replacement with dual write if needed |
+| remove column | high | stop all reads and writes first, drop later |
+| remove table | high | stop all usage first, drop later |
+| add foreign key | medium to high | clean data then add constraint |
+| change foreign key action | high | review delete and update behavior first |
+| add index | low | add only for known query patterns |
+| drop index | low to medium | confirm no longer used by critical queries |
+| add or tighten constraint | medium to high | validate and backfill data first |
+| change or remove enum value | high | additive only, phase out old values |
 
 ## Deployment rules
 
@@ -76,20 +76,15 @@ apply extra caution and peer review when changing:
 
 ## Quick reference patterns
 
-add new column:
-add as nullable or with safe default → migrate → update writes → backfill if needed
+add new column: add as nullable or with safe default → migrate → update writes → backfill if needed
 
-make column required:
-deploy code that always writes the value → backfill old rows → verify no nulls → enforce not null
+make column required: deploy code that always writes the value → backfill old rows → verify no nulls → enforce not null
 
-rename column:
-add new column → write to both → backfill → switch all reads → drop old column in later migration
+rename column: add new column → write to both → backfill → switch all reads → drop old column in later migration
 
-remove column:
-stop all reads and writes in code → deploy → confirm zero usage → drop in later migration
+remove column: stop all reads and writes in code → deploy → confirm zero usage → drop in later migration
 
-add foreign key:
-clean inconsistent data → add constraint
+add foreign key: clean inconsistent data → add constraint
 
 ## Final rule
 

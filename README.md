@@ -56,8 +56,7 @@
 
 ### Environment variables
 
-> [!IMPORTANT]
-> **Agentic coding and secrets.** AI-assisted workflows can index or include workspace files in context. A `.env` with real keys may show up in model output, logs, or a shared thread. Assume secrets on disk near source are visible to tooling. Use Infisical for credentials, not long-lived env files in the repo.
+> [!IMPORTANT] **Agentic coding and secrets.** AI-assisted workflows can index or include workspace files in context. A `.env` with real keys may show up in model output, logs, or a shared thread. Assume secrets on disk near source are visible to tooling. Use Infisical for credentials, not long-lived env files in the repo.
 >
 > Extra steps around secrets (CLI, login, skipping local `.env` dumps) are intentional. It is always okay to overengineer security.
 

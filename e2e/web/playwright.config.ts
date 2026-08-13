@@ -1,8 +1,6 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { createPlaywrightSuiteConfig } from "@repo/playwright";
 
-const currentDir = path.dirname(fileURLToPath(import.meta.url));
+const currentDir = import.meta.dirname;
 
 export default createPlaywrightSuiteConfig({
   appName: "web",

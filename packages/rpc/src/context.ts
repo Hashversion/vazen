@@ -13,4 +13,5 @@ export async function createContext(options: { headers: Headers }) {
   };
 }
 
-export type Context = Awaited<ReturnType<typeof createContext>> & EvlogOrpcContext;
+export type Context = Awaited<ReturnType<typeof createContext>> &
+  EvlogOrpcContext;

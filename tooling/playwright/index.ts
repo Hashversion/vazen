@@ -1,8 +1,8 @@
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+
 import { defineConfig, devices } from "@playwright/test";
 
-const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const repoRoot = path.resolve(import.meta.dirname, "../..");
 
 type CreatePlaywrightSuiteConfigOptions = {
   appName: string;
@@ -30,7 +30,16 @@ export function createPlaywrightSuiteConfig({
     // Opt out of parallel tests on CI.
     workers: process.env.CI ? 1 : undefined,
     // Reporter to use
-    reporter: [["list"], ["html", { open: "never", outputFolder: path.join(suiteDir, "playwright-report") }]],
+    reporter: [
+      ["list"],
+      [
+        "html",
+        {
+          open: "never",
+          outputFolder: path.join(suiteDir, "playwright-report"),
+        },
+      ],
+    ],
 
     outputDir: path.join(suiteDir, "test-results"),
 

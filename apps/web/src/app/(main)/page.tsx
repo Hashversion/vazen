@@ -1,7 +1,24 @@
-import APIHealth from "@/components/api-health";
 import { bannerFlag } from "@repo/flags/feature";
 import { Button } from "@repo/ui/components/button";
 import { Suspense } from "react";
+
+import APIHealth from "@/components/api-health";
+
+async function Banner() {
+  const isBannerEnabled = await bannerFlag();
+
+  if (isBannerEnabled) {
+    return (
+      <div className="bg-black py-1 text-center text-sm text-white">
+        <p>
+          Banner enabled by feature flag: <code>enable_banner_flag</code>
+        </p>
+      </div>
+    );
+  }
+
+  return null;
+}
 
 export default function Page() {
   return (
@@ -14,10 +31,11 @@ export default function Page() {
           <div className="space-y-2">
             <h1 className="font-asul text-3xl font-medium">Vazen</h1>
             <p className="max-w-xs min-w-0">
-              The production-grade starter kit for modern full-stack applications
+              The production-grade starter kit for modern full-stack
+              applications
             </p>
             <div className="flex items-center gap-3">
-              <Button size={"sm"}>Button</Button>
+              <Button size="sm">Button</Button>
               <APIHealth />
             </div>
           </div>
@@ -25,22 +43,4 @@ export default function Page() {
       </div>
     </>
   );
-}
-
-async function Banner() {
-  const isBannerEnabled = await bannerFlag();
-
-  if (isBannerEnabled) {
-    return (
-      <>
-        <div className="bg-black py-1 text-center text-sm text-white">
-          <p>
-            Banner enabled by feature flag: <code>enable_banner_flag</code>
-          </p>
-        </div>
-      </>
-    );
-  }
-
-  return null;
 }

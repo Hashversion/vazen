@@ -20,6 +20,7 @@ export function secondaryStorage(): SecondaryStorage | undefined {
     set: async (key, value, ttl) => {
       const storageKey = prefixRedisKey(AUTH_PREFIX, key);
 
+      // oxlint-disable-next-line unicorn/prefer-ternary
       if (ttl) {
         await redis.set(storageKey, value, { ex: ttl });
       } else {

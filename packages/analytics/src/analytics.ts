@@ -1,4 +1,8 @@
-import { newsletterSignedup, newsletterSignupStarted, newsletterSignupSubmitted } from "./events/newsletter";
+import {
+  newsletterSignedup,
+  newsletterSignupStarted,
+  newsletterSignupSubmitted,
+} from "./events/newsletter";
 
 export const analytics = {
   newsletter: {

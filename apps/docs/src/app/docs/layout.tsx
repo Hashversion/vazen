@@ -1,6 +1,7 @@
-import { source } from "@/lib/fuma/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
+
 import { baseOptions } from "@/lib/fuma/layout.shared";
+import { source } from "@/lib/fuma/source";
 
 export default function Layout({ children }: LayoutProps<"/docs">) {
   return (

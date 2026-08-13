@@ -27,6 +27,7 @@ const stacks = [
     stackName: "Posthog",
   },
   {
+    // oxlint-disable-next-line react/jsx-pascal-case
     icon: <Icons.ORPC className="size-4" />,
     stackName: "oRPC",
   },
@@ -83,9 +84,13 @@ const stacks = [
 export default function TechStackSet() {
   return (
     <div className="mx-auto flex max-w-[960px] flex-wrap items-center justify-center gap-4">
-      {stacks.map((stack, idx) => {
-        return <StackPill key={idx} icon={stack.icon} stackName={stack.stackName} />;
-      })}
+      {stacks.map((stack) => (
+        <StackPill
+          key={stack.stackName}
+          icon={stack.icon}
+          stackName={stack.stackName}
+        />
+      ))}
     </div>
   );
 }

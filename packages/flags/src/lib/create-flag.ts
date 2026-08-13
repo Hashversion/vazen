@@ -1,6 +1,7 @@
 import { statsigAdapter } from "@flags-sdk/statsig";
-import { flag } from "flags/next";
 import type { StatsigUser } from "@flags-sdk/statsig";
+import { flag } from "flags/next";
+
 import { identify } from "./identify";
 
 type FlagConfig = {
@@ -25,8 +26,8 @@ type FlagConfig = {
  *   defaultValue: false,
  * });
  */
-export const createFlag = (config: FlagConfig) => {
-  return flag<boolean, StatsigUser>({
+export const createFlag = (config: FlagConfig) =>
+  flag<boolean, StatsigUser>({
     key: config.key,
     description: config.description,
     defaultValue: config.defaultValue,
@@ -35,4 +36,3 @@ export const createFlag = (config: FlagConfig) => {
       exposureLogging: true,
     }),
   });
-};
