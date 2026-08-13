@@ -1,12 +1,16 @@
-export const links = {
-  base: "https://vazen.dev",
-  cdn: "https://cdn.vazen.dev",
-  og: `https://cdn.vazen.dev/brand/opengraph-image.jpeg`,
-  logo: "https://cdn.vazen.dev/brand/logo.png",
+export const socials = {
   github: "https://github.com/stack-found/vazen",
   facebook: "",
   x: "",
   instagram: "",
   linkedin: "",
   bluesky: "",
+};
+
+export const links = {
+  base: "https://vazen.dev",
+  cdn: "https://cdn.vazen.dev",
+  og: `https://cdn.vazen.dev/brand/opengraph-image.jpeg`,
+  logo: "https://cdn.vazen.dev/brand/logo.png",
+  ...socials,
 };
