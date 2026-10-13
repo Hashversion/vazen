@@ -1,0 +1,15 @@
+---
+title: Discovery Surfaces
+description: Where every vazen capability must be findable
+---
+
+A capability is done only when docs, demo, and repo agree. Code owns the how; this doc owns the where.
+
+| intent | surface | rule |
+|---|---|---|
+| directed search (name, error, config key) | docs search, repo search | found in ≤1 query; docs indexed on publish |
+| setup (clone → env → dev → deploy) | guides, README, CLI | happy path works from docs alone |
+| browsing (what does the starter give me) | docs overview, demo | every claim has a live route |
+| evaluation (starter vs alternatives) | README, stack docs, demo | trade-offs stated honestly |
+
+Every package has a docs entry and a README. Every docs page links to its demo route or repo path. Sidebar order: setup, stack, guides, reference.

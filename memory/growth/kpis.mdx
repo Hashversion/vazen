@@ -1,0 +1,17 @@
+---
+title: KPIs
+description: How we measure vazen adoption and health.
+---
+
+North-star: **production apps shipped from the starter**.
+
+| kpi | source of truth |
+|---|---|
+| repo clones / templates used | GitHub insights |
+| docs traffic | Search Console + PostHog |
+| docs completion (setup guides finished) | PostHog |
+| demo usage | PostHog + DB |
+| contributors (PRs, issues, discussions) | GitHub |
+| production deploys | hosting dashboards |
+
+Funnel: `docs visit → clone → first deploy → production app`. Clones without deploys mean setup or docs are broken, not traffic. Review weekly (traffic, clones), monthly (deploys, contributors).

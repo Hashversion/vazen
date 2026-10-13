@@ -1,0 +1,15 @@
+---
+title: AI Decisions
+description: Which intelligence to use when, and the contracts every call must satisfy.
+---
+
+Code decides, LLMs draft, tools act, humans approve. Models answer narrow questions inside a code-owned workflow.
+
+| need | engine |
+|---|---|
+| classify, score, route, verify | deterministic rules or small classifier |
+| draft, rewrite, summarize | LLM, always behind human review |
+| write data, send mail, reindex | deterministic procedure or job |
+| repo and schema context for agents | dev-time tooling; proposes, never merges |
+
+No LLM in the request path. No model writes directly. Pin model versions, cache by content hash, log outputs. Vendor pricing lives in [Costs](../operations/costs); provider choice in [Stack](./stack).

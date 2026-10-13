@@ -1,0 +1,19 @@
+---
+title: Stack
+description: Providers and tooling. Versions live in `pnpm-workspace.yaml` + `pnpm-lock.yaml`.
+---
+
+- **Monorepo**: Turborepo + pnpm workspaces + mise (node)
+- **Web**: Next.js 16 (app router, `typedRoutes`, `cacheComponents`, `reactCompiler`) + React 19
+- **Docs / memory**: Blume (`apps/docs`, `memory/`)
+- **Styling**: Tailwind CSS v4
+- **API**: oRPC + TanStack Query
+- **Database**: Postgres 17 (local docker) + Drizzle ORM
+- **Cache**: Redis 8 (local docker) + serverless-redis-http proxy; Upstash in prod
+- **Auth**: better-auth (drizzle adapter, redis secondary storage)
+- **Store**: Cloudflare R2
+- **Email**: React Email + Resend (`noreply@tx.vazen.dev`)
+- **Flags**: Statsig. **Analytics**: PostHog. **Errors**: Sentry. **Logs**: Evlog
+- **Headers**: Nosecone. **Secrets**: Infisical (`dev`/`staging`/`production`). **Env**: t3-oss/env-nextjs
+- **E2E**: Playwright (`e2e/`). **Infra**: Alchemy (`infra/`, local state for now)
+- **Supply chain**: exact pins + lockfile, Renovate-only upgrades

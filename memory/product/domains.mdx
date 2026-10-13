@@ -1,0 +1,22 @@
+---
+title: Domains
+description: Workspace areas, what each is for, what is still open.
+---
+
+Layout source of truth: `pnpm-workspace.yaml`. Demo schema source of truth: `packages/db/src/schema`.
+
+- **Web (`apps/web`)**: reference app and demo at `web.vazen.dev`. Open: which flows are canonical proofs vs playground?
+- **Docs (`apps/docs`)**: Blume site at `vazen.dev/docs`. Open: versioning as the starter evolves?
+- **CLI (`apps/cli`)**: scaffolding path for new apps. Open: full web template or slimmed subset?
+- **Packages (`packages/*`)**: `@repo/*` libs (auth, db, rpc, ui, email, flags, analytics, telemetry, redis, storage, security, config). Open: when does a new package earn its existence?
+- **DB (`packages/db`)**: Drizzle + Postgres, `snake_case`. Schema in `src/schema`, migrations in `drizzle/`. Follow `packages/db/SCHEMA.md`: additive-first, phased. Open: seed strategy for demo vs fresh clones?
+- **Infra (`infra/`)**: Alchemy, local state until the first provider lands. Open: first provider, staging vs prod split?
+- **Memory (`memory/`)**: this tree. Open: what stays here vs moves into docs?
+
+Decide with use cases ("fresh clone ships demo auth in under 10 minutes"), and log each locked choice below.
+
+## Decisions log
+
+| Date | Decision | Why | Alternative rejected |
+|------|----------|-----|----------------------|
+| — | — | — | — |

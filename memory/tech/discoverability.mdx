@@ -1,0 +1,12 @@
+---
+title: Machine Discoverability
+description: How agents find, read, and use vazen docs.
+---
+
+Same docs for eyes and machines. If an agent can't answer "how do I set up vazen auth?" from our surfaces alone, that's a bug.
+
+1. **`llms.txt`**: short root map to setup, toolkit, and stack pages. Summary plus links, no data dumps.
+2. **Markdown variants**: every docs page renders as `.md`. Useless markdown means the page fails AEO.
+3. **Sitemap + feeds**: every published page listed, honest `lastmod`, each feed item linking back.
+
+Reads need no key. Removals are breaking changes with a deprecation window. Allow AI crawlers by default; block only on abuse. Search intent lives in [SEO & AEO](../../growth/seo).

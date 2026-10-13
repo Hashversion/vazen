@@ -1,0 +1,18 @@
+---
+title: Problems to Solve
+description: Canonical backlog. Check off items as they ship, link specs and PRs.
+---
+
+- [ ] **Clone-to-dev**: fresh clone runs `web` + `docs` with one command each (mise, docker, Infisical, portless)
+- [ ] **Env story**: Infisical per-env + `.env.example` placeholders + `createEnv` validation, no real secrets in repo
+- [ ] **Auth end-to-end**: better-auth with social providers working in demo
+- [ ] **Data layer**: Drizzle schema, migrations, seeds per `packages/db/SCHEMA.md`
+- [ ] **API layer**: oRPC routers + TanStack Query wiring
+- [ ] **Email**: React Email templates + Resend delivery
+- [ ] **Observability**: Sentry + PostHog + Evlog with sampling and PII rules
+- [ ] **Security headers**: Nosecone defaults with a CSP that survives real deploys
+- [ ] **E2E**: Playwright happy path (`e2e/`)
+- [ ] **Docs completeness**: every package documented, every claim demo-backed
+- [ ] **SEO / AEO + machine surfaces**: per `growth/seo.mdx` and `tech/discoverability.mdx`
+- [ ] **CLI**: scaffold path stays green
+- [ ] **Infra**: first Alchemy provider + staging/prod split

@@ -1,0 +1,12 @@
+---
+title: Moderation
+description: How changes reach `main`.
+---
+
+No end-user submissions; the queue is PRs, RFCs, and template changes. Automation proposes, humans decide.
+
+`proposed → checked → reviewed → merged`
+
+Checked means CI green: `pnpm check`, `pnpm typecheck`, build, e2e where applicable, plus the Lefthook secret scan. Reviewed means human approval; Renovate owns dependency updates and security PRs merge anytime with 1 review. Merged means conventional commits via commitlint.
+
+No merge on red. No bypass for bots. Outcomes live in the PR; spend lives in [Costs](./costs).

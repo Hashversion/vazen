@@ -1,0 +1,22 @@
+---
+title: Costs
+description: What we pay to run vazen and why.
+---
+
+One row per bill. Provider choice lives in [Stack](../../tech/stack); dollars live here; invoices live in dashboards.
+
+| category | vendor | purpose |
+|---|---|---|
+| hosting (demo/docs) | TBD | record here when chosen |
+| database (demo) | Postgres, local docker free for dev | demo data |
+| blob storage | Cloudflare R2 | object store |
+| redis | Upstash (local docker free for dev) | rate limiting, secondary storage |
+| emails | Resend | transactional (`noreply@tx.vazen.dev`) |
+| errors | Sentry | error monitoring |
+| analytics | PostHog | product analytics |
+| flags | Statsig | feature flags |
+| code | GitHub | repo + runners |
+| secrets | Infisical | env injection |
+| domain | registrar | `vazen.dev`, annual |
+
+Review quarterly. Kill what doesn't move [KPIs](../../growth/kpis).
