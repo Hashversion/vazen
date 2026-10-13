@@ -1,7 +1,7 @@
 import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
 import { db } from "@repo/db";
 import * as schema from "@repo/db/schema";
-import { betterAuth } from "better-auth";
+import { betterAuth } from "better-auth/minimal";
 import { admin, magicLink } from "better-auth/plugins";
 import "server-only";
 
