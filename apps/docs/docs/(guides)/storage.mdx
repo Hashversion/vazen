@@ -1,0 +1,22 @@
+---
+title: Storage
+description: Object storage on Cloudflare R2 through files-sdk.
+icon: hard-drive
+---
+
+`files` in `packages/storage/src/index.ts` wraps Cloudflare R2 through the `files-sdk` client: uploads, reads, and URL building in one place. Keys come from Infisical, never from the repo.
+
+## Configure the bucket
+
+- Keys :: `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` in `packages/storage/.env.schema`, values in Infisical per environment
+- Bucket name :: still the `your_bucket_name` placeholder in `index.ts`, point it at a real bucket before uploading outside local experiments
+
+## Public or signed URLs
+
+- `publicBaseUrl` set :: plain paths under the bucket's custom domain
+- Unset :: presigned URLs, 1 hour default, `defaultUrlExpiresIn` changes the window
+
+## Where to read
+
+- Code :: `packages/storage/src/index.ts`, `packages/storage/.env.schema`
+- Token docs :: linked from the schema field docs

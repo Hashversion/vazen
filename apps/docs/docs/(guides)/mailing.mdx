@@ -1,0 +1,28 @@
+---
+title: Mailing
+description: React Email templates sent through email-sdk providers.
+icon: mail
+---
+
+Mail is React Email templates rendered with `react-email` and delivered through the `email-sdk` client. Sender defaults live in `packages/email/src/lib/config.ts`, templates in `packages/email/src/emails`, shared pieces in `packages/email/src/components`.
+
+## Templates and sender
+
+- Templates :: `packages/email/src/emails`, React Email components, shared pieces from `packages/email/src/components`
+- Sender :: `noreply@tx.vazen.dev` plus the magic-link subject, both in `packages/email/src/lib/config.ts`
+
+## Add a provider
+
+- Client :: `packages/email/src/providers/index.ts`, empty adapter list with a TODO
+- Adapter :: add the preferred one from the email-sdk docs, keys in Infisical like every other secret
+- Until then :: sending unwired, nowhere to deliver, nothing fails silently
+
+## Develop without delivering
+
+- Mock :: `sendDevEmail` in `packages/email/src/lib/dev.ts`
+- Logs :: `email.mock_send` event with from, to, and subject through Evlog, returns a mock id
+- Use :: magic-link and login flows run end to end locally, no provider touched
+
+## Where to read
+
+- Code :: `packages/email/src/emails`, `packages/email/src/providers`, `packages/email/src/lib/config.ts`, `packages/email/src/lib/dev.ts`

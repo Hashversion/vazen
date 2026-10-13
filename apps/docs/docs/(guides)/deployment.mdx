@@ -1,0 +1,39 @@
+---
+title: Deployment
+description: Shipping web and docs, and what infra still needs.
+icon: rocket
+---
+
+No hosting provider is chosen yet. `infra/` holds an Alchemy stack with local state and no resources, so this page covers what builds today and what the first deploy still needs.
+
+## What builds today
+
+- Web :: `pnpm web:build`, Next plus the Varlock env plugin plus the Sentry plugin, bundle analyzer when `ANALYZE=true`
+- Docs :: `pnpm docs:build` through Blume
+- Both :: from the root through Turbo, exact pins plus the committed lockfile
+
+```sh
+pnpm web:build
+pnpm docs:build
+```
+
+## Infra state
+
+- Stack :: `infra/alchemy.run.ts`, named `vazen`, empty provider layer, `Alchemy.localState()`
+- Scripts :: `plan` previews, `deploy` ships, `destroy` tears down, local state only until the first provider lands
+
+```sh
+pnpm --filter infra plan
+pnpm --filter infra deploy
+pnpm --filter infra destroy
+```
+
+## Before the first deploy
+
+- Secrets ready :: Infisical staging and production plus each package `.env.schema`, validated by `pnpm env:codegen`
+- Open :: provider choice, staging versus prod split, demo seed strategy
+- Previews :: auth allows `*.vercel.app` alongside the local `.id` hostname and `web.vazen.dev`
+
+## Where to read
+
+- Code :: `infra/alchemy.run.ts`, `apps/web/next.config.ts`, `packages/telemetry/.env.schema`

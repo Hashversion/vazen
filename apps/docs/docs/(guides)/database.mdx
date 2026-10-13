@@ -1,0 +1,37 @@
+---
+title: Database
+description: Postgres plus Drizzle, from schema edit to migration.
+icon: database
+---
+
+Postgres 17 runs in Docker for dev and Drizzle ORM owns the schema, queries, and migrations. Schema source is `packages/db/src/schema`, migrations land in `packages/db/drizzle`, and `packages/db/SCHEMA.md` is the playbook for risky changes.
+
+## Schema layout
+
+- Tables :: `packages/db/src/schema`, `snake_case` columns, `auth.ts` plus `enums.ts` plus `relations.ts`, re-exported from `index.ts`
+- Schemas :: drizzle config filters to `public`, `auth`, and `main`
+- Reads :: `db` from `packages/db/src/index.ts`, Postgres driver plus Upstash cache on Redis
+- Reloads :: driver shared across hot reloads in dev, fresh in production
+
+## Connection defaults
+
+- Declarations :: `DATABASE_URL` in `packages/db/.env.schema`, Redis REST credentials in `packages/redis/.env.schema`, local defaults match Compose
+- Real values :: Infisical per environment, never pasted into the repo
+
+## Change the schema safely
+
+- Playbook :: `packages/db/SCHEMA.md` ranks each operation, additive migrates first, destructive ships code first, renames and drops move in phases with backfills
+- Generate and review ::
+
+```sh
+pnpm --filter @repo/db db:generate
+pnpm --filter @repo/db db:push
+```
+
+- Shared envs :: `db:generate` plus `db:migrate`, `db:push` stays local only
+- Never :: mix a data migration with a destructive schema change in one step, review every line of generated SQL first
+
+## Where to click and read
+
+- Studio :: `pnpm --filter @repo/db db:studio`
+- Code :: `packages/db/src/schema`, `packages/db/drizzle.config.ts`, `packages/db/SCHEMA.md`

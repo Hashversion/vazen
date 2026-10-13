@@ -5,3 +5,68 @@ icon: box
 ---
 
 ![vazen header image](/images/home.svg)
+
+vazen is a production-grade monorepo starter for full-stack apps: Next.js web app, Blume docs site, shared packages for auth, data, and API, plus Docker and Alchemy for local and cloud infra. Clone it, run two commands, and you have the demo running locally.
+
+## How the repo is laid out
+
+The web app and the docs site are separate apps with their own `package.json` and configs. Shared code lives in `packages/*` as `@repo/*` libs. Infra and E2E sit at the root next to them.
+
+- `apps/web` is the reference app and demo at `web.vazen.dev`. Auth pages, admin routes, API routes for auth and oRPC.
+- `apps/docs` is this site, built with Blume, served at `vazen.dev/docs`.
+- `packages/*` holds the libs web composes: auth, db, rpc, ui, email, flags, analytics, telemetry, redis, storage, security, config.
+- `packages/db` owns the Drizzle schema in `src/schema` and migrations in `drizzle/`.
+- `infra/` owns Alchemy setup. Local state for now, first provider still open.
+- `e2e/web` owns the Playwright happy path.
+
+Source of truth for the layout is `pnpm-workspace.yaml`.
+
+## What ships in the box
+
+Each item below names the demo route and the repo path that prove it, so you can click through and read the code behind it.
+
+### Auth
+
+Email and Google sign-in through better-auth, Drizzle adapter on Postgres, sessions cached in Redis. Login lives at `/auth/login`, admin routes under `/admin` redirect there when no session cookie is present.
+
+Code: `packages/auth/src/server.ts`, `packages/auth/src/client.ts`, `apps/web/src/app/(auth)`.
+
+### Data
+
+Postgres 17 in Docker for dev, Drizzle ORM for schema and queries. Connection defaults live in `packages/db/.env.schema` and match Compose. Generate with `pnpm --filter @repo/db db:generate`, push with `db:push`.
+
+Code: `packages/db/src/schema`, `packages/db/SCHEMA.md`.
+
+### API
+
+oRPC routers on the server, TanStack Query on the client. `health` answers without a session, `privateData` requires one. Routes mount at `/api/rpc/[[...rest]]`.
+
+Code: `packages/rpc/src/routers`, `packages/rpc/src/contract.ts`, `apps/web/src/lib/orpc`.
+
+### Email
+
+React Email templates with Resend delivery, sent from `noreply@tx.vazen.dev`.
+
+Code: `packages/email/src/emails`, `packages/email/src/providers`.
+
+### Storage
+
+Cloudflare R2 through a `files-sdk` compatible client. Keys come from Infisical, never from the repo.
+
+Code: `packages/storage/src`, `packages/storage/.env.schema`.
+
+### Flags, analytics, errors, logs
+
+Statsig gates features, PostHog tracks product use, Sentry captures errors, Evlog carries structured logs. The oRPC health router already tags its route for the logger.
+
+Code: `packages/flags`, `packages/analytics`, `packages/telemetry`.
+
+### Security headers
+
+Nosecone defaults applied in `proxy.ts` for every route, plus an admin gate that redirects to login. The CSP report endpoint is an env key, not hardcoded.
+
+Code: `packages/security/src/security-headers.ts`, `apps/web/src/proxy.ts`.
+
+## What is still open
+
+Seed strategy for demo versus fresh clones, versioning for docs as the starter evolves, the first Alchemy provider and the staging/prod split, and which web flows count as canonical proofs. These are tracked as open questions, not missing docs.

@@ -3,3 +3,29 @@ title: Tech Stack
 description: Learn about the tech stack used in vazen.
 icon: square-stack
 ---
+
+Every version below is pinned in `pnpm-workspace.yaml` with `pnpm-lock.yaml` as the lockfile. Upgrades go through Renovate, not by hand.
+
+## Web
+
+Next.js 16 with the app router, `typedRoutes`, `cacheComponents`, and the React compiler on. React 19. Tailwind CSS v4 for styling. Config: `apps/web/next.config.ts`.
+
+## API and data fetching
+
+oRPC v2 beta for routers and OpenAPI-compatible procedures, TanStack Query 5 for fetching and caching on the client. Router shape: `packages/rpc/src/routers/index.ts`, client wiring: `apps/web/src/lib/orpc`, `apps/web/src/lib/query`.
+
+## Database and cache
+
+Postgres 17 with Drizzle ORM. Redis 8 in Docker for dev, reached through the `serverless-redis-http` proxy in Compose so local code uses the same REST shape as Upstash in prod. Auth sessions and rate limiting sit on Redis.
+
+## Auth
+
+better-auth 1.7 with the Drizzle adapter and Redis secondary storage. Google OAuth plus email. Schema uses plural table names in the `auth` Postgres schema.
+
+## Storage, email, flags, observability
+
+Cloudflare R2 for object storage. React Email plus Resend for mail. Statsig for flags, PostHog for analytics, Sentry for errors, Evlog for structured logs. Nosecone for security headers.
+
+## Docs
+
+Blume 2.2.3 renders this site and `memory/`. Same pages serve as Markdown, sitemap, and feeds so humans and answer engines read the same content.

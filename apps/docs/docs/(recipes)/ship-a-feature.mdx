@@ -1,0 +1,37 @@
+---
+title: Ship a feature, database to UI
+description: Add a table, a procedure, and a page, the vazen way.
+icon: wrench
+---
+
+This recipe adds a small feature end to end: a `feedback` table, an oRPC procedure behind sign-in, and a page that reads it. Each step names the file and the command, in the order to run them.
+
+## Add the table
+
+- Create :: table in `packages/db/src/schema`, `snake_case` like the tables there
+- Generate ::
+
+```sh
+pnpm --filter @repo/db db:generate
+pnpm --filter @repo/db db:push
+```
+
+- Review :: every line of generated SQL before applying, risk table and phased patterns in `packages/db/SCHEMA.md`
+- Shared envs :: `db:generate` plus `db:migrate`, `db:push` stays local only
+
+## Add the procedure
+
+- Router :: new file in `packages/rpc/src/routers`, registered on the app router in `packages/rpc/src/routers/index.ts`
+- Level :: `protectedProcedure` for signed-in data, `publicProcedure` for open data
+- Context :: `db`, `session`, and `user` already there
+
+## Call it from a page
+
+- Client :: typed utils from `apps/web/src/lib/orpc/client.ts`
+- Server :: prefetch with the router client from `apps/web/src/lib/orpc/server.ts`, pass state through `HydrateClient` in `apps/web/src/lib/query/hydration.tsx`, no refetch on mount
+
+## Check it
+
+- Restart :: dev server, sign in at `/auth/login`, POST the new route at `/api/rpc`
+- Sessions :: `health` still answers without one, the new route must not
+- Logs :: Evlog wide event carries the route tag, check there if the shape looks wrong

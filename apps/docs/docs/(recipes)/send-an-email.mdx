@@ -1,0 +1,29 @@
+---
+title: Send an email
+description: From template to delivery without spamming anyone.
+icon: mail
+---
+
+This recipe sends the first real email: a template in `packages/email/src/emails`, a provider adapter in the email client, and a local run through the dev mock before anything delivers.
+
+## Write the template
+
+- Template :: new file in `packages/email/src/emails`, React Email components, shared pieces from `packages/email/src/components`
+- Sender :: default `noreply@tx.vazen.dev` in `packages/email/src/lib/config.ts`, keep the subject next to the template
+
+## Add the adapter
+
+- Client :: `packages/email/src/providers/index.ts`, empty adapter list today
+- Adapter :: preferred one from the email-sdk docs, keys in Infisical for each environment that sends
+- Declarations :: new keys in the email package `.env.schema`, then `pnpm env:codegen`
+
+## Try it locally first
+
+- Mock :: `sendDevEmail` from `packages/email/src/lib/dev.ts` before wiring the real adapter
+- Logs :: `email.mock_send` with from, to, and subject, returns a mock id, whole flow runs without delivering
+
+## Check it
+
+- Switch :: to the real adapter, restart the dev server, trigger the flow once
+- Confirm :: exactly one send in the provider dashboard
+- Nothing arrives :: keys from the wrong Infisical environment, or the from address is not the verified sender

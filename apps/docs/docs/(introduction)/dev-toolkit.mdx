@@ -3,3 +3,61 @@ title: Dev Toolkit
 description: Learn about the development tools used in vazen
 icon: tool-case
 ---
+
+One command per tool, run from the repo root unless noted. Versions live in the root `package.json` and `pnpm-workspace.yaml`.
+
+## Install and versions
+
+pnpm 12 manages the monorepo with workspaces and catalogs. mise pins Node at 22.23.2 or newer. After changing catalogs, run `pnpm install --lockfile-only`.
+
+```sh
+pnpm install --frozen-lockfile
+```
+
+## Local hostnames
+
+portless gives each app a hostname so there is no port to remember: `https://local.web.vazen.id` for web, `https://local.docs.vazen.id` for docs. `.id` wins over `.localhost` because Google and other OAuth providers reject `.localhost` redirect URLs.
+
+```sh
+pnpm web:dev
+pnpm docs:dev
+```
+
+## Env and secrets
+
+Varlock reads each package `.env.schema` and generates a typed `env.ts`. Infisical holds real values per `dev`, `staging`, and `production`. Set `USE_INFISICAL=true` to fetch from Infisical, otherwise local files and already-set variables win.
+
+```sh
+pnpm env:codegen
+pnpm secrets:scan
+```
+
+## Hooks, lint, format
+
+lefthook runs pre-commit and commit-msg hooks. commitlint enforces Conventional Commits. oxlint checks the code, oxfmt formats it, ultracite wraps both.
+
+```sh
+pnpm check
+pnpm fix
+pnpm fmt
+```
+
+## Dead code and duplicates
+
+fallow reports dead code, duplicates, and repo health in human-readable form.
+
+```sh
+pnpm fallow:dead
+pnpm fallow:dupes
+pnpm fallow:health
+```
+
+## Services and E2E
+
+Docker Compose starts Postgres, Redis, and the serverless Redis proxy. Playwright covers the web happy path from `e2e/web`.
+
+```sh
+pnpm docker:up
+pnpm docker:down
+pnpm web:e2e:local
+```

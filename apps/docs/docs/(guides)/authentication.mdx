@@ -1,0 +1,32 @@
+---
+title: Authentication
+description: Sign-in with better-auth, Postgres sessions, and Redis cache.
+icon: lock
+---
+
+better-auth 1.7 handles sign-in for the web app: Google OAuth plus email, sessions in Postgres through the Drizzle adapter, hot session reads in Redis. Server code lives in `packages/auth`, routes in `apps/web/src/app/api/auth/[...all]`, login UI at `/auth/login`.
+
+## How sign-in works
+
+- Server :: `packages/auth/src/server.ts` on the Drizzle adapter, Postgres, plural tables in the `auth` schema
+- Session cache :: cookie JWE for 5 minutes, repeat reads skip the database
+- Secondary storage :: `packages/auth/src/secondary-storage.ts`, Redis under `auth:` prefixed keys
+- Providers :: Google only, `select_account` prompt, account linking for Google
+- Plugins :: `admin` and `magicLink` on the server, `adminClient()` plus `magicLinkClient()` in `packages/auth/src/client.ts`
+
+## Keys and hosts
+
+- Google keys :: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` in Infisical env `dev`, declared in `packages/auth/.env.schema`
+- Hosts :: local `.id` hostname, Vercel previews, `web.vazen.dev`
+
+## Login page and admin gate
+
+- `/auth/login` :: stub today, server wiring ships, designed UI still open
+- `/admin` :: gated in `apps/web/src/proxy.ts`, no session cookie redirects to `/auth/login?next=...`
+- Headers :: Nosecone on every route, same file
+
+## Where to click and read
+
+- Login :: `https://local.web.vazen.id/auth/login`
+- Admin :: `https://local.web.vazen.id/admin`
+- Code :: `packages/auth/src/server.ts`, `packages/auth/src/secondary-storage.ts`, `apps/web/src/proxy.ts`

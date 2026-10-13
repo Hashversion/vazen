@@ -1,0 +1,30 @@
+---
+title: API
+description: oRPC routers on the server, TanStack Query on the client.
+icon: network
+---
+
+oRPC v2 beta defines the API in `packages/rpc` and TanStack Query 5 calls it from the web app. Routers mount at `/api/rpc/[[...rest]]`, the client lives in `apps/web/src/lib/orpc`, and query defaults live in `apps/web/src/lib/query`.
+
+## Procedures and context
+
+- Levels :: `publicProcedure`, `protectedProcedure` throwing `UNAUTHORIZED`, `adminProcedure` throwing `FORBIDDEN`, all in `packages/rpc/src/orpc.ts`
+- Context :: `packages/rpc/src/context.ts` built from headers, session plus user plus `db` plus the Evlog logger
+- Starter router :: `health` open with `{ ok: true }`, `privateData` needs a session and echoes the user, both in `packages/rpc/src/routers/index.ts`
+
+## Methods and logging
+
+- Route :: `/api/rpc/[[...rest]]`, POST, PUT, PATCH, and DELETE only
+- No GET :: client sends POST, GET with cookie auth invites CSRF
+- Logging :: Evlog handler plugin tags the route on the wide event, flushes with `after()`
+
+## Calling from the app
+
+- Client components :: typed utils in `apps/web/src/lib/orpc/client.ts`, pointed at `/api/rpc` on the current origin
+- Server components :: router client in `apps/web/src/lib/orpc/server.ts`, same router in-process with request headers
+- Freshness :: 60 seconds stale, `pending` queries dehydrate for streaming, `HydrateClient` in `apps/web/src/lib/query/hydration.tsx` carries state to the browser
+
+## Where to click and read
+
+- Health :: POST `https://local.web.vazen.id/api/rpc/health`
+- Code :: `packages/rpc/src/routers`, `packages/rpc/src/orpc.ts`, `packages/rpc/src/context.ts`, `apps/web/src/lib/orpc`

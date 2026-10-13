@@ -3,3 +3,51 @@ title: Project Setup
 description: Learn how to set up vazen locally
 icon: rocket
 ---
+
+From a fresh clone to the demo in about ten minutes: install, start services, pull secrets, run web and docs.
+
+## Prerequisites
+
+Node 22.23.2 or newer through mise, pnpm 12, Docker running. An Infisical machine identity for secrets, see the Infisical machine identities docs.
+
+```sh
+mise install
+pnpm install --frozen-lockfile
+```
+
+## Start services
+
+Postgres 17, Redis 8, and the serverless Redis proxy come from Compose. Connection defaults live in `packages/db/.env.schema` and `packages/redis/.env.schema` and match Compose, so there is nothing to copy by hand.
+
+```sh
+pnpm docker:up
+```
+
+## Configure secrets
+
+Each package declares its keys in `.env.schema` with local defaults and placeholders. Real values live in Infisical under `/vazen-web`, split by `dev`, `staging`, and `production`. For local work, put the machine identity IDs in `apps/web/.env.local` and set `USE_INFISICAL=true`. Use env `dev` locally. `.env` and `.env.local` stay gitignored.
+
+```sh
+pnpm env:codegen
+```
+
+## Run web and docs
+
+Web serves at `https://local.web.vazen.id`, docs at `https://local.docs.vazen.id`. Both go through portless, no ports to remember.
+
+```sh
+pnpm web:dev
+pnpm docs:dev
+```
+
+In one terminal each, or `pnpm dev` from the root for everything through Turbo.
+
+## Verify
+
+Open the login page, hit the API health check, and run the local E2E once services are up.
+
+```sh
+pnpm web:e2e:local
+```
+
+Login: `https://local.web.vazen.id/auth/login`. Health: `/api/rpc/health`. If Google sign-in fails locally, check the redirect URL uses the `.id` hostname and the client ID and secret came from Infisical env `dev`.
