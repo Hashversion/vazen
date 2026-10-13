@@ -58,13 +58,13 @@ export default function CopyCodeBlock({
       onClick={handleCopy}
       className="group flex h-10 cursor-pointer items-center gap-3 rounded-xl bg-neutral-200 pr-3 pl-4 text-sm font-medium transition-all active:scale-[0.98] dark:bg-neutral-800"
     >
-      <span className="text-muted-foreground font-mono select-none">
+      <span className="font-mono text-neutral-500 select-none dark:text-neutral-400">
         {prefix}
       </span>
       <span className="font-commitmono text-[13px] text-balance text-neutral-900 dark:text-neutral-50">
         {value}
       </span>
-      <span className="bg-accent flex size-6 items-center justify-center rounded-lg text-neutral-800 transition-colors group-hover:bg-neutral-300 dark:text-white dark:group-hover:bg-neutral-700">
+      <span className="flex size-6 items-center justify-center rounded-lg bg-neutral-300 text-neutral-700 transition-colors group-hover:bg-neutral-400 dark:bg-neutral-700 dark:text-neutral-100 dark:group-hover:bg-neutral-600">
         {copied ? <CheckIcon /> : <CopyIcon />}
       </span>
     </button>
