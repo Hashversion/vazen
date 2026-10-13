@@ -1,6 +1,6 @@
 # vazen
 
-[![VAZEN](./github.svg)](https://github.com/hashversion/vazen)
+[![VAZEN](./media/images/cover.svg)](https://github.com/hashversion/vazen)
 
 > - Demo site :: [web.vazen.dev](https://web.vazen.dev)
 
