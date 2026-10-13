@@ -19,4 +19,4 @@ pre-commit:
       run: pnpm exec renovate-config-validator --strict {staged_files}
       stage_fixed: true
     secret:
-      run: infisical scan git-changes --staged --verbose
+      run: pnpm exec varlock scan --staged

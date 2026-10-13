@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "imports": {
+    "#env": "./env.ts"
+  },
   "exports": {
     ".": "./src/index.ts",
     "./rate-limit": "./src/rate-limit.ts",
@@ -10,13 +13,13 @@
   },
   "scripts": {
     "clean": "rimraf .turbo node_modules",
+    "env:codegen": "varlock codegen",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "catalog:",
     "@upstash/ratelimit": "2.0.8",
     "@upstash/redis": "1.38.2",
-    "zod": "catalog:"
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

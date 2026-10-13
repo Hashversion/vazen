@@ -17,13 +17,13 @@
   },
   "scripts": {
     "clean": "rimraf node_modules .turbo",
+    "env:codegen": "varlock codegen",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@sentry/nextjs": "catalog:",
-    "@t3-oss/env-nextjs": "catalog:",
     "evlog": "2.26.0",
-    "zod": "catalog:"
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

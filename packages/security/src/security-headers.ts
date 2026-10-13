@@ -1,9 +1,9 @@
 import { defaults } from "@nosecone/next";
 import type { Options as NoseconeOptions } from "@nosecone/next";
 
-import { env } from "../env";
+import { ENV } from "#env";
 
-const isDev = process.env.NODE_ENV === "development";
+const isDev = ENV.APP_ENV === "development";
 
 export const securityHeadersOptions: NoseconeOptions = {
   ...defaults,
@@ -48,7 +48,7 @@ export const securityHeadersOptions: NoseconeOptions = {
       ],
       frameAncestors: ["'self'", "https://*.posthog.com"],
       upgradeInsecureRequests: !isDev,
-      reportUri: [env().NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT],
+      reportUri: [ENV.NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT],
     },
   },
   crossOriginEmbedderPolicy: { policy: "credentialless" },

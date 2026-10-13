@@ -76,7 +76,7 @@ pnpm exec lefthook install
 
 ## Start backing services (Docker)
 
-PostgreSQL and a local Upstash-compatible Redis HTTP proxy match the defaults in `apps/web/.env.example`.
+PostgreSQL and a local Upstash-compatible Redis HTTP proxy match the defaults in the `.env.schema` files (`packages/db/.env.schema`, `packages/redis/.env.schema`).
 
 ```bash
 pnpm docker:up
@@ -97,30 +97,21 @@ Remove volumes: `pnpm docker:clean`
 
 ### Web app (required for `web` dev/build)
 
-Copy the example file and fill in secrets for features you need (OAuth, Statsig, PostHog, Sentry, R2):
+Each package owns its variables in a `.env.schema` file (root `.env.schema` holds shared keys like `APP_ENV`). Local defaults for Docker services ship in the schemas, so only secrets for features you need (OAuth, Statsig, PostHog, Sentry, R2) must be provided — via `apps/web/.env.local`, already-set environment variables, or Infisical (`USE_INFISICAL=true`).
 
 ```bash
-cp apps/web/.env.example apps/web/.env.local
+touch apps/web/.env.local
 ```
+
+To pull from Infisical, add a machine identity's project ID + client ID/secret to `apps/web/.env.local` (locally) or CI secrets (pipelines) and set `USE_INFISICAL=true`. Secrets live under the `/vazen-web` path; required secrets missing from Infisical error out, optionals fall back to `""`. No `.infisical.json` needed — see [Infisical machine identities](https://infisical.com/docs/documentation/platform/identities/machine-identities).
 
 Next.js loads `apps/web/.env.local` (and related `.env*` files). Most variables for the running app live here.
 
 ### Package tooling (Drizzle, etc.)
 
-When running database commands from `packages/db`, copy:
+Package tools read the same variables from the environment. Export what you need or place a `.env` file next to the package schema (gitignored), e.g.:
 
-```bash
-cp packages/db/.env.example packages/db/.env
-```
-
-Similarly, if you work on Redis or R2 packages directly:
-
-```bash
-cp packages/redis/.env.example packages/redis/.env
-cp packages/storage/.env.example packages/storage/.env
-```
-
-Validated variables are defined in each package’s `env.ts` (via [@t3-oss/env-nextjs](https://env.t3.gg/)). Invalid or missing required values fail at build/runtime when that code path is loaded.
+Validated variables are declared in each package's `.env.schema`; typed `env.ts` clients are generated with `pnpm env:codegen` (committed, never hand-edited). Invalid or missing required values fail at build/runtime when that code path is loaded.
 
 ---
 
@@ -201,7 +192,7 @@ Open pull requests against the **`dev`** branch (not `main`). `main` is reserved
 - [ ] PR base branch is **`dev`**
 - [ ] `pnpm fmt`, `pnpm lint`, and `pnpm typecheck` pass locally
 - [ ] Database changes include migrations or documented `db:push` steps
-- [ ] New env vars are documented in `.env.example` and in the table below
+- [ ] New env vars are declared in the owning package's `.env.schema`, `pnpm env:codegen` is run, and the generated `env.ts` is committed (codegen embeds locally-resolved values into JSDoc — run it with placeholder local values, never real secrets, before committing)
 - [ ] No secrets committed (`.env.local`, API keys, tokens)
 - [ ] PR description explains **why** and how to test
 - [ ] You have read the [Code of Conduct](./CODE_OF_CONDUCT.md)
@@ -210,8 +201,7 @@ Open pull requests against the **`dev`** branch (not `main`). `main` is reserved
 
 ## Environment variables reference
 
-Primary template: [`apps/web/.env.example`](../apps/web/.env.example).  
-Validation: `packages/*/env.ts`.
+Source of truth: `.env.schema` files (repo root, each package, `apps/web`). Validation: generated `env.ts` per schema (`pnpm env:codegen`, never hand-edit).
 
 | Variable | Scope | Required locally | Description | Local default / notes |
 | --- | --- | --- | --- | --- |
@@ -249,7 +239,7 @@ Validation: `packages/*/env.ts`.
 | `packages/redis/.env`   | Redis package validation when run in isolation     |
 | `packages/storage/.env` | R2 / storage package when run in isolation         |
 
-Never commit `.env.local`, `.env`, or production secrets. Use `.env.example` as the source of truth for new variables.
+Never commit `.env.local`, `.env`, or production secrets. Use `.env.schema` as the source of truth for new variables.
 
 ---
 

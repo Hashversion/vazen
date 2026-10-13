@@ -14,6 +14,6 @@ description: Providers and tooling. Versions live in `pnpm-workspace.yaml` + `pn
 - **Store**: Cloudflare R2
 - **Email**: React Email + Resend (`noreply@tx.vazen.dev`)
 - **Flags**: Statsig. **Analytics**: PostHog. **Errors**: Sentry. **Logs**: Evlog
-- **Headers**: Nosecone. **Secrets**: Infisical (`dev`/`staging`/`production`). **Env**: t3-oss/env-nextjs
+- **Headers**: Nosecone. **Secrets**: Infisical (`dev`/`staging`/`production`) + Varlock codegen. **Env**: Varlock (`.env.schema` → generated `env.ts`)
 - **E2E**: Playwright (`e2e/`). **Infra**: Alchemy (`infra/`, local state for now)
 - **Supply chain**: exact pins + lockfile, Renovate-only upgrades

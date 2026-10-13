@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "imports": {
+    "#env": "./env.ts"
+  },
   "exports": {
     ".": "./src/index.ts",
     "./schema": "./src/schema/index.ts"
@@ -14,16 +17,16 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "dev": "drizzle-kit studio",
+    "env:codegen": "varlock codegen",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/redis": "workspace:*",
-    "@t3-oss/env-nextjs": "catalog:",
     "drizzle-orm": "1.0.0-rc.4",
     "postgres": "3.4.9",
     "server-only": "catalog:",
     "uuid": "14.0.1",
-    "zod": "catalog:"
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

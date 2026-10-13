@@ -3,17 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "imports": {
+    "#env": "./env.ts"
+  },
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
     "clean": "rimraf node_modules .turbo",
+    "env:codegen": "varlock codegen",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "catalog:",
     "posthog-js": "1.415.7",
-    "zod": "catalog:"
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

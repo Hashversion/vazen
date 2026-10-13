@@ -12,6 +12,9 @@
       "cache": false,
       "persistent": true
     },
+    "env:codegen": {
+      "cache": false
+    },
     "e2e": {
       "dependsOn": ["web#build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],

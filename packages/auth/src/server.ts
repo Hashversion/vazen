@@ -5,12 +5,9 @@ import { betterAuth } from "better-auth/minimal";
 import { admin, magicLink } from "better-auth/plugins";
 import "server-only";
 
-import { env } from "../env";
-import { secondaryStorage } from "./secondary-storage";
+import { ENV } from "#env";
 
-function isProduction() {
-  return process.env.NODE_ENV === "production";
-}
+import { secondaryStorage } from "./secondary-storage";
 
 export const auth = betterAuth({
   appName: "vazen",
@@ -39,8 +36,8 @@ export const auth = betterAuth({
   socialProviders: {
     google: {
       prompt: "select_account",
-      clientId: env().GOOGLE_CLIENT_ID,
-      clientSecret: env().GOOGLE_CLIENT_SECRET,
+      clientId: ENV.GOOGLE_CLIENT_ID,
+      clientSecret: ENV.GOOGLE_CLIENT_SECRET,
     },
   },
 
@@ -76,7 +73,7 @@ export const auth = betterAuth({
 
   advanced: {
     cookiePrefix: "vazen",
-    useSecureCookies: isProduction(),
+    useSecureCookies: ENV.APP_ENV === "production",
     ipAddress: {
       ipAddressHeaders: ["cf-connecting-ip", "x-forwarded-for"],
     },

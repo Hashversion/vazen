@@ -19,7 +19,7 @@
 - [**oxlint**](https://oxc.rs/docs/guide/usage/linter.html) :: Static analysis and linting
 - [**Playwright**](https://playwright.dev/) :: End-to-end testing for browser workflows
 - [**Docker**](https://www.docker.com/) :: Local development via Docker Compose
-- [**t3-oss/env-nextjs**](https://env.t3.gg/) :: Validates environment variables at build-time
+- **Varlock** :: Schema-driven environment validation with generated types (`.env.schema` → `env.ts`)
 - [**Nosecone**](https://docs.arcjet.com/nosecone/quick-start) :: Security headers made simple (Arcjet’s OSS library)
 
 ### Tech Stack
@@ -63,9 +63,10 @@
 #### What
 
 - [**Infisical**](https://infisical.com/) stores secret values per environment (`dev`, `staging`, `production`).
-- `infisical run --` (used by dev scripts) fetches the selected environment and injects vars into the process before Next/portless starts.
-- The web app uses [**t3-oss/env-nextjs**](https://env.t3.gg/) to validate env names and types at build/runtime.
-- In git: [`.infisical.json`](.infisical.json) points at the Infisical project; [`.env.example`](apps/web/.env.example) lists keys with placeholders only. `.env` and `.env.local` are gitignored.
+- Setting `USE_INFISICAL=true` lets Varlock fetch the selected environment (via `INFISICAL_ENV`, remapped from `APP_ENV`) from secrets under the `/vazen-web` path before Next/portless starts. Otherwise already-set variables and local `.env*` files win.
+- Machine-identity credentials for the fetch (`INFISICAL_PROJECT_ID`, `INFISICAL_CLIENT_ID`, `INFISICAL_CLIENT_SECRET`) come from `apps/web/.env.local` locally and from CI secrets in pipelines — never bundled. See [Infisical machine identities](https://infisical.com/docs/documentation/platform/identities/machine-identities).
+- Each package declares its variables in `.env.schema`; typed `env.ts` clients are generated with `pnpm env:codegen` to validate env names and types at build/runtime.
+- In git: `.env.schema` files declare keys with local defaults and placeholders only. `.env` and `.env.local` are gitignored.
 
 #### Why
 
@@ -74,10 +75,10 @@
 
 #### How
 
-1. **Setup (once):** run [mise](https://mise.jdx.dev/) in the repo root · `infisical login` · leave [`.infisical.json`](.infisical.json) as committed · start web with `pnpm web:dev` (root) or `pnpm dev` in [`apps/web`](apps/web)
-2. **Daily:** use those scripts, or prefix any command with `infisical run --` · use Infisical environment **`dev`** locally (`--env=dev` if the CLI asks)
+1. **Setup (once):** run [mise](https://mise.jdx.dev/) in the repo root · start web with `pnpm web:dev` (root) or `pnpm dev` in [`apps/web`](apps/web) · to pull secrets from Infisical instead of local files, create a machine identity ([docs](https://infisical.com/docs/documentation/platform/identities/machine-identities)), put its project ID + client ID/secret in [`apps/web/.env.local`](apps/web/.env.local), and set `USE_INFISICAL=true`
+2. **Daily:** use those scripts · use Infisical environment **`dev`** locally (selected via `APP_ENV`/`INFISICAL_ENV` when `USE_INFISICAL=true`)
 3. **Change a secret:** Infisical dashboard · pick `dev`, `staging`, or `production` · edit the key · restart the dev server
-4. **Add a variable:** set the value in Infisical for each env that needs it · add to the web app `createEnv` schema if required · add a placeholder line to [`.env.example`](apps/web/.env.example)
+4. **Add a variable:** set the value in Infisical for each env that needs it · declare it in the owning package's `.env.schema` · run `pnpm env:codegen` and commit the generated `env.ts`
 5. **Avoid:** committing `.env*` files that contain real secrets · pasting live values into issues or AI threads
 
 ### License

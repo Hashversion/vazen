@@ -6,9 +6,10 @@
   "scripts": {
     "build": "next build",
     "clean": "rimraf .next .turbo node_modules next-env.d.ts",
-    "dev": "infisical run --env=dev --path=/vazen-web -- portless",
+    "dev": "portless",
     "dev:app": "next dev",
-    "e2e:local": "infisical run --env=dev --path=/vazen-web -- sh -c \"pnpm run build && pnpm --filter @e2e/web e2e\"",
+    "e2e:local": "sh -c \"pnpm run build && pnpm --filter @e2e/web e2e\"",
+    "env:codegen": "varlock codegen",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
@@ -25,12 +26,15 @@
     "@repo/ui": "workspace:*",
     "@sentry/nextjs": "catalog:",
     "@tanstack/react-query": "catalog:tanstack",
+    "@varlock/infisical-plugin": "catalog:",
+    "@varlock/nextjs-integration": "1.2.4",
     "@zanreal/nemo": "3.0.1",
     "better-auth": "catalog:",
     "next": "catalog:next",
     "nuqs": "2.9.5",
     "react": "catalog:react",
-    "react-dom": "catalog:react"
+    "react-dom": "catalog:react",
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "catalog:next",

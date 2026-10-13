@@ -3,6 +3,7 @@
     "mattpocock.ts-error-translator",
     "oxc.oxc-vscode",
     "bradlc.vscode-tailwindcss",
-    "ms-playwright.playwright"
+    "ms-playwright.playwright",
+    "varlock.env-spec-language"
   ]
 }

@@ -1,6 +1,9 @@
 import bundleAnalyzer from "@next/bundle-analyzer";
 import { withSentry } from "@repo/telemetry/sentry/with-sentry";
+import { varlockNextConfigPlugin } from "@varlock/nextjs-integration/plugin";
 import type { NextConfig } from "next";
+
+const withVarlock = varlockNextConfigPlugin();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -25,7 +28,7 @@ const bundleAnalyzerPlugin = bundleAnalyzer({
 });
 
 const NextApp = () => {
-  const plugins = [bundleAnalyzerPlugin, withSentry];
+  const plugins = [bundleAnalyzerPlugin, withSentry, withVarlock];
   // oxlint-disable-next-line unicorn/no-array-reduce
   return plugins.reduce((config, plugin) => plugin(config), nextConfig);
 };

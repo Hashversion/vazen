@@ -61,5 +61,5 @@ export default defineConfig({
     },
   ],
 
-  ignorePatterns: core.ignorePatterns,
+  ignorePatterns: [...(core.ignorePatterns ?? []), "**/env.ts", "**/env.d.ts"],
 });

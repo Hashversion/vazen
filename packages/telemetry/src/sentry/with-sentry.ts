@@ -1,10 +1,10 @@
 import { withSentryConfig } from "@sentry/nextjs";
 
-import { env } from "#env";
+import { ENV } from "#env";
 
 export const sentryConfig: Parameters<typeof withSentryConfig>[1] = {
-  org: env().SENTRY_ORG,
-  project: env().SENTRY_PROJECT,
+  org: ENV.SENTRY_ORG,
+  project: ENV.SENTRY_PROJECT,
   telemetry: false,
   silent: !process.env.CI,
   widenClientFileUpload: true,
