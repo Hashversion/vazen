@@ -35,9 +35,10 @@ catalogs:
     "@next/bundle-analyzer": 16.4.0
     next: 16.4.0
   orpc:
-    "@orpc/client": 1.15.0
-    "@orpc/server": 1.15.0
-    "@orpc/tanstack-query": 1.15.0
+    "@orpc/client": 2.0.0-beta.43
+    "@orpc/evlog": 2.0.0-beta.43
+    "@orpc/server": 2.0.0-beta.43
+    "@orpc/tanstack-query": 2.0.0-beta.43
   react:
     "@types/react": 19.3.0
     "@types/react-dom": 19.3.0

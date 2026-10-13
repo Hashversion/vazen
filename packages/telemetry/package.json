@@ -21,8 +21,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@orpc/evlog": "catalog:orpc",
     "@sentry/nextjs": "catalog:",
-    "evlog": "2.26.0",
+    "evlog": "2.30.1",
     "varlock": "catalog:"
   },
   "devDependencies": {

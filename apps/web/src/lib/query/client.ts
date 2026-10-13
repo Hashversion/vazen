@@ -10,8 +10,7 @@ export function createQueryClient() {
     defaultOptions: {
       queries: {
         queryKeyHashFn(queryKey) {
-          const [json, meta] = serializer.serialize(queryKey);
-          return JSON.stringify({ json, meta });
+          return JSON.stringify(serializer.serialize(queryKey));
         },
         // > 0 to prevent immediate refetching on mount
         staleTime: 60 * 1000,
@@ -21,13 +20,12 @@ export function createQueryClient() {
           defaultShouldDehydrateQuery(query) ||
           query.state.status === "pending",
         serializeData(data) {
-          const [json, meta] = serializer.serialize(data);
-          return { json, meta };
+          return serializer.serialize(data);
         },
       },
       hydrate: {
         deserializeData(data) {
-          return serializer.deserialize(data.json, data.meta);
+          return serializer.deserialize(data);
         },
       },
     },

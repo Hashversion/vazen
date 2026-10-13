@@ -5,6 +5,9 @@ export async function register() {
   if (process.env.NEXT_RUNTIME === "nodejs") {
     await import("@/lib/orpc/server");
 
+    const { configApiLogger } = await import("@repo/rpc/bootstrap/logger");
+    configApiLogger();
+
     const { initSentry } = await import("@repo/telemetry/sentry/server");
     initSentry();
   }

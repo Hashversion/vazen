@@ -2,9 +2,17 @@ import { RPCHandler } from "@orpc/server/fetch";
 import { createContext } from "@repo/rpc/context";
 import type { Context } from "@repo/rpc/context";
 import { appRouter } from "@repo/rpc/routers/index";
-import { withEvlog } from "@repo/telemetry/evlog/orpc";
+import { EvlogHandlerPlugin } from "@repo/telemetry/evlog/orpc";
+import { after } from "next/server";
 
-const handler = withEvlog(new RPCHandler<Context>(appRouter));
+const handler = new RPCHandler<Context>(appRouter, {
+  plugins: [
+    new EvlogHandlerPlugin({
+      logAbort: true,
+      waitUntil: (promise) => after(promise),
+    }),
+  ],
+});
 
 async function handleRequest(request: Request) {
   const context = {
@@ -19,10 +27,10 @@ async function handleRequest(request: Request) {
   return matched ? response : new Response("Not found", { status: 404 });
 }
 
-export const HEAD = handleRequest;
-export const GET = handleRequest;
+// NOTE (oRPC v2): RPCHandler only accepts POST/PUT/PATCH/DELETE by default.
+// The RPCLink client sends POST, and enabling GET with cookie auth is a CSRF
+// risk, so only mutating-method handlers are exported.
 export const POST = handleRequest;
 export const PUT = handleRequest;
 export const PATCH = handleRequest;
 export const DELETE = handleRequest;
-export const OPTIONS = handleRequest;

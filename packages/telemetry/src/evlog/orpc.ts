@@ -1,1 +1,1 @@
-export * from "evlog/orpc";
+export * from "@orpc/evlog";

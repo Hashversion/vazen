@@ -1,10 +1,11 @@
 import type { RouterClient } from "@orpc/server";
+import { getLogger } from "@repo/telemetry/evlog/orpc";
 
 import { protectedProcedure, publicProcedure } from "../orpc";
 
 export const appRouter = {
   health: publicProcedure.handler(({ context }) => {
-    context.log.set({ route: "health" });
+    getLogger(context)?.set({ route: "health" });
     return { ok: true };
   }),
   privateData: protectedProcedure.handler(({ context }) => ({

@@ -1,12 +1,12 @@
 import { ORPCError, os } from "@orpc/server";
-import { evlog } from "@repo/telemetry/evlog/orpc";
 
-import { configApiLogger } from "./bootstrap/logger";
 import type { Context } from "./context";
 
-configApiLogger();
-
-export const base = os.$context<Context>().use(evlog());
+// Request logging is handled natively by EvlogHandlerPlugin on the RPCHandler
+// (it tags rpc.method on the wide event); no procedure middleware needed.
+// Logger init (configApiLogger) runs explicitly in the app's instrumentation
+// hook, not as an import side effect here.
+export const base = os.$context<Context>();
 export const publicProcedure = base;
 
 export const protectedProcedure = publicProcedure.use(({ context, next }) => {
