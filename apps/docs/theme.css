@@ -1,0 +1,7 @@
+/* Dark mode follows Blume's [data-theme="dark"] attribute (and .dark). */
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-commitmono:
+    "CommitMonoVazen", ui-monospace, SFMono-Regular, Menlo, monospace;
+}

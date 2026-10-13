@@ -50,5 +50,16 @@ export default defineConfig({
     "no-warning-comments": "off",
   },
 
+  // Blume island filenames become the component tag, so they must stay
+  // PascalCase (e.g. islands/CopyCodeBlock.tsx -> <CopyCodeBlock />).
+  overrides: [
+    {
+      files: ["apps/docs/islands/**/*.tsx"],
+      rules: {
+        "unicorn/filename-case": "off",
+      },
+    },
+  ],
+
   ignorePatterns: core.ignorePatterns,
 });
