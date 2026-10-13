@@ -3,6 +3,8 @@ import { withSentry } from "@repo/telemetry/sentry/with-sentry";
 import { varlockNextConfigPlugin } from "@varlock/nextjs-integration/plugin";
 import type { NextConfig } from "next";
 
+import { ENV } from "./env";
+
 const withVarlock = varlockNextConfigPlugin();
 
 const nextConfig: NextConfig = {
@@ -24,13 +26,7 @@ const nextConfig: NextConfig = {
 };
 
 const bundleAnalyzerPlugin = bundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
+  enabled: ENV.ANALYZE,
 });
 
-const NextApp = () => {
-  const plugins = [bundleAnalyzerPlugin, withSentry, withVarlock];
-  // oxlint-disable-next-line unicorn/no-array-reduce
-  return plugins.reduce((config, plugin) => plugin(config), nextConfig);
-};
-
-export default NextApp;
+export default withVarlock(withSentry(bundleAnalyzerPlugin(nextConfig)));

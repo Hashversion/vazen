@@ -13,6 +13,13 @@ export type CoercedEnvSchema = {
   USE_INFISICAL?: boolean;
 
   /**
+   * **ANALYZE**
+   * Enables @next/bundle-analyzer during `next build` (ANALYZE=true).
+   * ![icon](data:image/svg+xml;utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill%3D%22%23808080%22%20d%3D%22M23%2023a7%207%200%201%201%207-7a7.01%207.01%200%200%201-7%207m0-12a5%205%200%201%200%205%205a5.006%205.006%200%200%200-5-5%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E)
+   */
+  ANALYZE?: boolean;
+
+  /**
    * **INFISICAL_ENV**
    * Infisical env slug for APP_ENV (dev / staging / prod).
    */
@@ -20,7 +27,8 @@ export type CoercedEnvSchema = {
 
   /**
    * **DATABASE_URL** 🔐 _sensitive_
-   * Database
+   * DATABASE_URL="postgresql://postgres:postgres@localhost:5432/vazen_db"
+   * DATABASE_URL="postgresql://neondb_owner:npg_VA26PBtiaMom@ep-lucky-snow-amxen5ha-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
    *
    * 📚 {@link https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING | PostgreSQL connection strings}
    */
@@ -144,7 +152,7 @@ export type CoercedEnvSchema = {
   STATSIG_SERVER_API_KEY: string;
 };
 
-type _CoercedEnvSchema_ad105505 = CoercedEnvSchema;
+type _CoercedEnvSchema_26f86da2 = CoercedEnvSchema;
 
 export type EnvSchemaAsStrings = {
   [Property in keyof CoercedEnvSchema]: NonNullable<
@@ -156,12 +164,13 @@ export type EnvSchemaAsStrings = {
       : string;
 };
 
-type _EnvSchemaAsStrings_ad105505 = EnvSchemaAsStrings;
+type _EnvSchemaAsStrings_26f86da2 = EnvSchemaAsStrings;
 
 export type PublicCoercedEnvSchema = Readonly<
   Pick<
     CoercedEnvSchema,
     | "USE_INFISICAL"
+    | "ANALYZE"
     | "INFISICAL_ENV"
     | "APP_ENV"
     | "NEXT_PUBLIC_POSTHOG_KEY"
