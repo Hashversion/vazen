@@ -23,3 +23,9 @@ Source of truth: exact pins + `pnpm-lock.yaml`. No drift.
 - Containers: exact tag + digest, no `:latest`/floating majors.
 
 Agent: DO frozen installs + Renovate PRs. NEVER hand-edit versions, widen ranges, add build scripts, float tags.
+
+## Memory (`memory/`)
+
+- `memory/` holds what code doesn't answer: intent, principles, contracts, decisions. Code owns the how; `memory/` owns the why. Never duplicate code there.
+- Don't preload it. First read `memory/index.mdx`, judge which file answers your question, then read only that file.
+- Links inside `memory/` stay extension-less (`[Discovery](../product/discovery)`). Extensions break Blume routing.
