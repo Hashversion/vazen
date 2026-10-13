@@ -163,10 +163,6 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  auth:
-    better-auth:
-      specifier: 1.6.26
-      version: 1.6.26
   default:
     '@playwright/test':
       specifier: ^1.62.1
@@ -180,9 +176,9 @@ catalogs:
     '@types/node':
       specifier: ^24.13.3
       version: 24.13.3
-    drizzle-orm:
-      specifier: 0.45.2
-      version: 0.45.2
+    better-auth:
+      specifier: 1.6.26
+      version: 1.6.26
     server-only:
       specifier: 0.0.1
       version: 0.0.1
@@ -348,7 +344,7 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(next@16.4.0(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))
       better-auth:
-        specifier: catalog:auth
+        specifier: 'catalog:'
         version: 1.6.26(@opentelemetry/api@1.9.1)(drizzle-kit@0.31.10)(drizzle-orm@0.45.2(@opentelemetry/api@1.9.1)(@upstash/redis@1.38.2)(kysely@0.29.5)(postgres@3.4.9))(next@16.4.0(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       next:
         specifier: catalog:next
@@ -465,7 +461,7 @@ importers:
         specifier: 'catalog:'
         version: 0.13.11(typescript@7.0.2)(zod@4.4.3)
       better-auth:
-        specifier: catalog:auth
+        specifier: 'catalog:'
         version: 1.6.26(@opentelemetry/api@1.9.1)(drizzle-kit@0.31.10)(drizzle-orm@0.45.2(@opentelemetry/api@1.9.1)(@upstash/redis@1.38.2)(kysely@0.29.5)(postgres@3.4.9))(next@16.4.0(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       next:
         specifier: catalog:next
@@ -524,7 +520,7 @@ importers:
         specifier: 'catalog:'
         version: 0.13.11(typescript@7.0.2)(zod@4.4.3)
       drizzle-orm:
-        specifier: 'catalog:'
+        specifier: 0.45.2
         version: 0.45.2(@opentelemetry/api@1.9.1)(@upstash/redis@1.38.2)(kysely@0.29.5)(postgres@3.4.9)
       postgres:
         specifier: ^3.4.9

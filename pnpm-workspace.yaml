@@ -19,14 +19,11 @@ catalog:
   "@sentry/nextjs": 10.69.0
   "@t3-oss/env-nextjs": ^0.13.11
   "@types/node": ^24.13.3
-  drizzle-orm: 0.45.2
-  motion: ^12.43.0
+  better-auth: 1.6.26
   "server-only": 0.0.1
   typescript: ^7.0.2
   zod: 4.4.3
 catalogs:
-  auth:
-    better-auth: 1.6.26
   next:
     "@next/bundle-analyzer": 16.4.0
     next: 16.4.0

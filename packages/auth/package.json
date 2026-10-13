@@ -22,7 +22,7 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "better-auth": "catalog:auth",
+    "better-auth": "catalog:",
     "next": "catalog:next",
     "server-only": "catalog:"
   }
