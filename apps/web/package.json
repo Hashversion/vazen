@@ -25,10 +25,10 @@
     "@repo/ui": "workspace:*",
     "@sentry/nextjs": "catalog:",
     "@tanstack/react-query": "catalog:tanstack",
-    "@zanreal/nemo": "^3.0.1",
+    "@zanreal/nemo": "3.0.1",
     "better-auth": "catalog:",
     "next": "catalog:next",
-    "nuqs": "^2.9.5",
+    "nuqs": "2.9.5",
     "react": "catalog:react",
     "react-dom": "catalog:react"
   },

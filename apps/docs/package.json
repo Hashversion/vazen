@@ -12,7 +12,7 @@
     "typecheck": "blume check"
   },
   "dependencies": {
-    "blume": "^2.2.3",
+    "blume": "2.2.3",
     "react": "catalog:react",
     "react-dom": "catalog:react"
   },

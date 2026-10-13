@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "schema-dts": "^2.0.0"
+    "schema-dts": "2.0.0"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

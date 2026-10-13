@@ -19,11 +19,11 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "@flags-sdk/statsig": "^0.3.0",
+    "@flags-sdk/statsig": "0.3.1",
     "@repo/auth": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",
-    "flags": "^4.3.0",
-    "nanoid": "^5.1.16",
+    "flags": "4.3.0",
+    "nanoid": "5.1.16",
     "zod": "catalog:"
   },
   "devDependencies": {

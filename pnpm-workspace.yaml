@@ -5,23 +5,27 @@ packages:
   - "e2e/*"
 
 allowBuilds:
+  # Install-time code exec — do not extend without review.
   "@infisical/cli": true
   "@sentry/cli": true
   core-js: true
+  core-js-pure: false
+  dtrace-provider: false
   esbuild: true
   fallow: true
   lefthook: true
   protobufjs: true
+  re2: false
   sharp: true
 
 catalog:
-  "@playwright/test": ^1.62.1
+  "@playwright/test": 1.62.1
   "@sentry/nextjs": 10.69.0
-  "@t3-oss/env-nextjs": ^0.13.11
-  "@types/node": ^24.13.3
+  "@t3-oss/env-nextjs": 0.13.11
+  "@types/node": 24.13.3
   better-auth: 1.6.26
   "server-only": 0.0.1
-  typescript: ^7.0.2
+  typescript: 7.0.2
   zod: 4.4.3
 catalogs:
   next:
@@ -37,8 +41,8 @@ catalogs:
     react: 19.2.8
     "react-dom": 19.2.8
   tanstack:
-    "@tanstack/react-query": ^5.101.4
-    "@tanstack/react-query-devtools": ^5.101.4
+    "@tanstack/react-query": 5.101.4
+    "@tanstack/react-query-devtools": 5.101.4
   tailwind:
-    "@tailwindcss/postcss": ^4.3.3
-    tailwindcss: ^4.3.3
+    "@tailwindcss/postcss": 4.3.3
+    tailwindcss: 4.3.3
