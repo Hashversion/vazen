@@ -15,7 +15,7 @@ allowBuilds:
   fallow: true
   lefthook: true
   protobufjs: true
-  re2: false
+  re2: true
   sharp: true
 
 catalog:
