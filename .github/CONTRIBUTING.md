@@ -25,7 +25,7 @@ Please read our [Code of Conduct](./CODE_OF_CONDUCT.md) before participating. Se
 | Tool | Version / notes |
 | --- | --- |
 | **Node.js** | `>= 22.22.3` (see root `package.json` `engines`) |
-| **pnpm** | `10.33.4` (see root `packageManager`; use [Corepack](https://nodejs.org/api/corepack.html): `corepack enable`) |
+| **pnpm** | `12.11.2` (see root `packageManager`; use [Corepack](https://nodejs.org/api/corepack.html): `corepack enable`) |
 | **Docker** | For local PostgreSQL and Redis (recommended) |
 | **Git** | With hooks via [Lefthook](https://lefthook.dev/) (installed with the repo) |
 
