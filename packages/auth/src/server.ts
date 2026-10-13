@@ -1,6 +1,7 @@
+import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
 import { db } from "@repo/db";
+import * as schema from "@repo/db/schema";
 import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin, magicLink } from "better-auth/plugins";
 import "server-only";
 
@@ -28,9 +29,12 @@ export const auth = betterAuth({
 
   database: drizzleAdapter(db, {
     provider: "pg",
+    schema,
+    usePlural: true,
+    schemaName: "auth",
   }),
 
-  secondaryStorage: secondaryStorage(),
+  secondaryStorage,
 
   socialProviders: {
     google: {

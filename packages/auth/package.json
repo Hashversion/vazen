@@ -11,6 +11,7 @@
     "clean": "rimraf node_modules .turbo"
   },
   "dependencies": {
+    "@better-auth/drizzle-adapter": "1.7.7",
     "@repo/db": "workspace:*",
     "@repo/redis": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",

@@ -5,7 +5,7 @@ import { userRoleEnum } from "./enums";
 
 export const auth = pgSchema("auth");
 
-export const user = auth.table("user", {
+export const users = auth.table("users", {
   id: t.text("id").primaryKey(),
   name: t.text("name").notNull(),
   email: t.varchar("email", { length: 255 }).notNull().unique(),
@@ -23,14 +23,14 @@ export const user = auth.table("user", {
   banExpires: t.timestamp("ban_expires", { precision: 6, withTimezone: true }),
 });
 
-export const session = auth.table(
-  "session",
+export const sessions = auth.table(
+  "sessions",
   {
     id: t.text("id").primaryKey(),
     userId: t
       .text("user_id")
       .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
+      .references(() => users.id, { onDelete: "cascade" }),
     token: t.varchar("token", { length: 255 }).notNull().unique(),
     expiresAt: t
       .timestamp("expires_at", { precision: 6, withTimezone: true })
@@ -46,19 +46,19 @@ export const session = auth.table(
       .notNull(),
   },
   (table) => [
-    t.index("session_user_id_idx").on(table.userId),
-    t.index("session_token_idx").on(table.token),
+    t.index("sessions_user_id_idx").on(table.userId),
+    t.index("sessions_token_idx").on(table.token),
   ]
 );
 
-export const account = auth.table(
-  "account",
+export const accounts = auth.table(
+  "accounts",
   {
     id: t.text("id").primaryKey(),
     userId: t
       .text("user_id")
       .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
+      .references(() => users.id, { onDelete: "cascade" }),
     accountId: t.text("account_id").notNull(),
     providerId: t.text("provider_id").notNull(),
     accessToken: t.text("access_token"),
@@ -81,11 +81,11 @@ export const account = auth.table(
       .timestamp("updated_at", { precision: 6, withTimezone: true })
       .notNull(),
   },
-  (table) => [t.index("account_user_id_idx").on(table.userId)]
+  (table) => [t.index("accounts_user_id_idx").on(table.userId)]
 );
 
-export const verification = auth.table(
-  "verification",
+export const verifications = auth.table(
+  "verifications",
   {
     id: t.text("id").primaryKey(),
     identifier: t.text("identifier").notNull(),
@@ -100,5 +100,5 @@ export const verification = auth.table(
       .timestamp("updated_at", { precision: 6, withTimezone: true })
       .notNull(),
   },
-  (table) => [t.index("verification_identifier_idx").on(table.identifier)]
+  (table) => [t.index("verifications_identifier_idx").on(table.identifier)]
 );

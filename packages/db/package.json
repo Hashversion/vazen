@@ -19,7 +19,7 @@
   "dependencies": {
     "@repo/redis": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",
-    "drizzle-orm": "0.45.2",
+    "drizzle-orm": "1.0.0-rc.4",
     "postgres": "3.4.9",
     "server-only": "catalog:",
     "uuid": "14.0.1",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@types/node": "catalog:",
-    "drizzle-kit": "0.31.10",
+    "drizzle-kit": "1.0.0-rc.4",
     "typescript": "catalog:"
   }
 }
