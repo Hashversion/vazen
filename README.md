@@ -19,7 +19,7 @@
 - [**oxlint**](https://oxc.rs/docs/guide/usage/linter.html) :: Static analysis and linting
 - [**Playwright**](https://playwright.dev/) :: End-to-end testing for browser workflows
 - [**Docker**](https://www.docker.com/) :: Local development via Docker Compose
-- **Varlock** :: Schema-driven environment validation with generated types (`.env.schema` → `env.ts`)
+- [**Varlock**](https://varlock.dev/) :: Schema-driven environment validation with generated types (`.env.schema` → `env.ts`)
 - [**Nosecone**](https://docs.arcjet.com/nosecone/quick-start) :: Security headers made simple (Arcjet’s OSS library)
 
 ### Tech Stack
@@ -44,42 +44,36 @@
 
 ## Local Development
 
-- Uses [**portless**](https://portless.sh/) :: apps run on clean hostnames instead of raw ports.
-- Local hosts: `https://local.web.vazen.id` and `https://local.docs.vazen.id`
-- We use `.id` instead of `.localhost` because auth clients and OAuth providers such as Google can reject `.localhost` redirect URLs during local development.
-- Dev scripts in [`apps/web/package.json`](apps/web/package.json) and [`apps/docs/package.json`](apps/docs/package.json) are wired to portless.
-
-**Local hosts:**
-
-- `https://local.web.vazen.id`
-- `https://local.docs.vazen.id`
+- [**portless**](https://portless.sh/) :: apps run on hostnames, no ports to remember
+- Local hosts :: `https://local.web.vazen.id`, `https://local.docs.vazen.id`
+- `.id` over `.localhost` :: OAuth providers like Google reject `.localhost` redirect URLs
+- Dev scripts :: wired to portless in [`apps/web/package.json`](apps/web/package.json) and [`apps/docs/package.json`](apps/docs/package.json)
 
 ### Environment variables
 
-> [!IMPORTANT] **Agentic coding and secrets.** AI-assisted workflows can index or include workspace files in context. A `.env` with real keys may show up in model output, logs, or a shared thread. Assume secrets on disk near source are visible to tooling. Use Infisical for credentials, not long-lived env files in the repo.
->
-> Extra steps around secrets (CLI, login, skipping local `.env` dumps) are intentional. It is always okay to overengineer security.
+> [!IMPORTANT]
+> AI context can pick up workspace files. A `.env` with real keys can surface in output, logs, or a shared thread. Keep credentials in Infisical, not in long-lived files in the repo.
 
 #### What
 
-- [**Infisical**](https://infisical.com/) stores secret values per environment (`dev`, `staging`, `production`).
-- Setting `USE_INFISICAL=true` lets Varlock fetch the selected environment (via `INFISICAL_ENV`, remapped from `APP_ENV`) from secrets under the `/vazen-web` path before Next/portless starts. Otherwise already-set variables and local `.env*` files win.
-- Machine-identity credentials for the fetch (`INFISICAL_PROJECT_ID`, `INFISICAL_CLIENT_ID`, `INFISICAL_CLIENT_SECRET`) come from `apps/web/.env.local` locally and from CI secrets in pipelines — never bundled. See [Infisical machine identities](https://infisical.com/docs/documentation/platform/identities/machine-identities).
-- Each package declares its variables in `.env.schema`; typed `env.ts` clients are generated with `pnpm env:codegen` to validate env names and types at build/runtime.
-- In git: `.env.schema` files declare keys with local defaults and placeholders only. `.env` and `.env.local` are gitignored.
+- [**Infisical**](https://infisical.com/) :: secret values per environment (`dev`, `staging`, `production`)
+- `USE_INFISICAL=true` :: Varlock fetches the selected env (via `INFISICAL_ENV`, from `APP_ENV`) under `/vazen-web` before Next/portless starts, otherwise local `.env*` wins
+- Machine identity :: `INFISICAL_PROJECT_ID`, `INFISICAL_CLIENT_ID`, `INFISICAL_CLIENT_SECRET` live in `apps/web/.env.local` locally, in CI secrets in pipelines, never committed ([docs](https://infisical.com/docs/documentation/platform/identities/machine-identities))
+- `.env.schema` :: declares expected keys, `pnpm env:codegen` generates the typed `env.ts` for build/runtime checks
+- In git :: `.env.schema` with placeholders and local defaults only, `.env` and `.env.local` stay ignored
 
 #### Why
 
-- One source of truth: change a key in Infisical, restart dev, the team gets the same value on the next run.
-- Keeps real credentials out of the clone so search and agentic coding are less likely to expose them (see callout above).
+- One place to change :: edit in Infisical, restart, the team gets the same value
+- Nothing real in the clone :: search and AI context stay clean
 
 #### How
 
-1. **Setup (once):** run [mise](https://mise.jdx.dev/) in the repo root · start web with `pnpm web:dev` (root) or `pnpm dev` in [`apps/web`](apps/web) · to pull secrets from Infisical instead of local files, create a machine identity ([docs](https://infisical.com/docs/documentation/platform/identities/machine-identities)), put its project ID + client ID/secret in [`apps/web/.env.local`](apps/web/.env.local), and set `USE_INFISICAL=true`
-2. **Daily:** use those scripts · use Infisical environment **`dev`** locally (selected via `APP_ENV`/`INFISICAL_ENV` when `USE_INFISICAL=true`)
-3. **Change a secret:** Infisical dashboard · pick `dev`, `staging`, or `production` · edit the key · restart the dev server
-4. **Add a variable:** set the value in Infisical for each env that needs it · declare it in the owning package's `.env.schema` · run `pnpm env:codegen` and commit the generated `env.ts`
-5. **Avoid:** committing `.env*` files that contain real secrets · pasting live values into issues or AI threads
+1. Setup :: run [mise](https://mise.jdx.dev/) from the root, `pnpm web:dev` from the root or `pnpm dev` in [`apps/web`](apps/web), for Infisical pulls create a machine identity ([docs](https://infisical.com/docs/documentation/platform/identities/machine-identities)), put its IDs in [`apps/web/.env.local`](apps/web/.env.local), set `USE_INFISICAL=true`
+2. Daily :: same scripts, Infisical env `dev` locally
+3. Change a secret :: Infisical dashboard, pick env, edit key, restart the dev server
+4. Add a variable :: set in Infisical for each env that needs it, declare in the owning `.env.schema`, run `pnpm env:codegen`, commit `env.ts`
+5. Avoid :: committing `.env*` with real secrets, pasting live values into issues or AI threads
 
 ### License
 
