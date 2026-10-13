@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.woff2 binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico binary
+pnpm-lock.yaml text eol=lf linguist-generated merge=binary
+mise.lock text eol=lf linguist-generated merge=binary
