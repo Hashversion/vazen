@@ -1,4 +1,3 @@
-import { dash } from "@better-auth/infra";
 import { db } from "@repo/db";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
@@ -58,7 +57,6 @@ export const auth = betterAuth({
   },
 
   plugins: [
-    dash(),
     admin(),
     magicLink({
       rateLimit: {
