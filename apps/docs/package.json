@@ -25,7 +25,7 @@
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@tailwindcss/postcss": "catalog:",
+    "@tailwindcss/postcss": "catalog:tailwind",
     "@types/mdx": "^2.0.14",
     "@types/node": "catalog:",
     "@types/react": "catalog:react",

@@ -18,12 +18,10 @@ catalog:
   "@playwright/test": ^1.62.1
   "@sentry/nextjs": 10.69.0
   "@t3-oss/env-nextjs": ^0.13.11
-  "@tailwindcss/postcss": ^4.3.3
   "@types/node": ^24.13.3
   drizzle-orm: 0.45.2
   motion: ^12.43.0
   "server-only": 0.0.1
-  tailwindcss: ^4.3.3
   typescript: ^5.9.3
   zod: 4.4.3
 catalogs:
@@ -45,3 +43,6 @@ catalogs:
   tanstack:
     "@tanstack/react-query": ^5.101.4
     "@tanstack/react-query-devtools": ^5.101.4
+  tailwind:
+    "@tailwindcss/postcss": ^4.3.3
+    tailwindcss: ^4.3.3

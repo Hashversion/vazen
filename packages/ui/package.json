@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
-    "@tailwindcss/postcss": "catalog:",
+    "@tailwindcss/postcss": "catalog:tailwind",
     "@types/node": "catalog:",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
-    "tailwindcss": "catalog:",
+    "tailwindcss": "catalog:tailwind",
     "typescript": "catalog:"
   },
   "peerDependencies": {
