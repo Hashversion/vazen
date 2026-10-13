@@ -3,6 +3,7 @@ packages:
   - "packages/*"
   - "tooling/*"
   - "e2e/*"
+  - infra
 
 allowBuilds:
   # Install-time code exec — do not extend without review.
@@ -17,6 +18,7 @@ allowBuilds:
   protobufjs: true
   re2: true
   sharp: true
+  workerd: true
 
 catalog:
   "@playwright/test": 1.62.1
@@ -46,3 +48,7 @@ catalogs:
   tailwind:
     "@tailwindcss/postcss": 4.3.3
     tailwindcss: 4.3.3
+  effect:
+    "@effect/platform-bun": 4.0.2
+    "@effect/platform-node": 4.0.2
+    effect: 4.0.2

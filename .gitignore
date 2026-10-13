@@ -129,6 +129,7 @@ next-env.d.ts
 
 # Turborepo
 .turbo
+.alchemy
 
 # Design Assets
 psd
