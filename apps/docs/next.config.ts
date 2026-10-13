@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   cacheComponents: true,
+  partialPrefetching: true,
   transpilePackages: ["@repo/ui"],
   typedRoutes: true,
   allowedDevOrigins: ["local.docs.vazen.id", "*.local.docs.vazen.id"],

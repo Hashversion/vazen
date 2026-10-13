@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   typedRoutes: true,
   cacheComponents: true,
+  partialPrefetching: true,
   compress: true,
   logging: {
     fetches: {

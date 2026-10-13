@@ -1,6 +1,7 @@
 {
   "extends": "@repo/tsconfig/app/dom",
   "compilerOptions": {
+    "types": ["node"],
     "plugins": [
       {
         "name": "next"

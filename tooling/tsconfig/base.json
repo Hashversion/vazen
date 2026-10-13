@@ -18,6 +18,7 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "types": ["node"]
   }
 }
