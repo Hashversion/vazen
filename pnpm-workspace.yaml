@@ -22,7 +22,7 @@ allowBuilds:
 
 catalog:
   "@playwright/test": 1.62.1
-  "@sentry/nextjs": 10.69.0
+  "@sentry/nextjs": 11.6.0
   "@types/node": 24.13.3
   "@varlock/infisical-plugin": 2.1.3
   better-auth: 1.7.7
