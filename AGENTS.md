@@ -24,6 +24,14 @@ Source of truth: exact pins + `pnpm-lock.yaml`. No drift.
 
 Agent: DO frozen installs + Renovate PRs. NEVER hand-edit versions, widen ranges, add build scripts, float tags.
 
+## Reference hygiene
+
+Reference repos / web examples are for patterns only, never source text. Never copy identifiers, strings, comments, docs, or commit messages from outside this repo. Always derive naming from this repo: `apps/*`, `packages/*`, `memory/brand/*`.
+
+## Comment style
+
+One insight per line, interrogation-first: `// What :: ...`, `// Why :: ...`, `// How :: ...`, `// When :: ...`, `// Where :: ...`, `// Which :: ...`, `// Note :: ...`, `// E.g. :: ...`. Keep lines brief and plain-spoken. No block comments. Tool directives (`oxlint-`, `eslint`, `@ts-`) stay as-is.
+
 ## Memory (`memory/`)
 
 - `memory/` holds what code doesn't answer: intent, principles, contracts, decisions. Code owns the how; `memory/` owns the why. Never duplicate code there.
