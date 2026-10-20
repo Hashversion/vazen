@@ -37,3 +37,7 @@ One insight per line, interrogation-first: `// What :: ...`, `// Why :: ...`, `/
 - `memory/` holds what code doesn't answer: intent, principles, contracts, decisions. Code owns the how; `memory/` owns the why. Never duplicate code there.
 - Don't preload it. First read `memory/index.mdx`, judge which file answers your question, then read only that file.
 - Links inside `memory/` stay extension-less (`[Discovery](../product/discovery)`). Extensions break Blume routing.
+
+## Interaction log
+
+Every agent, including subagents, writes one log file at the end of its run; never edit older logs. Path, fields and format live in the spec: `memory/agents/interaction-log.mdx`.

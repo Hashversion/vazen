@@ -1,0 +1,30 @@
+---
+title: Interaction log
+description: One minimal summary file per agent run.
+---
+
+- Every agent writes one file at the end of its run, including subagents.
+- Rule agents load: repo-root `AGENTS.md`, section `## Interaction log`.
+- Files: `memory/agents/logs/YYYY/MM-Mon/DD/DD-MM-YYYY-HHMMSS-<agent>-<slug>.md` (UTC).
+- E.g. `memory/agents/logs/2026/10-Oct/16/16-10-2026-165653-opencode-....md`.
+- Mon is Title-case 3-letter English (`Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec`). Numeric prefix keeps sort order.
+- Week is ISO week derived from the date, not a dir level.
+- Slug: kebab-case from the ask, 40 characters max.
+- One file per run. Do not edit older logs.
+- Commit each log in the same commit as the changes it describes.
+- Exception: a run that only git stages/commits writes no log file.
+- Format: `| Field | Value |` table, one row per field.
+- One line per cell. No multi-line cells.
+
+| Field | Write |
+| --- | --- |
+| when | `DD-MM-YYYY HH:MM AM/PM UTC / DD-MM-YYYY HH:MM AM/PM TZ` (e.g. `12-10-2026 06:39 PM UTC / 13-10-2026 12:09 AM IST`) |
+| agent | `grok`, `claude`, `cursor`, `codex`, `copilot`, `opencode`, or the product name |
+| ask | The user request, one line |
+| did | What changed or was answered, one line |
+| outcome | Result, one line |
+
+## Skip
+
+- Secrets, tokens, env values, raw diffs.
+- Paragraphs, bullets, tool-by-tool transcripts.
