@@ -1,7 +1,7 @@
 {
   "extends": "@repo/tsconfig/app/dom",
   "compilerOptions": {
-    "types": ["node", "react", "react-dom"]
+    "jsx": "react-jsx"
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

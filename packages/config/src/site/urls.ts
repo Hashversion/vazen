@@ -7,7 +7,7 @@ export const socials = {
   bluesky: "",
 };
 
-export const links = {
+export const urls = {
   base: "https://vazen.dev",
   cdn: "https://cdn.vazen.dev",
   og: `https://cdn.vazen.dev/brand/opengraph-image.jpeg`,

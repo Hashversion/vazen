@@ -7,25 +7,22 @@
     "#app": "./src/app/index.ts"
   },
   "exports": {
-    "./app": "./src/app/index.ts",
+    "./site": "./src/site/index.ts",
     "./seo": "./src/seo/index.ts"
   },
   "scripts": {
-    "clean": "rimraf node_modules .turbo",
-    "typecheck": "tsc --noEmit"
+    "clean": "rm -rf .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "schema-dts": "2.0.0"
+    "react": "catalog:react",
+    "react-dom": "catalog:react"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
-    "typescript": "catalog:"
-  },
-  "peerDependencies": {
-    "next": "catalog:next",
-    "react": "catalog:react",
-    "react-dom": "catalog:react"
+    "next": "catalog:next"
   }
 }

@@ -1,7 +1,7 @@
-import type { Thing, WithContext } from "schema-dts";
+import type { JsonLdSchema } from "./schemas";
 
 interface JsonLdProps {
-  code: WithContext<Thing>;
+  data: JsonLdSchema;
 }
 
 const escapeJsonForHtml = (json: string): string =>
@@ -12,14 +12,12 @@ const escapeJsonForHtml = (json: string): string =>
     .replaceAll("\u2028", "\\u2028")
     .replaceAll("\u2029", "\\u2029");
 
-export const JsonLd = ({ code }: JsonLdProps) => (
+export const JsonLd = ({ data }: JsonLdProps) => (
   <script
     // oxlint-disable-next-line react/no-danger
     dangerouslySetInnerHTML={{
-      __html: escapeJsonForHtml(JSON.stringify(code)),
+      __html: escapeJsonForHtml(JSON.stringify(data)),
     }}
     type="application/ld+json"
   />
 );
-
-export * from "schema-dts";
