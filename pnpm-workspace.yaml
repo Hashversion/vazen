@@ -33,7 +33,7 @@ catalog:
 catalogs:
   next:
     "@next/bundle-analyzer": 16.4.0
-    next: 16.4.0
+    next: 16.4.1
   orpc:
     "@orpc/client": 2.0.0-beta.43
     "@orpc/evlog": 2.0.0-beta.43
