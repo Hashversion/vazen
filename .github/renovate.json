@@ -1,0 +1,109 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", ":semanticCommitTypeAll(chore)"],
+  "timezone": "Asia/Kolkata",
+  "minimumReleaseAge": "3 days",
+  "schedule": ["* 0-4 * * 1,4"],
+  "baseBranchPatterns": ["dev"],
+  "postUpdateOptions": ["pnpmDedupe"],
+  "labels": ["dependencies"],
+  "platformAutomerge": false,
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "rebaseWhen": "conflicted",
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"],
+    "labels": ["security"],
+    "minimumReleaseAge": null,
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": ["schedule:weekly"],
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "description": "actions minor/patch/digest :: automerge after CI :: low risk, CI is the safety net",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "description": "patch :: group all, automerge after CI + cooldown :: low risk, fewer PRs",
+      "groupName": "All patch updates",
+      "matchUpdateTypes": ["patch"],
+      "labels": ["patch", "automerge"],
+      "automerge": true
+    },
+    {
+      "description": "dev minor :: group, automerge after CI :: tooling only, never ships to users",
+      "groupName": "Dev dependency minor updates",
+      "matchDepTypes": ["devDependencies", "dev-dependencies"],
+      "matchUpdateTypes": ["minor"],
+      "labels": ["dev", "automerge"],
+      "automerge": true
+    },
+    {
+      "description": "prod minor :: PR only, 5-day cooldown :: behavior changes may affect users",
+      "groupName": "Production dependency minor updates",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor"],
+      "minimumReleaseAge": "5 days",
+      "automerge": false,
+      "labels": ["minor"]
+    },
+    {
+      "description": "0.x minor :: separate PR, no automerge :: minor can be breaking before 1.0",
+      "matchCurrentVersion": "/^0\\./",
+      "matchUpdateTypes": ["minor"],
+      "groupName": null,
+      "automerge": false,
+      "labels": ["minor", "pre-1.0"]
+    },
+    {
+      "description": "major :: dashboard approval, never automerge :: breaking changes need manual review",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
+      "automerge": false,
+      "labels": ["major", "breaking-change"]
+    },
+    {
+      "description": "pnpm catalog :: replace range strategy :: exact pins have no range to bump",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["pnpm.catalog.*"],
+      "rangeStrategy": "replace"
+    },
+    {
+      "description": "pnpm catalog minor/major :: PR only, 7-day cooldown :: shared versions affect every workspace package",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["pnpm.catalog.*"],
+      "matchUpdateTypes": ["minor", "major"],
+      "minimumReleaseAge": "7 days",
+      "automerge": false,
+      "labels": ["dependencies", "catalog"]
+    },
+    {
+      "description": "runtimes :: own group, PR only, 7-day cooldown :: node, pnpm and base images affect everything",
+      "matchPackageNames": ["node", "pnpm"],
+      "matchManagers": [
+        "dockerfile",
+        "docker-compose",
+        "github-actions",
+        "npm",
+        "nvm"
+      ],
+      "groupName": "Runtime updates",
+      "minimumReleaseAge": "7 days",
+      "automerge": false,
+      "labels": ["runtime"]
+    },
+    {
+      "description": "node :: LTS only :: odd-numbered releases are short-lived",
+      "matchPackageNames": ["node"],
+      "allowedVersions": "/^\\d*[02468]\\./"
+    }
+  ]
+}
