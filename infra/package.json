@@ -12,8 +12,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@alchemy.run/axiom": "2.0.0-beta.85",
     "@alchemy.run/cloudflare": "2.0.0-beta.85",
     "@alchemy.run/infisical": "2.0.0-beta.85",
+    "@alchemy.run/neon": "2.0.0-beta.85",
     "@effect/platform-node": "catalog:effect",
     "alchemy": "2.0.0-beta.85",
     "effect": "catalog:effect"

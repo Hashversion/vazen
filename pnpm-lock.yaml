@@ -435,12 +435,18 @@ importers:
 
   infra:
     dependencies:
+      '@alchemy.run/axiom':
+        specifier: 2.0.0-beta.85
+        version: 2.0.0-beta.85(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)
       '@alchemy.run/cloudflare':
         specifier: 2.0.0-beta.85
         version: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/node@24.13.3)(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)(typescript@7.0.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))
       '@alchemy.run/infisical':
         specifier: 2.0.0-beta.85
         version: 2.0.0-beta.85(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)
+      '@alchemy.run/neon':
+        specifier: 2.0.0-beta.85
+        version: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@vercel/nft@1.11.0(rollup@4.62.4)(supports-color@8.1.1))(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)(hono@4.13.1)
       '@effect/platform-node':
         specifier: catalog:effect
         version: 4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1))
@@ -895,6 +901,12 @@ packages:
       alchemy: 2.0.0-beta.85
       effect: ^4.1.0
 
+  '@alchemy.run/axiom@2.0.0-beta.85':
+    resolution: {integrity: sha512-dpBBDxZaRlRIiszRYTUB9M3e3yN6hvkyYTpc0E66tJfcESY6rwp2O2fl38Mun5iLEyGJb2Gvv4HqPiURYWzrHw==}
+    peerDependencies:
+      alchemy: 2.0.0-beta.85
+      effect: ^4.1.0
+
   '@alchemy.run/cloudflare-runtime@2.0.0-beta.85':
     resolution: {integrity: sha512-OyGH/j5R9QaUdMjvm3y6pIUpMa7T9SvVYvlVd+fWo/eltOf+k/KQxC12QHC2fe22GVs3apL28l9f4VUH8N9aEA==}
     peerDependencies:
@@ -951,6 +963,22 @@ packages:
     peerDependencies:
       alchemy: 2.0.0-beta.85
       effect: ^4.1.0
+
+  '@alchemy.run/neon@2.0.0-beta.85':
+    resolution: {integrity: sha512-Vxx/CJ4gM6HpA85WKkzExS8bV0MQ7bWkWFqrVyxtbdDQQzJ705zFmbh42YzM2dZguT42e242Cd5qCHPW9SNwoA==}
+    peerDependencies:
+      '@effect/platform-node': ^4.1.0
+      '@vercel/nft': ^1.10.2
+      alchemy: 2.0.0-beta.85
+      effect: ^4.1.0
+      pg: ^8.22.0
+    peerDependenciesMeta:
+      '@effect/platform-node':
+        optional: true
+      '@vercel/nft':
+        optional: true
+      pg:
+        optional: true
 
   '@alchemy.run/node-utils@2.0.0-beta.85':
     resolution: {integrity: sha512-2gxqMNMoJdx13w7wlDJw+gaXQ8e1VxQFsKldOvweqpd7JEgB5TGn3oO8r1sb/GB9+UzqXdh8tKp2MOVgFOrmbg==}
@@ -1702,6 +1730,11 @@ packages:
     peerDependencies:
       effect: ^4.0.5
 
+  '@distilled.cloud/axiom@1.0.0-rc.18':
+    resolution: {integrity: sha512-8z6PPKm3OlEI9ovuSgqnQBYrGU5Fg8LVrk/Xs85NBDH8kJ69ttdJ8vaSb6hILi9hHluefvYO7SJ1XTOXxH+vCw==}
+    peerDependencies:
+      effect: ^4.0.5
+
   '@distilled.cloud/cloudflare@1.0.0-rc.18':
     resolution: {integrity: sha512-UJB7pitkg7msm7BGTuAE8yYx4GzKdPLRtiOm3G3XHw07xLUlqEiEr4xpSf0CeziWzDygjI53FSkpC2qyVZr49g==}
     peerDependencies:
@@ -1719,6 +1752,11 @@ packages:
 
   '@distilled.cloud/infisical@1.0.0-rc.18':
     resolution: {integrity: sha512-bkGnDaxGxwvuvT7GYIWI7hPN/CSsqfU65UhfWC1lSCjSAuLpy4wgoOuD4DBDNjKl5JyF/jZQI1yc5jzU1CEO8w==}
+    peerDependencies:
+      effect: ^4.0.5
+
+  '@distilled.cloud/neon@1.0.0-rc.18':
+    resolution: {integrity: sha512-jgwj/pXQXowHGwZg0XQ6KcV9ZqGlP4+HTZjOWSK0GqG7TMTs9jujo9wE7YuoRZ0J+UXKyQ9+2+JxKU+Tt9T8RQ==}
     peerDependencies:
       effect: ^4.0.5
 
@@ -2665,6 +2703,15 @@ packages:
 
   '@neon-rs/load@0.0.4':
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
+
+  '@neon/functions@0.11.0':
+    resolution: {integrity: sha512-xyIEk9aULR2nBTzyTgxljkM8aS+Ppe9oVw/t5mdqYOlY/mLFppHSZHq8hiWVDWy6Ca8oLd3loTtfVz+cZQQjsA==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      hono: ^4.7.8
+    peerDependenciesMeta:
+      hono:
+        optional: true
 
   '@next/bundle-analyzer@16.4.0':
     resolution: {integrity: sha512-z4iuh6QGVhPKa+Pq/e6WO1d5jFeVGDtjaVY2PVnguTyGTNY/Tw/ozRAHJoaQUyiKEcREot8iQnvmuIOkD+1wyw==}
@@ -10552,6 +10599,13 @@ snapshots:
       alchemy: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3)
       effect: 4.1.2
 
+  '@alchemy.run/axiom@2.0.0-beta.85(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)':
+    dependencies:
+      '@distilled.cloud/axiom': 1.0.0-rc.18(effect@4.1.2)
+      '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
+      alchemy: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3)
+      effect: 4.1.2
+
   '@alchemy.run/cloudflare-runtime@2.0.0-beta.85(@distilled.cloud/cloudflare@1.0.0-rc.18(effect@4.1.2))(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/node@24.13.3)(effect@4.1.2)(rolldown@1.2.13)(typescript@7.0.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))':
     dependencies:
       '@alchemy.run/node-utils': 2.0.0-beta.85
@@ -10617,6 +10671,25 @@ snapshots:
       '@distilled.cloud/infisical': 1.0.0-rc.18(effect@4.1.2)
       alchemy: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3)
       effect: 4.1.2
+
+  '@alchemy.run/neon@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@vercel/nft@1.11.0(rollup@4.62.4)(supports-color@8.1.1))(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)(hono@4.13.1)':
+    dependencies:
+      '@alchemy.run/sql': 2.0.0-beta.85(alchemy@2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3))(effect@4.1.2)
+      '@distilled.cloud/aws': 1.0.0-rc.18(effect@4.1.2)
+      '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
+      '@distilled.cloud/neon': 1.0.0-rc.18(effect@4.1.2)
+      '@neon/functions': 0.11.0(hono@4.13.1)
+      alchemy: 2.0.0-beta.85(@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1)))(@types/react@19.3.0)(effect@4.1.2)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))(ws@8.21.3)
+      effect: 4.1.2
+    optionalDependencies:
+      '@effect/platform-node': 4.1.2(effect@4.1.2)(redis@6.3.0(@opentelemetry/api@1.9.1))
+      '@vercel/nft': 1.11.0(rollup@4.62.4)(supports-color@8.1.1)
+    transitivePeerDependencies:
+      - '@effect/sql-libsql'
+      - '@effect/sql-mysql2'
+      - '@effect/sql-pg'
+      - hono
+      - mysql2
 
   '@alchemy.run/node-utils@2.0.0-beta.85':
     dependencies:
@@ -11619,6 +11692,11 @@ snapshots:
       '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
       effect: 4.1.2
 
+  '@distilled.cloud/axiom@1.0.0-rc.18(effect@4.1.2)':
+    dependencies:
+      '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
+      effect: 4.1.2
+
   '@distilled.cloud/cloudflare@1.0.0-rc.18(effect@4.1.2)':
     dependencies:
       '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
@@ -11634,6 +11712,11 @@ snapshots:
       effect: 4.1.2
 
   '@distilled.cloud/infisical@1.0.0-rc.18(effect@4.1.2)':
+    dependencies:
+      '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
+      effect: 4.1.2
+
+  '@distilled.cloud/neon@1.0.0-rc.18(effect@4.1.2)':
     dependencies:
       '@distilled.cloud/core': 1.0.0-rc.18(effect@4.1.2)
       effect: 4.1.2
@@ -12356,6 +12439,10 @@ snapshots:
 
   '@neon-rs/load@0.0.4':
     optional: true
+
+  '@neon/functions@0.11.0(hono@4.13.1)':
+    optionalDependencies:
+      hono: 4.13.1
 
   '@next/bundle-analyzer@16.4.0':
     dependencies:

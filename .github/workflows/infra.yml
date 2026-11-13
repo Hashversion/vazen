@@ -1,0 +1,102 @@
+name: Infra
+
+permissions: {}
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Which environment to deploy"
+        type: choice
+        options:
+          - staging
+          - production
+        default: staging
+  push:
+    branches:
+      - main
+      - dev
+    paths:
+      - "infra/**"
+      - ".github/workflows/infra.yml"
+
+concurrency:
+  group: infra-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate infra
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - &checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: |-
+            /*
+            !/memory/**
+            /memory/package.json
+          sparse-checkout-cone-mode: false
+
+      - uses: ./.github/actions/setup
+
+      - name: Typecheck
+        run: pnpm --filter infra typecheck
+
+  deploy-staging:
+    name: Deploy infra (staging)
+    needs: validate
+    if: >-
+      always() && needs.validate.result == 'success' && (github.ref == 'refs/heads/dev' || (github.event_name == 'workflow_dispatch' && inputs.environment == 'staging'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency: infra-staging-deploy
+    environment: staging
+    env:
+      APP_ENV: staging
+      INFISICAL_IDENTITY_ID: ${{ vars.INFISICAL_IDENTITY_ID }}
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - *checkout
+
+      - uses: ./.github/actions/setup
+
+      - name: Infra plan (staging)
+        run: pnpm --filter infra exec alchemy plan
+
+      - name: Deploy infra (staging)
+        run: pnpm --filter infra exec alchemy deploy --stage staging --yes
+
+  deploy-production:
+    name: Deploy infra (production)
+    needs: validate
+    if: >-
+      always() && needs.validate.result == 'success' && (github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && inputs.environment == 'production'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency: infra-production-deploy
+    environment: production
+    env:
+      APP_ENV: production
+      INFISICAL_IDENTITY_ID: ${{ vars.INFISICAL_IDENTITY_ID }}
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - *checkout
+
+      - uses: ./.github/actions/setup
+
+      - name: Infra plan (production)
+        run: pnpm --filter infra exec alchemy plan
+
+      - name: Deploy infra (production)
+        run: pnpm --filter infra exec alchemy deploy --stage production --yes
