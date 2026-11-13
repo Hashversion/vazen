@@ -1,0 +1,31 @@
+name: Setup
+description: Setup pnpm + Node, cache dependencies, and install
+
+inputs:
+  node-version:
+    description: Node version to install (must match mise.toml)
+    required: false
+    default: "24.22.1"
+  pnpm-version:
+    description: pnpm version to install (must match packageManager)
+    required: false
+    default: "12.11.2"
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+      with:
+        version: ${{ inputs.pnpm-version }}
+        run_install: false
+
+    - name: Setup Node
+      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: pnpm
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install --frozen-lockfile

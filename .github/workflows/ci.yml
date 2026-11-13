@@ -1,0 +1,46 @@
+name: CI
+
+permissions: {}
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - dev
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+  TURBO_TELEMETRY_DISABLED: 1
+
+jobs:
+  # What :: Lint + types gate for automerge.
+  # Why :: Free-plan repos have no platform merge queue, so Renovate internal automerge waits on this check.
+  validate:
+    name: Lint + Types
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: |-
+            /*
+            !/memory/**
+            /memory/package.json
+          sparse-checkout-cone-mode: false
+
+      - uses: ./.github/actions/setup
+
+      - name: Lint
+        run: pnpm check
+
+      - name: Typecheck
+        run: pnpm typecheck

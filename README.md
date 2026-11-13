@@ -51,8 +51,7 @@
 
 ### Environment variables
 
-> [!IMPORTANT]
-> AI context can pick up workspace files. A `.env` with real keys can surface in output, logs, or a shared thread. Keep credentials in Infisical, not in long-lived files in the repo.
+> [!IMPORTANT] AI context can pick up workspace files. A `.env` with real keys can surface in output, logs, or a shared thread. Keep credentials in Infisical, not in long-lived files in the repo.
 
 #### What
 
