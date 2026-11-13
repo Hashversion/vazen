@@ -27,7 +27,7 @@
     "@sentry/nextjs": "catalog:",
     "@tanstack/react-query": "catalog:tanstack",
     "@varlock/infisical-plugin": "catalog:",
-    "@varlock/nextjs-integration": "1.2.4",
+    "@varlock/nextjs-integration": "catalog:",
     "@zanreal/nemo": "3.0.1",
     "better-auth": "catalog:",
     "next": "catalog:next",
