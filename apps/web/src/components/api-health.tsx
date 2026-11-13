@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 
-import { orpc } from "@/lib/orpc/client";
+import { orpc } from "@/lib/orpc/query";
 
 export default function APIHealth() {
   const { data, isPending, isError } = useQuery(orpc.health.queryOptions());

@@ -1,4 +1,5 @@
 import { ORPCError, os } from "@orpc/server";
+import { auth } from "@repo/auth/server";
 
 import type { Context } from "./context";
 
@@ -9,24 +10,27 @@ import type { Context } from "./context";
 export const base = os.$context<Context>();
 export const publicProcedure = base;
 
-export const protectedProcedure = publicProcedure.use(({ context, next }) => {
-  if (!context.user) {
-    throw new ORPCError("UNAUTHORIZED");
+export const protectedProcedure = publicProcedure.use(
+  async ({ context, next }) => {
+    const authSession = await auth.api.getSession({
+      headers: context.headers,
+    });
+
+    if (!authSession) {
+      throw new ORPCError("UNAUTHORIZED");
+    }
+
+    return next({
+      context: {
+        ...context,
+        session: authSession.session,
+        user: authSession.user,
+      },
+    });
   }
+);
 
-  return next({
-    context: {
-      session: context.session,
-      user: context.user,
-    },
-  });
-});
-
-export const adminProcedure = publicProcedure.use(({ context, next }) => {
-  if (!context.session || !context.user) {
-    throw new ORPCError("UNAUTHORIZED");
-  }
-
+export const adminProcedure = protectedProcedure.use(({ context, next }) => {
   if (context.user.role !== "admin") {
     throw new ORPCError("FORBIDDEN", {
       message: "You don't have right permission",
@@ -34,9 +38,6 @@ export const adminProcedure = publicProcedure.use(({ context, next }) => {
   }
 
   return next({
-    context: {
-      session: context.session,
-      user: context.user,
-    },
+    context,
   });
 });

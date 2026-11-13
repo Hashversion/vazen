@@ -16,7 +16,9 @@ const handler = new RPCHandler<Context>(appRouter, {
 
 async function handleRequest(request: Request) {
   const context = {
-    ...(await createContext({ headers: request.headers })),
+    ...createContext({
+      headers: request.headers,
+    }),
   } as Context;
 
   const { matched, response } = await handler.handle(request, {
@@ -24,7 +26,7 @@ async function handleRequest(request: Request) {
     context,
   });
 
-  return matched ? response : new Response("Not found", { status: 404 });
+  return matched ? response : new Response("Not Found", { status: 404 });
 }
 
 // NOTE (oRPC v2): RPCHandler only accepts POST/PUT/PATCH/DELETE by default.

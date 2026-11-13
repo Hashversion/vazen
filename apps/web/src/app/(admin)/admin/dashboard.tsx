@@ -2,7 +2,7 @@
 import type { authClient } from "@repo/auth/client";
 import { useQuery } from "@tanstack/react-query";
 
-import { orpc } from "@/lib/orpc/client";
+import { orpc } from "@/lib/orpc/query";
 
 export default function Dashboard({
   session,
