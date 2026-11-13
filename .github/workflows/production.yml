@@ -1,0 +1,61 @@
+name: Production
+
+permissions: {}
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: production-${{ github.workflow }}
+  cancel-in-progress: false
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+  TURBO_TELEMETRY_DISABLED: 1
+  VERCEL_TELEMETRY_DISABLED: 1
+  APP_ENV: production
+  USE_INFISICAL: "true"
+  INFISICAL_IDENTITY_ID: ${{ vars.INFISICAL_IDENTITY_ID }}
+
+jobs:
+  # What :: Manual production deploy of the web app on Vercel.
+  # How :: GitHub OIDC authenticates Infisical for CI + varlock secrets, then Vercel builds and promotes a prebuilt deploy.
+  deploy-web-production:
+    name: Deploy Website (Production)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: |-
+            /*
+            !/memory/**
+            /memory/package.json
+          sparse-checkout-cone-mode: false
+
+      - uses: ./.github/actions/setup
+
+      - uses: ./.github/actions/infisical
+        with:
+          env-slug: prod
+          identity-id: ${{ vars.INFISICAL_IDENTITY_ID }}
+
+      - name: Pull Vercel project config
+        run: pnpx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      - name: Fetch GitHub OIDC token for varlock
+        run: |
+          set -euo pipefail
+          token=$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}" | jq -r .value)
+          echo "INFISICAL_OIDC_TOKEN=${token}" >> "$GITHUB_ENV"
+
+      - name: Build
+        run: pnpx vercel build --prod --token="$VERCEL_TOKEN"
+
+      - name: Deploy
+        run: pnpx vercel deploy --prebuilt --prod --archive=tgz --token="$VERCEL_TOKEN"

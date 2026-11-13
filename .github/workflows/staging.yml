@@ -1,0 +1,69 @@
+name: Staging / Preview
+
+permissions: {}
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: staging-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+  TURBO_TELEMETRY_DISABLED: 1
+  VERCEL_TELEMETRY_DISABLED: 1
+  APP_ENV: staging
+  USE_INFISICAL: "true"
+  INFISICAL_IDENTITY_ID: ${{ vars.INFISICAL_IDENTITY_ID }}
+
+jobs:
+  # What :: Manual staging deploy of the web app as a Vercel preview.
+  # How :: GitHub OIDC authenticates Infisical for CI + varlock secrets, then Vercel builds and ships a prebuilt deploy.
+  deploy-web-preview:
+    name: Deploy Website (Preview)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: |-
+            /*
+            !/memory/**
+            /memory/package.json
+          sparse-checkout-cone-mode: false
+
+      - uses: ./.github/actions/setup
+
+      - uses: ./.github/actions/infisical
+        with:
+          env-slug: staging
+          identity-id: ${{ vars.INFISICAL_IDENTITY_ID }}
+
+      - name: Set up Turborepo Remote Cache
+        uses: vercel/setup-turborepo-remote-cache-action@49d7b1b46ba4c9251e1977986bfe18336feabc8f # v1.1.0
+        with:
+          team: ${{ vars.TURBO_TEAM }}
+
+      - name: Configure Vercel project
+        run: echo "VERCEL_PROJECT_ID=$VERCEL_WEB_PROJECT_ID" >> "$GITHUB_ENV"
+
+      - name: Pull Vercel project config
+        run: pnpx vercel pull --yes --environment=preview --token="$VERCEL_TOKEN"
+
+      - name: Fetch GitHub OIDC token for varlock
+        run: |
+          set -euo pipefail
+          token=$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}" | jq -r .value)
+          echo "INFISICAL_OIDC_TOKEN=${token}" >> "$GITHUB_ENV"
+
+      - name: Build
+        run: pnpx vercel build --token="$VERCEL_TOKEN"
+
+      - name: Deploy
+        run: pnpx vercel deploy --prebuilt --archive=tgz --token="$VERCEL_TOKEN"

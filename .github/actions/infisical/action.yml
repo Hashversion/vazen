@@ -1,0 +1,29 @@
+name: "Infisical"
+description: "Fetch secrets from Infisical using GitHub OIDC"
+
+inputs:
+  env-slug:
+    description: "Infisical environment slug"
+    required: true
+
+  identity-id:
+    description: "Infisical machine identity ID allowed to assume via GitHub OIDC"
+    required: true
+
+  secret-path:
+    description: "Infisical secret path"
+    default: "github-actions"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Authenticate with Infisical via OIDC and fetch secrets
+      uses: Infisical/secrets-action@d2e351f16c6ca20d17c85e6c992e04bdeb64e87d # v1.0.18
+      with:
+        method: oidc
+        domain: "https://app.infisical.com"
+        project-slug: "vazen"
+        identity-id: ${{ inputs.identity-id }}
+        env-slug: ${{ inputs.env-slug }}
+        secret-path: ${{ inputs.secret-path }}
