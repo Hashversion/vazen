@@ -46,6 +46,14 @@ jobs:
           env-slug: prod
           identity-id: ${{ vars.INFISICAL_IDENTITY_ID }}
 
+      - name: Set up Turborepo Remote Cache
+        uses: vercel/setup-turborepo-remote-cache-action@49d7b1b46ba4c9251e1977986bfe18336feabc8f # v1.1.0
+        with:
+          team: ${{ vars.TURBO_TEAM }}
+
+      - name: Configure Vercel project
+        run: echo "VERCEL_PROJECT_ID=$VERCEL_WEB_PROJECT_ID" >> "$GITHUB_ENV"
+
       - name: Pull Vercel project config
         run: pnpx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
 
