@@ -23,7 +23,7 @@ jobs:
   # How :: GitHub OIDC authenticates Infisical for CI + varlock secrets, then Vercel builds and promotes a prebuilt deploy.
   deploy-web-production:
     name: Deploy Website (Production)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
       contents: read

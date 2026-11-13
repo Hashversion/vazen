@@ -22,7 +22,7 @@ jobs:
   # Why :: Free-plan repos have no platform merge queue, so Renovate internal automerge waits on this check.
   validate:
     name: Lint + Types
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
       contents: read
