@@ -28,6 +28,6 @@
   "peerDependencies": {
     "@orpc/server": "catalog:orpc",
     "server-only": "catalog:",
-    "zod": "4.4.3"
+    "zod": "4.6.6"
   }
 }
