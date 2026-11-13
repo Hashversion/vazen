@@ -7,7 +7,6 @@ packages:
   - infra
 
 allowBuilds:
-  # Install-time code exec — do not extend without review.
   "@sentry/cli": true
   core-js: true
   core-js-pure: false
@@ -51,7 +50,6 @@ catalogs:
     "@tailwindcss/postcss": 4.3.3
     tailwindcss: 4.3.3
   effect:
-    "@effect/platform-bun": 4.0.2
     "@effect/platform-node": 4.0.2
     effect: 4.0.2
 overrides:
