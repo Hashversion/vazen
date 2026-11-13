@@ -1,5 +1,6 @@
 import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
 import { db } from "@repo/db";
+import { createRecordId } from "@repo/db/ids";
 import * as schema from "@repo/db/schema";
 import { betterAuth } from "better-auth/minimal";
 import { admin, magicLink } from "better-auth/plugins";
@@ -76,6 +77,10 @@ export const auth = betterAuth({
     useSecureCookies: ENV.APP_ENV === "production",
     ipAddress: {
       ipAddressHeaders: ["cf-connecting-ip", "x-forwarded-for"],
+    },
+    database: {
+      // Why :: Drizzle has no DB-side default, so ids are generated in the client.
+      generateId: () => createRecordId(),
     },
   },
   onAPIError: {

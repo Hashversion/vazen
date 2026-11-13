@@ -587,9 +587,9 @@ importers:
       server-only:
         specifier: 'catalog:'
         version: 0.0.1
-      uuid:
-        specifier: 14.0.1
-        version: 14.0.1
+      ulid:
+        specifier: 3.0.2
+        version: 3.0.2
       varlock:
         specifier: 'catalog:'
         version: 1.23.0
@@ -9881,6 +9881,10 @@ packages:
   uint8array-extras@1.5.0:
     resolution: {integrity: sha512-rvKSBiC5zqCCiDZ9kAOszZcDvdAHwwIKJG33Ykj43OKcWsnmcBRL09YTU4nOeHZ8Y2a7l1MgTd08SBe9A8Qj6A==}
     engines: {node: '>=18'}
+
+  ulid@3.0.2:
+    resolution: {integrity: sha512-yu26mwteFYzBAot7KVMqFGCVpsF6g8wXfJzQUHvu1no3+rRRSFcSV2nKeYvNPLD2J4b08jYBDhHUjeH0ygIl9w==}
+    hasBin: true
 
   ultracite@7.10.3:
     resolution: {integrity: sha512-0T27Sdpsk9XBdpAzEhJeRzMxAncowkfxW33M3l5i9iIPhptxRumXuOTzCCb+gkOckzKLA0SkTTZhbePMrUxUCw==}
@@ -19765,6 +19769,8 @@ snapshots:
     optional: true
 
   uint8array-extras@1.5.0: {}
+
+  ulid@3.0.2: {}
 
   ultracite@7.10.3(oxfmt@0.63.0)(oxlint@1.78.0(oxlint-tsgolint@7.0.2001)):
     dependencies:

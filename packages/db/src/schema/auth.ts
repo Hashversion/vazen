@@ -1,12 +1,13 @@
 import { pgSchema } from "drizzle-orm/pg-core";
 import * as t from "drizzle-orm/pg-core";
 
+import { ulidPrimaryKey, ulidReference } from "../lib/ids";
 import { userRoleEnum } from "./enums";
 
 export const auth = pgSchema("auth");
 
 export const users = auth.table("users", {
-  id: t.text("id").primaryKey(),
+  id: ulidPrimaryKey("id"),
   name: t.text("name").notNull(),
   email: t.varchar("email", { length: 255 }).notNull().unique(),
   emailVerified: t.boolean("email_verified").notNull(),
@@ -26,11 +27,10 @@ export const users = auth.table("users", {
 export const sessions = auth.table(
   "sessions",
   {
-    id: t.text("id").primaryKey(),
-    userId: t
-      .text("user_id")
-      .notNull()
-      .references(() => users.id, { onDelete: "cascade" }),
+    id: ulidPrimaryKey("id"),
+    userId: ulidReference("user_id").references(() => users.id, {
+      onDelete: "cascade",
+    }),
     token: t.varchar("token", { length: 255 }).notNull().unique(),
     expiresAt: t
       .timestamp("expires_at", { precision: 6, withTimezone: true })
@@ -54,11 +54,10 @@ export const sessions = auth.table(
 export const accounts = auth.table(
   "accounts",
   {
-    id: t.text("id").primaryKey(),
-    userId: t
-      .text("user_id")
-      .notNull()
-      .references(() => users.id, { onDelete: "cascade" }),
+    id: ulidPrimaryKey("id"),
+    userId: ulidReference("user_id").references(() => users.id, {
+      onDelete: "cascade",
+    }),
     accountId: t.text("account_id").notNull(),
     providerId: t.text("provider_id").notNull(),
     accessToken: t.text("access_token"),
@@ -87,7 +86,7 @@ export const accounts = auth.table(
 export const verifications = auth.table(
   "verifications",
   {
-    id: t.text("id").primaryKey(),
+    id: ulidPrimaryKey("id"),
     identifier: t.text("identifier").notNull(),
     value: t.text("value").notNull(),
     expiresAt: t

@@ -8,6 +8,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
+    "./ids": "./src/lib/ids.ts",
     "./schema": "./src/schema/index.ts"
   },
   "scripts": {
@@ -25,7 +26,7 @@
     "drizzle-orm": "1.0.0-rc.4",
     "postgres": "3.4.9",
     "server-only": "catalog:",
-    "uuid": "14.0.1",
+    "ulid": "3.0.2",
     "varlock": "catalog:"
   },
   "devDependencies": {
