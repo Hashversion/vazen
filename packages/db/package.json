@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@repo/redis": "workspace:*",
-    "drizzle-orm": "1.0.0-rc.4",
+    "drizzle-orm": "1.0.0-rc.5-ab785fc",
     "postgres": "3.4.9",
     "server-only": "catalog:",
     "ulid": "3.0.2",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@types/node": "catalog:",
-    "drizzle-kit": "1.0.0-rc.4",
+    "drizzle-kit": "1.0.0-rc.5-ab785fc",
     "typescript": "catalog:"
   }
 }
