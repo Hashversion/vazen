@@ -19,6 +19,12 @@ export type CoercedEnvSchema = {
   ANALYZE?: boolean;
 
   /**
+   * **APP_ENV**
+   * Set per context (CI: staging / production).
+   */
+  APP_ENV?: "development" | "staging" | "test" | "production";
+
+  /**
    * **INFISICAL_ENV**
    * Infisical env slug for APP_ENV (dev / staging / prod).
    */
@@ -46,12 +52,6 @@ export type CoercedEnvSchema = {
    * 📚 {@link https://upstash.com/docs | Upstash Redis docs}
    */
   UPSTASH_REDIS_REST_TOKEN: string;
-
-  /**
-   * **APP_ENV**
-   * Set per context (CI: staging / production).
-   */
-  APP_ENV?: "development" | "staging" | "test" | "production";
 
   /**
    * **GOOGLE_CLIENT_ID** 🔐 _sensitive_
@@ -169,8 +169,8 @@ export type PublicCoercedEnvSchema = Readonly<
     CoercedEnvSchema,
     | "USE_INFISICAL"
     | "ANALYZE"
-    | "INFISICAL_ENV"
     | "APP_ENV"
+    | "INFISICAL_ENV"
     | "NEXT_PUBLIC_POSTHOG_KEY"
     | "NEXT_PUBLIC_POSTHOG_HOST"
     | "NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT"

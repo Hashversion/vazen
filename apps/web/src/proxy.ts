@@ -1,3 +1,5 @@
+import { precompute } from "@repo/flags";
+import { rootFlags } from "@repo/flags/feature";
 import { getStableId } from "@repo/flags/lib/stable-id";
 import {
   securityHeadersMiddleware,
@@ -42,6 +44,14 @@ const middlewares = {
       }
 
       return response;
+    },
+  ],
+  "/": [
+    // What :: precompute flags into a signed code and rewrite to /{code}
+    async (request: NextRequest) => {
+      const code = await precompute(rootFlags);
+      const nextUrl = new URL(`/${code}${request.nextUrl.search}`, request.url);
+      return NextResponse.rewrite(nextUrl, { request });
     },
   ],
   "/admin/:path*": [

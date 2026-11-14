@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@repo/ui/components/button";
+import type { Route } from "next";
 import Link from "next/link";
 import { parseAsString, useQueryState } from "nuqs";
 import { Suspense } from "react";
@@ -90,7 +91,8 @@ function AuthErrorPage() {
           <Button
             nativeButton={false}
             variant="outline"
-            render={<Link href="/">go home</Link>}
+            // Why :: "/" only exists via the proxy rewrite to /{code}
+            render={<Link href={"/" as Route}>go home</Link>}
             className="w-full"
           />
         </div>
