@@ -4,7 +4,7 @@ import * as Alchemy from "alchemy";
 import * as Effect from "effect/Effect";
 
 const environments: Record<string, string> = {
-  production: "prod",
+  production: "production",
   staging: "staging",
 };
 
@@ -16,7 +16,7 @@ export default Alchemy.Stack(
     secrets: ({ stage }) =>
       Infisical.Secrets({
         project: "vazen",
-        environment: environments[stage] ?? "dev",
+        environment: environments[stage] ?? "development",
         path: "/infra",
       }),
   },

@@ -43,7 +43,7 @@ jobs:
 
       - uses: ./.github/actions/infisical
         with:
-          env-slug: prod
+          env-slug: production
           identity-id: ${{ vars.INFISICAL_IDENTITY_ID }}
 
       - name: Set up Turborepo Remote Cache

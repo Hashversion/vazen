@@ -25,7 +25,7 @@ pnpm docs:dev
 
 ## Env and secrets
 
-Varlock reads each package `.env.schema` and generates a typed `env.ts`. Infisical holds real values per `dev`, `staging`, and `production`. Set `USE_INFISICAL=true` to fetch from Infisical, otherwise local files and already-set variables win.
+Varlock reads each package `.env.schema` and generates a typed `env.ts`. Infisical holds real values per `development`, `staging`, and `production`. Set `USE_INFISICAL=true` to fetch from Infisical, otherwise local files and already-set variables win.
 
 ```sh
 pnpm env:codegen

@@ -25,7 +25,7 @@ pnpm docker:up
 
 ## Configure secrets
 
-Each package declares its keys in `.env.schema` with local defaults and placeholders. Real values live in Infisical under `/vazen-web`, split by `dev`, `staging`, and `production`. For local work, put the machine identity IDs in `apps/web/.env.local` and set `USE_INFISICAL=true`. Use env `dev` locally. `.env` and `.env.local` stay gitignored.
+Each package declares its keys in `.env.schema` with local defaults and placeholders. Real values live in Infisical under `/vazen-web`, split by `development`, `staging`, and `production`. For local work, put the machine identity IDs in `apps/web/.env.local` and set `USE_INFISICAL=true`. Use env `development` locally. `.env` and `.env.local` stay gitignored.
 
 ```sh
 pnpm env:codegen
@@ -50,4 +50,4 @@ Open the login page, hit the API health check, and run the local E2E once servic
 pnpm web:e2e:local
 ```
 
-Login: `https://local.web.vazen.id/auth/login`. Health: `/api/rpc/health`. If Google sign-in fails locally, check the redirect URL uses the `.id` hostname and the client ID and secret came from Infisical env `dev`.
+Login: `https://local.web.vazen.id/auth/login`. Health: `/api/rpc/health`. If Google sign-in fails locally, check the redirect URL uses the `.id` hostname and the client ID and secret came from Infisical env `development`.

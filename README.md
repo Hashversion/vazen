@@ -55,7 +55,7 @@
 
 #### What
 
-- [**Infisical**](https://infisical.com/) :: secret values per environment (`dev`, `staging`, `production`)
+- [**Infisical**](https://infisical.com/) :: secret values per environment (`development`, `staging`, `production`)
 - `USE_INFISICAL=true` :: Varlock fetches the selected env (via `INFISICAL_ENV`, from `APP_ENV`) under `/vazen-web` before Next/portless starts, otherwise local `.env*` wins
 - Machine identity :: `INFISICAL_PROJECT_ID`, `INFISICAL_CLIENT_ID`, `INFISICAL_CLIENT_SECRET` live in `apps/web/.env.local` locally, in CI secrets in pipelines, never committed ([docs](https://infisical.com/docs/documentation/platform/identities/machine-identities))
 - `.env.schema` :: declares expected keys, `pnpm env:codegen` generates the typed `env.ts` for build/runtime checks
@@ -69,7 +69,7 @@
 #### How
 
 1. Setup :: run [mise](https://mise.jdx.dev/) from the root, `pnpm web:dev` from the root or `pnpm dev` in [`apps/web`](apps/web), for Infisical pulls create a machine identity ([docs](https://infisical.com/docs/documentation/platform/identities/machine-identities)), put its IDs in [`apps/web/.env.local`](apps/web/.env.local), set `USE_INFISICAL=true`
-2. Daily :: same scripts, Infisical env `dev` locally
+2. Daily :: same scripts, Infisical env `development` locally
 3. Change a secret :: Infisical dashboard, pick env, edit key, restart the dev server
 4. Add a variable :: set in Infisical for each env that needs it, declare in the owning `.env.schema`, run `pnpm env:codegen`, commit `env.ts`
 5. Avoid :: committing `.env*` with real secrets, pasting live values into issues or AI threads

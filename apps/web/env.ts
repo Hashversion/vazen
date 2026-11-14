@@ -26,7 +26,7 @@ export type CoercedEnvSchema = {
 
   /**
    * **INFISICAL_ENV**
-   * Infisical env slug for APP_ENV (dev / staging / prod).
+   * Infisical env slug for APP_ENV (development / staging / production).
    */
   INFISICAL_ENV?: string;
 
