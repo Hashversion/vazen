@@ -4,6 +4,9 @@ permissions: {}
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 concurrency:
   group: staging-${{ github.ref }}
@@ -19,7 +22,7 @@ env:
   INFISICAL_IDENTITY_ID: ${{ vars.INFISICAL_IDENTITY_ID }}
 
 jobs:
-  # What :: Manual staging deploy of the web app as a Vercel preview.
+  # What :: Staging deploys on every push to main; workflow_dispatch redeploys any ref by hand.
   # How :: GitHub OIDC authenticates Infisical for CI + varlock secrets, then Vercel builds and ships a prebuilt deploy.
   deploy-web-preview:
     name: Deploy Website (Preview)
