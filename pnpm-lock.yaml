@@ -759,8 +759,8 @@ importers:
         specifier: 3.1108.0
         version: 3.1108.0
       files-sdk:
-        specifier: 2.2.4
-        version: 2.2.4(@aws-sdk/client-s3@3.1108.0)(@aws-sdk/s3-presigned-post@3.1108.0)(@aws-sdk/s3-request-presigner@3.1108.0)(@opentelemetry/api@1.9.1)(h3@1.15.11)(hono@4.13.1)(next@16.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.6)
+        specifier: 3.2.0
+        version: 3.2.0(@aws-sdk/client-s3@3.1108.0)(@aws-sdk/s3-presigned-post@3.1108.0)(@aws-sdk/s3-request-presigner@3.1108.0)(@opentelemetry/api@1.9.1)(ai@7.0.137(zod@4.6.6))(astro@7.3.8(@types/node@24.13.3))(effect@4.1.2)(google-auth-library@11.1.0(supports-color@8.1.1))(h3@1.15.11)(hono@4.13.1)(next@16.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.6)
       varlock:
         specifier: 'catalog:'
         version: 1.23.0
@@ -7123,12 +7123,13 @@ packages:
   filelist@1.0.6:
     resolution: {integrity: sha512-5giy2PkLYY1cP39p17Ech+2xlpTRL9HLspOfEgm0L6CwBXBTgsK5ou0JtzYuepxkaQ/tvhCFIJ5uXo0OrM2DxA==}
 
-  files-sdk@2.2.4:
-    resolution: {integrity: sha512-9eEayQDd+/+uh6NgGwyj7hXGL+01gjW05S9WuetvuoF4cOYne8wQ4ZSICcegtE2VLsj73L0WVSNyVK5rVukD7Q==}
+  files-sdk@3.2.0:
+    resolution: {integrity: sha512-AtAGpBAS/0Kh/MMTyynjXVvtVbdGji1VmSOkzoRTtJIrWh1IrvYLOOJwk3Dc3I7kPXfpp5pAQvQ929IITawPXw==}
+    engines: {node: '>=22'}
     hasBin: true
     peerDependencies:
       '@anthropic-ai/claude-agent-sdk': ^0.3.0
-      '@aws-sdk/client-s3': ^3.700.0
+      '@aws-sdk/client-s3': ^3.1079.0
       '@aws-sdk/lib-storage': ^3.700.0
       '@aws-sdk/s3-presigned-post': ^3.700.0
       '@aws-sdk/s3-request-presigner': ^3.700.0
@@ -7136,35 +7137,36 @@ packages:
       '@azure/identity': ^4.5.0
       '@azure/storage-blob': ^12.26.0
       '@bunny.net/storage-sdk': ^0.3.1
-      '@google-cloud/storage': ^7.19.0
-      '@googleapis/drive': ^20.0.0
+      '@google-cloud/storage': ^7.19.0 || ^8.0.0
+      '@googleapis/drive': ^20.0.0 || ^21.0.0 || ^22.0.0 || ^25.0.0 || ^26.0.0
       '@microsoft/microsoft-graph-client': ^3.0.7
-      '@nestjs/common': ^10.0.0 || ^11.0.0
-      '@netlify/blobs': ^10.7.4
-      '@openai/agents': ^0.11.0
+      '@nestjs/common': ^10.0.0 || ^11.0.0 || ^12.0.0
+      '@netlify/blobs': ^10.7.4 || ^11.0.0
+      '@openai/agents': '>=0.11.0 <1.0.0'
       '@opentelemetry/api': ^1.9.0
       '@supabase/storage-js': ^2.105.4
-      '@sveltejs/kit': ^2.0.0
+      '@sveltejs/kit': ^2.0.0 || ^3.0.0
       '@tanstack/react-start': ^1.0.0
       '@vercel/blob': ^2.4.0
-      ai: ^6.0.0
-      astro: ^4.0.0 || ^5.0.0 || ^6.0.0
+      ai: ^6.0.0 || ^7.0.0
+      astro: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
       basic-ftp: ^6.0.1
       box-typescript-sdk-gen: ^1.19.1
       cloudinary: ^2.10.0
       convex: ^1.16.0
-      disk: ^0.8.18
+      disk: ^0.8.18 || ^1.0.0
       dropbox: ^10.34.0
+      effect: ^4.0.0
       fastify: ^4.0.0 || ^5.0.0
       firebase-admin: ^14.1.0
-      google-auth-library: ^10.0.0
-      h3: ^1.0.0
+      google-auth-library: ^10.0.0 || ^11.0.0
+      h3: ^1.0.0 || ^2.0.0
       hono: ^4.0.0
       koa: ^2.0.0 || ^3.0.0
       next: ^14.0.0 || ^15.0.0 || ^16.0.0
-      node-appwrite: ^26.0.0
-      openai: ^6.0.0
-      pocketbase: ^0.27.0
+      node-appwrite: ^26.0.0 || ^27.0.0 || ^28.0.0 || ^29.0.0
+      openai: ^6.0.0 || ^7.0.0
+      pocketbase: ^0.27.0 || ^0.28.0
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
       ssh2-sftp-client: ^12.1.1
@@ -7229,6 +7231,8 @@ packages:
       disk:
         optional: true
       dropbox:
+        optional: true
+      effect:
         optional: true
       fastify:
         optional: true
@@ -15121,6 +15125,96 @@ snapshots:
       - uploadthing
       - yaml
 
+  astro@7.3.8(@types/node@24.13.3):
+    dependencies:
+      '@astrojs/compiler-rs': 0.5.1
+      '@astrojs/internal-helpers': 0.12.0
+      '@astrojs/markdown-satteri': 0.4.3
+      '@astrojs/telemetry': 3.3.3
+      '@capsizecss/unpack': 4.0.1
+      '@clack/prompts': 1.8.1
+      '@oslojs/encoding': 1.1.0
+      am-i-vibing: 0.5.0
+      aria-query: 5.3.2
+      axobject-query: 4.1.0
+      ci-info: 4.4.0
+      clsx: 2.1.1
+      common-ancestor-path: 2.0.0
+      cookie: 2.0.1
+      devalue: 5.9.4
+      diff: 9.0.0
+      dset: 3.1.4
+      es-module-lexer: 3.0.3
+      find-proc: 0.2.0
+      flattie: 1.1.1
+      fontace: 0.4.1
+      get-tsconfig: 5.0.0-beta.6
+      github-slugger: 2.0.0
+      html-escaper: 3.0.3
+      http-cache-semantics: 4.3.0
+      jsonc-parser: 3.3.1
+      magic-string: 1.4.3
+      magicast: 0.5.5
+      mrmime: 2.0.1
+      neotraverse: 1.0.1
+      obug: 3.0.0
+      p-limit: 7.3.3
+      p-queue: 9.3.5
+      package-manager-detector: 1.9.0
+      piccolore: 0.1.3
+      picomatch: 4.0.7
+      rolldown: 1.2.13
+      shiki: 4.4.3
+      smol-toml: 1.9.1
+      svgo: 4.1.0
+      tinyclip: 1.0.3
+      tinyexec: 1.3.1
+      tinyglobby: 0.2.17
+      ultrahtml: 1.7.0
+      unifont: 0.7.5
+      unstorage: 1.17.5(@upstash/redis@1.38.2)(@vercel/functions@3.9.11(@aws-sdk/credential-provider-web-identity@3.972.79)(ws@8.21.3))(aws4fetch@1.0.20)
+      verkit: 0.5.0
+      vite: 8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)
+      vitefu: 1.1.3(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))
+      xxhash-wasm: 1.1.0
+      yargs-parser: 22.0.0
+      zod: 4.6.6
+    optionalDependencies:
+      sharp: 0.35.5(@types/node@24.13.3)
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@deno/kv'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@types/node'
+      - '@upstash/redis'
+      - '@vercel/blob'
+      - '@vercel/functions'
+      - '@vercel/kv'
+      - '@vitejs/devtools'
+      - aws4fetch
+      - db0
+      - esbuild
+      - idb-keyval
+      - ioredis
+      - jiti
+      - less
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - terser
+      - tsx
+      - uploadthing
+      - yaml
+    optional: true
+
   async-mutex@0.5.0:
     dependencies:
       tslib: 2.8.1
@@ -16668,10 +16762,13 @@ snapshots:
     dependencies:
       minimatch: 5.1.9
 
-  files-sdk@2.2.4(@aws-sdk/client-s3@3.1108.0)(@aws-sdk/s3-presigned-post@3.1108.0)(@aws-sdk/s3-request-presigner@3.1108.0)(@opentelemetry/api@1.9.1)(h3@1.15.11)(hono@4.13.1)(next@16.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.6):
+  files-sdk@3.2.0(@aws-sdk/client-s3@3.1108.0)(@aws-sdk/s3-presigned-post@3.1108.0)(@aws-sdk/s3-request-presigner@3.1108.0)(@opentelemetry/api@1.9.1)(ai@7.0.137(zod@4.6.6))(astro@7.3.8(@types/node@24.13.3))(effect@4.1.2)(google-auth-library@11.1.0(supports-color@8.1.1))(h3@1.15.11)(hono@4.13.1)(next@16.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.6):
     dependencies:
       aws4fetch: 1.0.20
       commander: 15.0.0
+      fflate: 0.8.3
+      mime: 4.1.1
+      p-map: 7.1.1
       picomatch: 4.0.7
       safe-regex2: 5.1.1
     optionalDependencies:
@@ -16680,6 +16777,10 @@ snapshots:
       '@aws-sdk/s3-request-presigner': 3.1108.0
       '@modelcontextprotocol/sdk': 1.30.0(supports-color@8.1.1)(zod@4.6.6)
       '@opentelemetry/api': 1.9.1
+      ai: 7.0.137(zod@4.6.6)
+      astro: 7.3.8(@types/node@24.13.3)
+      effect: 4.1.2
+      google-auth-library: 11.1.0(supports-color@8.1.1)
       h3: 1.15.11
       hono: 4.13.1
       next: 16.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0)
@@ -20102,6 +20203,11 @@ snapshots:
   vitefu@1.1.3(vite@8.3.4(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)):
     optionalDependencies:
       vite: 8.3.4(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)
+
+  vitefu@1.1.3(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)):
+    optionalDependencies:
+      vite: 8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)
+    optional: true
 
   volar-service-css@0.0.71(@volar/language-service@2.4.28(typescript@6.0.3)):
     dependencies:
