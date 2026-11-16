@@ -15,7 +15,7 @@
     "env:codegen": "varlock codegen"
   },
   "dependencies": {
-    "@better-auth/drizzle-adapter": "1.7.22",
+    "@better-auth/drizzle-adapter": "1.7.23",
     "@repo/db": "workspace:*",
     "@repo/redis": "workspace:*",
     "varlock": "catalog:"
