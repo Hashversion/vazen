@@ -9,4 +9,6 @@ No end-user submissions; the queue is PRs, RFCs, and template changes. Automatio
 
 Checked means CI green: `pnpm check`, `pnpm typecheck`, build, e2e where applicable, plus the Lefthook secret scan. Reviewed means human approval; Renovate owns dependency updates and security PRs merge anytime with 1 review. Merged means conventional commits via commitlint.
 
+We run trunk-based: `main` is the only long-lived branch, branches are short-lived, squash merges keep history linear. The git-flow `develop` branch shipped nothing but merge ceremony — removed 16-11-2026. Staging deploys on every merge to `main`; production deploys are explicit workflow runs, never automatic.
+
 No merge on red. No bypass for bots. Outcomes live in the PR; spend lives in [Costs](./costs).

@@ -4,7 +4,7 @@
   "timezone": "Asia/Kolkata",
   "minimumReleaseAge": "3 days",
   "schedule": ["* 0-4 * * 1,4"],
-  "baseBranchPatterns": ["dev"],
+  "baseBranchPatterns": ["main"],
   "postUpdateOptions": ["pnpmDedupe"],
   "labels": ["dependencies"],
   "platformAutomerge": false,

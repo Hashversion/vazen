@@ -47,14 +47,16 @@ Optional but used in this monorepo:
    git remote add upstream https://github.com/stack-found/vazen.git
    ```
 
-3. Base your work on `dev` and create a branch:
+3. Base your work on `main` and create a branch:
 
    ```bash
    git fetch upstream
-   git checkout dev
-   git pull upstream dev
+   git checkout main
+   git pull upstream main
    git checkout -b feat/short-description
    ```
+
+We use trunk-based flow: `main` is the trunk, branches are short-lived, and PRs squash-merge into `main` (linear history is enforced). There is no `develop` or release branch. Staging deploys automatically on every merge to `main`; production deploys run manually via the **Production** workflow.
 
 ---
 
@@ -186,10 +188,10 @@ feat(web): add banner flag to homepage
 
 ## Pull request checklist
 
-Open pull requests against the **`dev`** branch (not `main`). `main` is reserved for releases.
+Open pull requests against **`main`** — the trunk. There is no `develop` or release branch.
 
-- [ ] Branch is up to date with `dev` (`git fetch upstream && git rebase upstream/dev`)
-- [ ] PR base branch is **`dev`**
+- [ ] Branch is up to date with `main` (`git fetch upstream && git rebase upstream/main`)
+- [ ] PR base branch is **`main`**
 - [ ] `pnpm fmt`, `pnpm lint`, and `pnpm typecheck` pass locally
 - [ ] Database changes include migrations or documented `db:push` steps
 - [ ] New env vars are declared in the owning package's `.env.schema`, `pnpm env:codegen` is run, and the generated `env.ts` is committed (codegen embeds locally-resolved values into JSDoc — run it with placeholder local values, never real secrets, before committing)
