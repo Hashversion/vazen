@@ -619,8 +619,8 @@ importers:
   packages/email:
     dependencies:
       '@opencoredev/email-sdk':
-        specifier: 1.1.0
-        version: 1.1.0(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.62(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: 3.0.1
+        version: 3.0.1(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.62(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@repo/telemetry':
         specifier: workspace:*
         version: link:../telemetry
@@ -2865,8 +2865,8 @@ packages:
   '@openapi-spec/types@0.3.0':
     resolution: {integrity: sha512-r9Gufbaw9Cpb/rCiEsFdmdWdj41MzL4/y6dCJjwMQBUvQqj5X76WlbErDSwIHR3UsxCNQI2W20GsQ4eh3YXaMQ==}
 
-  '@opencoredev/email-sdk@1.1.0':
-    resolution: {integrity: sha512-YZ33+pnhLQaiNXUmdrmSA11Rti2fmE1oDugH8tNdsigDcR5KNGTjJxpr4NZgZI0nRzBTPVVyFabsX7Q3hiwv1A==}
+  '@opencoredev/email-sdk@3.0.1':
+    resolution: {integrity: sha512-GkMqq0QX3qhyPE1Mqgw3VxBMXJAte8qtXhkVhoNuBB/CfhwsKR9nRZ5TMfWdeXjtP3w3KURWd5G9q9fI0QM3Hw==}
     engines: {bun: '>=1.1.0', node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
@@ -8697,6 +8697,10 @@ packages:
     resolution: {integrity: sha512-D9UOmYG3UH1V+ENW56t5QXBwJw1YEY18ruVeus89Rw+SyIgjPkCO84bRzO3uNIYosJbNwiabWVn48o3uJLjxFQ==}
     engines: {node: '>=18'}
 
+  nodemailer@10.5.0:
+    resolution: {integrity: sha512-L/w/HH5MqpzMDuZD7fQdt/+KqymuvrpaApaIjAH2XA3ILePwlcvXCVVvP75xVrXCEt2ggK2marrrHHFB5Qu0kA==}
+    engines: {node: '>=20.0.0'}
+
   nopt@10.0.1:
     resolution: {integrity: sha512-df3sBr/6ax9hSGuC3CspvLlbnX8cP5L5nZwXF8cGN8l0zSWR6BvzmQ6jPUKjvo6+/xdpkNvEcucBNUdBeeV13g==}
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
@@ -12555,7 +12559,9 @@ snapshots:
 
   '@openapi-spec/types@0.3.0': {}
 
-  '@opencoredev/email-sdk@1.1.0(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.62(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@opencoredev/email-sdk@3.0.1(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.62(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+    dependencies:
+      nodemailer: 10.5.0
     optionalDependencies:
       '@react-email/render': 2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       ai: 7.0.62(zod@4.6.6)
@@ -18264,6 +18270,8 @@ snapshots:
 
   node-releases@2.0.53:
     optional: true
+
+  nodemailer@10.5.0: {}
 
   nopt@10.0.1:
     dependencies:
