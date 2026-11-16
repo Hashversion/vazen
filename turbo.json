@@ -2,9 +2,23 @@
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
   "envMode": "loose",
+  "globalEnv": ["APP_ENV", "USE_INFISICAL"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      // What :: build output embeds the resolved env (varlock freeze), so env-determining values must hit the hash.
+      // Why :: one shared remote cache serves staging + production — unhashed vars could restore a staging blob into prod.
+      // How :: hash identity/creds-influence; pass through the ephemeral OIDC JWT (auth-only, changes every run).
+      "env": [
+        "INFISICAL_PROJECT_ID",
+        "INFISICAL_IDENTITY_ID",
+        "_VARLOCK_ENV_KEY",
+        "SENTRY_ORG",
+        "SENTRY_PROJECT",
+        "SENTRY_AUTH_TOKEN",
+        "ANALYZE"
+      ],
+      "passThroughEnv": ["INFISICAL_OIDC_TOKEN"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
