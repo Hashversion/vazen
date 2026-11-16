@@ -5,6 +5,7 @@ import { ENV } from "#env";
 export const sentryConfig: Parameters<typeof withSentryConfig>[1] = {
   org: ENV.SENTRY_ORG,
   project: ENV.SENTRY_PROJECT,
+  authToken: ENV.SENTRY_AUTH_TOKEN || undefined,
   telemetry: false,
   silent: !process.env.CI,
   widenClientFileUpload: true,

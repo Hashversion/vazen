@@ -32,7 +32,7 @@ services:
     restart: always
     environment:
       SRH_MODE: env
-      SRH_TOKEN: vazen
+      SRH_TOKEN: vihct68wl22
       SRH_CONNECTION_STRING: "redis://redis:6379" # Using `redis` hostname since they're in the same Docker network.
 
 volumes:
