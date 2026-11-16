@@ -211,7 +211,7 @@ Source of truth: `.env.schema` files (repo root, each package, `apps/web`). Vali
 | `ANALYZE` | Build | No | Set to `true` to enable Next bundle analyzer | Empty in example |
 | `DATABASE_URL` | Server | **Yes** (web + db) | PostgreSQL connection string | `postgresql://postgres:postgres@localhost:5432/vazen_db` |
 | `UPSTASH_REDIS_REST_URL` | Server | **Yes** | Upstash REST URL (local SRH proxy in Docker) | `http://localhost:8079` |
-| `UPSTASH_REDIS_REST_TOKEN` | Server | **Yes** | Token for REST Redis | `vazen` (matches Compose `SRH_TOKEN`) |
+| `UPSTASH_REDIS_REST_TOKEN` | Server | **Yes** | Token for REST Redis | `vihct68wl22` (matches Compose `SRH_TOKEN`) |
 | `GOOGLE_CLIENT_ID` | Server | **Yes** for Google sign-in | OAuth client ID | From Google Cloud Console |
 | `GOOGLE_CLIENT_SECRET` | Server | **Yes** for Google sign-in | OAuth client secret | From Google Cloud Console |
 | `BETTER_AUTH_SECRET` | Server | Recommended | Better Auth secret | Generate a strong random string |
