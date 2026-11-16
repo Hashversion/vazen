@@ -19,7 +19,7 @@
     "fallow:dupes": "fallow dupes --format human",
     "fallow:health": "fallow health --format human",
     "fmt": "oxfmt",
-    "secrets:scan": "varlock scan",
+    "secrets:scan": "varlock scan apps/*/src packages/*/src tooling e2e",
     "typecheck": "turbo typecheck",
     "web:build": "turbo build -F web...",
     "web:dev": "turbo dev -F web...",
