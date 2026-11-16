@@ -479,11 +479,11 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: 4.0.65
-        version: 4.0.65(react@19.3.1)(zod@4.6.6)
+        specifier: 4.0.176
+        version: 4.0.176(react@19.3.1)(zod@4.6.6)
       ai:
-        specifier: 7.0.62
-        version: 7.0.62(zod@4.6.6)
+        specifier: 7.0.172
+        version: 7.0.172(zod@4.6.6)
       react:
         specifier: catalog:react
         version: 19.3.1
@@ -620,7 +620,7 @@ importers:
     dependencies:
       '@opencoredev/email-sdk':
         specifier: 3.0.1
-        version: 3.0.1(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.62(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 3.0.1(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.172(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@repo/telemetry':
         specifier: workspace:*
         version: link:../telemetry
@@ -776,13 +776,13 @@ importers:
     dependencies:
       '@orpc/evlog':
         specifier: catalog:orpc
-        version: 2.0.0-beta.46(crossws@0.3.5)(evlog@2.30.1(ai@7.0.62(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)))
+        version: 2.0.0-beta.46(crossws@0.3.5)(evlog@2.30.1(ai@7.0.172(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)))
       '@sentry/nextjs':
         specifier: 'catalog:'
         version: 11.6.0(@babel/core@7.29.7(supports-color@8.1.1))(@cloudflare/workers-types@5.20261112.1)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(react@19.3.1)(webpack@5.109.2(csso@5.0.5)(esbuild@0.28.2)(lightningcss@1.32.0)(postcss@8.5.29)(uglify-js@3.19.3))
       evlog:
         specifier: 2.30.1
-        version: 2.30.1(ai@7.0.62(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))
+        version: 2.30.1(ai@7.0.172(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))
       varlock:
         specifier: 'catalog:'
         version: 1.23.0
@@ -860,20 +860,14 @@ packages:
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  '@ai-sdk/gateway@4.0.49':
-    resolution: {integrity: sha512-qdSUr4FAN7e+MHBdVzkmbGMtpf7XQdQp1AgMI3jV0QPmld/4k4QbR7mXRQgjUsPeIfAwBzMPMPziHAPP1tXRwg==}
+  '@ai-sdk/gateway@4.0.145':
+    resolution: {integrity: sha512-vquqCrEut1jlWshy2lWaOrBvyrpVjhLWoR/EVpb+m7JKtHtmpy0vpl9rtpB6xNFiumjT9e2s70MZmRth/hH9tw==}
     engines: {node: '>=22'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  '@ai-sdk/mcp@2.0.31':
-    resolution: {integrity: sha512-vBxkIg4CB9wQjWYo5uu1G/Vv3Xhbi3JZ47HoT5ywLNTycxKlY2RGGynTyGqcXLcvWBErRyMygDYVFn8VPc1N+w==}
-    engines: {node: '>=22'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4.1.8
-
-  '@ai-sdk/provider-utils@5.0.27':
-    resolution: {integrity: sha512-EzAn4pdgG5g0xXtH6lE2zyNmfjDQIDjATkfqzuidEI35g++hh4+07vnjzkT/RmGmIClPZiRj/Q2GMPV2V7mkHw==}
+  '@ai-sdk/mcp@2.0.99':
+    resolution: {integrity: sha512-9yDWp5WABLMRNKYuLrLIXGtJpIkjwXAdJyYUSu5XpD0cqtuM11LGqk3gb5XGiShco3RT/79W8CkqXskegTtWKw==}
     engines: {node: '>=22'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -884,16 +878,22 @@ packages:
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
+  '@ai-sdk/provider-utils@5.0.81':
+    resolution: {integrity: sha512-pfvvdQ3d1WxdBuug/mnGEP6E48cPokwD8dMBnsFeeAUp0/rb/H2aj0f3mwOiY62gu/Cu5GO44e+SE5nDHyBWMA==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4.1.8
+
   '@ai-sdk/provider@4.0.26':
     resolution: {integrity: sha512-BZ443uBEq6HuMA+Z4b7Hpm65GpZSo7pWqnYqpf/7tAO3C48JbtvAhOE2JnODFj+jodsZzfRHkAyQb64xuD2tZQ==}
     engines: {node: '>=22'}
 
-  '@ai-sdk/provider@4.0.7':
-    resolution: {integrity: sha512-6or44XprPzKbr8zkmzosowSE0pxkvJcoojBL+mCZvPUt3kvXp3XSNqeVun9golb1acEfSo6yaEBRT18h2VU+1Q==}
+  '@ai-sdk/provider@4.0.38':
+    resolution: {integrity: sha512-GElz70UUCuDFFyD6m6aQJFgRY0HEABQzB5otzgkrisYaF5mnss7o0upAmbBTSD6KWiM9h7lZm1ls2c7xzHR8CA==}
     engines: {node: '>=22'}
 
-  '@ai-sdk/react@4.0.65':
-    resolution: {integrity: sha512-ScJ5VDm67gkt5mFppHe+t35LIDfIsYPVu0Tq1Y9B+Y+PJAQMHE8moGGspithVhOPA9a7DBbCMdY/PPZ8e3xcyw==}
+  '@ai-sdk/react@4.0.176':
+    resolution: {integrity: sha512-pqGoKP2WZhqPloM3tO/zMFTuLlfTab3DDKoneMXsT+BIl05RuopVN5OsgUQYCLH7SoQ/tlTS7oE464JB39hscg==}
     engines: {node: '>=22'}
     peerDependencies:
       react: ^18 || ~19.0.1 || ~19.1.2 || ^19.2.1
@@ -5565,8 +5565,8 @@ packages:
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  ai@7.0.62:
-    resolution: {integrity: sha512-/YiuaaFIUPAiGqzHphnu9NuHQKbToZjlZkKoqGsQx6TFd7CZj6Z3eQUNeK6er1kXb9Ou5hRntRX4dvvE/kHYiQ==}
+  ai@7.0.172:
+    resolution: {integrity: sha512-FDY7I0I/BE6mqa+hoeWwECO5fbnpXl9vYdvm7n5pNjru1mjrBhX1ZQrYOZOtYledTp0c0vCP/eGYPD5P3bLl3Q==}
     engines: {node: '>=22'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -10570,27 +10570,19 @@ snapshots:
       '@vercel/oidc': 3.2.0
       zod: 4.6.6
 
-  '@ai-sdk/gateway@4.0.49(zod@4.6.6)':
+  '@ai-sdk/gateway@4.0.145(zod@4.6.6)':
     dependencies:
-      '@ai-sdk/provider': 4.0.7
-      '@ai-sdk/provider-utils': 5.0.27(zod@4.6.6)
+      '@ai-sdk/provider': 4.0.38
+      '@ai-sdk/provider-utils': 5.0.81(zod@4.6.6)
       '@vercel/oidc': 3.2.0
       zod: 4.6.6
 
-  '@ai-sdk/mcp@2.0.31(zod@4.6.6)':
+  '@ai-sdk/mcp@2.0.99(zod@4.6.6)':
     dependencies:
-      '@ai-sdk/provider': 4.0.7
-      '@ai-sdk/provider-utils': 5.0.27(zod@4.6.6)
+      '@ai-sdk/provider': 4.0.38
+      '@ai-sdk/provider-utils': 5.0.81(zod@4.6.6)
+      cross-spawn: 7.0.6
       pkce-challenge: 5.0.1
-      zod: 4.6.6
-
-  '@ai-sdk/provider-utils@5.0.27(zod@4.6.6)':
-    dependencies:
-      '@ai-sdk/provider': 4.0.7
-      '@standard-schema/spec': 1.1.0
-      '@workflow/serde': 4.1.0
-      eventsource-parser: 3.1.1
-      undici: 7.29.1
       zod: 4.6.6
 
   '@ai-sdk/provider-utils@5.0.58(zod@4.6.6)':
@@ -10602,20 +10594,28 @@ snapshots:
       undici: 7.29.1
       zod: 4.6.6
 
+  '@ai-sdk/provider-utils@5.0.81(zod@4.6.6)':
+    dependencies:
+      '@ai-sdk/provider': 4.0.38
+      '@standard-schema/spec': 1.1.0
+      '@workflow/serde': 4.1.0
+      eventsource-parser: 3.1.1
+      zod: 4.6.6
+
   '@ai-sdk/provider@4.0.26':
     dependencies:
       json-schema: 0.4.0
 
-  '@ai-sdk/provider@4.0.7':
+  '@ai-sdk/provider@4.0.38':
     dependencies:
       json-schema: 0.4.0
 
-  '@ai-sdk/react@4.0.65(react@19.3.1)(zod@4.6.6)':
+  '@ai-sdk/react@4.0.176(react@19.3.1)(zod@4.6.6)':
     dependencies:
-      '@ai-sdk/mcp': 2.0.31(zod@4.6.6)
-      '@ai-sdk/provider': 4.0.7
-      '@ai-sdk/provider-utils': 5.0.27(zod@4.6.6)
-      ai: 7.0.62(zod@4.6.6)
+      '@ai-sdk/mcp': 2.0.99(zod@4.6.6)
+      '@ai-sdk/provider': 4.0.38
+      '@ai-sdk/provider-utils': 5.0.81(zod@4.6.6)
+      ai: 7.0.172(zod@4.6.6)
       react: 19.3.1
       swr: 2.5.0(react@19.3.1)
       throttleit: 2.1.0
@@ -12563,12 +12563,12 @@ snapshots:
 
   '@openapi-spec/types@0.3.0': {}
 
-  '@opencoredev/email-sdk@3.0.1(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.62(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@opencoredev/email-sdk@3.0.1(@react-email/render@2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.172(zod@4.6.6))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       nodemailer: 10.5.0
     optionalDependencies:
       '@react-email/render': 2.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      ai: 7.0.62(zod@4.6.6)
+      ai: 7.0.172(zod@4.6.6)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
@@ -12759,13 +12759,13 @@ snapshots:
       '@orpc/shared': 2.0.0-beta.46
       '@standard-schema/spec': 1.1.0
 
-  '@orpc/evlog@2.0.0-beta.46(crossws@0.3.5)(evlog@2.30.1(ai@7.0.62(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)))':
+  '@orpc/evlog@2.0.0-beta.46(crossws@0.3.5)(evlog@2.30.1(ai@7.0.172(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)))':
     dependencies:
       '@orpc/client': 2.0.0-beta.46
       '@orpc/server': 2.0.0-beta.46(crossws@0.3.5)
       '@orpc/shared': 2.0.0-beta.46
       '@standard-server/core': 0.11.0
-      evlog: 2.30.1(ai@7.0.62(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))
+      evlog: 2.30.1(ai@7.0.172(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1))
     transitivePeerDependencies:
       - crossws
       - fastify
@@ -14932,11 +14932,11 @@ snapshots:
       '@ai-sdk/provider-utils': 5.0.58(zod@4.6.6)
       zod: 4.6.6
 
-  ai@7.0.62(zod@4.6.6):
+  ai@7.0.172(zod@4.6.6):
     dependencies:
-      '@ai-sdk/gateway': 4.0.49(zod@4.6.6)
-      '@ai-sdk/provider': 4.0.7
-      '@ai-sdk/provider-utils': 5.0.27(zod@4.6.6)
+      '@ai-sdk/gateway': 4.0.145(zod@4.6.6)
+      '@ai-sdk/provider': 4.0.38
+      '@ai-sdk/provider-utils': 5.0.81(zod@4.6.6)
       zod: 4.6.6
 
   ajv-draft-04@1.0.0(ajv@8.20.0):
@@ -16590,9 +16590,9 @@ snapshots:
     dependencies:
       eventsource-parser: 3.1.1
 
-  evlog@2.30.1(ai@7.0.62(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)):
+  evlog@2.30.1(ai@7.0.172(zod@4.6.6))(express@5.2.1(supports-color@8.1.1))(h3@1.15.11)(next@16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.4(@types/node@24.13.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(tsx@4.23.12)(yaml@2.9.1)):
     optionalDependencies:
-      ai: 7.0.62(zod@4.6.6)
+      ai: 7.0.172(zod@4.6.6)
       express: 5.2.1(supports-color@8.1.1)
       h3: 1.15.11
       next: 16.4.6(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(@types/node@24.13.3)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.23.0)
