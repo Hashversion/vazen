@@ -50,7 +50,7 @@
   "engines": {
     "node": "24.22.1"
   },
-  "packageManager": "pnpm@12.11.2",
+  "packageManager": "pnpm@12.19.0",
   "varlock": {
     "loadPath": [
       "apps/web/",
