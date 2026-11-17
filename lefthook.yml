@@ -7,7 +7,7 @@ pre-commit:
   parallel: true
   commands:
     format:
-      glob: "*.{js,jsx,ts,tsx,json,jsonc,css}"
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,md,mdx}"
       run: pnpm oxfmt --write {staged_files}
       stage_fixed: true
     lint:
