@@ -1,46 +1,28 @@
 import { defineConfig } from "oxlint";
 import core from "ultracite/oxlint/core";
-import jsPlugins from "ultracite/oxlint/js-plugins";
+import { jsPluginSettings, selectJsPlugins } from "ultracite/oxlint/js-plugins";
 import next from "ultracite/oxlint/next";
 import nextJsPlugins from "ultracite/oxlint/next/js-plugins";
 import react from "ultracite/oxlint/react";
 import tanstack from "ultracite/oxlint/tanstack";
 import tanstackJsPlugins from "ultracite/oxlint/tanstack/js-plugins";
 
-const selectedJsPluginNames = new Set(["react-doctor"]);
-const selectedJsPluginRulePrefixes = new Set(["react-doctor"]);
-
-const selectedJsPlugins = {
-  ...jsPlugins,
-  jsPlugins: jsPlugins.jsPlugins?.filter((plugin) =>
-    selectedJsPluginNames.has(typeof plugin === "string" ? plugin : plugin.name)
-  ),
-  overrides: jsPlugins.overrides?.map((override) => ({
-    ...override,
-    rules: Object.fromEntries(
-      Object.entries(override.rules ?? {}).filter(([ruleName]) =>
-        selectedJsPluginRulePrefixes.has(ruleName.split("/")[0] ?? ruleName)
-      )
-    ),
-  })),
-  rules: Object.fromEntries(
-    Object.entries(jsPlugins.rules ?? {}).filter(([ruleName]) =>
-      selectedJsPluginRulePrefixes.has(ruleName.split("/")[0] ?? ruleName)
-    )
-  ),
-};
+const jsPlugins = selectJsPlugins(["react-doctor"]);
 
 export default defineConfig({
+  env: core.env,
   extends: [
     core,
     react,
     next,
     tanstack,
+    jsPlugins,
     nextJsPlugins,
     tanstackJsPlugins,
-    selectedJsPlugins,
   ],
-
+  ignorePatterns: [...(core.ignorePatterns ?? []), "**/env.ts", "**/env.d.ts"],
+  jsPlugins: jsPlugins.jsPlugins,
+  settings: jsPluginSettings,
   // overides
   rules: {
     "sort-keys": "off",
@@ -49,7 +31,6 @@ export default defineConfig({
     "func-style": "off",
     "no-warning-comments": "off",
   },
-
   // Blume island filenames become the component tag, so they must stay
   // PascalCase (e.g. islands/CopyCodeBlock.tsx -> <CopyCodeBlock />).
   overrides: [
@@ -60,6 +41,4 @@ export default defineConfig({
       },
     },
   ],
-
-  ignorePatterns: [...(core.ignorePatterns ?? []), "**/env.ts", "**/env.d.ts"],
 });
