@@ -56,7 +56,7 @@ export default function CopyCodeBlock({
     <button
       type="button"
       onClick={handleCopy}
-      className="group flex h-10 cursor-pointer items-center gap-3 rounded-xl bg-neutral-200 pr-3 pl-4 text-sm font-medium transition-all active:scale-[0.98] dark:bg-neutral-800"
+      className="group flex h-10 cursor-pointer items-center gap-3 rounded-xl bg-neutral-200 pr-3 pl-4 text-sm font-medium transition-transform active:scale-[0.98] dark:bg-neutral-800"
     >
       <span className="font-mono text-neutral-500 select-none dark:text-neutral-400">
         {prefix}
