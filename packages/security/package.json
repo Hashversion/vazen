@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@nosecone/next": "1.9.1",
+    "@nosecone/next": "1.15.0",
     "varlock": "catalog:"
   },
   "devDependencies": {
