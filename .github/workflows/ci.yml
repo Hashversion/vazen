@@ -35,8 +35,9 @@ jobs:
             !/memory/**
             /memory/package.json
           sparse-checkout-cone-mode: false
+          persist-credentials: false
 
-      - uses: ./.github/actions/setup
+      - uses: $/.github/actions/setup
 
       - name: Lint
         run: pnpm check
