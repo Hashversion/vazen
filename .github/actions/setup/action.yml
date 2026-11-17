@@ -9,7 +9,7 @@ inputs:
   pnpm-version:
     description: pnpm version to install (must match packageManager)
     required: false
-    default: "12.11.2"
+    default: "12.21.0"
 
 runs:
   using: composite
