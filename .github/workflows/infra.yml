@@ -40,8 +40,9 @@ jobs:
             !/memory/**
             /memory/package.json
           sparse-checkout-cone-mode: false
+          persist-credentials: false
 
-      - uses: ./.github/actions/setup
+      - uses: $/.github/actions/setup
 
       - name: Typecheck
         run: pnpm --filter infra typecheck
@@ -65,7 +66,7 @@ jobs:
     steps:
       - *checkout
 
-      - uses: ./.github/actions/setup
+      - uses: $/.github/actions/setup
 
       - name: Infra plan (staging)
         run: pnpm --filter infra exec alchemy plan
@@ -93,7 +94,7 @@ jobs:
     steps:
       - *checkout
 
-      - uses: ./.github/actions/setup
+      - uses: $/.github/actions/setup
 
       - name: Infra plan (production)
         run: pnpm --filter infra exec alchemy plan

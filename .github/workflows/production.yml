@@ -38,10 +38,11 @@ jobs:
             !/memory/**
             /memory/package.json
           sparse-checkout-cone-mode: false
+          persist-credentials: false
 
-      - uses: ./.github/actions/setup
+      - uses: $/.github/actions/setup
 
-      - uses: ./.github/actions/infisical
+      - uses: $/.github/actions/infisical
         with:
           env-slug: production
           identity-id: ${{ vars.INFISICAL_IDENTITY_ID }}
@@ -88,10 +89,11 @@ jobs:
             !/memory/**
             /memory/package.json
           sparse-checkout-cone-mode: false
+          persist-credentials: false
 
-      - uses: ./.github/actions/setup
+      - uses: $/.github/actions/setup
 
-      - uses: ./.github/actions/infisical
+      - uses: $/.github/actions/infisical
         with:
           env-slug: production
           identity-id: ${{ vars.INFISICAL_IDENTITY_ID }}
