@@ -284,8 +284,8 @@ importers:
         specifier: ^0.9.23
         version: 0.9.23
       portless:
-        specifier: 0.15.5
-        version: 0.15.5
+        specifier: 0.17.0
+        version: 0.17.0
       renovate:
         specifier: 44.153.1
         version: 44.153.1(supports-color@8.1.1)(typanion@3.14.0)
@@ -9194,8 +9194,8 @@ packages:
   points-on-path@0.2.1:
     resolution: {integrity: sha512-25ClnWWuw7JbWZcgqY/gJ4FQWadKxGWk+3kR/7kD0tCaDtPPMj7oHu2ToLaVhfpnHrZzYby2w6tUA0eOIuUg8g==}
 
-  portless@0.15.5:
-    resolution: {integrity: sha512-zmJu4Q8/fY54oVUT/5NnmF4Ih8wTdCvCf6JCN783dRYl9mXkJBzXSckX2lztGCLIbM70varDjCudAbGKT73XPg==}
+  portless@0.17.0:
+    resolution: {integrity: sha512-UJdy5sGmNSwi8ETvVniUTqULJht16qvBR9rvsFqsVekEyabMH2xJ5mwIEYBmSSHVCUmQvAmaYAhBcCs8PA7IBA==}
     engines: {node: '>=24'}
     os: [darwin, linux, win32]
     hasBin: true
@@ -19005,7 +19005,7 @@ snapshots:
       path-data-parser: 0.1.0
       points-on-curve: 0.2.0
 
-  portless@0.15.5: {}
+  portless@0.17.0: {}
 
   postcss-selector-parser@6.0.10:
     dependencies:
