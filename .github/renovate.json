@@ -1,15 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", ":semanticCommitTypeAll(chore)"],
+  "extends": ["config:recommended", ":semanticCommitTypeAll(chore)"],
   "timezone": "Asia/Kolkata",
   "minimumReleaseAge": "3 days",
-  "schedule": ["* 0-4 * * 1,4"],
   "baseBranchPatterns": ["main"],
   "postUpdateOptions": ["pnpmDedupe"],
   "labels": ["dependencies"],
   "platformAutomerge": false,
   "prConcurrentLimit": 5,
-  "prHourlyLimit": 2,
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
