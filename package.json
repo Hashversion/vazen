@@ -36,7 +36,7 @@
     "@varlock/infisical-plugin": "catalog:",
     "fallow": "3.34.0",
     "lefthook": "2.1.10",
-    "oxfmt": "^0.75.0",
+    "oxfmt": "^0.78.0",
     "oxlint": "^1.93.0",
     "oxlint-plugin-react-doctor": "^0.9.23",
     "portless": "0.15.5",
