@@ -7,151 +7,151 @@ import { ENV as _ENV } from "varlock/env";
 
 export type CoercedEnvSchema = {
   /**
-   * **USE_INFISICAL**
-   * Off by default (already-set variables / Docker defaults win). True = fetch from Infisical.
+   * **USE_INFISICAL**  
+   * Off by default (already-set variables / Docker defaults win). True = fetch from Infisical.  
    */
   USE_INFISICAL?: boolean;
 
   /**
-   * **ANALYZE**
-   * Enables @next/bundle-analyzer during `next build` (ANALYZE=true).
+   * **ANALYZE**  
+   * Enables @next/bundle-analyzer during `next build` (ANALYZE=true).  
    */
   ANALYZE?: boolean;
 
   /**
-   * **APP_ENV**
-   * Set per context (CI: staging / production).
+   * **APP_ENV**  
+   * Set per context (CI: staging / production).  
    */
   APP_ENV?: "development" | "staging" | "test" | "production";
 
   /**
-   * **INFISICAL_ENV**
-   * Infisical env slug for APP_ENV (development / staging / production).
+   * **INFISICAL_ENV**  
+   * Infisical env slug for APP_ENV (development / staging / production).  
    */
   INFISICAL_ENV?: string;
 
   /**
-   * **DATABASE_URL** 🔐 _sensitive_
-   * Database
+   * **DATABASE_URL** 🔐 _sensitive_  
+   * Database  
    *
-   * 📚 {@link https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING | PostgreSQL connection strings}
+   * 📚 {@link https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING | PostgreSQL connection strings}  
    */
   DATABASE_URL: string;
 
   /**
-   * **UPSTASH_REDIS_REST_URL** 🔐 _sensitive_
-   * Upstash Redis
+   * **UPSTASH_REDIS_REST_URL** 🔐 _sensitive_  
+   * Upstash Redis  
    *
-   * 📚 {@link https://upstash.com/docs | Upstash Redis docs}
+   * 📚 {@link https://upstash.com/docs | Upstash Redis docs}  
    */
   UPSTASH_REDIS_REST_URL: string;
 
   /**
-   * **UPSTASH_REDIS_REST_TOKEN** 🔐 _sensitive_
+   * **UPSTASH_REDIS_REST_TOKEN** 🔐 _sensitive_  
    *
-   * 📚 {@link https://upstash.com/docs | Upstash Redis docs}
+   * 📚 {@link https://upstash.com/docs | Upstash Redis docs}  
    */
   UPSTASH_REDIS_REST_TOKEN: string;
 
   /**
-   * **GOOGLE_CLIENT_ID** 🔐 _sensitive_
-   * Google OAuth
+   * **GOOGLE_CLIENT_ID** 🔐 _sensitive_  
+   * Google OAuth  
    *
-   * 📚 {@link https://developers.google.com/workspace/guides/create-credentials | Create access credentials}
+   * 📚 {@link https://developers.google.com/workspace/guides/create-credentials | Create access credentials}  
    */
   GOOGLE_CLIENT_ID: string;
 
   /**
-   * **GOOGLE_CLIENT_SECRET** 🔐 _sensitive_
+   * **GOOGLE_CLIENT_SECRET** 🔐 _sensitive_  
    *
-   * 📚 {@link https://developers.google.com/workspace/guides/create-credentials | Create access credentials}
+   * 📚 {@link https://developers.google.com/workspace/guides/create-credentials | Create access credentials}  
    */
   GOOGLE_CLIENT_SECRET: string;
 
   /**
-   * **R2_ACCOUNT_ID** 🔐 _sensitive_
-   * Cloudflare R2
+   * **R2_ACCOUNT_ID** 🔐 _sensitive_  
+   * Cloudflare R2  
    *
-   * 📚 {@link https://developers.cloudflare.com/r2/api/tokens/ | R2 API tokens}
+   * 📚 {@link https://developers.cloudflare.com/r2/api/tokens/ | R2 API tokens}  
    */
   R2_ACCOUNT_ID?: string;
 
   /**
-   * **R2_ACCESS_KEY_ID** 🔐 _sensitive_
+   * **R2_ACCESS_KEY_ID** 🔐 _sensitive_  
    *
-   * 📚 {@link https://developers.cloudflare.com/r2/api/tokens/ | R2 API tokens}
+   * 📚 {@link https://developers.cloudflare.com/r2/api/tokens/ | R2 API tokens}  
    */
   R2_ACCESS_KEY_ID?: string;
 
   /**
-   * **R2_SECRET_ACCESS_KEY** 🔐 _sensitive_
+   * **R2_SECRET_ACCESS_KEY** 🔐 _sensitive_  
    *
-   * 📚 {@link https://developers.cloudflare.com/r2/api/tokens/ | R2 API tokens}
+   * 📚 {@link https://developers.cloudflare.com/r2/api/tokens/ | R2 API tokens}  
    */
   R2_SECRET_ACCESS_KEY?: string;
 
   /**
-   * **NEXT_PUBLIC_POSTHOG_KEY**
-   * PostHog
+   * **NEXT_PUBLIC_POSTHOG_KEY**  
+   * PostHog  
    *
-   * 📚 {@link https://posthog.com/docs/api | PostHog API keys}
+   * 📚 {@link https://posthog.com/docs/api | PostHog API keys}  
    */
   NEXT_PUBLIC_POSTHOG_KEY: string;
 
   /**
-   * **NEXT_PUBLIC_POSTHOG_HOST**
+   * **NEXT_PUBLIC_POSTHOG_HOST**  
    *
-   * 📚 {@link https://posthog.com/docs/api | PostHog API keys}
+   * 📚 {@link https://posthog.com/docs/api | PostHog API keys}  
    */
   NEXT_PUBLIC_POSTHOG_HOST: string;
 
   /**
-   * **NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT**
+   * **NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT**  
    *
-   * 📚 {@link https://docs.sentry.io/platforms/javascript/guides/nextjs/ | Sentry Next.js}
+   * 📚 {@link https://docs.sentry.io/platforms/javascript/guides/nextjs/ | Sentry Next.js}  
    */
   NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT: string;
 
   /**
-   * **SENTRY_ORG**
-   * Sentry
+   * **SENTRY_ORG**  
+   * Sentry  
    *
-   * 📚 {@link https://docs.sentry.io/platforms/javascript/guides/nextjs/ | Sentry Next.js}
+   * 📚 {@link https://docs.sentry.io/platforms/javascript/guides/nextjs/ | Sentry Next.js}  
    */
   SENTRY_ORG: string;
 
   /**
-   * **SENTRY_PROJECT**
+   * **SENTRY_PROJECT**  
    *
-   * 📚 {@link https://docs.sentry.io/platforms/javascript/guides/nextjs/ | Sentry Next.js}
+   * 📚 {@link https://docs.sentry.io/platforms/javascript/guides/nextjs/ | Sentry Next.js}  
    */
   SENTRY_PROJECT: string;
 
   /**
-   * **NEXT_PUBLIC_SENTRY_DSN**
+   * **NEXT_PUBLIC_SENTRY_DSN**  
    *
-   * 📚 {@link https://docs.sentry.io/concepts/key-terms/dsn-explainer/ | Sentry DSN}
+   * 📚 {@link https://docs.sentry.io/concepts/key-terms/dsn-explainer/ | Sentry DSN}  
    */
   NEXT_PUBLIC_SENTRY_DSN: string;
 
   /**
-   * **SENTRY_AUTH_TOKEN** 🔐 _sensitive_
-   * Auth token for sourcemap uploads during build (withSentryConfig reads it implicitly).
+   * **SENTRY_AUTH_TOKEN** 🔐 _sensitive_  
+   * Auth token for sourcemap uploads during build (withSentryConfig reads it implicitly).  
    */
   SENTRY_AUTH_TOKEN?: string;
 
   /**
-   * **FLAGS_SECRET** 🔐 _sensitive_
-   * Feature Flags
+   * **FLAGS_SECRET** 🔐 _sensitive_  
+   * Feature Flags  
    *
-   * 📚 {@link https://flags-sdk.dev/docs/frameworks/next/precompute#prerequisites | Flags precompute}
+   * 📚 {@link https://flags-sdk.dev/docs/frameworks/next/precompute#prerequisites | Flags precompute}  
    */
   FLAGS_SECRET?: string;
 
   /**
-   * **STATSIG_SERVER_API_KEY** 🔐 _sensitive_
+   * **STATSIG_SERVER_API_KEY** 🔐 _sensitive_  
    *
-   * 📚 {@link https://docs.statsig.com/access-management/api-keys | Statsig API keys}
+   * 📚 {@link https://docs.statsig.com/access-management/api-keys | Statsig API keys}  
    */
   STATSIG_SERVER_API_KEY: string;
 };
