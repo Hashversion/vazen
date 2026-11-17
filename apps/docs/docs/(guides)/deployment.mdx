@@ -4,7 +4,13 @@ description: Shipping web and docs, and what infra still needs.
 icon: rocket
 ---
 
-No hosting provider is chosen yet. `infra/` holds an Alchemy stack with local state and no resources, so this page covers what builds today and what the first deploy still needs.
+Web and docs ship to Vercel through GitHub Actions; `infra/` holds an Alchemy stack with local state and no resources, so this page covers what deploys ship and what the first infra deploy still needs.
+
+## How deploys ship
+
+- Staging :: every push to `main` runs `.github/workflows/staging.yml`, one preview deploy per app — web and docs on separate Vercel projects
+- Production :: manual `workflow_dispatch` on `.github/workflows/production.yml`, builds then promotes with `--prod`
+- Secrets :: Infisical OIDC per environment; `VERCEL_WEB_PROJECT_ID` and `VERCEL_DOCS_PROJECT_ID` select the project
 
 ## What builds today
 
@@ -31,7 +37,8 @@ pnpm --filter infra destroy
 ## Before the first deploy
 
 - Secrets ready :: Infisical staging and production plus each package `.env.schema`, validated by `pnpm env:codegen`
-- Open :: provider choice, staging versus prod split, demo seed strategy
+- Vercel ready :: `web` and `docs` projects exist with root directories set, plus `VERCEL_WEB_PROJECT_ID` and `VERCEL_DOCS_PROJECT_ID` secrets
+- Open :: infra provider choice, demo seed strategy
 - Previews :: auth allows `*.vercel.app` alongside the local `.id` hostname and `web.vazen.dev`
 
 ## Where to read
