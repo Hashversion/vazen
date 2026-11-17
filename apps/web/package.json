@@ -31,7 +31,7 @@
     "@zanreal/nemo": "3.0.2",
     "better-auth": "catalog:",
     "next": "catalog:next",
-    "nuqs": "2.9.5",
+    "nuqs": "2.10.3",
     "react": "catalog:react",
     "react-dom": "catalog:react",
     "varlock": "catalog:"

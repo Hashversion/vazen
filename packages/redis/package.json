@@ -17,8 +17,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@upstash/ratelimit": "2.0.8",
-    "@upstash/redis": "1.38.2",
+    "@upstash/ratelimit": "2.2.0",
+    "@upstash/redis": "1.41.0",
     "varlock": "catalog:"
   },
   "devDependencies": {
