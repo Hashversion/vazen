@@ -16,7 +16,7 @@
     "@repo/telemetry": "workspace:*",
     "react": "catalog:react",
     "react-dom": "catalog:react",
-    "react-email": "6.11.11"
+    "react-email": "6.11.13"
   },
   "devDependencies": {
     "@react-email/ui": "6.11.13",
