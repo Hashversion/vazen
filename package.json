@@ -39,7 +39,7 @@
     "oxfmt": "^0.78.0",
     "oxlint": "^1.93.0",
     "oxlint-plugin-react-doctor": "^0.9.23",
-    "portless": "0.17.0",
+    "portless": "0.18.1",
     "renovate": "44.246.4",
     "rimraf": "6.1.4",
     "turbo": "2.11.11",
