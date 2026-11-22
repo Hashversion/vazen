@@ -30,12 +30,12 @@ export function rateLimit(namespace: string, options: RateLimitOptions) {
   });
 }
 
-export function limitRequest(
+export async function limitRequest(
   namespace: string,
   identifier: string,
   options: RateLimitOptions
 ) {
-  return rateLimit(namespace, options).limit(identifier);
+  return await rateLimit(namespace, options).limit(identifier);
 }
 
 export const ratelimit = {
@@ -45,4 +45,6 @@ export const ratelimit = {
   }),
 };
 
-export const { fixedWindow, slidingWindow, tokenBucket } = Ratelimit;
+export const fixedWindow = Ratelimit.fixedWindow.bind(Ratelimit);
+export const slidingWindow = Ratelimit.slidingWindow.bind(Ratelimit);
+export const tokenBucket = Ratelimit.tokenBucket.bind(Ratelimit);

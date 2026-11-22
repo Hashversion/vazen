@@ -16,6 +16,7 @@ async function DashboardContent() {
   }
   if (session.user.role !== "admin") {
     // Why :: "/" only exists via the proxy rewrite to /{code}
+    // oxlint-disable-next-line typescript/no-unsafe-type-assertion -- proxy rewrite makes "/" valid at runtime
     redirect("/" as Route);
   }
 

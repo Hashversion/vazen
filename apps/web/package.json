@@ -24,6 +24,7 @@
     "@repo/security": "workspace:*",
     "@repo/telemetry": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@repo/utils": "workspace:*",
     "@sentry/nextjs": "catalog:",
     "@tanstack/react-query": "catalog:tanstack",
     "@varlock/infisical-plugin": "catalog:",

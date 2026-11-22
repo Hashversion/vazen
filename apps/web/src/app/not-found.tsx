@@ -12,6 +12,7 @@ export default function NotFound() {
         className="mt-4"
         nativeButton={false}
         // Why :: "/" only exists via the proxy rewrite to /{code}
+        // oxlint-disable-next-line typescript/no-unsafe-type-assertion -- proxy rewrite makes "/" valid at runtime
         render={<Link href={"/" as Route} />}
       >
         Go to Home

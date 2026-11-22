@@ -8,7 +8,7 @@ export function StackPill({
   icon: JSX.Element;
 }) {
   return (
-    <div className="flex w-fit items-center justify-center gap-3 rounded-[24px] bg-neutral-200 px-3 py-2 [corner-shape:squircle] dark:bg-neutral-800">
+    <div className="bg-muted flex w-fit items-center justify-center gap-3 rounded-[24px] px-3 py-2 [corner-shape:squircle]">
       {icon}
       {stackName}
     </div>

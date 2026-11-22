@@ -92,6 +92,7 @@ function AuthErrorPage() {
             nativeButton={false}
             variant="outline"
             // Why :: "/" only exists via the proxy rewrite to /{code}
+            // oxlint-disable-next-line typescript/no-unsafe-type-assertion -- proxy rewrite makes "/" valid at runtime
             render={<Link href={"/" as Route}>go home</Link>}
             className="w-full"
           />

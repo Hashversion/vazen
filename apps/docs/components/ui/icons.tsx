@@ -1,4 +1,4 @@
-// oxlint-disable react-doctor/rendering-svg-precision
+// oxlint-disable react-doctor/rendering-svg-precision, shadcn/no-raw-colors, shadcn/no-inline-styles
 import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
