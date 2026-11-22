@@ -13,7 +13,8 @@
     }
   },
   "scripts": {
-    "clean": "rimraf node_modules .turbo"
+    "clean": "rimraf node_modules .turbo",
+    "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
     "@repo/auth": "workspace:*",

@@ -13,7 +13,7 @@
   "scripts": {
     "clean": "rimraf node_modules .turbo",
     "env:codegen": "varlock codegen",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.1169.0",

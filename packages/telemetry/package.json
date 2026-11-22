@@ -18,7 +18,7 @@
   "scripts": {
     "clean": "rimraf node_modules .turbo",
     "env:codegen": "varlock codegen",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
     "@orpc/evlog": "catalog:orpc",
