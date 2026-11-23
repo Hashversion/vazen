@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf node_modules .turbo",
-    "typecheck": "tsrs --noEmit"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

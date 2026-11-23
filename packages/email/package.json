@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf node_modules .turbo dist",
     "dev": "email dev --dir ./src/emails --port 4444",
-    "typecheck": "tsrs --noEmit"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "dependencies": {
     "@opencoredev/email-sdk": "3.0.1",

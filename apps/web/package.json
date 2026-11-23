@@ -11,7 +11,7 @@
     "e2e:local": "sh -c \"pnpm run build && pnpm --filter @e2e/web e2e\"",
     "env:codegen": "varlock codegen",
     "start": "next start",
-    "typecheck": "tsrs --noEmit"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "dependencies": {
     "@orpc/client": "catalog:orpc",

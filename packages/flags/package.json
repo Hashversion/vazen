@@ -17,7 +17,7 @@
   "scripts": {
     "clean": "rimraf .turbo node_modules",
     "env:codegen": "varlock codegen",
-    "typecheck": "tsrs --noEmit --emitDeclarationOnly false"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "dependencies": {
     "@flags-sdk/statsig": "0.3.1",

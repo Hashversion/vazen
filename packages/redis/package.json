@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "rimraf .turbo node_modules",
     "env:codegen": "varlock codegen",
-    "typecheck": "tsrs --noEmit"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "dependencies": {
     "@upstash/ratelimit": "2.2.1",

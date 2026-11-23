@@ -12,7 +12,7 @@
   },
   "scripts": {
     "clean": "rm -rf .turbo dist node_modules",
-    "typecheck": "tsrs --noEmit --emitDeclarationOnly false"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "dependencies": {
     "react": "catalog:react",

@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "rimraf .turbo node_modules",
-    "typecheck": "tsrs --noEmit"
+    "typecheck": "effect-tsgo tsrs --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "1.9.0",
