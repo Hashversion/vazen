@@ -102,6 +102,11 @@
       "description": "node :: LTS only :: odd-numbered releases are short-lived",
       "matchPackageNames": ["node"],
       "allowedVersions": "/^\\d*[02468]\\./"
+    },
+    {
+      "description": "typescript :: stay tsrs-compatible :: skip dev nightlies; bump only with tsrs-supported TS versions",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "!/-dev\\./"
     }
   ]
 }
