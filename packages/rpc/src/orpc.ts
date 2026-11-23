@@ -30,14 +30,16 @@ export const protectedProcedure = publicProcedure.use(
   }
 );
 
-export const adminProcedure = protectedProcedure.use(({ context, next }) => {
-  if (context.user.role !== "admin") {
-    throw new ORPCError("FORBIDDEN", {
-      message: "You don't have right permission",
+export const adminProcedure = protectedProcedure.use(
+  async ({ context, next }) => {
+    if (context.user.role !== "admin") {
+      throw new ORPCError("FORBIDDEN", {
+        message: "You don't have right permission",
+      });
+    }
+
+    return await next({
+      context,
     });
   }
-
-  return next({
-    context,
-  });
-});
+);
