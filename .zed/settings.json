@@ -30,7 +30,7 @@
     },
     "oxlint": {
       "binary": {
-        "path": "./node_modules/.bin/oxlint",
+        "path": "./tooling/bin/oxlint",
         "arguments": ["--lsp"]
       },
       "initialization_options": {

@@ -1,4 +1,4 @@
-import { recommended } from "@effect/tsgo/oxlint-presets";
+import { recommended as effect } from "@effect/tsgo/oxlint-presets";
 import { defineConfig } from "oxlint";
 import core from "ultracite/oxlint/core";
 import drizzle from "ultracite/oxlint/drizzle";
@@ -27,11 +27,11 @@ export default defineConfig({
     nextJsPlugins,
     tanstackJsPlugins,
     shadcn,
-    recommended,
+    effect,
   ],
   ignorePatterns: [...(core.ignorePatterns ?? []), ...varlockPatterns],
   jsPlugins: [...jsPlugins.jsPlugins, ...shadcn.jsPlugins],
-  options: { typeAware: true },
+  options: { typeAware: true, typeCheck: false },
   settings: jsPluginSettings,
   // overides
   rules: {
