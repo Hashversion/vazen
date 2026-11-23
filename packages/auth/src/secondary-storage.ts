@@ -34,12 +34,17 @@ export const secondaryStorage: SecondaryStorage = {
   async set(key, value, ttl) {
     const storageKey = prefixRedisKey(AUTH_PREFIX, key);
 
-    // oxlint-disable-next-line unicorn/prefer-ternary
     if (ttl === undefined) {
       await redis.set(storageKey, value);
-    } else {
-      await redis.set(storageKey, value, { ex: ttl });
+      return;
     }
+
+    if (ttl <= 0) {
+      await redis.del(storageKey);
+      return;
+    }
+
+    await redis.set(storageKey, value, { ex: ttl });
   },
 
   async delete(key) {
