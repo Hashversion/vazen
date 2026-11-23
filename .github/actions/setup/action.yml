@@ -1,30 +1,28 @@
 name: Setup
-description: Setup pnpm + Node, cache dependencies, and install
-
-inputs:
-  node-version:
-    description: Node version to install (must match mise.toml)
-    required: false
-    default: "24.22.1"
-  pnpm-version:
-    description: pnpm version to install (must match packageManager)
-    required: false
-    default: "12.21.0"
+description: Install mise-managed tools and project dependencies
 
 runs:
   using: composite
   steps:
-    - name: Setup pnpm
-      uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+    - name: Setup mise
+      uses: jdx/mise-action@924e7c586e33d7d4bae9c14e26c5d22e2beb6e78 # v5.3.0
       with:
-        version: ${{ inputs.pnpm-version }}
-        run_install: false
+        version: "2026.11.12"
+        install: true
+        cache: true
 
-    - name: Setup Node
-      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+    - name: Get pnpm store directory
+      id: pnpm-store
+      shell: bash
+      run: echo "store=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+    - name: Cache pnpm store
+      uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
       with:
-        node-version: ${{ inputs.node-version }}
-        cache: pnpm
+        path: ${{ steps.pnpm-store.outputs.store }}
+        key: pnpm-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml') }}
+        restore-keys: |
+          pnpm-${{ runner.os }}-${{ runner.arch }}-
 
     - name: Install dependencies
       shell: bash
