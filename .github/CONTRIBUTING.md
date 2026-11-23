@@ -171,7 +171,7 @@ pnpm web:e2e      # Playwright e2e for web (when touching UI/flows)
 **Pre-commit** (see [`lefthook.yml`](../lefthook.yml)):
 
 - Format staged files with **oxfmt**
-- Lint staged TS/JS with **oxlint** (`pnpm lint -- --fix`)
+- Lint staged TS/JS with **oxlint**
 - Validate **renovate** config when those files change
 
 **Commit message** — [Conventional Commits](https://www.conventionalcommits.org/) enforced by **commitlint** ([`commitlint.config.ts`](../commitlint.config.ts)).
