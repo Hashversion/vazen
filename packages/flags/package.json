@@ -23,7 +23,7 @@
     "@flags-sdk/statsig": "0.3.1",
     "@repo/auth": "workspace:*",
     "@repo/utils": "workspace:*",
-    "flags": "4.4.0",
+    "flags": "4.4.1",
     "nanoid": "5.1.16",
     "varlock": "catalog:"
   },
