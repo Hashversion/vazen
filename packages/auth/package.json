@@ -13,7 +13,7 @@
   "scripts": {
     "clean": "rimraf node_modules .turbo",
     "env:codegen": "varlock codegen",
-    "typecheck": "effect-tsgo tsrs --noEmit"
+    "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.25",

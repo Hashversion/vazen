@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf node_modules .turbo",
-    "typecheck": "effect-tsgo tsrs --noEmit"
+    "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
     "@ai-sdk/react": "4.0.177",

@@ -19,7 +19,7 @@
     "db:studio": "drizzle-kit studio",
     "dev": "drizzle-kit studio",
     "env:codegen": "varlock codegen",
-    "typecheck": "effect-tsgo tsrs --noEmit"
+    "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
     "@repo/redis": "workspace:*",
