@@ -158,7 +158,7 @@ From the repository root:
 
 ```bash
 pnpm fmt          # oxfmt
-pnpm lint         # oxlint (via turbo)
+pnpm lint         # oxlint via the Effect proxy
 pnpm typecheck    # TypeScript across the monorepo
 pnpm build        # full turbo build (optional but recommended)
 pnpm web:e2e      # Playwright e2e for web (when touching UI/flows)

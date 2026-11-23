@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "TypeScriptTeam.native-preview",
     "mattpocock.ts-error-translator",
     "oxc.oxc-vscode",
     "bradlc.vscode-tailwindcss",
