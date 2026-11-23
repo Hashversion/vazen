@@ -8,12 +8,12 @@ export function prefixRedisKey(prefix: string, key: string) {
 }
 
 export const secondaryStorage: SecondaryStorage = {
-  get(key) {
-    return redis.get(prefixRedisKey(AUTH_PREFIX, key));
+  async get(key) {
+    return await redis.get(prefixRedisKey(AUTH_PREFIX, key));
   },
 
-  getAndDelete(key) {
-    return redis.getdel(prefixRedisKey(AUTH_PREFIX, key));
+  async getAndDelete(key) {
+    return await redis.getdel(prefixRedisKey(AUTH_PREFIX, key));
   },
 
   async increment(key, ttl) {
@@ -34,12 +34,17 @@ export const secondaryStorage: SecondaryStorage = {
   async set(key, value, ttl) {
     const storageKey = prefixRedisKey(AUTH_PREFIX, key);
 
-    // oxlint-disable-next-line unicorn/prefer-ternary
-    if (ttl) {
-      await redis.set(storageKey, value, { ex: ttl });
-    } else {
+    if (ttl === undefined) {
       await redis.set(storageKey, value);
+      return;
     }
+
+    if (ttl <= 0) {
+      await redis.del(storageKey);
+      return;
+    }
+
+    await redis.set(storageKey, value, { ex: ttl });
   },
 
   async delete(key) {

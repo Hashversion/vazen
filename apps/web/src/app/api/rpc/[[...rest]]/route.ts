@@ -9,7 +9,9 @@ const handler = new RPCHandler<Context>(appRouter, {
   plugins: [
     new EvlogHandlerPlugin({
       logAbort: true,
-      waitUntil: (promise) => after(promise),
+      waitUntil: (promise) => {
+        after(promise);
+      },
     }),
   ],
 });

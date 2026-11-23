@@ -1,3 +1,4 @@
+import { isNonEmptyString } from "@repo/utils/is-non-empty-string";
 import { withSentryConfig } from "@sentry/nextjs/config";
 
 import { ENV } from "#env";
@@ -5,9 +6,9 @@ import { ENV } from "#env";
 export const sentryConfig: Parameters<typeof withSentryConfig>[1] = {
   org: ENV.SENTRY_ORG,
   project: ENV.SENTRY_PROJECT,
-  authToken: ENV.SENTRY_AUTH_TOKEN || undefined,
+  authToken: ENV.SENTRY_AUTH_TOKEN ?? undefined,
   telemetry: false,
-  silent: !process.env.CI,
+  silent: !isNonEmptyString(process.env.CI),
   widenClientFileUpload: true,
 };
 

@@ -20,7 +20,7 @@ export const protectedProcedure = publicProcedure.use(
       throw new ORPCError("UNAUTHORIZED");
     }
 
-    return next({
+    return await next({
       context: {
         ...context,
         session: authSession.session,

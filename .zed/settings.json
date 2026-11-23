@@ -3,6 +3,10 @@
   "formatter": "language_server",
   "lsp": {
     "typescript-language-server": {
+      "binary": {
+        "path": "./node_modules/.bin/tsrs",
+        "arguments": ["--lsp", "--stdio"]
+      },
       "settings": {
         "typescript": {
           "preferences": {
@@ -25,6 +29,10 @@
       }
     },
     "oxlint": {
+      "binary": {
+        "path": "./tooling/bin/oxlint",
+        "arguments": ["--lsp"]
+      },
       "initialization_options": {
         "settings": {
           "disableNestedConfig": false,
@@ -34,21 +42,30 @@
           "unusedDisableDirectives": "deny"
         }
       }
+    },
+    "vtsls": {
+      "settings": {
+        "javascript": {
+          "preferences": {
+            "includePackageJsonAutoImports": "on"
+          }
+        },
+        "typescript": {
+          "preferences": {
+            "includePackageJsonAutoImports": "on"
+          }
+        }
+      }
     }
   },
   "languages": {
     "JavaScript": {
-      "code_actions_on_format": {
-        "source.fixAll.oxc": true,
-        "source.organizeImports.oxc": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "oxfmt"
-        }
-      }
-    },
-    "TSX": {
+      "language_servers": [
+        "typescript-language-server",
+        "!vtsls",
+        "!typescript-ls",
+        "..."
+      ],
       "code_actions_on_format": {
         "source.fixAll.oxc": true,
         "source.organizeImports.oxc": true
@@ -60,6 +77,29 @@
       }
     },
     "TypeScript": {
+      "language_servers": [
+        "typescript-language-server",
+        "!vtsls",
+        "!typescript-ls",
+        "..."
+      ],
+      "code_actions_on_format": {
+        "source.fixAll.oxc": true,
+        "source.organizeImports.oxc": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "oxfmt"
+        }
+      }
+    },
+    "TSX": {
+      "language_servers": [
+        "typescript-language-server",
+        "!vtsls",
+        "!typescript-ls",
+        "..."
+      ],
       "code_actions_on_format": {
         "source.fixAll.oxc": true,
         "source.organizeImports.oxc": true

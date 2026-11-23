@@ -4,6 +4,7 @@ description: Providers and tooling. Versions live in `pnpm-workspace.yaml` + `pn
 ---
 
 - **Monorepo**: Turborepo + pnpm workspaces + mise (node)
+- **Typecheck**: `tsrs --noEmit` by default; packages that use Effect run `effect-tsgo tsrs --noEmit` for Effect-specific diagnostics. Lint runs through `mise run lint` (`effect-tsgo --tsrs-lint oxlint`) for Effect Oxlint rules.
 - **Web**: Next.js 16 (app router, `typedRoutes`, `cacheComponents`, `reactCompiler`) + React 19
 - **Docs / memory**: Blume (`apps/docs`, `memory/`)
 - **Styling**: Tailwind CSS v4

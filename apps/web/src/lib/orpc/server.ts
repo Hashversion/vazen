@@ -18,7 +18,9 @@ globalThis.$client = createRouterClient(appRouter, {
       const log = createRequestLogger({
         method: "RPC",
         path: options.path.join("."),
-        waitUntil: (promise) => after(promise),
+        waitUntil: (promise) => {
+          after(promise);
+        },
       });
 
       try {

@@ -1,0 +1,5 @@
+#!/bin/sh
+# What :: Stable oxlint entrypoint for editors, hooks, and scripts.
+# Why :: Stock oxlint cannot load the effecttsgo plugin used by @effect/tsgo/oxlint-presets; lint must run through the Effect tsrs-lint proxy.
+# How :: Delegate to the mise lint task with raw I/O so editor LSP callers keep direct stdin/stdout/stderr, while forwarded args stay unchanged.
+exec mise run -q --raw lint -- "$@"

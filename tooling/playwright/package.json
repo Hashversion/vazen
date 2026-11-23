@@ -5,15 +5,17 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./index.ts"
+    ".": "./src/index.ts"
   },
   "scripts": {
     "clean": "rimraf node_modules"
   },
   "dependencies": {
-    "@playwright/test": "catalog:"
+    "@playwright/test": "catalog:",
+    "@repo/utils": "workspace:*"
   },
   "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
     "@types/node": "catalog:"
   }
 }

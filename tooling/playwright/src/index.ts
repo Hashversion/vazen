@@ -1,6 +1,7 @@
 import path from "node:path";
 
 import { defineConfig, devices } from "@playwright/test";
+import { isNonEmptyString } from "@repo/utils/is-non-empty-string";
 
 const repoRoot = path.resolve(import.meta.dirname, "../..");
 
@@ -18,17 +19,18 @@ export function createPlaywrightSuiteConfig({
   suiteDir,
 }: CreatePlaywrightSuiteConfigOptions) {
   const resolvedBaseURL = baseURL ?? `http://localhost:${port}`;
+  const isCI = isNonEmptyString(process.env.CI);
 
   return defineConfig({
     testDir: path.join(suiteDir, "tests"),
     // Run all tests in parallel.
     fullyParallel: true,
     // Fail the build on CI if you accidentally left test.only in the source code.
-    forbidOnly: Boolean(process.env.CI),
+    forbidOnly: isCI,
     // Retry on CI only.
-    retries: process.env.CI ? 2 : 0,
+    retries: isCI ? 2 : 0,
     // Opt out of parallel tests on CI.
-    workers: process.env.CI ? 1 : undefined,
+    workers: isCI ? 1 : undefined,
     // Reporter to use
     reporter: [
       ["list"],
@@ -79,7 +81,7 @@ export function createPlaywrightSuiteConfig({
         HOSTNAME: "localhost",
         PORT: String(port),
       },
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: !isCI,
       //3 minutes in milliseconds
       timeout: 3 * 60 * 1000,
       url: resolvedBaseURL,

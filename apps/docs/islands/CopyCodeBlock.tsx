@@ -47,24 +47,26 @@ export default function CopyCodeBlock({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(value);
+    void navigator.clipboard.writeText(value);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   return (
     <button
       type="button"
       onClick={handleCopy}
-      className="group flex h-10 cursor-pointer items-center gap-3 rounded-xl bg-neutral-200 pr-3 pl-4 text-sm font-medium transition-transform active:scale-[0.98] dark:bg-neutral-800"
+      className="group bg-muted flex h-10 cursor-pointer items-center gap-3 rounded-xl pr-3 pl-4 text-sm font-medium transition-transform active:scale-[0.98]"
     >
-      <span className="font-mono text-neutral-500 select-none dark:text-neutral-400">
+      <span className="text-muted-foreground font-mono select-none">
         {prefix}
       </span>
-      <span className="font-commitmono text-[13px] text-balance text-neutral-900 dark:text-neutral-50">
+      <span className="font-commitmono text-foreground text-sm text-balance">
         {value}
       </span>
-      <span className="flex size-6 items-center justify-center rounded-lg bg-neutral-300 text-neutral-700 transition-colors group-hover:bg-neutral-400 dark:bg-neutral-700 dark:text-neutral-100 dark:group-hover:bg-neutral-600">
+      <span className="bg-border text-foreground/80 group-hover:bg-border/80 flex size-6 items-center justify-center rounded-lg transition-colors">
         {copied ? <CheckIcon /> : <CopyIcon />}
       </span>
     </button>

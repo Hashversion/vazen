@@ -1,5 +1,4 @@
 import { auth } from "@repo/auth/server";
-import type { Route } from "next";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
@@ -15,8 +14,7 @@ async function DashboardContent() {
     redirect("/auth/login");
   }
   if (session.user.role !== "admin") {
-    // Why :: "/" only exists via the proxy rewrite to /{code}
-    redirect("/" as Route);
+    redirect("/");
   }
 
   return (

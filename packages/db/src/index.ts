@@ -9,9 +9,11 @@ import { relations } from "./schema/relations";
 
 export * from "drizzle-orm";
 
-const globalForDb = globalThis as unknown as {
-  client: postgres.Sql | undefined;
+type GlobalForDb = typeof globalThis & {
+  client?: postgres.Sql;
 };
+
+const globalForDb = globalThis as GlobalForDb;
 
 const client =
   globalForDb.client ?? postgres(ENV.DATABASE_URL, { prepare: false });

@@ -5,6 +5,7 @@ import {
   securityHeadersMiddleware,
   securityHeadersOptions,
 } from "@repo/security/security-headers";
+import { isNonEmptyString } from "@repo/utils/is-non-empty-string";
 import { createNEMO } from "@zanreal/nemo";
 import type { MiddlewareConfig } from "@zanreal/nemo";
 import type { NextRequest } from "next/server";
@@ -57,7 +58,7 @@ const middlewares = {
   "/admin/:path*": [
     (request: NextRequest) => {
       const sessionCookie = getSessionCookie(request);
-      if (!sessionCookie) {
+      if (!isNonEmptyString(sessionCookie)) {
         const callbackUrl = encodeURIComponent(request.nextUrl.pathname);
         return NextResponse.redirect(
           new URL(`/auth/login?next=${callbackUrl}`, request.url)

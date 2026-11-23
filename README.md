@@ -27,6 +27,8 @@
 - [**Next.js v16**](https://nextjs.org/) :: React framework with app router
 - [**React.js v19**](https://react.dev/) :: Latest React with React compiler enabled
 - [**Typescript**](https://www.typescriptlang.org/) :: Type-safe development
+- [**tsrs**](https://github.com/oxc-project/tsrs) :: Rust port of the TypeScript 7 compiler for typechecking and type-aware linting
+- [**@effect/tsgo**](https://github.com/Effect-TS/tsgo) :: Effect rules for Oxlint through the tsrs-lint proxy, without patching node_modules
 - [**Tailwind CSS v4**](https://tailwindcss.com/) :: Utility-first CSS framework
 - [**oRPC**](https://orpc.dev/) :: tRPC alternative with built-in OpenAPI support
 - [**Tanstack Query**](https://tanstack.com/query/latest) :: Data fetching and caching

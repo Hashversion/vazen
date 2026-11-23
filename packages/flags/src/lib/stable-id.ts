@@ -1,3 +1,4 @@
+import { isNonEmptyString } from "@repo/utils/is-non-empty-string";
 import { dedupe } from "flags/next";
 import { nanoid } from "nanoid";
 import { cookies, headers } from "next/headers";
@@ -11,12 +12,12 @@ export const getStableId = dedupe(async () => {
   const header = await headers();
 
   const generatedStableId = header.get("x-generated-stable-id");
-  if (generatedStableId) {
+  if (isNonEmptyString(generatedStableId)) {
     return { value: generatedStableId, isFresh: false };
   }
 
   const stableId = cookiesStore.get("stable-id")?.value;
-  if (!stableId) {
+  if (!isNonEmptyString(stableId)) {
     return { value: nanoid(), isFresh: true };
   }
 
