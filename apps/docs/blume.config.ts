@@ -22,7 +22,7 @@ export default defineConfig({
     actions: [{ label: "Docs", href: "/docs" }],
   },
   github: {
-    owner: "Hashversion",
+    owner: "pagefunction",
     repo: "vazen",
     dir: "apps/docs",
   },

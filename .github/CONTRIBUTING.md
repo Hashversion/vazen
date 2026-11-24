@@ -44,7 +44,7 @@ Optional but used in this monorepo:
    ```bash
    git clone https://github.com/<your-username>/vazen.git
    cd vazen
-   git remote add upstream https://github.com/stack-found/vazen.git
+   git remote add upstream https://github.com/pagefunction/vazen.git
    ```
 
 3. Base your work on `main` and create a branch:
@@ -129,7 +129,7 @@ pnpm db:migrate   # apply migrations
 pnpm db:studio    # Drizzle Studio
 ```
 
-Schema change playbook: [packages/db/SCHEMA.md](https://github.com/stack-found/vazen/blob/main/packages/db/SCHEMA.md) (also in-repo at [`packages/db/SCHEMA.md`](../packages/db/SCHEMA.md)).
+Schema change playbook: [packages/db/SCHEMA.md](https://github.com/pagefunction/vazen/blob/main/packages/db/SCHEMA.md) (also in-repo at [`packages/db/SCHEMA.md`](../packages/db/SCHEMA.md)).
 
 ---
 
@@ -259,4 +259,4 @@ Never commit `.env.local`, `.env`, or production secrets. Use `.env.schema` as t
 
 ## Questions?
 
-Open a [Discussion](https://github.com/stack-found/vazen/discussions) or an issue with the `question` label if something in this doc is outdated—PRs that improve this file are welcome.
+Open a [Discussion](https://github.com/pagefunction/vazen/discussions) or an issue with the `question` label if something in this doc is outdated—PRs that improve this file are welcome.

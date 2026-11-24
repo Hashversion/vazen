@@ -1,5 +1,5 @@
 export const socials = {
-  github: "https://github.com/stack-found/vazen",
+  github: "https://github.com/pagefunction/vazen",
   facebook: "",
   x: "",
   instagram: "",

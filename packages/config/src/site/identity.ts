@@ -21,7 +21,7 @@ export const site: SiteIdentity = {
   sameAs: Object.values(socials).filter(Boolean),
   slug: "vazen",
   domain: "vazen.dev",
-  handle: "@stackfound",
+  handle: "@pagefunction",
   tagline:
     "The production-grade starter kit for modern full-stack applications",
 };

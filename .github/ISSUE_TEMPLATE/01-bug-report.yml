@@ -8,7 +8,7 @@ body:
     attributes:
       label: Before you submit
       options:
-        - label: I searched [existing issues](https://github.com/stack-found/vazen/issues) for duplicates
+        - label: I searched [existing issues](https://github.com/pagefunction/vazen/issues) for duplicates
           required: true
         - label: This is not a security report (see SECURITY.md / private advisory)
           required: true
@@ -93,7 +93,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting, you agree to follow our [Code of Conduct](https://github.com/stack-found/vazen/blob/main/.github/CODE_OF_CONDUCT.md).
+      description: By submitting, you agree to follow our [Code of Conduct](https://github.com/pagefunction/vazen/blob/main/.github/CODE_OF_CONDUCT.md).
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
