@@ -439,8 +439,8 @@ importers:
         specifier: catalog:react
         version: 19.3.0(@types/react@19.3.0)
       '@vercel/config':
-        specifier: 0.14.1
-        version: 0.14.1
+        specifier: 0.15.0
+        version: 0.15.0
       babel-plugin-react-compiler:
         specifier: 1.0.0
         version: 1.0.0
@@ -5338,8 +5338,8 @@ packages:
     resolution: {integrity: sha512-g9XerViJ/paZujufXYcu5XYI2vU2rtB4sgdpjUHde5RnOkdmpu0ngH46LCFGHoPXO/C+qDPSczIHIRN+8Q2YKQ==}
     engines: {node: '>= 18'}
 
-  '@vercel/config@0.14.1':
-    resolution: {integrity: sha512-iaCxmLGGm84mglf1NpCEXYbvH8u5xvcWCuXo7iBevxGlIHoN6/qV9532oYf2wv6EPgxdh12Q9jwav+3Buv387w==}
+  '@vercel/config@0.15.0':
+    resolution: {integrity: sha512-noggEs/Ej6I8VWQSUunpGKjuBUikUNzlATGXZ67UHSwDnSCQQkQiYiXIVXtyWyZsyktv5YGm4T41/rTq5wXcmA==}
     hasBin: true
 
   '@vercel/edge-config@1.5.1':
@@ -14342,7 +14342,7 @@ snapshots:
     dependencies:
       execa: 5.1.1
 
-  '@vercel/config@0.14.1':
+  '@vercel/config@0.15.0':
     dependencies:
       '@vercel/routing-utils': 6.6.1
       pretty-cache-header: 1.0.0
