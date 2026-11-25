@@ -3,7 +3,7 @@ _.path = ["{{config_root}}/node_modules/.bin"]
 
 [tools]
 node = "24.22.1"
-pnpm = "12.21.0"
+pnpm = "12.23.0"
 
 [tasks.lint]
 description = "Lint the codebase with Oxlint through the Effect TypeScript proxy"
