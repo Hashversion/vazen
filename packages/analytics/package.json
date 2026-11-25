@@ -15,7 +15,7 @@
     "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
-    "posthog-js": "1.449.2",
+    "posthog-js": "1.453.0",
     "varlock": "catalog:"
   },
   "devDependencies": {

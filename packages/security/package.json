@@ -15,7 +15,7 @@
     "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
-    "@nosecone/next": "1.15.0",
+    "@nosecone/next": "1.16.0",
     "varlock": "catalog:"
   },
   "devDependencies": {

@@ -24,7 +24,7 @@
     "@orpc/evlog": "catalog:orpc",
     "@repo/utils": "workspace:*",
     "@sentry/nextjs": "catalog:",
-    "evlog": "2.35.1",
+    "evlog": "2.36.0",
     "varlock": "catalog:"
   },
   "devDependencies": {
