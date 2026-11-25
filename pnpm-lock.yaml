@@ -786,8 +786,8 @@ importers:
         specifier: 3.1173.0
         version: 3.1173.0
       files-sdk:
-        specifier: 3.2.0
-        version: 3.2.0(@aws-sdk/client-s3@3.1173.0)(@aws-sdk/s3-presigned-post@3.1173.0)(@aws-sdk/s3-request-presigner@3.1173.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@8.1.1))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.7)
+        specifier: 3.2.1
+        version: 3.2.1(@aws-sdk/client-s3@3.1173.0)(@aws-sdk/s3-presigned-post@3.1173.0)(@aws-sdk/s3-request-presigner@3.1173.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@8.1.1))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.7)
       varlock:
         specifier: 'catalog:'
         version: 1.25.0
@@ -7075,8 +7075,8 @@ packages:
   filelist@1.0.6:
     resolution: {integrity: sha512-5giy2PkLYY1cP39p17Ech+2xlpTRL9HLspOfEgm0L6CwBXBTgsK5ou0JtzYuepxkaQ/tvhCFIJ5uXo0OrM2DxA==}
 
-  files-sdk@3.2.0:
-    resolution: {integrity: sha512-AtAGpBAS/0Kh/MMTyynjXVvtVbdGji1VmSOkzoRTtJIrWh1IrvYLOOJwk3Dc3I7kPXfpp5pAQvQ929IITawPXw==}
+  files-sdk@3.2.1:
+    resolution: {integrity: sha512-3B35YaKoGS1+hIETiFAtpf8H30PG005Wo1OWdv0s4xAxEzV6UQ/tvQbYeJfozDr5lJ8pVcr91q50i85MEXvJhw==}
     engines: {node: '>=22'}
     hasBin: true
     peerDependencies:
@@ -7090,7 +7090,7 @@ packages:
       '@azure/storage-blob': ^12.26.0
       '@bunny.net/storage-sdk': ^0.3.1
       '@google-cloud/storage': ^7.19.0 || ^8.0.0
-      '@googleapis/drive': ^20.0.0 || ^21.0.0 || ^22.0.0 || ^25.0.0 || ^26.0.0
+      '@googleapis/drive': ^20.0.0 || ^21.0.0 || ^22.0.0 || ^25.0.0 || ^26.0.0 || ^27.0.0
       '@microsoft/microsoft-graph-client': ^3.0.7
       '@nestjs/common': ^10.0.0 || ^11.0.0 || ^12.0.0
       '@netlify/blobs': ^10.7.4 || ^11.0.0
@@ -7116,9 +7116,9 @@ packages:
       hono: ^4.0.0
       koa: ^2.0.0 || ^3.0.0
       next: ^14.0.0 || ^15.0.0 || ^16.0.0
-      node-appwrite: ^26.0.0 || ^27.0.0 || ^28.0.0 || ^29.0.0
+      node-appwrite: ^26.0.0 || ^27.0.0 || ^28.0.0 || ^29.0.0 || ^30.0.0 || ^31.0.0 || ^32.0.0
       openai: ^6.0.0 || ^7.0.0
-      pocketbase: ^0.27.0 || ^0.28.0
+      pocketbase: ^0.27.0 || ^0.28.0 || ^0.29.0
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
       ssh2-sftp-client: ^12.1.1
@@ -16333,7 +16333,7 @@ snapshots:
     dependencies:
       minimatch: 5.1.9
 
-  files-sdk@3.2.0(@aws-sdk/client-s3@3.1173.0)(@aws-sdk/s3-presigned-post@3.1173.0)(@aws-sdk/s3-request-presigner@3.1173.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@8.1.1))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.7):
+  files-sdk@3.2.1(@aws-sdk/client-s3@3.1173.0)(@aws-sdk/s3-presigned-post@3.1173.0)(@aws-sdk/s3-request-presigner@3.1173.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@8.1.1))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@8.1.1)(zod@4.6.7):
     dependencies:
       aws4fetch: 1.0.20
       commander: 15.1.0
