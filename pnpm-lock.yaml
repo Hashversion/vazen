@@ -327,7 +327,7 @@ importers:
     dependencies:
       blume:
         specifier: 'catalog:'
-        version: 2.2.7(@aws-sdk/credential-provider-web-identity@3.972.90)(@shikijs/themes@4.6.0)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1)
+        version: 2.2.7(@aws-sdk/credential-provider-web-identity@3.972.92)(@shikijs/themes@4.6.0)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1)
       react:
         specifier: catalog:react
         version: 19.3.1
@@ -498,7 +498,7 @@ importers:
     dependencies:
       blume:
         specifier: 'catalog:'
-        version: 2.2.7(@aws-sdk/credential-provider-web-identity@3.972.90)(@shikijs/themes@4.6.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1)
+        version: 2.2.7(@aws-sdk/credential-provider-web-identity@3.972.92)(@shikijs/themes@4.6.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1)
 
   packages/ai:
     dependencies:
@@ -678,7 +678,7 @@ importers:
     dependencies:
       '@flags-sdk/statsig':
         specifier: 0.3.1
-        version: 0.3.1(@aws-sdk/credential-provider-web-identity@3.972.90)(@opentelemetry/api@1.10.0)(@vercel/edge-config@1.5.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0)))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))
+        version: 0.3.1(@aws-sdk/credential-provider-web-identity@3.972.92)(@opentelemetry/api@1.10.0)(@vercel/edge-config@1.5.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0)))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))
       '@repo/auth':
         specifier: workspace:*
         version: link:../auth
@@ -686,8 +686,8 @@ importers:
         specifier: workspace:*
         version: link:../utils
       flags:
-        specifier: 4.4.1
-        version: 4.4.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: 4.5.0
+        version: 4.5.0(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       nanoid:
         specifier: 5.1.16
         version: 5.1.16
@@ -777,17 +777,17 @@ importers:
   packages/storage:
     dependencies:
       '@aws-sdk/client-s3':
-        specifier: 3.1173.0
-        version: 3.1173.0
+        specifier: 3.1175.0
+        version: 3.1175.0
       '@aws-sdk/s3-presigned-post':
-        specifier: 3.1173.0
-        version: 3.1173.0
+        specifier: 3.1175.0
+        version: 3.1175.0
       '@aws-sdk/s3-request-presigner':
-        specifier: 3.1173.0
-        version: 3.1173.0
+        specifier: 3.1175.0
+        version: 3.1175.0
       files-sdk:
         specifier: 3.2.1
-        version: 3.2.1(@aws-sdk/client-s3@3.1173.0)(@aws-sdk/s3-presigned-post@3.1173.0)(@aws-sdk/s3-request-presigner@3.1173.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)(zod@4.6.7)
+        version: 3.2.1(@aws-sdk/client-s3@3.1175.0)(@aws-sdk/s3-presigned-post@3.1175.0)(@aws-sdk/s3-request-presigner@3.1175.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)(zod@4.6.7)
       varlock:
         specifier: 'catalog:'
         version: 1.25.0
@@ -1216,8 +1216,8 @@ packages:
   '@astrojs/yaml2ts@0.2.4':
     resolution: {integrity: sha512-8oddpOae35pJsXPQXhTkM0ypfKPskVsh2bCxRtbf7e+/Epw2nReakFYpLKjZMEr75CsoF203PMnCocpfz0s69A==}
 
-  '@aws-sdk/checksums@3.1002.5':
-    resolution: {integrity: sha512-OHlfkNzDFjYnwNPABhwAkDTUi0HPjfsKUHJDR0bSMORpCXNzRpInPCNCIT08xKDhjaPlcLJ+2Av+Sk7hHnuC8A==}
+  '@aws-sdk/checksums@3.1002.7':
+    resolution: {integrity: sha512-J2L1/AdkQOyAEt440r+U4vdh3UcyDk+ybwGd0hWLTNCbS+t2TykGcp3/tNK2H8zHjIzsrsF2B/5YiGCt5tl5yA==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/client-codecommit@3.1139.0':
@@ -1244,48 +1244,48 @@ packages:
     resolution: {integrity: sha512-HwMHlXgJSsQmZhpFLJaovAIBoC2eVBep4wjTaPCV+qySFd4giXCFuDZC/8Btz1KCr4JzEO5AhXPb5FMflqoQig==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/client-s3@3.1173.0':
-    resolution: {integrity: sha512-eFlCOczCvpv1CN37d0BzUxoHmw2ARrMtqQ4JC0pkh5kx/SU9oUKlNtWkqrNg+QRNob0MAi3+SbQQnP5FCcKpHg==}
+  '@aws-sdk/client-s3@3.1175.0':
+    resolution: {integrity: sha512-vBbIL3dsLsCLfoq7M8PXAybnPkFz7hbGiy6l+RCA81z6vXS88HfxPuxT+e3iuNjR4gXS7QxRSJa/4oSbsEc/Ag==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/core@3.981.1':
-    resolution: {integrity: sha512-sERtJaZjzvBdFMm2uei4k0WwPNUJtIrMBH9h0AEw7G0KkhIbnN3e5ZcwGjbVKClR+rrJCmyL1jhtXkseE7DU4A==}
+  '@aws-sdk/core@3.981.2':
+    resolution: {integrity: sha512-N3XKZdfa+Dcm7Kl8NJnaaHLx860Ts3QYHOraj/wuKOYHqqCApQBIKwzSxrpwZdwrqfbPt7BvJdYVhVMPpsRoGA==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/credential-provider-cognito-identity@3.972.83':
     resolution: {integrity: sha512-yaHdWS2q6N2eKG9yNftDB/W7uG0OqfViXBihZwb5XPyVIMXYffpEgWp/4haIURrMSCYkLfmfMrHZhFSoPKgmQA==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-env@3.972.84':
-    resolution: {integrity: sha512-akZJetiMVeLRHsKzYh3LamDCo74ZUCeo0XoyRKMEMZT5qP7ReM6LhpioBCyuqKP5Vav5gEOeCmaQV0VVQr1Meg==}
+  '@aws-sdk/credential-provider-env@3.972.86':
+    resolution: {integrity: sha512-ZFIkIzLAiOLOakfrzUuOz938+AF+q4nc/MYINYwFlgBbl8CsI8ofJ8Ueh0/Pp7hXMJfpq10eJdnQ7aaE6kfikQ==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-http@3.972.86':
-    resolution: {integrity: sha512-U4mHaDRPWAn63yhl7FXIzbppNmW1F+4dSLeuiUpej2v3Xb6rGwvayEJ8SdlrdMV+/mZtd+GStTEP2HqurEzXtw==}
+  '@aws-sdk/credential-provider-http@3.972.88':
+    resolution: {integrity: sha512-92dpM3lwCyDjcDI3R+olUI2IG8R+qfUdnMQgxWZB4XM37P+N+oBaRd5xGc7uOH7FqMQY03XsrVKQeuWbPfIrKg==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-ini@3.973.30':
-    resolution: {integrity: sha512-r6r6499GWoGN943NA5YEhBEQ6TEOGTf7tTOBhHd/zw0UbNvSzd1/zPCNcDkPmRarA+e24X7KgxutqxjoWcskBg==}
+  '@aws-sdk/credential-provider-ini@3.973.32':
+    resolution: {integrity: sha512-MdIAf70d701Hj04Yo7AKqI1RfjTW5dFf+tEvUirYFMbs3NRHWiwqQj/C9wGFptZtmX+z/c57H3gQfzTt5Bsn8A==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-login@3.972.92':
-    resolution: {integrity: sha512-96bcp9Pe/Xd60OEwncZ+kAQTQSu+fJnpUGz1qE6ghF5jnETmrk8XMU86mIP3lolvnCgR61XbZ+Ht6hdBjiQOmQ==}
+  '@aws-sdk/credential-provider-login@3.972.94':
+    resolution: {integrity: sha512-sSq1PxdXT1kqR11/dRvE5AC2dEWMbYJCXzRU03Ulu4stu6vv08zju8uUNhVdqiIX+OrMIcEHHT1maLrUZDBGDA==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-node@3.972.97':
-    resolution: {integrity: sha512-E4a0IXXJVsIdo/K9roX4JAEfI0JJr7KTPymkbKgETRDqEcLygE4ZlLTe24+7Qkh8Dl5YpnPd+Tt0DOPJDFXIwA==}
+  '@aws-sdk/credential-provider-node@3.972.99':
+    resolution: {integrity: sha512-AgS2qV8P9XmT4M44LfGcFtKbbt/yLgBydETKxPvqN9y7gMnKYv8GY+QfH7JsNvu6eQgDl600uAjvzC6K7ilkJQ==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-process@3.972.84':
-    resolution: {integrity: sha512-199C6OpNejd0nq9GFAkEFIKids1FL0R6LJtL9c1OTiDOXki7S1OduuPxW4+hE0LwndcYJ7YHOuYTlqScfpCocA==}
+  '@aws-sdk/credential-provider-process@3.972.86':
+    resolution: {integrity: sha512-9x/+gtSDNxMQrRXgwIdwdNCVGxzUZtTZArjEeLfsn9xDvyXdsgs4my1g7JN5wKxT61ZLx4bKPREaDXnO8j7gkg==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-sso@3.973.28':
-    resolution: {integrity: sha512-bGg7wH8wVDJQIcJggO9lg1ZYbG7l+PbLwHuM3Bi/e1TlCZhU712JS1W3tdRpyptdJD1UGyhBNGO/YrhrQCHKbg==}
+  '@aws-sdk/credential-provider-sso@3.973.30':
+    resolution: {integrity: sha512-sMvwUIaKQEeprbMT5LXrI6nhM1IUEBDRpJAydEkAMrI7brrsRl7pxnOAJ6nweg/Hn5pJOVS7JgieJIv6CvJ7Sw==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/credential-provider-web-identity@3.972.90':
-    resolution: {integrity: sha512-duLeE3xlf0viHeH+1RM4z5duR3b32BCZTWVMu+MbxFPjQBxy7hmIGEqt5hekuFPRuXoyhMovjNl+PNNsb5oiGQ==}
+  '@aws-sdk/credential-provider-web-identity@3.972.92':
+    resolution: {integrity: sha512-AKaUwpy1wPN3B/byFWuvL6v+Qk8Gm840InZJw/bA1A+ciCL3zkzBUyEgxdeghJPEe79VKLs6BvbME74MQa3YKg==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/credential-providers@3.1139.0':
@@ -1304,24 +1304,24 @@ packages:
     resolution: {integrity: sha512-L4rY9o4i85P/UJ8rGiHH4JYC/PnFwdAbCrXAs3g1UCxnyrnKboYm6blgx38xbOzVaZ1odpkrBRlMNMWI+aTfgg==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/nested-clients@3.998.3':
-    resolution: {integrity: sha512-acHTTzMB13CU6dU4sxABYExMI3PQM2zStWH2MiUwJp/7QKTrLg2f7mbzSXoegW2kYOk2tdqQYagsZrWB8Xv7eA==}
+  '@aws-sdk/nested-clients@3.998.5':
+    resolution: {integrity: sha512-9w5mkwVLOuGqlJkPR1uhod6ZP+TOtaxrKtvK2pY9G/+FEx0e8wYRLIDeg30dYQjFDx27jHGSzEA+OaMqxeyTPg==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/s3-presigned-post@3.1173.0':
-    resolution: {integrity: sha512-RUSI+Gvj0f8ekPEj/NMeyz8/rhQx7Lwy6fN1I5hhBZjbWk9ScjkbrTTZfP45UrBI29jgTuRVdJfrr8MOyzes8w==}
+  '@aws-sdk/s3-presigned-post@3.1175.0':
+    resolution: {integrity: sha512-wSypGwObYws3nZSAjoykS8SXCMQl/s4RPAI6by4YZd290PCPquLZ80LTvxuIBqIGevlFHJO0uS1zlaFfiLN6dw==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/s3-request-presigner@3.1173.0':
-    resolution: {integrity: sha512-M1VcisErcZY3LYRSE1QE402L5Xv+XjhAA4IMK1TTkyDdE8XLYWg9DmEwRJo2FLSC2qDMEmrNimZgsHhoyLb36Q==}
+  '@aws-sdk/s3-request-presigner@3.1175.0':
+    resolution: {integrity: sha512-jkn1w6k3qRZSGrFORdakExpWgPQTYaEXjIE9NujBZSyHEhK6yqLsVZjHak/8+qmxVy+TPw3/NeU797VHVu0HZg==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/signature-v4-multi-region@3.996.52':
     resolution: {integrity: sha512-6W6SjGc8OXUhMzNxU1X922ghD+PP1XvzmCk5Scui0jaYsLezycMYR1RaLp5xTIOUrhTXyb4DnAbPr3fBgmdnzg==}
     engines: {node: '>=20.0.0'}
 
-  '@aws-sdk/token-providers@3.1166.0':
-    resolution: {integrity: sha512-ngJ8mxXqtQ9mnp7QV6TWKJCxkpjVfPWxKQSc2FYhCyCfOVFIGdFv7P+/RqVffFrJAorwBPpktnv32gNlcEgF4g==}
+  '@aws-sdk/token-providers@3.1177.0':
+    resolution: {integrity: sha512-KFQ/2YqE7OIGNu05hys6y9ZUyoNxxLJVHM7NCvjfyjV0Mki0u0Euwjduj5M/HMurdbZJfBV0NjMNQQkGlJEQqg==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/types@3.975.1':
@@ -4456,8 +4456,8 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
-  '@smithy/core@3.40.0':
-    resolution: {integrity: sha512-DssGno52pzZ5m6RlDtyKuBIpZNPg9pqgs0CnNDKz9IatxCsmvNmJNn5Zn6rf77MthZo9wf89OvZFhTY/RwxhxQ==}
+  '@smithy/core@3.41.1':
+    resolution: {integrity: sha512-24LyiHSY0R/MLcbTylurWXU6Uy4lzI6KJgsdzxkNnjT9/OLWc2zGPb/3k5AM1f0vcgCGrExanUG339t+TBiIrA==}
     engines: {node: '>=18.0.0'}
 
   '@smithy/credential-provider-imds@4.5.2':
@@ -7249,8 +7249,8 @@ packages:
   find-workspaces@0.3.1:
     resolution: {integrity: sha512-UDkGILGJSA1LN5Aa7McxCid4sqW3/e+UYsVwyxki3dDT0F8+ym0rAfnCkEfkL0rO7M+8/mvkim4t/s3IPHmg+w==}
 
-  flags@4.4.1:
-    resolution: {integrity: sha512-KdM9LiSlupYY54zg6hBo82zm68ZB8JmTmz6j0HXCiGqfcmx9uKvKm/I+wJkyRNzwQg9BAuyyQoNGK0JgwrKnkA==}
+  flags@4.5.0:
+    resolution: {integrity: sha512-dlguAFw409cXsw9fRA0uvlXSxVZRgrp7yfi2OCRrN0GEEOr9APEd8rCn1BjcLGeO3SBe+voHcazdYiOTh60dAw==}
     peerDependencies:
       '@opentelemetry/api': ^1.7.0
       next: '*'
@@ -10618,17 +10618,17 @@ snapshots:
       github-slugger: 2.0.0
       satteri: 0.11.7
 
-  '@astrojs/mdx@8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))':
+  '@astrojs/mdx@8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
       '@astrojs/internal-helpers': 0.13.2
       '@astrojs/markdown-satteri': 0.4.10
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       es-module-lexer: 3.0.5
 
-  '@astrojs/node@11.1.13(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(supports-color@7.2.0)':
+  '@astrojs/node@11.1.13(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(supports-color@7.2.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.13.2
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       send: 1.2.1(supports-color@7.2.0)
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -10710,14 +10710,14 @@ snapshots:
       is-docker: 4.0.0
       package-manager-detector: 1.9.0
 
-  '@astrojs/vercel@11.0.22(@aws-sdk/credential-provider-web-identity@3.972.90)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)':
+  '@astrojs/vercel@11.0.22(@aws-sdk/credential-provider-web-identity@3.972.92)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)':
     dependencies:
       '@astrojs/internal-helpers': 0.13.2
       '@vercel/analytics': 2.0.1(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)
-      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3)
+      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3)
       '@vercel/nft': 1.11.2(rollup@4.68.4)(supports-color@7.2.0)
       '@vercel/routing-utils': 6.6.1
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       rolldown: 1.2.19
       tinyglobby: 0.2.17
     transitivePeerDependencies:
@@ -10735,14 +10735,14 @@ snapshots:
       - vue-router
       - ws
 
-  '@astrojs/vercel@11.0.22(@aws-sdk/credential-provider-web-identity@3.972.90)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)':
+  '@astrojs/vercel@11.0.22(@aws-sdk/credential-provider-web-identity@3.972.92)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)':
     dependencies:
       '@astrojs/internal-helpers': 0.13.2
       '@vercel/analytics': 2.0.1(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)
-      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3)
+      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3)
       '@vercel/nft': 1.11.2(rollup@4.68.4)(supports-color@7.2.0)
       '@vercel/routing-utils': 6.6.1
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       rolldown: 1.2.19
       tinyglobby: 0.2.17
     transitivePeerDependencies:
@@ -10791,20 +10791,20 @@ snapshots:
     dependencies:
       yaml: 2.9.1
 
-  '@aws-sdk/checksums@3.1002.5':
+  '@aws-sdk/checksums@3.1002.7':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@aws-sdk/client-codecommit@3.1139.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
@@ -10812,11 +10812,11 @@ snapshots:
 
   '@aws-sdk/client-ec2@3.1139.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/middleware-sdk-ec2': 3.972.72
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
@@ -10824,10 +10824,10 @@ snapshots:
 
   '@aws-sdk/client-ecr@3.1139.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
@@ -10835,10 +10835,10 @@ snapshots:
 
   '@aws-sdk/client-eks@3.1139.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
@@ -10846,11 +10846,11 @@ snapshots:
 
   '@aws-sdk/client-rds@3.1139.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/middleware-sdk-rds': 3.972.72
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
@@ -10858,38 +10858,38 @@ snapshots:
 
   '@aws-sdk/client-s3@3.1139.0':
     dependencies:
-      '@aws-sdk/checksums': 3.1002.5
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/checksums': 3.1002.7
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/middleware-sdk-s3': 3.972.91
       '@aws-sdk/signature-v4-multi-region': 3.996.52
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/client-s3@3.1173.0':
+  '@aws-sdk/client-s3@3.1175.0':
     dependencies:
-      '@aws-sdk/checksums': 3.1002.5
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-node': 3.972.97
+      '@aws-sdk/checksums': 3.1002.7
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-node': 3.972.99
       '@aws-sdk/middleware-sdk-s3': 3.972.91
       '@aws-sdk/signature-v4-multi-region': 3.996.52
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/core@3.981.1':
+  '@aws-sdk/core@3.981.2':
     dependencies:
       '@aws-sdk/types': 3.975.1
       '@aws-sdk/xml-builder': 3.972.43
       '@aws/lambda-invoke-store': 0.3.0
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/signature-v4': 5.7.5
       '@smithy/types': 4.20.0
       bowser: 2.15.0
@@ -10897,169 +10897,169 @@ snapshots:
 
   '@aws-sdk/credential-provider-cognito-identity@3.972.83':
     dependencies:
-      '@aws-sdk/nested-clients': 3.998.3
+      '@aws-sdk/nested-clients': 3.998.5
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-env@3.972.84':
+  '@aws-sdk/credential-provider-env@3.972.86':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-http@3.972.86':
+  '@aws-sdk/credential-provider-http@3.972.88':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-ini@3.973.30':
+  '@aws-sdk/credential-provider-ini@3.973.32':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/credential-provider-env': 3.972.84
-      '@aws-sdk/credential-provider-http': 3.972.86
-      '@aws-sdk/credential-provider-login': 3.972.92
-      '@aws-sdk/credential-provider-process': 3.972.84
-      '@aws-sdk/credential-provider-sso': 3.973.28
-      '@aws-sdk/credential-provider-web-identity': 3.972.90
-      '@aws-sdk/nested-clients': 3.998.3
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/credential-provider-env': 3.972.86
+      '@aws-sdk/credential-provider-http': 3.972.88
+      '@aws-sdk/credential-provider-login': 3.972.94
+      '@aws-sdk/credential-provider-process': 3.972.86
+      '@aws-sdk/credential-provider-sso': 3.973.30
+      '@aws-sdk/credential-provider-web-identity': 3.972.92
+      '@aws-sdk/nested-clients': 3.998.5
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/credential-provider-imds': 4.5.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-login@3.972.92':
+  '@aws-sdk/credential-provider-login@3.972.94':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/nested-clients': 3.998.3
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/nested-clients': 3.998.5
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-node@3.972.97':
+  '@aws-sdk/credential-provider-node@3.972.99':
     dependencies:
-      '@aws-sdk/credential-provider-env': 3.972.84
-      '@aws-sdk/credential-provider-http': 3.972.86
-      '@aws-sdk/credential-provider-ini': 3.973.30
-      '@aws-sdk/credential-provider-process': 3.972.84
-      '@aws-sdk/credential-provider-sso': 3.973.28
-      '@aws-sdk/credential-provider-web-identity': 3.972.90
+      '@aws-sdk/credential-provider-env': 3.972.86
+      '@aws-sdk/credential-provider-http': 3.972.88
+      '@aws-sdk/credential-provider-ini': 3.973.32
+      '@aws-sdk/credential-provider-process': 3.972.86
+      '@aws-sdk/credential-provider-sso': 3.973.30
+      '@aws-sdk/credential-provider-web-identity': 3.972.92
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/credential-provider-imds': 4.5.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-process@3.972.84':
+  '@aws-sdk/credential-provider-process@3.972.86':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-sso@3.973.28':
+  '@aws-sdk/credential-provider-sso@3.973.30':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/nested-clients': 3.998.3
-      '@aws-sdk/token-providers': 3.1166.0
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/nested-clients': 3.998.5
+      '@aws-sdk/token-providers': 3.1177.0
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/credential-provider-web-identity@3.972.90':
+  '@aws-sdk/credential-provider-web-identity@3.972.92':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/nested-clients': 3.998.3
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/nested-clients': 3.998.5
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@aws-sdk/credential-providers@3.1139.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/credential-provider-cognito-identity': 3.972.83
-      '@aws-sdk/credential-provider-env': 3.972.84
-      '@aws-sdk/credential-provider-http': 3.972.86
-      '@aws-sdk/credential-provider-ini': 3.973.30
-      '@aws-sdk/credential-provider-login': 3.972.92
-      '@aws-sdk/credential-provider-node': 3.972.97
-      '@aws-sdk/credential-provider-process': 3.972.84
-      '@aws-sdk/credential-provider-sso': 3.973.28
-      '@aws-sdk/credential-provider-web-identity': 3.972.90
-      '@aws-sdk/nested-clients': 3.998.3
+      '@aws-sdk/credential-provider-env': 3.972.86
+      '@aws-sdk/credential-provider-http': 3.972.88
+      '@aws-sdk/credential-provider-ini': 3.973.32
+      '@aws-sdk/credential-provider-login': 3.972.94
+      '@aws-sdk/credential-provider-node': 3.972.99
+      '@aws-sdk/credential-provider-process': 3.972.86
+      '@aws-sdk/credential-provider-sso': 3.973.30
+      '@aws-sdk/credential-provider-web-identity': 3.972.92
+      '@aws-sdk/nested-clients': 3.998.5
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/credential-provider-imds': 4.5.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@aws-sdk/middleware-sdk-ec2@3.972.72':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/signature-v4': 5.7.5
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@aws-sdk/middleware-sdk-rds@3.972.72':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/signature-v4': 5.7.5
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@aws-sdk/middleware-sdk-s3@3.972.91':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/signature-v4-multi-region': 3.996.52
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/nested-clients@3.998.3':
+  '@aws-sdk/nested-clients@3.998.5':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/signature-v4-multi-region': 3.996.52
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/fetch-http-handler': 5.8.1
       '@smithy/node-http-handler': 4.14.2
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/s3-presigned-post@3.1173.0':
+  '@aws-sdk/s3-presigned-post@3.1175.0':
     dependencies:
-      '@aws-sdk/client-s3': 3.1173.0
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/client-s3': 3.1175.0
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/signature-v4': 5.7.5
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/s3-request-presigner@3.1173.0':
+  '@aws-sdk/s3-request-presigner@3.1175.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
+      '@aws-sdk/core': 3.981.2
       '@aws-sdk/signature-v4-multi-region': 3.996.52
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
@@ -11070,12 +11070,12 @@ snapshots:
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
-  '@aws-sdk/token-providers@3.1166.0':
+  '@aws-sdk/token-providers@3.1177.0':
     dependencies:
-      '@aws-sdk/core': 3.981.1
-      '@aws-sdk/nested-clients': 3.998.3
+      '@aws-sdk/core': 3.981.2
+      '@aws-sdk/nested-clients': 3.998.5
       '@aws-sdk/types': 3.975.1
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
@@ -11851,9 +11851,9 @@ snapshots:
   '@fallow-cli/win32-x64-msvc@3.46.0':
     optional: true
 
-  '@flags-sdk/statsig@0.3.1(@aws-sdk/credential-provider-web-identity@3.972.90)(@opentelemetry/api@1.10.0)(@vercel/edge-config@1.5.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0)))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))':
+  '@flags-sdk/statsig@0.3.1(@aws-sdk/credential-provider-web-identity@3.972.92)(@opentelemetry/api@1.10.0)(@vercel/edge-config@1.5.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0)))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))':
     dependencies:
-      '@vercel/functions': 1.6.0(@aws-sdk/credential-provider-web-identity@3.972.90)
+      '@vercel/functions': 1.6.0(@aws-sdk/credential-provider-web-identity@3.972.92)
       '@vercel/global-config': 1.5.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))
       statsig-node-lite: 0.5.3
       statsig-node-vercel: 0.7.0(@vercel/edge-config@1.5.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0)))
@@ -13250,10 +13250,10 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.68.4':
     optional: true
 
-  '@scalar/astro@0.4.37(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))':
+  '@scalar/astro@0.4.37(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
       '@scalar/client-side-rendering': 0.4.19
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
 
   '@scalar/client-side-rendering@0.4.19':
     dependencies:
@@ -13535,32 +13535,32 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@smithy/core@3.40.0':
+  '@smithy/core@3.41.1':
     dependencies:
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@smithy/credential-provider-imds@4.5.2':
     dependencies:
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@smithy/fetch-http-handler@5.8.1':
     dependencies:
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@smithy/node-http-handler@4.14.2':
     dependencies:
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
   '@smithy/signature-v4@5.7.5':
     dependencies:
-      '@smithy/core': 3.40.0
+      '@smithy/core': 3.41.1
       '@smithy/types': 4.20.0
       tslib: 2.9.1
 
@@ -14344,22 +14344,22 @@ snapshots:
       '@opentelemetry/api': 1.10.0
       next: 16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0)
 
-  '@vercel/functions@1.6.0(@aws-sdk/credential-provider-web-identity@3.972.90)':
+  '@vercel/functions@1.6.0(@aws-sdk/credential-provider-web-identity@3.972.92)':
     optionalDependencies:
-      '@aws-sdk/credential-provider-web-identity': 3.972.90
+      '@aws-sdk/credential-provider-web-identity': 3.972.92
 
-  '@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3)':
+  '@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3)':
     dependencies:
       '@vercel/oidc': 4.0.9
     optionalDependencies:
-      '@aws-sdk/credential-provider-web-identity': 3.972.90
+      '@aws-sdk/credential-provider-web-identity': 3.972.92
       ws: 8.21.3
 
-  '@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0)':
+  '@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0)':
     dependencies:
       '@vercel/oidc': 4.0.9
     optionalDependencies:
-      '@aws-sdk/credential-provider-web-identity': 3.972.90
+      '@aws-sdk/credential-provider-web-identity': 3.972.92
       ws: 8.23.0
     optional: true
 
@@ -14695,7 +14695,7 @@ snapshots:
 
   aria-query@5.3.2: {}
 
-  astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1):
+  astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1):
     dependencies:
       '@astrojs/compiler-rs': 0.5.3
       '@astrojs/internal-helpers': 0.13.2
@@ -14743,7 +14743,7 @@ snapshots:
       tinyps: 0.5.2
       ultrahtml: 1.7.0
       unifont: 1.0.3
-      unstorage: 1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)
+      unstorage: 1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)
       verkit: 0.5.0
       vite: 8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       vitefu: 1.1.3(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -14784,7 +14784,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1):
+  astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1):
     dependencies:
       '@astrojs/compiler-rs': 0.5.3
       '@astrojs/internal-helpers': 0.13.2
@@ -14832,7 +14832,7 @@ snapshots:
       tinyps: 0.5.2
       ultrahtml: 1.7.0
       unifont: 1.0.3
-      unstorage: 1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)
+      unstorage: 1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0))(aws4fetch@1.0.20)
       verkit: 0.5.0
       vite: 8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       vitefu: 1.1.3(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -14958,14 +14958,14 @@ snapshots:
     dependencies:
       file-uri-to-path: 1.0.0
 
-  blume@2.2.7(@aws-sdk/credential-provider-web-identity@3.972.90)(@shikijs/themes@4.6.0)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1):
+  blume@2.2.7(@aws-sdk/credential-provider-web-identity@3.972.92)(@shikijs/themes@4.6.0)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1):
     dependencies:
       '@astrojs/check': 0.9.12(prettier@3.10.1)(typescript@6.0.3)
       '@astrojs/markdown-satteri': 0.4.10
-      '@astrojs/mdx': 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
-      '@astrojs/node': 11.1.13(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(supports-color@7.2.0)
+      '@astrojs/mdx': 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+      '@astrojs/node': 11.1.13(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(supports-color@7.2.0)
       '@astrojs/react': 7.1.9(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(babel-plugin-react-compiler@1.0.0)(oxc-transform-react@0.145.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
-      '@astrojs/vercel': 11.0.22(@aws-sdk/credential-provider-web-identity@3.972.90)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)
+      '@astrojs/vercel': 11.0.22(@aws-sdk/credential-provider-web-identity@3.972.92)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)
       '@clack/prompts': 1.9.0
       '@iconify-json/lucide': 1.2.155
       '@iconify/types': 2.0.0
@@ -14973,7 +14973,7 @@ snapshots:
       '@modelcontextprotocol/sdk': 1.32.2(supports-color@7.2.0)(zod@4.6.7)
       '@orama/orama': 3.1.18
       '@pierre/diffs': 1.6.4(@shikijs/themes@4.6.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@scalar/astro': 0.4.37(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+      '@scalar/astro': 0.4.37(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
       '@scalar/openapi-parser': 0.29.22
       '@scalar/openapi-types': 0.9.9
       '@shikijs/transformers': 4.6.0
@@ -14985,7 +14985,7 @@ snapshots:
       '@vercel/analytics': 2.0.1(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@22.20.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)
       '@vitejs/plugin-react': 6.1.1(babel-plugin-react-compiler@1.0.0)(oxc-transform-react@0.145.0)(vite@8.3.8(@types/node@22.20.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
       ai: 7.0.179(zod@4.6.7)
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       chokidar: 5.0.0
       citty: 0.2.2
       consola: 3.4.2
@@ -15097,14 +15097,14 @@ snapshots:
       - ws
       - yaml
 
-  blume@2.2.7(@aws-sdk/credential-provider-web-identity@3.972.90)(@shikijs/themes@4.6.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1):
+  blume@2.2.7(@aws-sdk/credential-provider-web-identity@3.972.92)(@shikijs/themes@4.6.0)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(babel-plugin-react-compiler@1.0.0)(csstype@3.2.3)(esbuild@0.28.2)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(preact@10.29.8)(prettier@3.10.1)(rollup@4.68.4)(supports-color@7.2.0)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(ws@8.21.3)(yaml@2.9.1):
     dependencies:
       '@astrojs/check': 0.9.12(prettier@3.10.1)(typescript@6.0.3)
       '@astrojs/markdown-satteri': 0.4.10
-      '@astrojs/mdx': 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
-      '@astrojs/node': 11.1.13(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(supports-color@7.2.0)
+      '@astrojs/mdx': 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+      '@astrojs/node': 11.1.13(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(supports-color@7.2.0)
       '@astrojs/react': 7.1.9(babel-plugin-react-compiler@1.0.0)(oxc-transform-react@0.145.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
-      '@astrojs/vercel': 11.0.22(@aws-sdk/credential-provider-web-identity@3.972.90)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)
+      '@astrojs/vercel': 11.0.22(@aws-sdk/credential-provider-web-identity@3.972.92)(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(rollup@4.68.4)(supports-color@7.2.0)(ws@8.21.3)
       '@clack/prompts': 1.9.0
       '@iconify-json/lucide': 1.2.155
       '@iconify/types': 2.0.0
@@ -15112,7 +15112,7 @@ snapshots:
       '@modelcontextprotocol/sdk': 1.32.2(supports-color@7.2.0)(zod@4.6.7)
       '@orama/orama': 3.1.18
       '@pierre/diffs': 1.6.4(@shikijs/themes@4.6.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@scalar/astro': 0.4.37(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+      '@scalar/astro': 0.4.37(astro@7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
       '@scalar/openapi-parser': 0.29.22
       '@scalar/openapi-types': 0.9.9
       '@shikijs/transformers': 4.6.0
@@ -15124,7 +15124,7 @@ snapshots:
       '@vercel/analytics': 2.0.1(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)
       '@vitejs/plugin-react': 6.1.1(babel-plugin-react-compiler@1.0.0)(oxc-transform-react@0.145.0)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
       ai: 7.0.179(zod@4.6.7)
-      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@22.20.5)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       chokidar: 5.0.0
       citty: 0.2.2
       consola: 3.4.2
@@ -16335,7 +16335,7 @@ snapshots:
     dependencies:
       minimatch: 5.1.9
 
-  files-sdk@3.2.1(@aws-sdk/client-s3@3.1173.0)(@aws-sdk/s3-presigned-post@3.1173.0)(@aws-sdk/s3-request-presigner@3.1173.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)(zod@4.6.7):
+  files-sdk@3.2.1(@aws-sdk/client-s3@3.1175.0)(@aws-sdk/s3-presigned-post@3.1175.0)(@aws-sdk/s3-request-presigner@3.1175.0)(@opentelemetry/api@1.10.0)(ai@7.0.179(zod@4.6.7))(astro@7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))(effect@4.1.5)(google-auth-library@11.3.4(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)(zod@4.6.7):
     dependencies:
       aws4fetch: 1.0.20
       commander: 15.1.0
@@ -16345,13 +16345,13 @@ snapshots:
       picomatch: 4.0.7
       safe-regex2: 5.1.2
     optionalDependencies:
-      '@aws-sdk/client-s3': 3.1173.0
-      '@aws-sdk/s3-presigned-post': 3.1173.0
-      '@aws-sdk/s3-request-presigner': 3.1173.0
+      '@aws-sdk/client-s3': 3.1175.0
+      '@aws-sdk/s3-presigned-post': 3.1175.0
+      '@aws-sdk/s3-request-presigner': 3.1175.0
       '@modelcontextprotocol/sdk': 1.32.2(supports-color@7.2.0)(zod@4.6.7)
       '@opentelemetry/api': 1.10.0
       ai: 7.0.179(zod@4.6.7)
-      astro: 7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@24.19.2)(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0))(aws4fetch@1.0.20)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
       effect: 4.1.5
       google-auth-library: 11.3.4(supports-color@7.2.0)
       h3: 1.15.11
@@ -16398,7 +16398,7 @@ snapshots:
       pkg-types: 1.3.1
       yaml: 2.9.1
 
-  flags@4.4.1(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
+  flags@4.5.0(@opentelemetry/api@1.10.0)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@edge-runtime/cookies': 5.0.2
       jose: 5.10.0
@@ -19601,7 +19601,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unstorage@1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3))(aws4fetch@1.0.20):
+  unstorage@1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3))(aws4fetch@1.0.20):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -19613,10 +19613,10 @@ snapshots:
       ufo: 1.6.4
     optionalDependencies:
       '@upstash/redis': 1.41.0
-      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.21.3)
+      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.21.3)
       aws4fetch: 1.0.20
 
-  unstorage@1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0))(aws4fetch@1.0.20):
+  unstorage@1.17.6(@upstash/redis@1.41.0)(@vercel/functions@3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0))(aws4fetch@1.0.20):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -19628,7 +19628,7 @@ snapshots:
       ufo: 1.6.4
     optionalDependencies:
       '@upstash/redis': 1.41.0
-      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.90)(ws@8.23.0)
+      '@vercel/functions': 3.11.3(@aws-sdk/credential-provider-web-identity@3.972.92)(ws@8.23.0)
       aws4fetch: 1.0.20
     optional: true
 
