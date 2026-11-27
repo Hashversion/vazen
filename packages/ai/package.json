@@ -12,8 +12,8 @@
     "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
-    "@ai-sdk/react": "4.0.184",
-    "ai": "7.0.179",
+    "@ai-sdk/react": "4.0.186",
+    "ai": "7.0.181",
     "react": "catalog:react",
     "react-dom": "catalog:react"
   },
