@@ -16,7 +16,7 @@
     "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
-    "@better-auth/drizzle-adapter": "1.7.27",
+    "@better-auth/drizzle-adapter": "1.7.28",
     "@repo/db": "workspace:*",
     "@repo/redis": "workspace:*",
     "varlock": "catalog:"
