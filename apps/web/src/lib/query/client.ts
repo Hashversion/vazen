@@ -11,7 +11,7 @@ export function createQueryClient() {
         staleTime: 60 * 1000,
       },
       // Why :: dehydrate/hydrate oRPC types (Date, Set, Map) across SSR boundary.
-      ...createHydrationOptions(serializer),
+      ...createHydrationOptions({ serializer }),
     },
   });
 }
