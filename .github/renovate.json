@@ -27,14 +27,16 @@
       "description": "actions minor/patch/digest :: automerge after CI :: low risk, CI is the safety net",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "prConcurrentLimit": 0
     },
     {
       "description": "patch :: group all, automerge after CI + cooldown :: low risk, fewer PRs",
       "groupName": "All patch updates",
       "matchUpdateTypes": ["patch"],
       "labels": ["patch", "automerge"],
-      "automerge": true
+      "automerge": true,
+      "prConcurrentLimit": 0
     },
     {
       "description": "dev minor :: group, automerge after CI :: tooling only, never ships to users",
@@ -42,7 +44,8 @@
       "matchDepTypes": ["devDependencies", "dev-dependencies"],
       "matchUpdateTypes": ["minor"],
       "labels": ["dev", "automerge"],
-      "automerge": true
+      "automerge": true,
+      "prConcurrentLimit": 0
     },
     {
       "description": "prod minor :: PR only, 5-day cooldown :: behavior changes may affect users",
