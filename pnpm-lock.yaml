@@ -643,8 +643,8 @@ importers:
   packages/email:
     dependencies:
       '@opencoredev/email-sdk':
-        specifier: 3.0.1
-        version: 3.0.1(@react-email/render@2.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.181(zod@4.6.7))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: 3.1.0
+        version: 3.1.0(@react-email/render@2.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.181(zod@4.6.7))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@repo/telemetry':
         specifier: workspace:*
         version: link:../telemetry
@@ -803,7 +803,7 @@ importers:
     dependencies:
       '@orpc/evlog':
         specifier: catalog:orpc
-        version: 2.0.0-beta.53(crossws@0.3.5)(evlog@2.36.0(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))
+        version: 2.0.0-beta.53(crossws@0.3.5)(evlog@2.37.1(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))
       '@repo/utils':
         specifier: workspace:*
         version: link:../utils
@@ -811,8 +811,8 @@ importers:
         specifier: 'catalog:'
         version: 11.16.0(@cloudflare/workers-types@5.20261116.1)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
       evlog:
-        specifier: 2.36.0
-        version: 2.36.0(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+        specifier: 2.37.1
+        version: 2.37.1(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
       varlock:
         specifier: 'catalog:'
         version: 1.25.0
@@ -2720,8 +2720,8 @@ packages:
   '@openapi-spec/types@0.8.0':
     resolution: {integrity: sha512-MJGUd1VdG/Ty60uYObP20rnFwrObQOJIGKfBjvSKAgDzTmbKT0gzJabCupwuDu47LbphZWaFtGmZHFYv7B4huQ==}
 
-  '@opencoredev/email-sdk@3.0.1':
-    resolution: {integrity: sha512-GkMqq0QX3qhyPE1Mqgw3VxBMXJAte8qtXhkVhoNuBB/CfhwsKR9nRZ5TMfWdeXjtP3w3KURWd5G9q9fI0QM3Hw==}
+  '@opencoredev/email-sdk@3.1.0':
+    resolution: {integrity: sha512-trIxstDPYaWoy7TpNp1PHB2nwKydQimQ5T67Fo6nz+5uZs4Ebvl2Yd9xWk6HFpqAl0Bi1ivq1a5twUao69VAHw==}
     engines: {bun: '>=1.1.0', node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
@@ -6921,8 +6921,8 @@ packages:
     resolution: {integrity: sha512-CRT1WTyuQoD771GW56XEZFQ/ZoSfWid1alKGDYMmkt2yl8UXrVR4pspqWNEcqKvVIzg6PAltWjxcSSPrboA4iA==}
     engines: {node: '>=18.0.0'}
 
-  evlog@2.36.0:
-    resolution: {integrity: sha512-S1DADaoiFDhJqEAHkVHEmXbHx+6f3PUaGhP5Kb366nFs267EtBGkwD2g0uJhpIQ1G+0C4kDeZuTJHVN6krdpEw==}
+  evlog@2.37.1:
+    resolution: {integrity: sha512-DVvNKgBKKMiSjsJq8AfsSWDvy5ol8U0nnf+LbTHU5Mi68CaOq7WQDgUVaN1q1N2ov+aVQ5jhGNHDZtM+sFfung==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -12233,7 +12233,7 @@ snapshots:
 
   '@openapi-spec/types@0.8.0': {}
 
-  '@opencoredev/email-sdk@3.0.1(@react-email/render@2.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.181(zod@4.6.7))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@opencoredev/email-sdk@3.1.0(@react-email/render@2.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(ai@7.0.181(zod@4.6.7))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       nodemailer: 10.6.0
     optionalDependencies:
@@ -12406,13 +12406,13 @@ snapshots:
       '@orpc/shared': 2.0.0-beta.53
       '@standard-schema/spec': 1.1.0
 
-  '@orpc/evlog@2.0.0-beta.53(crossws@0.3.5)(evlog@2.36.0(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))':
+  '@orpc/evlog@2.0.0-beta.53(crossws@0.3.5)(evlog@2.37.1(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)))':
     dependencies:
       '@orpc/client': 2.0.0-beta.53
       '@orpc/server': 2.0.0-beta.53(crossws@0.3.5)
       '@orpc/shared': 2.0.0-beta.53
       '@standard-server/core': 0.16.0
-      evlog: 2.36.0(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+      evlog: 2.37.1(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
     transitivePeerDependencies:
       - crossws
       - fastify
@@ -16161,7 +16161,7 @@ snapshots:
     dependencies:
       eventsource-parser: 3.1.1
 
-  evlog@2.36.0(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)):
+  evlog@2.37.1(ai@7.0.181(zod@4.6.7))(effect@4.1.5)(express@5.3.0(supports-color@7.2.0))(h3@1.15.11)(hono@4.13.18)(next@16.4.6(@opentelemetry/api@1.10.0)(@playwright/test@1.65.1)(@types/node@24.19.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(varlock@1.25.0))(ofetch@1.5.1)(react@19.3.1)(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)):
     optionalDependencies:
       ai: 7.0.181(zod@4.6.7)
       effect: 4.1.5

@@ -12,7 +12,7 @@
     "typecheck": "tsrs --noEmit"
   },
   "dependencies": {
-    "@opencoredev/email-sdk": "3.0.1",
+    "@opencoredev/email-sdk": "3.1.0",
     "@repo/telemetry": "workspace:*",
     "react": "catalog:react",
     "react-dom": "catalog:react",
